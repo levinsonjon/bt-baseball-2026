@@ -1,31 +1,27 @@
 """
-send_pending_email.py — Sends a pending daily report email via Gmail API.
+send_pending_email.py — Finds and sends the daily report Gmail draft.
 
-Designed to run as a local launchd job ~15 min after the remote agent
-builds the report and pushes data/pending_email.json to the repo.
+Designed to run as a local launchd job ~30 min after the remote agent
+creates a Gmail draft via the claude.ai Gmail connector.
 
-1. git pull to get the latest pending_email.json
-2. Read the email payload (to, cc, subject, htmlBody)
-3. Send via Gmail API using local OAuth credentials
-4. Delete pending_email.json, commit, and push
+1. Connect to Gmail API using local OAuth credentials
+2. Search drafts for today's "Fantasy Baseball Daily" subject
+3. Send the draft
 """
 
 import json
 import sys
-import subprocess
-import base64
 from pathlib import Path
-from email.mime.text import MIMEText
-from datetime import datetime
+from datetime import datetime, date, timedelta
 
-# Paths
-PROJECT_DIR = Path(__file__).parent
-PENDING_EMAIL = PROJECT_DIR / "data" / "pending_email.json"
-SEND_LOG = PROJECT_DIR / "send_email.log"
+SEND_LOG = Path(__file__).parent / "send_email.log"
 
 # Gmail OAuth credentials (same ones used by local MCP server)
 GMAIL_CREDS = Path.home() / ".config" / "personal-mcp" / "gmail" / "credentials.json"
 GMAIL_OAUTH = Path.home() / ".config" / "personal-mcp" / "gmail" / "gcp-oauth.keys.json"
+
+# Subject prefix to match
+SUBJECT_PREFIX = "Fantasy Baseball Daily"
 
 
 def log(msg: str):
@@ -34,38 +30,6 @@ def log(msg: str):
     print(line)
     with open(SEND_LOG, "a") as f:
         f.write(line + "\n")
-
-
-def git_pull():
-    result = subprocess.run(
-        ["git", "pull", "--rebase"],
-        cwd=PROJECT_DIR,
-        capture_output=True, text=True, timeout=30,
-    )
-    if result.returncode != 0:
-        log(f"git pull failed: {result.stderr}")
-        return False
-    log(f"git pull: {result.stdout.strip()}")
-    return True
-
-
-def git_commit_and_push():
-    subprocess.run(
-        ["git", "add", "data/pending_email.json"],
-        cwd=PROJECT_DIR, capture_output=True, timeout=10,
-    )
-    subprocess.run(
-        ["git", "commit", "-m", "Remove pending_email.json after sending"],
-        cwd=PROJECT_DIR, capture_output=True, timeout=10,
-    )
-    result = subprocess.run(
-        ["git", "push"],
-        cwd=PROJECT_DIR, capture_output=True, text=True, timeout=30,
-    )
-    if result.returncode != 0:
-        log(f"git push failed: {result.stderr}")
-    else:
-        log("Pushed cleanup commit")
 
 
 def build_gmail_service():
@@ -90,7 +54,6 @@ def build_gmail_service():
 
     if creds.expired or not creds.valid:
         creds.refresh(Request())
-        # Save refreshed token
         creds_data["access_token"] = creds.token
         with open(GMAIL_CREDS, "w") as f:
             json.dump(creds_data, f)
@@ -99,58 +62,57 @@ def build_gmail_service():
     return build("gmail", "v1", credentials=creds)
 
 
-def send_email(service, to: list[str], cc: list[str], subject: str, html_body: str):
-    msg = MIMEText(html_body, "html")
-    msg["to"] = ", ".join(to)
-    if cc:
-        msg["cc"] = ", ".join(cc)
-    msg["subject"] = subject
+def find_daily_report_draft(service):
+    """Find the most recent draft matching today's daily report subject."""
+    # Yesterday's date is what the report covers
+    yesterday = date.today() - timedelta(days=1)
 
-    raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
-    result = service.users().messages().send(
-        userId="me", body={"raw": raw}
-    ).execute()
-    return result.get("id")
+    # List all drafts
+    result = service.users().drafts().list(userId="me", maxResults=20).execute()
+    drafts = result.get("drafts", [])
+
+    if not drafts:
+        return None
+
+    for draft_info in drafts:
+        draft = service.users().drafts().get(
+            userId="me", id=draft_info["id"], format="metadata",
+        ).execute()
+
+        headers = draft.get("message", {}).get("payload", {}).get("headers", [])
+        subject = next((h["value"] for h in headers if h["name"] == "Subject"), "")
+
+        if SUBJECT_PREFIX in subject:
+            log(f"Found matching draft: {subject} (id: {draft_info['id']})")
+            return draft_info["id"]
+
+    return None
 
 
 def main():
     log("--- Starting send_pending_email ---")
 
-    if not git_pull():
-        log("Aborting: git pull failed")
-        sys.exit(1)
-
-    if not PENDING_EMAIL.exists():
-        log("No pending_email.json found — nothing to send")
-        sys.exit(0)
-
-    with open(PENDING_EMAIL) as f:
-        email_data = json.load(f)
-
-    to = email_data.get("to", [])
-    cc = email_data.get("cc", [])
-    subject = email_data.get("subject", "Fantasy Baseball Daily Report")
-    html_body = email_data.get("html", "")
-
-    if not to or not html_body:
-        log("ERROR: pending_email.json missing 'to' or 'html'")
-        sys.exit(1)
-
-    log(f"Sending: {subject}")
-    log(f"  To: {to}, CC: {cc}")
-
     try:
         service = build_gmail_service()
-        msg_id = send_email(service, to, cc, subject, html_body)
-        log(f"Sent successfully (message ID: {msg_id})")
     except Exception as e:
-        log(f"ERROR sending email: {e}")
+        log(f"ERROR building Gmail service: {e}")
         sys.exit(1)
 
-    # Clean up: remove pending_email.json and push
-    PENDING_EMAIL.unlink()
-    log("Deleted pending_email.json")
-    git_commit_and_push()
+    draft_id = find_daily_report_draft(service)
+
+    if not draft_id:
+        log("No matching draft found — nothing to send")
+        sys.exit(0)
+
+    try:
+        result = service.users().drafts().send(
+            userId="me", body={"id": draft_id}
+        ).execute()
+        msg_id = result.get("id")
+        log(f"Draft sent successfully (message ID: {msg_id})")
+    except Exception as e:
+        log(f"ERROR sending draft: {e}")
+        sys.exit(1)
 
     log("--- Done ---")
 
