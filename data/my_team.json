@@ -1,0 +1,303 @@
+{
+  "updated": "2026-03-30T18:51:37.432507",
+  "pick_number": 9,
+  "players": [
+    {
+      "name": "Cal Raleigh",
+      "team": "SEA",
+      "positions": [
+        "C"
+      ],
+      "player_type": "hitter",
+      "projected_points": 491.7,
+      "projected_stats": {
+        "AB": 579.7,
+        "PA": 671.1,
+        "H": 139.4,
+        "R": 95.6,
+        "HR": 41.9,
+        "RBI": 104.4,
+        "SB": 9.8,
+        "BB": 79.9,
+        "HBP": 7.0,
+        "AVG": 0.2405
+      }
+    },
+    {
+      "name": "Bryce Harper",
+      "team": "PHI",
+      "positions": [
+        "1B"
+      ],
+      "player_type": "hitter",
+      "projected_points": 491.4,
+      "projected_stats": {
+        "AB": 558.9,
+        "PA": 639.8,
+        "H": 151.8,
+        "R": 89.1,
+        "HR": 29.2,
+        "RBI": 91.0,
+        "SB": 10.1,
+        "BB": 70.9,
+        "HBP": 5.7,
+        "AVG": 0.2716
+      }
+    },
+    {
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "positions": [
+        "2B"
+      ],
+      "player_type": "hitter",
+      "projected_points": 450.8,
+      "projected_stats": {
+        "AB": 581.7,
+        "PA": 624.1,
+        "H": 173.3,
+        "R": 75.3,
+        "HR": 8.2,
+        "RBI": 60.1,
+        "SB": 9.2,
+        "BB": 33.0,
+        "HBP": 4.4,
+        "AVG": 0.2978
+      }
+    },
+    {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "positions": [
+        "3B"
+      ],
+      "player_type": "hitter",
+      "projected_points": 470.3,
+      "projected_stats": {
+        "AB": 572.8,
+        "PA": 622.5,
+        "H": 164.6,
+        "R": 84.4,
+        "HR": 18.4,
+        "RBI": 75.6,
+        "SB": 4.9,
+        "BB": 41.1,
+        "HBP": 4.3,
+        "AVG": 0.2873
+      }
+    },
+    {
+      "name": "Francisco Lindor",
+      "team": "NYM",
+      "positions": [
+        "SS"
+      ],
+      "player_type": "hitter",
+      "projected_points": 484.9,
+      "projected_stats": {
+        "AB": 571.4,
+        "PA": 642.5,
+        "H": 151.2,
+        "R": 92.0,
+        "HR": 25.3,
+        "RBI": 78.0,
+        "SB": 24.6,
+        "BB": 56.0,
+        "HBP": 10.3,
+        "AVG": 0.2646
+      }
+    },
+    {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "positions": [
+        "OF"
+      ],
+      "player_type": "hitter",
+      "projected_points": 476.5,
+      "projected_stats": {
+        "AB": 582.0,
+        "PA": 627.2,
+        "H": 144.0,
+        "R": 76.6,
+        "HR": 27.3,
+        "RBI": 90.4,
+        "SB": 35.2,
+        "BB": 31.9,
+        "HBP": 8.0,
+        "AVG": 0.2474
+      }
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "positions": [
+        "OF"
+      ],
+      "player_type": "hitter",
+      "projected_points": 474.2,
+      "projected_stats": {
+        "AB": 556.7,
+        "PA": 602.0,
+        "H": 155.7,
+        "R": 76.7,
+        "HR": 24.7,
+        "RBI": 88.6,
+        "SB": 4.2,
+        "BB": 36.0,
+        "HBP": 4.6,
+        "AVG": 0.2797
+      }
+    },
+    {
+      "name": "Teoscar Hern\u00e1ndez",
+      "team": "LAD",
+      "positions": [
+        "OF"
+      ],
+      "player_type": "hitter",
+      "projected_points": 458.5,
+      "projected_stats": {
+        "AB": 544.8,
+        "PA": 596.1,
+        "H": 140.1,
+        "R": 78.6,
+        "HR": 26.5,
+        "RBI": 90.0,
+        "SB": 6.4,
+        "BB": 42.0,
+        "HBP": 5.3,
+        "AVG": 0.2572
+      }
+    },
+    {
+      "name": "Devin Williams",
+      "team": "NYM",
+      "positions": [
+        "RP"
+      ],
+      "player_type": "rp",
+      "projected_points": 166.0,
+      "projected_stats": {
+        "IP": 64.1,
+        "G": 61.0,
+        "GS": 0.0,
+        "W": 3.3,
+        "SV": 29.9,
+        "ERA": 2.845
+      }
+    },
+    {
+      "name": "Zack Wheeler",
+      "team": "PHI",
+      "positions": [
+        "SP"
+      ],
+      "player_type": "sp",
+      "projected_points": 92.57,
+      "projected_stats": {
+        "IP": 156.2,
+        "G": 26.1,
+        "GS": 26.1,
+        "W": 11.7,
+        "SV": 0.0,
+        "ERA": 3.247
+      }
+    },
+    {
+      "name": "Cole Ragans",
+      "team": "KCR",
+      "positions": [
+        "SP"
+      ],
+      "player_type": "sp",
+      "projected_points": 98.23,
+      "projected_stats": {
+        "IP": 145.0,
+        "G": 26.7,
+        "GS": 26.7,
+        "W": 10.5,
+        "SV": 0.0,
+        "ERA": 3.298
+      }
+    },
+    {
+      "name": "Chase Burns",
+      "team": "CIN",
+      "positions": [
+        "SP"
+      ],
+      "player_type": "sp",
+      "projected_points": 87.89,
+      "projected_stats": {
+        "IP": 122.1,
+        "G": 27.6,
+        "GS": 22.4,
+        "W": 8.1,
+        "SV": 0.0,
+        "ERA": 3.189
+      }
+    },
+    {
+      "name": "Nathan Eovaldi",
+      "team": "TEX",
+      "positions": [
+        "SP"
+      ],
+      "player_type": "sp",
+      "projected_points": 87.78,
+      "projected_stats": {
+        "IP": 163.1,
+        "G": 27.8,
+        "GS": 27.8,
+        "W": 11.7,
+        "SV": 0.0,
+        "ERA": 3.656
+      }
+    },
+    {
+      "name": "Emmet Sheehan",
+      "team": "LAD",
+      "positions": [
+        "SP"
+      ],
+      "player_type": "sp",
+      "projected_points": 73.33,
+      "projected_stats": {
+        "IP": 128.1,
+        "G": 33.8,
+        "GS": 21.2,
+        "W": 7.3,
+        "SV": 0.0,
+        "ERA": 3.568
+      }
+    },
+    {
+      "name": "Reid Detmers",
+      "team": "LAA",
+      "positions": [
+        "SP"
+      ],
+      "player_type": "sp",
+      "projected_points": 75.68,
+      "projected_stats": {
+        "IP": 130.0,
+        "G": 26.0,
+        "GS": 26.0,
+        "W": 8.8,
+        "SV": 0.0,
+        "ERA": 3.543
+      }
+    },
+    {
+      "name": "Giancarlo Stanton",
+      "team": "NYY",
+      "positions": [
+        "DH"
+      ],
+      "player_type": "hitter",
+      "projected_points": 377.8,
+      "projected_stats": {}
+    }
+  ]
+}

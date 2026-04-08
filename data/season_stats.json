@@ -1,0 +1,144 @@
+{
+  "Cal Raleigh": {
+    "H": 6,
+    "AB": 41,
+    "HR": 1,
+    "RBI": 5,
+    "R": 3,
+    "SB": 0
+  },
+  "Bryce Harper": {
+    "H": 8,
+    "AB": 40,
+    "HR": 1,
+    "RBI": 7,
+    "R": 5,
+    "SB": 0
+  },
+  "Luis Arraez": {
+    "H": 11,
+    "AB": 40,
+    "HR": 0,
+    "RBI": 3,
+    "R": 4,
+    "SB": 0
+  },
+  "Bo Bichette": {
+    "H": 7,
+    "AB": 36,
+    "HR": 0,
+    "RBI": 5,
+    "R": 3,
+    "SB": 0
+  },
+  "Francisco Lindor": {
+    "H": 3,
+    "AB": 21,
+    "HR": 0,
+    "RBI": 0,
+    "R": 5,
+    "SB": 0
+  },
+  "Pete Crow-Armstrong": {
+    "H": 8,
+    "AB": 34,
+    "HR": 0,
+    "RBI": 3,
+    "R": 5,
+    "SB": 3
+  },
+  "Jackson Merrill": {
+    "H": 10,
+    "AB": 40,
+    "HR": 2,
+    "RBI": 7,
+    "R": 5,
+    "SB": 1
+  },
+  "Teoscar Hernández": {
+    "H": 12,
+    "AB": 40,
+    "HR": 3,
+    "RBI": 8,
+    "R": 7,
+    "SB": 1
+  },
+  "Giancarlo Stanton": {
+    "H": 13,
+    "AB": 33,
+    "HR": 1,
+    "RBI": 6,
+    "R": 7,
+    "SB": 1
+  },
+  "Devin Williams": {
+    "G": 4,
+    "IP": 4.0,
+    "ER": 0,
+    "K": 4,
+    "H": 3,
+    "BB": 2,
+    "W": 0,
+    "SV": 1
+  },
+  "Zack Wheeler": {
+    "G": 0,
+    "GS": 0,
+    "IP": 0,
+    "ER": 0,
+    "K": 0,
+    "H": 0,
+    "BB": 0,
+    "W": 0
+  },
+  "Cole Ragans": {
+    "G": 1,
+    "GS": 1,
+    "IP": 4.0,
+    "ER": 4,
+    "K": 5,
+    "H": 6,
+    "BB": 4,
+    "W": 0
+  },
+  "Chase Burns": {
+    "G": 2,
+    "GS": 2,
+    "IP": 11.0,
+    "ER": 1,
+    "K": 16,
+    "H": 5,
+    "BB": 4,
+    "W": 1
+  },
+  "Nathan Eovaldi": {
+    "G": 2,
+    "GS": 2,
+    "IP": 8.2,
+    "ER": 11,
+    "K": 12,
+    "H": 16,
+    "BB": 3,
+    "W": 0
+  },
+  "Emmet Sheehan": {
+    "G": 2,
+    "GS": 2,
+    "IP": 9.0,
+    "ER": 8,
+    "K": 14,
+    "H": 12,
+    "BB": 5,
+    "W": 1
+  },
+  "Reid Detmers": {
+    "G": 2,
+    "GS": 2,
+    "IP": 9.2,
+    "ER": 4,
+    "K": 9,
+    "H": 10,
+    "BB": 2,
+    "W": 1
+  }
+}

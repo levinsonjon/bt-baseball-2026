@@ -1,0 +1,21 @@
+# Data - large source files (not needed at runtime)
+data/projections_cache.json
+data/pitcherlist_projections.xlsx
+data/*.xlsx
+data/*.csv
+
+# Debug artifacts
+debug_pitcherlist_*.png
+
+# Python
+__pycache__/
+*.pyc
+
+# Claude Code session files
+.claude/scheduled_tasks.lock
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
