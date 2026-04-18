@@ -40,6 +40,7 @@ class DayResult:
         self.summary: str = ""       # one-line game summary
         self.decision: str = ""      # pitcher decision: W, L, SV, or ""
         self.news: str = ""          # 2-3 sentence summary
+        self.news_sources: list = [] # list of {"title": str, "url": str}
         self.injury_note: str = ""   # empty if healthy
         self.injury_flag: bool = False
         self.injury_prev: str = ""   # previous injury status
@@ -372,6 +373,106 @@ def _fmt_pts(val) -> str:
     return str(val)
 
 
+def export_web_data(
+    report_date: date,
+    day_results: list[DayResult],
+) -> tuple[dict, dict]:
+    """
+    Build the two JSON payloads consumed by the web interface.
+
+    Returns (yesterday_dict, news_dict). These get embedded in the email
+    HTML as hidden <script type="application/json"> blocks so the local
+    send script can extract them and commit them to the repo for Vercel.
+    """
+    from datetime import datetime as _dt
+
+    generated_at = _dt.utcnow().isoformat(timespec="seconds") + "Z"
+
+    y_players = []
+    y_tot_hit = {"AB": 0, "H": 0, "R": 0, "HR": 0, "RBI": 0, "SB": 0, "points": 0.0}
+    y_tot_p = {"IP": 0.0, "H": 0, "ER": 0, "K": 0, "BB": 0, "W": 0, "SV": 0, "points": 0.0}
+
+    for r in day_results:
+        entry = {
+            "name": r.player_name,
+            "team": r.team,
+            "position": r.position,
+            "type": r.player_type,
+            "opponent": r.opponent or None,
+            "dnp": r.dnp,
+            "dnp_reason": r.injury_curr if r.dnp and r.injury_flag else ("Team off day" if r.dnp else None),
+            "stats": {k: v for k, v in r.stats.items() if v not in (None, "")},
+            "points": round(r.fantasy_points, 2),
+            "summary": r.summary or r.news or "",
+        }
+        if not r.dnp:
+            s = r.stats or {}
+            if r.player_type == "hitter":
+                y_tot_hit["AB"] += int(s.get("AB", 0) or 0)
+                y_tot_hit["H"] += int(s.get("H", 0) or 0)
+                y_tot_hit["R"] += int(s.get("R", 0) or 0)
+                y_tot_hit["HR"] += int(s.get("HR", 0) or 0)
+                y_tot_hit["RBI"] += int(s.get("RBI", 0) or 0)
+                y_tot_hit["SB"] += int(s.get("SB", 0) or 0)
+                y_tot_hit["points"] += float(r.fantasy_points or 0)
+            else:
+                y_tot_p["IP"] += float(s.get("IP", 0) or 0)
+                y_tot_p["H"] += int(s.get("H", 0) or 0)
+                y_tot_p["ER"] += int(s.get("ER", 0) or 0)
+                y_tot_p["K"] += int(s.get("K", 0) or 0)
+                y_tot_p["BB"] += int(s.get("BB", 0) or 0)
+                y_tot_p["W"] += int(s.get("W", 0) or 0)
+                y_tot_p["SV"] += int(s.get("SV", 0) or 0)
+                y_tot_p["points"] += float(r.fantasy_points or 0)
+        y_players.append(entry)
+
+    yesterday = {
+        "date": report_date.isoformat(),
+        "generated_at": generated_at,
+        "totals": {
+            "hitters": {**y_tot_hit, "points": round(y_tot_hit["points"], 2)},
+            "pitchers": {**y_tot_p, "IP": round(y_tot_p["IP"], 2), "points": round(y_tot_p["points"], 2)},
+        },
+        "players": y_players,
+    }
+
+    news_players = []
+    for r in day_results:
+        if not r.news:
+            continue
+        news_players.append({
+            "name": r.player_name,
+            "team": r.team,
+            "position": r.position,
+            "summary": r.news,
+            "sources": r.news_sources or [],
+        })
+
+    injuries = []
+    for r in day_results:
+        if not r.injury_flag:
+            continue
+        source = r.news_sources[0] if r.news_sources else None
+        injuries.append({
+            "name": r.player_name,
+            "team": r.team,
+            "position": r.position,
+            "status": r.injury_curr or "",
+            "previous_status": r.injury_prev or "",
+            "note": r.injury_note or "",
+            "source": source,
+        })
+
+    news = {
+        "generated_at": generated_at,
+        "window_hours": 24,
+        "players": news_players,
+        "injuries": injuries,
+    }
+
+    return yesterday, news
+
+
 def build_html_email(
     report_date: date,
     day_results: list[DayResult],
@@ -529,8 +630,25 @@ def build_html_email(
     <a href="https://docs.google.com/spreadsheets/d/{config.GOOGLE_SHEET_ID}" style="color:#1a73e8">View rankings sheet &rarr;</a>
     &nbsp;&middot;&nbsp; Pre = preseason projection &nbsp;&middot;&nbsp; YTD = season points to date
     &nbsp;&middot;&nbsp; Pace = 162-game extrapolation
-  </p>
-</body></html>"""
+  </p>"""
+
+    # Hidden JSON payloads consumed by the local send script → web interface.
+    # These render nothing in mail clients but let send_pending_email.py
+    # extract fresh data and commit it to the repo for Vercel.
+    import json as _json
+    yesterday_data, news_data = export_web_data(report_date, day_results)
+    html += (
+        '\n  <script type="application/json" id="yesterday-data">'
+        + _json.dumps(yesterday_data, ensure_ascii=False)
+        + "</script>"
+    )
+    html += (
+        '\n  <script type="application/json" id="news-data">'
+        + _json.dumps(news_data, ensure_ascii=False)
+        + "</script>"
+    )
+
+    html += "\n</body></html>"
     return html
 
 

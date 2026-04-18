@@ -131,7 +131,16 @@ def generate_report_from_search_results(
             player_type=sr["player_type"],
             search_text=sr.get("box_score_text", ""),
         )
-        result.news = _summarize_news(sr.get("news_text", ""))
+        # News: prefer a pre-synthesized summary + sources from the caller
+        # (the remote agent has the full WebSearch context to produce this).
+        # Fall back to naive truncation of raw search text.
+        result.news = sr.get("news_summary") or _summarize_news(sr.get("news_text", ""))
+        sources = sr.get("news_sources") or []
+        # Keep only well-formed {"title", "url"} dicts
+        result.news_sources = [
+            {"title": str(s.get("title", "")), "url": str(s.get("url", ""))}
+            for s in sources if isinstance(s, dict) and s.get("url")
+        ]
         result.injury_note, result.injury_flag = _parse_injury(sr.get("injury_text", ""))
         day_results.append(result)
 

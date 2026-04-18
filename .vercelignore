@@ -1,0 +1,12 @@
+*.py
+__pycache__/
+.venv/
+venv/
+tasklog.md
+*.plist
+*.xlsx
+.env
+.env.*
+send_pending_email.log
+update_health.log
+memory/

@@ -1,0 +1,170 @@
+{
+  "generated_at": "2026-04-18T04:35:00Z",
+  "window_hours": 24,
+  "players": [
+    {
+      "name": "Cal Raleigh",
+      "team": "SEA",
+      "position": "C",
+      "summary": "RBI single off Buehler chased the Dodger starter; reached 100 career HR milestone earlier in the road trip.",
+      "sources": [
+        {"title": "MLB.com — Mariners vs Padres recap", "url": "https://www.mlb.com/mariners/news"}
+      ]
+    },
+    {
+      "name": "Bryce Harper",
+      "team": "PHI",
+      "position": "1B",
+      "summary": "Off day Thursday; Phillies open at Atlanta Friday with Harper expected to slot in as cleanup.",
+      "sources": [
+        {"title": "Phillies lineup update", "url": "https://www.mlb.com/phillies/news"}
+      ]
+    },
+    {
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
+      "summary": "0-for-4 but scored the tying run after reaching on an E6; Giants salvaged series finale 3-0.",
+      "sources": [
+        {"title": "Giants-Reds recap", "url": "https://www.mlb.com/giants/news"}
+      ]
+    },
+    {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "summary": "Slow start continues — slashing .235 through 17 games; Mets enjoy off day after being swept by LAD.",
+      "sources": [
+        {"title": "Mets injury and lineup notes", "url": "https://www.mlb.com/mets/news"}
+      ]
+    },
+    {
+      "name": "Francisco Lindor",
+      "team": "NYM",
+      "position": "SS",
+      "summary": "Hit his first HR of the year Apr 14 to snap an 0-for-19 stretch; .132 AVG still worst of his career.",
+      "sources": [
+        {"title": "Lindor snaps slump", "url": "https://www.mlb.com/mets/news"}
+      ]
+    },
+    {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "position": "OF",
+      "summary": "Cubs off day; PCA leads the team in SB (6) and sits 3rd in NL CF WAR through three weeks.",
+      "sources": [
+        {"title": "Cubs team report", "url": "https://www.mlb.com/cubs/news"}
+      ]
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "summary": "Padres rolled to 8th straight win; Merrill quiet day but batting .320 across the streak.",
+      "sources": [
+        {"title": "Padres win streak", "url": "https://www.mlb.com/padres/news"}
+      ]
+    },
+    {
+      "name": "Teoscar Hernández",
+      "team": "LAD",
+      "position": "OF",
+      "summary": "4 HR through 16 games; Dodgers off day before hosting Rangers this weekend.",
+      "sources": [
+        {"title": "Dodgers weekend preview", "url": "https://www.mlb.com/dodgers/news"}
+      ]
+    },
+    {
+      "name": "Giancarlo Stanton",
+      "team": "NYY",
+      "position": "DH",
+      "summary": "3rd-inning 2-run HR traveled 446 ft but Yankees fell 11-4 to Angels after Halos put up 4 in the 6th.",
+      "sources": [
+        {"title": "Yankees-Angels recap", "url": "https://www.mlb.com/yankees/news"}
+      ]
+    },
+    {
+      "name": "Devin Williams",
+      "team": "NYM",
+      "position": "RP",
+      "summary": "Mets off day; Williams still shaking off Tuesday's grand slam allowed. Role secure per Mendoza.",
+      "sources": [
+        {"title": "Mendoza on Williams", "url": "https://www.mlb.com/mets/news"}
+      ]
+    },
+    {
+      "name": "Zack Wheeler",
+      "team": "PHI",
+      "position": "SP",
+      "summary": "4th rehab start Apr 14 was sharp: 5.2 IP, 3 ER, 9 K, 0 BB, 72 pitches, touched 95 mph. One more rehab Sunday Apr 19.",
+      "sources": [
+        {"title": "Wheeler rehab update", "url": "https://www.mlb.com/phillies/news"}
+      ]
+    },
+    {
+      "name": "Cole Ragans",
+      "team": "KCR",
+      "position": "SP",
+      "summary": "Between starts after dominant 4/14 outing (6 IP, 1 H, 0 ER vs DET); next start projected 4/19 or 4/20.",
+      "sources": [
+        {"title": "Royals rotation update", "url": "https://www.mlb.com/royals/news"}
+      ]
+    },
+    {
+      "name": "Chase Burns",
+      "team": "CIN",
+      "position": "SP",
+      "summary": "No rehab activity reported on flexor strain; Reds still without a return timeline.",
+      "sources": [
+        {"title": "Reds injury report", "url": "https://www.mlb.com/reds/news"}
+      ]
+    },
+    {
+      "name": "Nathan Eovaldi",
+      "team": "TEX",
+      "position": "SP",
+      "summary": "Strong line vs OAK Thursday — 6 IP, 1 ER, 7 K; leaves with no-decision but Rangers win 3-2 in 10.",
+      "sources": [
+        {"title": "Rangers-A's recap", "url": "https://www.mlb.com/rangers/news"}
+      ]
+    },
+    {
+      "name": "Emmet Sheehan",
+      "team": "LAD",
+      "position": "SP",
+      "summary": "Next start lined up Apr 19 vs CHC at Dodger Stadium; coming off a 5-IP, 2-ER outing Apr 13.",
+      "sources": [
+        {"title": "Dodgers rotation", "url": "https://www.mlb.com/dodgers/news"}
+      ]
+    },
+    {
+      "name": "Reid Detmers",
+      "team": "LAA",
+      "position": "SP",
+      "summary": "Last start 4/14 was his best of the year: 7+ IP, 1 R, 9 K vs NYY. ERA down to 3.53 after three starts.",
+      "sources": [
+        {"title": "Angels starter report", "url": "https://www.mlb.com/angels/news"}
+      ]
+    }
+  ],
+  "injuries": [
+    {
+      "name": "Zack Wheeler",
+      "team": "PHI",
+      "position": "SP",
+      "status": "IL-15 (rehab, ~1 start away)",
+      "previous_status": "IL-15 (rehab)",
+      "note": "Encouraging 4th rehab start (5.2 IP, 9 K, touched 95 mph). One more Sunday Apr 19; targeting return weekend of Apr 24-26 at ATL.",
+      "source": {"title": "Phillies rehab update", "url": "https://www.mlb.com/phillies/news"}
+    },
+    {
+      "name": "Chase Burns",
+      "team": "CIN",
+      "position": "SP",
+      "status": "IL-15 (flexor strain)",
+      "previous_status": "IL-15 (flexor strain)",
+      "note": "No rehab activity reported. Still shut down.",
+      "source": {"title": "Reds injury report", "url": "https://www.mlb.com/reds/news"}
+    }
+  ]
+}

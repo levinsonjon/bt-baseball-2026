@@ -1,0 +1,197 @@
+{
+  "date": "2026-04-17",
+  "generated_at": "2026-04-18T04:35:00Z",
+  "totals": {
+    "hitters": {"AB": 28, "H": 8, "R": 3, "HR": 1, "RBI": 6, "SB": 1, "points": 14},
+    "pitchers": {"IP": 6.0, "H": 4, "ER": 1, "K": 7, "BB": 1, "W": 0, "SV": 1, "points": 5}
+  },
+  "players": [
+    {
+      "name": "Cal Raleigh",
+      "team": "SEA",
+      "position": "C",
+      "type": "hitter",
+      "opponent": "@ SD",
+      "dnp": false,
+      "stats": {"AB": 4, "H": 2, "R": 0, "HR": 0, "RBI": 1, "SB": 0},
+      "points": 1,
+      "summary": "2-for-4, RBI single; Mariners lose 5-2"
+    },
+    {
+      "name": "Bryce Harper",
+      "team": "PHI",
+      "position": "1B",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0,
+      "summary": "Phillies off day ahead of Friday opener at Atlanta"
+    },
+    {
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
+      "type": "hitter",
+      "opponent": "@ CIN",
+      "dnp": false,
+      "stats": {"AB": 4, "H": 0, "R": 1, "HR": 0, "RBI": 0, "SB": 0},
+      "points": 1,
+      "summary": "0-for-4, reached on E6 and scored; Giants win 3-0"
+    },
+    {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0,
+      "summary": "Mets off day after being swept by LAD"
+    },
+    {
+      "name": "Francisco Lindor",
+      "team": "NYM",
+      "position": "SS",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0,
+      "summary": "Mets off day"
+    },
+    {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0,
+      "summary": "Cubs off day between series"
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "vs SEA",
+      "dnp": false,
+      "stats": {"AB": 4, "H": 1, "R": 0, "HR": 0, "RBI": 0, "SB": 0},
+      "points": 0,
+      "summary": "1-for-4; Padres complete sweep 5-2 (8th straight win)"
+    },
+    {
+      "name": "Teoscar Hernández",
+      "team": "LAD",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0,
+      "summary": "Dodgers off day"
+    },
+    {
+      "name": "Giancarlo Stanton",
+      "team": "NYY",
+      "position": "DH",
+      "type": "hitter",
+      "opponent": "vs LAA",
+      "dnp": false,
+      "stats": {"AB": 4, "H": 1, "R": 1, "HR": 1, "RBI": 2, "SB": 0},
+      "points": 4,
+      "summary": "2-run HR (446 ft, 2nd of year); Yankees lose 11-4"
+    },
+    {
+      "name": "Devin Williams",
+      "team": "NYM",
+      "position": "RP",
+      "type": "rp",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0,
+      "summary": "Mets off day; still working back from 4/15 grand slam allowed"
+    },
+    {
+      "name": "Zack Wheeler",
+      "team": "PHI",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "IL-15 (rehab)",
+      "stats": {},
+      "points": 0,
+      "summary": "4th rehab start 4/14 strong; one more Sunday, targeting late-April return"
+    },
+    {
+      "name": "Cole Ragans",
+      "team": "KCR",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Between starts",
+      "stats": {},
+      "points": 0,
+      "summary": "Last outing 4/14 (6 IP, 0 ER); next likely 4/19-20"
+    },
+    {
+      "name": "Chase Burns",
+      "team": "CIN",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "IL-15 (flexor strain)",
+      "stats": {},
+      "points": 0,
+      "summary": "No rehab activity reported; still shut down"
+    },
+    {
+      "name": "Nathan Eovaldi",
+      "team": "TEX",
+      "position": "SP",
+      "type": "sp",
+      "opponent": "vs OAK",
+      "dnp": false,
+      "stats": {"IP": 6.0, "H": 4, "ER": 1, "K": 7, "BB": 1, "W": 0},
+      "points": 3.2,
+      "summary": "6 IP, 1 ER, 7 K; no-decision in Rangers 3-2 win"
+    },
+    {
+      "name": "Emmet Sheehan",
+      "team": "LAD",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Between starts",
+      "stats": {},
+      "points": 0,
+      "summary": "Next start projected 4/19 vs CHC"
+    },
+    {
+      "name": "Reid Detmers",
+      "team": "LAA",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Between starts",
+      "stats": {},
+      "points": 0,
+      "summary": "Last outing 4/14 (7+ IP, 1 R, 9 K vs NYY)"
+    }
+  ]
+}
