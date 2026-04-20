@@ -1,15 +1,20 @@
 """
-send_pending_email.py — Finds and sends the daily report Gmail draft.
+send_pending_email.py — Finds and sends the daily report Gmail drafts.
 
 Designed to run as a local launchd job ~30 min after the remote agent
-creates a Gmail draft via the claude.ai Gmail connector.
+creates two Gmail drafts via the claude.ai Gmail connector:
 
-1. Connect to Gmail API using local OAuth credentials
-2. Search drafts for today's "Fantasy Baseball Daily" subject
-3. Extract embedded JSON (yesterday-data, news-data) and write to
-   data/yesterday.json, data/news.json, then git commit + push so
-   Vercel redeploys the static web interface with fresh data.
-4. Send the draft
+  - DATA draft   ("Fantasy Baseball DATA YYYY-MM-DD")
+      Body: <script type="application/json"> payloads only.
+      This script extracts them, writes data/{yesterday,news}.json,
+      commits + pushes to main (triggering a Vercel redeploy), and
+      DELETES the draft.
+
+  - EMAIL draft  ("Fantasy Baseball Daily YYYY-MM-DD (...)")
+      Body: the HTML email. This script sends it.
+
+Splitting the payload across two drafts keeps each Gmail-draft API call
+small enough to avoid stream-idle timeouts on the remote agent side.
 """
 
 import base64
@@ -28,13 +33,17 @@ SEND_LOG = REPO_ROOT / "send_email.log"
 GMAIL_CREDS = Path.home() / ".config" / "personal-mcp" / "gmail" / "credentials.json"
 GMAIL_OAUTH = Path.home() / ".config" / "personal-mcp" / "gmail" / "gcp-oauth.keys.json"
 
-# Subject prefix to match
-SUBJECT_PREFIX = "Fantasy Baseball Daily"
+# Subject prefixes. Order matters in find_draft_by_prefix: "Fantasy Baseball DATA"
+# must be matched before "Fantasy Baseball" substring fallbacks. Use exact prefix
+# matching to keep them distinct.
+DATA_SUBJECT_PREFIX = "Fantasy Baseball DATA"
+EMAIL_SUBJECT_PREFIX = "Fantasy Baseball Daily"
 
-# Embedded JSON block IDs written by daily_report.build_html_email
+# Embedded JSON block IDs in the DATA draft → files in data/.
 EMBED_BLOCKS = {
-    "yesterday-data": "yesterday.json",
-    "news-data": "news.json",
+    "yesterday-data":    "yesterday.json",
+    "news-data":         "news.json",
+    "season-stats-data": "season_stats.json",
 }
 
 # Non-interactive git env (launchd has no HOME expansion surprises)
@@ -79,15 +88,11 @@ def build_gmail_service():
     return build("gmail", "v1", credentials=creds)
 
 
-def find_daily_report_draft(service):
-    """Find the most recent draft matching today's daily report subject."""
-    # Yesterday's date is what the report covers
-    yesterday = date.today() - timedelta(days=1)
-
-    # List all drafts
+def find_draft_by_prefix(service, prefix: str):
+    """Return the id of the most recent draft whose subject starts with `prefix`,
+    or None if no match. Uses startswith to keep DATA and Daily prefixes distinct."""
     result = service.users().drafts().list(userId="me", maxResults=20).execute()
     drafts = result.get("drafts", [])
-
     if not drafts:
         return None
 
@@ -95,12 +100,10 @@ def find_daily_report_draft(service):
         draft = service.users().drafts().get(
             userId="me", id=draft_info["id"], format="metadata",
         ).execute()
-
         headers = draft.get("message", {}).get("payload", {}).get("headers", [])
         subject = next((h["value"] for h in headers if h["name"] == "Subject"), "")
-
-        if SUBJECT_PREFIX in subject:
-            log(f"Found matching draft: {subject} (id: {draft_info['id']})")
+        if subject.startswith(prefix):
+            log(f"Found draft: {subject} (id: {draft_info['id']})")
             return draft_info["id"]
 
     return None
@@ -226,24 +229,27 @@ def git_commit_and_push(paths: list[Path], report_date: date):
     log("Pushed to origin/main")
 
 
-def sync_web_data(service, draft_id: str):
+def consume_data_draft(service, draft_id: str):
     """
-    Extract embedded JSON from the draft, write data files, commit, push.
-    Logs any failure but never raises — the email send should proceed.
+    Extract JSON payloads from the data draft, write them to data/*.json,
+    commit + push to origin/main, then delete the draft (it has served its
+    purpose — no need to clutter Jon's drafts folder).
+
+    Logs and swallows errors. The email send should proceed regardless.
     """
     try:
         html = get_draft_html(service, draft_id)
         if not html:
-            log("WARN: draft had no HTML body; skipping data sync")
+            log("WARN: data draft had no body; skipping sync")
             return
         blocks = extract_json_blocks(html)
         if not blocks:
-            log("WARN: no JSON blocks found in draft; skipping data sync")
+            log("WARN: no JSON blocks found in data draft; skipping sync")
             return
         written = write_data_files(blocks)
         if not written:
             return
-        # Prefer the date from the payload, falling back to today-minus-one.
+
         report_date = date.today() - timedelta(days=1)
         y = blocks.get("yesterday-data") or {}
         if isinstance(y.get("date"), str):
@@ -251,9 +257,17 @@ def sync_web_data(service, draft_id: str):
                 report_date = date.fromisoformat(y["date"])
             except ValueError:
                 pass
+
         git_commit_and_push(written, report_date)
+
+        # Best-effort cleanup — don't error if it fails.
+        try:
+            service.users().drafts().delete(userId="me", id=draft_id).execute()
+            log(f"Deleted data draft {draft_id}")
+        except Exception as e:
+            log(f"WARN: failed to delete data draft: {e}")
     except Exception as e:
-        log(f"ERROR during data sync (continuing to send email): {e}")
+        log(f"ERROR during data draft consumption (continuing): {e}")
 
 
 def main():
@@ -265,24 +279,27 @@ def main():
         log(f"ERROR building Gmail service: {e}")
         sys.exit(1)
 
-    draft_id = find_daily_report_draft(service)
+    # Phase 1: consume the data draft (writes files, pushes, deletes the draft).
+    data_id = find_draft_by_prefix(service, DATA_SUBJECT_PREFIX)
+    if data_id:
+        consume_data_draft(service, data_id)
+    else:
+        log("No data draft found; skipping data sync")
 
-    if not draft_id:
-        log("No matching draft found — nothing to send")
+    # Phase 2: find and send the email draft.
+    email_id = find_draft_by_prefix(service, EMAIL_SUBJECT_PREFIX)
+    if not email_id:
+        log("No email draft found — nothing to send")
         sys.exit(0)
-
-    # Sync structured data to the repo for Vercel before sending.
-    # Failures here log but do not block the email.
-    sync_web_data(service, draft_id)
 
     try:
         result = service.users().drafts().send(
-            userId="me", body={"id": draft_id}
+            userId="me", body={"id": email_id}
         ).execute()
         msg_id = result.get("id")
-        log(f"Draft sent successfully (message ID: {msg_id})")
+        log(f"Email draft sent successfully (message ID: {msg_id})")
     except Exception as e:
-        log(f"ERROR sending draft: {e}")
+        log(f"ERROR sending email draft: {e}")
         sys.exit(1)
 
     log("--- Done ---")

@@ -630,26 +630,33 @@ def build_html_email(
     <a href="https://docs.google.com/spreadsheets/d/{config.GOOGLE_SHEET_ID}" style="color:#1a73e8">View rankings sheet &rarr;</a>
     &nbsp;&middot;&nbsp; Pre = preseason projection &nbsp;&middot;&nbsp; YTD = season points to date
     &nbsp;&middot;&nbsp; Pace = 162-game extrapolation
-  </p>"""
+  </p>
+</body></html>"""
+    return html
 
-    # Hidden JSON payloads consumed by the local send script → web interface.
-    # These render nothing in mail clients but let send_pending_email.py
-    # extract fresh data and commit it to the repo for Vercel.
+
+def build_data_draft_html(report_date: date, day_results: list[DayResult]) -> str:
+    """
+    Build a minimal HTML wrapper containing only the structured JSON payloads.
+
+    Used by the remote agent as the body of a separate "data" Gmail draft. The
+    local send script finds this draft by subject prefix, extracts the two
+    <script> blocks, writes the data files, commits + pushes to GitHub, and
+    deletes the draft. Keeping the data payload out of the main email draft
+    avoids stream-idle timeouts on the single Gmail draft API call.
+    """
     import json as _json
     yesterday_data, news_data = export_web_data(report_date, day_results)
-    html += (
-        '\n  <script type="application/json" id="yesterday-data">'
+    return (
+        '<html><body>'
+        '<script type="application/json" id="yesterday-data">'
         + _json.dumps(yesterday_data, ensure_ascii=False)
-        + "</script>"
-    )
-    html += (
-        '\n  <script type="application/json" id="news-data">'
+        + '</script>'
+        '<script type="application/json" id="news-data">'
         + _json.dumps(news_data, ensure_ascii=False)
-        + "</script>"
+        + '</script>'
+        '</body></html>'
     )
-
-    html += "\n</body></html>"
-    return html
 
 
 def build_subject(report_date: date, day_results: list[DayResult] = None) -> str:
