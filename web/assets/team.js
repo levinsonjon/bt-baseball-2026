@@ -191,9 +191,10 @@ function renderRP(players, statsByName) {
 
 async function renderTeam() {
   try {
-    const [team, stats] = await Promise.all([
+    const [team, stats, yesterday] = await Promise.all([
       loadJSON("my_team.json"),
-      loadJSON("season_stats.json")
+      loadJSON("season_stats.json"),
+      loadJSON("yesterday.json").catch(() => ({}))
     ]);
 
     const statsByName = stats;
@@ -207,9 +208,9 @@ async function renderTeam() {
     document.getElementById("sp-table").innerHTML = renderSPs(sps, statsByName);
     document.getElementById("rp-table").innerHTML = renderRP(rps, statsByName);
 
-    const updated = team.updated ? fmtTimestamp(team.updated) : "—";
+    const refreshed = yesterday.generated_at ? fmtTimestamp(yesterday.generated_at) : "—";
     document.getElementById("page-sub").textContent =
-      `Season stats, fantasy points to date, and projected season totals · roster last updated ${updated}`;
+      `Season stats, fantasy points to date, and projected season totals · data refreshed ${refreshed}`;
   } catch (err) {
     document.getElementById("hitters-section").innerHTML =
       `<div class="empty-state">Couldn't load team data: ${err.message}</div>`;
