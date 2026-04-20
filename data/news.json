@@ -1,118 +1,198 @@
 {
-  "generated_at": "2026-04-19T00:00:00Z",
+  "generated_at": "2026-04-20T08:30:00Z",
   "window_hours": 24,
   "players": [
     {
       "name": "Cal Raleigh",
       "team": "SEA",
       "position": "C",
-      "summary": "Grand slam highlights Mariners' 5-2 win over Rangers. Bryan Woo dominated on the mound.",
-      "sources": []
+      "summary": "Mariners beat Rangers 5-2 as Bryan Woo set down 15 straight batters and allowed just 2 runs on 4 hits in 7 IP. Raleigh goes 1-3 in the win; he is batting .186 on the year after a slow start to defend his 60-HR 2025 season.",
+      "sources": [
+        {
+          "title": "Cal Raleigh, Bryan Woo shine in Mariners' win",
+          "url": "https://www.mlb.com/news/cal-raleigh-bryan-woo-shine-in-mariners-win"
+        }
+      ]
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "Quiet night, 0-for-3. No scoring plays.",
-      "sources": []
+      "summary": "Braves complete a three-game sweep of the Phillies 4-2 on Sunday Night Baseball as Philadelphia loses its 5th straight. Harper is raking individually (.409 wOBA) but grounded into a key out with runners on second and third in the 5th inning.",
+      "sources": [
+        {
+          "title": "Phillies get swept by Braves to cap off disastrous homestand",
+          "url": "https://downbeach.com/news/2026/apr/19/philadelphia-phillies-news-atlanta-braves-andrew-painter-kyle-schwarber-michael-harris/"
+        }
+      ]
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
-      "summary": "2-for-4 (2 singles) but Giants were shut out 3-0. Making contact but no run support.",
-      "sources": []
+      "summary": "Nationals blank the Giants 3-0 with Curtis Mead homering and Andrew Alvarez dominant in relief. Arraez goes 0-4 — his first hitless performance in 14 career games at Nationals Park — as San Francisco falls in the rubber match.",
+      "sources": [
+        {
+          "title": "Curtis Mead homers, Nationals blank Giants 3-0 to avoid sweep",
+          "url": "https://www.baltimoresun.com/2026/04/19/curtis-mead-homers-andrew-alvarez-shines-in-relief-as-nationals-blank-giants-3-0-to-avoid-sweep/"
+        }
+      ]
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
-      "summary": "1-for-4 in NYM game; no runs or RBI.",
-      "sources": []
+      "summary": "Mets extend their skid to 11 games in excruciating fashion, falling 2-1 in 10 innings after Devin Williams blew a 9th-inning save. Bichette goes 0-4 in what has been a rough April for the New York offense.",
+      "sources": [
+        {
+          "title": "Mets extend losing streak to 11 in excruciating fashion",
+          "url": "https://sports.yahoo.com/mlb/article/mets-extend-losing-streak-to-11-in-excruciating-fashion-with-blown-shutout-by-devin-williams-loss-to-cubs-in-extras-222245549.html"
+        }
+      ]
     },
     {
       "name": "Francisco Lindor",
       "team": "NYM",
       "position": "SS",
-      "summary": "Solo home run and R in 2-for-4 performance. Trending better after slow start — .310 avg in last 7 games. Hamate recovery progressing well.",
-      "sources": []
+      "summary": "Lindor continues a baffling early-season slump at .175/.287 with just 1 HR and 2 RBI through 80 at-bats. Manager Mendoza has moved him to the bottom of the lineup as the Mets' skid hits 11. No clear injury explanation.",
+      "sources": [
+        {
+          "title": "Ken Rosenthal not finding answers on Francisco Lindor's bizarre start",
+          "url": "https://clutchpoints.com/mlb/new-york-mets/mets-news-ken-rosenthal-not-finding-answers-francisco-lindor-bizarre-start"
+        }
+      ]
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
-      "summary": "1-for-3 with a run scored in CHC win. Steady contributor.",
-      "sources": []
+      "summary": "Cubs complete a sweep of the Mets with a 2-1 walk-off in 10 innings. PCA was placed at second base as the automatic runner, advanced to third on a wild pitch, and scored the winning run on Nico Hoerner's sacrifice fly.",
+      "sources": [
+        {
+          "title": "Cubs finish sweep of reeling Mets with late rally",
+          "url": "https://chicago.suntimes.com/cubs/2026/04/19/cubs-finish-sweep-of-reeling-mets-with-late-rally"
+        }
+      ]
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
-      "summary": "0-for-3 at the plate but made a highlight-reel HR-robbing catch in the outfield.",
-      "sources": []
+      "summary": "Padres edge the Angels 2-1 in a pitching duel as Mason Miller closed a combined two-hitter. Merrill goes 0-3 on the day but has 19 hits, 3 HR, and 13 RBI on the 2026 season so far.",
+      "sources": [
+        {
+          "title": "Padres 2-1 Angels (Apr 19, 2026) — ESPN",
+          "url": "https://www.espn.com/mlb/game/_/gameId/401815013/padres-angels"
+        }
+      ]
     },
     {
       "name": "Teoscar Hernández",
       "team": "LAD",
       "position": "OF",
-      "summary": "Day off vs Rockies. Ryan Ward made his MLB debut in Teoscar's place. Dodgers lost 9-6 to COL with Roki Sasaki starting.",
-      "sources": []
+      "summary": "Hernández was given a planned rest day as the Dodgers fell 9-6 to the Rockies at Coors Field. He has been one of LA's hottest hitters, slashing .353 with 3 HR and a 1.042 OPS through 49 at-bats.",
+      "sources": [
+        {
+          "title": "Dodgers Lineup vs Rockies: Teoscar Hernandez Out, Ryan Ward Making MLB Debut",
+          "url": "https://www.si.com/mlb/dodgers/onsi/dodgers-lineup-vs-rockies-teoscar-hernandez-out-ryan-ward-making-mlb-debut"
+        }
+      ]
     },
     {
       "name": "Giancarlo Stanton",
       "team": "NYY",
       "position": "DH",
-      "summary": "Scheduled rest day; Ben Rice started at DH. Regular maintenance day off for NYY.",
-      "sources": []
+      "summary": "Yankees blank the Royals 7-0 to complete a series sweep, with Aaron Judge hitting his MLB-best 9th homer, Ben Rice going deep, and Trent Grisham crushing a 3-run shot. The Yankees have now won 10 straight regular-season games over Kansas City.",
+      "sources": [
+        {
+          "title": "Aaron Judge, Ben Rice continue HR barrage, Yankees blank Royals",
+          "url": "https://www.953thescore.com/2026/04/19/aaron-judge-ben-rice-continue-hr-barrage-yankees-blank-royals/"
+        }
+      ]
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
-      "summary": "Clean inning (1.0 IP, 0 ER, 1K) in hold situation. No save opportunity. Has 1 SV, 0 W on the season.",
-      "sources": []
+      "summary": "Williams blew a 9th-inning shutout save as Michael Conforto's pinch-hit RBI double tied the game at 1-1, then Nico Hoerner hit a walk-off sacrifice fly off Craig Kimbrel in the 10th. Williams now has a 7.11 ERA in 7 appearances with just 1 save.",
+      "sources": [
+        {
+          "title": "Devin Williams blows save as Mets lose 11th straight",
+          "url": "https://sny.tv/articles/mets-cubs-recap-david-peterson-devin-williams"
+        }
+      ]
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
-      "summary": "Continues recovery from venous thoracic outlet syndrome. Target return: April 24-26 home series vs Atlanta. Has not pitched this season (0.0 IP).",
-      "sources": []
+      "summary": "Wheeler made his 5th rehab start for Double-A Reading, allowing 4 ER in 4 innings with his fastball sitting in the low 90s and surrendering 2 homers. Despite the rough outing, the Phillies still expect him to rejoin the rotation around April 24-26 in Atlanta.",
+      "sources": [
+        {
+          "title": "Zack Wheeler not concerned about decreased velocity before rejoining Phillies",
+          "url": "https://www.inquirer.com/phillies/zack-wheeler-rehab-start-reading-decreased-fastball-velocity-20260419.html"
+        }
+      ]
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "Rough outing: 4.1 IP, 7 ER, 8 BB — serious control issues. Season ERA now 14.00. IP/G = 3.0 means season RSAR = 0 (below 3.5 IP/G minimum).",
-      "sources": []
+      "summary": "Ragans had the worst start of his career, issuing a career-high 8 walks and allowing 7 ER in just 4.1 IP as the Yankees swept the Royals 7-0. He falls to 0-4 on the year with his season ERA climbing to 6.0 after a disastrous performance in the Bronx.",
+      "sources": [
+        {
+          "title": "Yankees sweep Royals — Weathers, Judge lead the way",
+          "url": "https://www.pinstripealley.com/yankees-scores-standings/184391/yankees-mlb-game-recaps-royals-weathers-judge-rice-ragans-grisham-caballero"
+        }
+      ]
     },
     {
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
-      "summary": "Off day; last pitched Thursday April 16. On normal rotation schedule.",
-      "sources": []
+      "summary": "Burns was off today with Brady Singer starting as the Reds beat the Twins 7-4 on a TJ Friedl go-ahead double. Burns has been one of the most dominant starters in baseball early in 2026.",
+      "sources": [
+        {
+          "title": "Reds 7-4 Twins (Apr 19, 2026) Game Recap — ESPN",
+          "url": "https://www.espn.com/mlb/recap/_/gameId/401815008"
+        }
+      ]
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
-      "summary": "Pitched April 18 (day before report date); off April 19.",
-      "sources": []
+      "summary": "Eovaldi was off today as MacKenzie Gore started for the Rangers in a 5-2 loss to the Mariners with Bryan Woo delivering 7 stellar innings. Eovaldi recently rebounded with a 7-inning shutout vs. Oakland to improve to 2-2 on the year.",
+      "sources": [
+        {
+          "title": "Nathan Eovaldi fires seven scoreless innings for Rangers",
+          "url": "https://www.mlb.com/news/nathan-eovaldi-fires-seven-scoreless-innings-for-rangers"
+        }
+      ]
     },
     {
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
-      "summary": "Started April 18 vs Rockies, took the loss 4-3. Off April 19.",
-      "sources": []
+      "summary": "Sheehan started on April 18 (5 IP, 2 ER) as the Rockies rallied for a 4-3 win, then the Dodgers fell again April 19, 9-6, with a different starter. Sheehan carries a 6.43 ERA through 3 starts and figures to go again around April 23.",
+      "sources": [
+        {
+          "title": "Late Rallies Sputter, Leaving Dodgers One Run Short in Loss",
+          "url": "https://dodgersbeat.com/dodgers-vs-rockies-recap-tucker-rushing-emmet-sheehan/"
+        }
+      ]
     },
     {
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
-      "summary": "Quality start: 6.0 IP, 2 ER, 6K despite the loss. ERA improved from 5.14 to 4.50. Solid performance.",
-      "sources": []
+      "summary": "Detmers was superb with 8 strikeouts over 6 innings but took the hard-luck loss as the Angels fell 2-1 to the Padres in a Mason Miller combined two-hitter. His season ERA is now 3.45 — among the best in the AL West.",
+      "sources": [
+        {
+          "title": "Reid Detmers against the Padres | 04/19/2026",
+          "url": "https://www.mlb.com/angels/video/reid-detmers-against-the-padres"
+        }
+      ]
     }
   ],
   "injuries": [
@@ -120,19 +200,13 @@
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
-      "status": "15-day IL",
-      "previous_status": "",
-      "note": "Venous thoracic outlet syndrome; placed on IL April 8; return target April 24-26 home series vs Atlanta Braves. 0.0 IP this season.",
-      "source": null
-    },
-    {
-      "name": "Francisco Lindor",
-      "team": "NYM",
-      "position": "SS",
-      "status": "Active / Monitor",
-      "previous_status": "",
-      "note": "Hamate bone surgery February 2026; playing through recovery; power limited early (.132 AVG, 0 HR in first 38 AB) but trending better (.310 last 7G, HR today).",
-      "source": null
+      "status": "15-day IL (TOS surgery, rehab)",
+      "previous_status": "15-day IL (TOS surgery)",
+      "note": "5th rehab start for AA Reading Apr 19: 4 IP, 4 ER, 2 HR, velo in low-90s. Expected MLB return Apr 24-26 in Atlanta.",
+      "source": {
+        "title": "Zack Wheeler not concerned about decreased velocity before rejoining Phillies",
+        "url": "https://www.inquirer.com/phillies/zack-wheeler-rehab-start-reading-decreased-fastball-velocity-20260419.html"
+      }
     }
   ]
 }

@@ -1,21 +1,21 @@
 {
   "date": "2026-04-19",
-  "generated_at": "2026-04-20T04:30:00Z",
+  "generated_at": "2026-04-20T08:30:00Z",
   "totals": {
     "hitters": {
-      "AB": 25,
-      "H": 7,
+      "AB": 28,
+      "H": 3,
       "R": 3,
-      "HR": 2,
-      "RBI": 5,
+      "HR": 0,
+      "RBI": 1,
       "SB": 0,
-      "points": 10.0
+      "points": 4.0
     },
     "pitchers": {
       "IP": 11.1,
-      "H": 0,
-      "ER": 9,
-      "K": 13,
+      "H": 9,
+      "ER": 10,
+      "K": 15,
       "BB": 10,
       "W": 0,
       "SV": 0,
@@ -28,176 +28,184 @@
       "team": "SEA",
       "position": "C",
       "type": "hitter",
-      "opponent": "TEX",
+      "opponent": "vs TEX",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
         "H": 1,
-        "R": 1,
-        "HR": 1,
-        "RBI": 4,
+        "AB": 3,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
         "SB": 0
       },
-      "points": 6.0,
-      "summary": "1-for-4, grand slam (4 RBI), R scored — SEA 5, TEX 2"
+      "points": 0.0,
+      "summary": "1-3; Mariners beat Rangers 5-2 behind Bryan Woo's 7 strong innings"
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "vs ATL",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
-        "H": 0,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 0.0,
-      "summary": "0-for-3, no scoring plays"
-    },
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "type": "hitter",
-      "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 2,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 0.0,
-      "summary": "2-for-4 (2 singles), SFG shut out 3-0"
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "type": "hitter",
-      "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
         "H": 1,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 0.0,
-      "summary": "1-for-4, no R/HR/RBI/SB"
-    },
-    {
-      "name": "Francisco Lindor",
-      "team": "NYM",
-      "position": "SS",
-      "type": "hitter",
-      "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 2,
-        "R": 1,
-        "HR": 1,
-        "RBI": 1,
-        "SB": 0
-      },
-      "points": 3.0,
-      "summary": "2-for-4, solo HR, R, RBI"
-    },
-    {
-      "name": "Pete Crow-Armstrong",
-      "team": "CHC",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
         "AB": 3,
-        "H": 1,
         "R": 1,
         "HR": 0,
         "RBI": 0,
         "SB": 0
       },
       "points": 1.0,
-      "summary": "1-for-3, R scored in CHC win"
+      "summary": "1-3, 1R; Phillies swept by Braves 4-2 on Sunday Night Baseball"
     },
     {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "vs WSH",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
         "H": 0,
+        "AB": 4,
         "R": 0,
         "HR": 0,
         "RBI": 0,
         "SB": 0
       },
       "points": 0.0,
-      "summary": "0-for-3; HR-robbing outfield catch"
+      "summary": "0-4; Giants blanked 3-0, first hitless game at Nationals Park"
+    },
+    {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "type": "hitter",
+      "opponent": "@ CHC",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 0.0,
+      "summary": "0-4; Mets extend losing streak to 11 in 2-1 extra-inning loss to Cubs"
+    },
+    {
+      "name": "Francisco Lindor",
+      "team": "NYM",
+      "position": "SS",
+      "type": "hitter",
+      "opponent": "@ CHC",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 0.0,
+      "summary": "0-4, 1K; Lindor batting .175, moved to bottom of order"
+    },
+    {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "vs NYM",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 0,
+        "AB": 4,
+        "R": 1,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 1.0,
+      "summary": "0-4, 1R (scored as automatic runner in 10th on Hoerner walk-off sac fly)"
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "@ LAA",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 0,
+        "AB": 3,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 0.0,
+      "summary": "0-3; Padres win 2-1 with Mason Miller combined two-hitter"
     },
     {
       "name": "Teoscar Hernández",
       "team": "LAD",
       "position": "OF",
       "type": "hitter",
-      "opponent": "COL",
+      "opponent": null,
       "dnp": true,
-      "dnp_reason": null,
+      "dnp_reason": "Rest day",
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — rest day vs COL; Ryan Ward made MLB debut"
+      "summary": "Rest day — Dodgers fall 9-6 to Rockies"
     },
     {
       "name": "Giancarlo Stanton",
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
+      "opponent": "vs KCR",
+      "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 0.0,
-      "summary": "DNP — scheduled rest day; Ben Rice at DH"
+      "stats": {
+        "H": 1,
+        "AB": 3,
+        "R": 1,
+        "HR": 0,
+        "RBI": 1,
+        "SB": 0
+      },
+      "points": 2.0,
+      "summary": "1-3, 1R, 1 RBI; Yankees blank Royals 7-0 to complete sweep"
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": null,
+      "opponent": "@ CHC",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
         "IP": 1.0,
-        "ER": 0,
+        "H": 1,
+        "ER": 1,
         "K": 1,
         "BB": 0,
         "W": 0,
         "SV": 0
       },
       "points": 0.0,
-      "summary": "1.0 IP, 0 ER, 1K — hold, no W/SV"
+      "summary": "1.0 IP, 1H, 1 ER — blown save; Conforto RBI double ties it in 9th, Mets lose in 10"
     },
     {
       "name": "Zack Wheeler",
@@ -206,29 +214,29 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": null,
+      "dnp_reason": "15-day IL (blood clot)",
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — 15-day IL (thoracic outlet syndrome)"
+      "summary": "DNP — 15-day IL; 5th rehab start for AA Reading: 4 IP, 4 ER, 2 HR, velo in low 90s"
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
+      "opponent": "@ NYY",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
         "IP": 4.1,
+        "H": 4,
         "ER": 7,
         "K": 6,
         "BB": 8,
-        "W": 0,
-        "L": 1
+        "W": 0
       },
       "points": -4.57,
-      "summary": "L, 4.1 IP, 7 ER, 6K, 8BB — RSAR -4.57 (IP/G=3.0 penalty: season RSAR=0)"
+      "summary": "4.1 IP, 7 ER, career-high 8 BB; career-worst outing, falls to 0-4"
     },
     {
       "name": "Chase Burns",
@@ -240,7 +248,7 @@
       "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — rotation off day (last pitched Thu Apr 16)"
+      "summary": "DNP — off rotation; Brady Singer started in Reds' 7-4 win over Twins"
     },
     {
       "name": "Nathan Eovaldi",
@@ -252,7 +260,7 @@
       "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — started Apr 18"
+      "summary": "DNP — off rotation; MacKenzie Gore started in Rangers' 5-2 loss to Mariners"
     },
     {
       "name": "Emmet Sheehan",
@@ -264,26 +272,26 @@
       "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — started Apr 18 (L, 4-3 vs COL)"
+      "summary": "DNP — started April 18 (5 IP, 2 ER) in Rockies' 4-3 win"
     },
     {
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
+      "opponent": "vs SDP",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
         "IP": 6.0,
+        "H": 4,
         "ER": 2,
-        "K": 6,
+        "K": 8,
         "BB": 2,
-        "W": 0,
-        "L": 1
+        "W": 0
       },
       "points": 1.36,
-      "summary": "L, 6.0 IP, 2 ER, 6K, 2BB — RSAR +1.36"
+      "summary": "6.0 IP, 8K, 2 ER; dominant but Angels fall 2-1 to Padres"
     }
   ]
 }
