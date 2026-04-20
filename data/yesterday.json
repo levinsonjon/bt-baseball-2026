@@ -1,17 +1,36 @@
 {
   "date": "2026-04-19",
   "generated_at": "2026-04-20T04:30:00Z",
-  "team_points": 6.79,
-  "hitter_points": 10.0,
-  "pitcher_points": -3.21,
+  "totals": {
+    "hitters": {
+      "AB": 25,
+      "H": 7,
+      "R": 3,
+      "HR": 2,
+      "RBI": 5,
+      "SB": 0,
+      "points": 10.0
+    },
+    "pitchers": {
+      "IP": 11.1,
+      "H": 0,
+      "ER": 9,
+      "K": 13,
+      "BB": 10,
+      "W": 0,
+      "SV": 0,
+      "points": -3.21
+    }
+  },
   "players": [
     {
       "name": "Cal Raleigh",
-      "position": "C",
       "team": "SEA",
-      "player_type": "hitter",
-      "dnp": false,
+      "position": "C",
+      "type": "hitter",
       "opponent": "TEX",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {
         "AB": 4,
         "H": 1,
@@ -20,16 +39,17 @@
         "RBI": 4,
         "SB": 0
       },
-      "fantasy_points": 6.0,
+      "points": 6.0,
       "summary": "1-for-4, grand slam (4 RBI), R scored — SEA 5, TEX 2"
     },
     {
       "name": "Bryce Harper",
-      "position": "1B",
       "team": "PHI",
-      "player_type": "hitter",
+      "position": "1B",
+      "type": "hitter",
+      "opponent": null,
       "dnp": false,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {
         "AB": 3,
         "H": 0,
@@ -38,16 +58,17 @@
         "RBI": 0,
         "SB": 0
       },
-      "fantasy_points": 0.0,
+      "points": 0.0,
       "summary": "0-for-3, no scoring plays"
     },
     {
       "name": "Luis Arraez",
-      "position": "2B",
       "team": "SFG",
-      "player_type": "hitter",
+      "position": "2B",
+      "type": "hitter",
+      "opponent": null,
       "dnp": false,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {
         "AB": 4,
         "H": 2,
@@ -56,16 +77,17 @@
         "RBI": 0,
         "SB": 0
       },
-      "fantasy_points": 0.0,
+      "points": 0.0,
       "summary": "2-for-4 (2 singles), SFG shut out 3-0"
     },
     {
       "name": "Bo Bichette",
-      "position": "3B",
       "team": "NYM",
-      "player_type": "hitter",
+      "position": "3B",
+      "type": "hitter",
+      "opponent": null,
       "dnp": false,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {
         "AB": 4,
         "H": 1,
@@ -74,16 +96,17 @@
         "RBI": 0,
         "SB": 0
       },
-      "fantasy_points": 0.0,
+      "points": 0.0,
       "summary": "1-for-4, no R/HR/RBI/SB"
     },
     {
       "name": "Francisco Lindor",
-      "position": "SS",
       "team": "NYM",
-      "player_type": "hitter",
+      "position": "SS",
+      "type": "hitter",
+      "opponent": null,
       "dnp": false,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {
         "AB": 4,
         "H": 2,
@@ -92,16 +115,17 @@
         "RBI": 1,
         "SB": 0
       },
-      "fantasy_points": 3.0,
+      "points": 3.0,
       "summary": "2-for-4, solo HR, R, RBI"
     },
     {
       "name": "Pete Crow-Armstrong",
-      "position": "OF",
       "team": "CHC",
-      "player_type": "hitter",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": null,
       "dnp": false,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {
         "AB": 3,
         "H": 1,
@@ -110,16 +134,17 @@
         "RBI": 0,
         "SB": 0
       },
-      "fantasy_points": 1.0,
+      "points": 1.0,
       "summary": "1-for-3, R scored in CHC win"
     },
     {
       "name": "Jackson Merrill",
-      "position": "OF",
       "team": "SDP",
-      "player_type": "hitter",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": null,
       "dnp": false,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {
         "AB": 3,
         "H": 0,
@@ -128,38 +153,41 @@
         "RBI": 0,
         "SB": 0
       },
-      "fantasy_points": 0.0,
+      "points": 0.0,
       "summary": "0-for-3; HR-robbing outfield catch"
     },
     {
       "name": "Teoscar Hernández",
-      "position": "OF",
       "team": "LAD",
-      "player_type": "hitter",
-      "dnp": true,
+      "position": "OF",
+      "type": "hitter",
       "opponent": "COL",
+      "dnp": true,
+      "dnp_reason": null,
       "stats": {},
-      "fantasy_points": 0.0,
+      "points": 0.0,
       "summary": "DNP — rest day vs COL; Ryan Ward made MLB debut"
     },
     {
       "name": "Giancarlo Stanton",
-      "position": "DH",
       "team": "NYY",
-      "player_type": "hitter",
+      "position": "DH",
+      "type": "hitter",
+      "opponent": null,
       "dnp": true,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {},
-      "fantasy_points": 0.0,
+      "points": 0.0,
       "summary": "DNP — scheduled rest day; Ben Rice at DH"
     },
     {
       "name": "Devin Williams",
-      "position": "RP",
       "team": "NYM",
-      "player_type": "rp",
+      "position": "RP",
+      "type": "rp",
+      "opponent": null,
       "dnp": false,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {
         "IP": 1.0,
         "ER": 0,
@@ -168,27 +196,29 @@
         "W": 0,
         "SV": 0
       },
-      "fantasy_points": 0.0,
+      "points": 0.0,
       "summary": "1.0 IP, 0 ER, 1K — hold, no W/SV"
     },
     {
       "name": "Zack Wheeler",
-      "position": "SP",
       "team": "PHI",
-      "player_type": "sp",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
       "dnp": true,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {},
-      "fantasy_points": 0.0,
+      "points": 0.0,
       "summary": "DNP — 15-day IL (thoracic outlet syndrome)"
     },
     {
       "name": "Cole Ragans",
-      "position": "SP",
       "team": "KCR",
-      "player_type": "sp",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
       "dnp": false,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {
         "IP": 4.1,
         "ER": 7,
@@ -197,49 +227,53 @@
         "W": 0,
         "L": 1
       },
-      "fantasy_points": -4.57,
+      "points": -4.57,
       "summary": "L, 4.1 IP, 7 ER, 6K, 8BB — RSAR -4.57 (IP/G=3.0 penalty: season RSAR=0)"
     },
     {
       "name": "Chase Burns",
-      "position": "SP",
       "team": "CIN",
-      "player_type": "sp",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
       "dnp": true,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {},
-      "fantasy_points": 0.0,
+      "points": 0.0,
       "summary": "DNP — rotation off day (last pitched Thu Apr 16)"
     },
     {
       "name": "Nathan Eovaldi",
-      "position": "SP",
       "team": "TEX",
-      "player_type": "sp",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
       "dnp": true,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {},
-      "fantasy_points": 0.0,
+      "points": 0.0,
       "summary": "DNP — started Apr 18"
     },
     {
       "name": "Emmet Sheehan",
-      "position": "SP",
       "team": "LAD",
-      "player_type": "sp",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
       "dnp": true,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {},
-      "fantasy_points": 0.0,
+      "points": 0.0,
       "summary": "DNP — started Apr 18 (L, 4-3 vs COL)"
     },
     {
       "name": "Reid Detmers",
-      "position": "SP",
       "team": "LAA",
-      "player_type": "sp",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
       "dnp": false,
-      "opponent": "",
+      "dnp_reason": null,
       "stats": {
         "IP": 6.0,
         "ER": 2,
@@ -248,7 +282,7 @@
         "W": 0,
         "L": 1
       },
-      "fantasy_points": 1.36,
+      "points": 1.36,
       "summary": "L, 6.0 IP, 2 ER, 6K, 2BB — RSAR +1.36"
     }
   ]

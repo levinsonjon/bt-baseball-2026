@@ -168,16 +168,153 @@ def extract_json_blocks(html: str) -> dict:
     return blocks
 
 
+def _load_roster_index() -> dict:
+    """Return {player_name: {team, position, type}} from data/my_team.json."""
+    my_team_path = DATA_DIR / "my_team.json"
+    if not my_team_path.exists():
+        return {}
+    with open(my_team_path) as f:
+        team = json.load(f)
+    out = {}
+    for p in team.get("players", []):
+        positions = p.get("positions") or [""]
+        out[p.get("name", "")] = {
+            "team": p.get("team", ""),
+            "position": positions[0] if positions else "",
+            "type": p.get("player_type", "hitter"),
+        }
+    return out
+
+
+def normalize_yesterday(data: dict, roster: dict) -> dict:
+    """Adapt remote agent's yesterday payload to the schema the site reads.
+
+    Handles common field-name drift from the agent:
+      - player_type → type, fantasy_points → points
+      - opponent "" → null
+      - team/position filled in from the roster if missing
+      - rebuild totals.{hitters,pitchers} from per-player stats
+    """
+    tot_hit = {"AB": 0, "H": 0, "R": 0, "HR": 0, "RBI": 0, "SB": 0, "points": 0.0}
+    tot_p = {"IP": 0.0, "H": 0, "ER": 0, "K": 0, "BB": 0, "W": 0, "SV": 0, "points": 0.0}
+    players_out = []
+
+    for p in data.get("players", []):
+        name = p.get("name", "")
+        r = roster.get(name, {})
+        ptype = p.get("type") or p.get("player_type") or r.get("type", "hitter")
+        pts = p.get("points")
+        if pts is None:
+            pts = p.get("fantasy_points", 0.0)
+        stats = p.get("stats") or {}
+        dnp = bool(p.get("dnp", False))
+        opp = p.get("opponent")
+        if opp == "" or opp is None:
+            opp = None
+
+        players_out.append({
+            "name": name,
+            "team": p.get("team") or r.get("team", ""),
+            "position": p.get("position") or r.get("position", ""),
+            "type": ptype,
+            "opponent": opp,
+            "dnp": dnp,
+            "dnp_reason": p.get("dnp_reason"),
+            "stats": stats,
+            "points": float(pts or 0),
+            "summary": p.get("summary", ""),
+        })
+
+        if not dnp:
+            try:
+                if ptype == "hitter":
+                    for k in ("AB", "H", "R", "HR", "RBI", "SB"):
+                        tot_hit[k] += int(stats.get(k, 0) or 0)
+                    tot_hit["points"] += float(pts or 0)
+                else:
+                    tot_p["IP"] += float(stats.get("IP", 0) or 0)
+                    for k in ("H", "ER", "K", "BB", "W", "SV"):
+                        tot_p[k] += int(stats.get(k, 0) or 0)
+                    tot_p["points"] += float(pts or 0)
+            except (TypeError, ValueError) as e:
+                log(f"WARN: totals skipped for {name}: {e}")
+
+    return {
+        "date": data.get("date", ""),
+        "generated_at": data.get("generated_at", ""),
+        "totals": {
+            "hitters": {**tot_hit, "points": round(tot_hit["points"], 2)},
+            "pitchers": {**tot_p, "IP": round(tot_p["IP"], 2), "points": round(tot_p["points"], 2)},
+        },
+        "players": players_out,
+    }
+
+
+def normalize_news(data: dict, roster: dict) -> dict:
+    """Adapt news payload: summary field, roster-backed team/position, preserved sources."""
+    players_out = []
+    for p in data.get("players", []):
+        name = p.get("name", "")
+        r = roster.get(name, {})
+        players_out.append({
+            "name": name,
+            "team": p.get("team") or r.get("team", ""),
+            "position": p.get("position") or r.get("position", ""),
+            "summary": p.get("summary") or p.get("news") or "",
+            "sources": p.get("sources") or [],
+        })
+
+    injuries_out = []
+    for inj in data.get("injuries", []):
+        name = inj.get("name", "")
+        r = roster.get(name, {})
+        injuries_out.append({
+            "name": name,
+            "team": inj.get("team") or r.get("team", ""),
+            "position": inj.get("position") or r.get("position", ""),
+            "status": inj.get("status", ""),
+            "previous_status": inj.get("previous_status", ""),
+            "note": inj.get("note", ""),
+            "source": inj.get("source"),
+        })
+
+    generated_at = data.get("generated_at") or ""
+    if not generated_at and data.get("date"):
+        generated_at = data["date"] + "T00:00:00Z"
+
+    return {
+        "generated_at": generated_at,
+        "window_hours": data.get("window_hours", 24),
+        "players": players_out,
+        "injuries": injuries_out,
+    }
+
+
+# season_stats.json needs no normalization — its keys already match the site schema.
+_NORMALIZERS = {
+    "yesterday.json": normalize_yesterday,
+    "news.json": normalize_news,
+}
+
+
 def write_data_files(blocks: dict) -> list[Path]:
-    """Write each known block to data/<name>.json. Returns the paths written."""
+    """Write each known block to data/<name>.json, normalizing where needed."""
+    roster = _load_roster_index()
     written = []
     for block_id, filename in EMBED_BLOCKS.items():
         if block_id not in blocks:
             log(f"WARN: no '{block_id}' block in draft — skipping {filename}")
             continue
+        data = blocks[block_id]
+        normalizer = _NORMALIZERS.get(filename)
+        if normalizer:
+            try:
+                data = normalizer(data, roster)
+            except Exception as e:
+                log(f"WARN: normalize {filename} failed ({e}); writing raw payload")
         path = DATA_DIR / filename
         with open(path, "w") as f:
-            json.dump(blocks[block_id], f, indent=2, ensure_ascii=False)
+            json.dump(data, f, indent=2, ensure_ascii=False)
             f.write("\n")
         log(f"Wrote {path.relative_to(REPO_ROOT)}")
         written.append(path)

@@ -1,84 +1,117 @@
 {
-  "date": "2026-04-19",
+  "generated_at": "2026-04-19T00:00:00Z",
+  "window_hours": 24,
   "players": [
     {
       "name": "Cal Raleigh",
-      "news": "Grand slam highlights Mariners' 5-2 win over Rangers. Bryan Woo dominated on the mound.",
+      "team": "SEA",
+      "position": "C",
+      "summary": "Grand slam highlights Mariners' 5-2 win over Rangers. Bryan Woo dominated on the mound.",
       "sources": []
     },
     {
       "name": "Bryce Harper",
-      "news": "Quiet night, 0-for-3. No scoring plays.",
+      "team": "PHI",
+      "position": "1B",
+      "summary": "Quiet night, 0-for-3. No scoring plays.",
       "sources": []
     },
     {
       "name": "Luis Arraez",
-      "news": "2-for-4 (2 singles) but Giants were shut out 3-0. Making contact but no run support.",
+      "team": "SFG",
+      "position": "2B",
+      "summary": "2-for-4 (2 singles) but Giants were shut out 3-0. Making contact but no run support.",
       "sources": []
     },
     {
       "name": "Bo Bichette",
-      "news": "1-for-4 in NYM game; no runs or RBI.",
+      "team": "NYM",
+      "position": "3B",
+      "summary": "1-for-4 in NYM game; no runs or RBI.",
       "sources": []
     },
     {
       "name": "Francisco Lindor",
-      "news": "Solo home run and R in 2-for-4 performance. Trending better after slow start — .310 avg in last 7 games. Hamate recovery progressing well.",
+      "team": "NYM",
+      "position": "SS",
+      "summary": "Solo home run and R in 2-for-4 performance. Trending better after slow start — .310 avg in last 7 games. Hamate recovery progressing well.",
       "sources": []
     },
     {
       "name": "Pete Crow-Armstrong",
-      "news": "1-for-3 with a run scored in CHC win. Steady contributor.",
+      "team": "CHC",
+      "position": "OF",
+      "summary": "1-for-3 with a run scored in CHC win. Steady contributor.",
       "sources": []
     },
     {
       "name": "Jackson Merrill",
-      "news": "0-for-3 at the plate but made a highlight-reel HR-robbing catch in the outfield.",
+      "team": "SDP",
+      "position": "OF",
+      "summary": "0-for-3 at the plate but made a highlight-reel HR-robbing catch in the outfield.",
       "sources": []
     },
     {
       "name": "Teoscar Hernández",
-      "news": "Day off vs Rockies. Ryan Ward made his MLB debut in Teoscar's place. Dodgers lost 9-6 to COL with Roki Sasaki starting.",
+      "team": "LAD",
+      "position": "OF",
+      "summary": "Day off vs Rockies. Ryan Ward made his MLB debut in Teoscar's place. Dodgers lost 9-6 to COL with Roki Sasaki starting.",
       "sources": []
     },
     {
       "name": "Giancarlo Stanton",
-      "news": "Scheduled rest day; Ben Rice started at DH. Regular maintenance day off for NYY.",
+      "team": "NYY",
+      "position": "DH",
+      "summary": "Scheduled rest day; Ben Rice started at DH. Regular maintenance day off for NYY.",
       "sources": []
     },
     {
       "name": "Devin Williams",
-      "news": "Clean inning (1.0 IP, 0 ER, 1K) in hold situation. No save opportunity. Has 1 SV, 0 W on the season.",
+      "team": "NYM",
+      "position": "RP",
+      "summary": "Clean inning (1.0 IP, 0 ER, 1K) in hold situation. No save opportunity. Has 1 SV, 0 W on the season.",
       "sources": []
     },
     {
       "name": "Zack Wheeler",
-      "news": "Continues recovery from venous thoracic outlet syndrome. Target return: April 24-26 home series vs Atlanta. Has not pitched this season (0.0 IP).",
+      "team": "PHI",
+      "position": "SP",
+      "summary": "Continues recovery from venous thoracic outlet syndrome. Target return: April 24-26 home series vs Atlanta. Has not pitched this season (0.0 IP).",
       "sources": []
     },
     {
       "name": "Cole Ragans",
-      "news": "Rough outing: 4.1 IP, 7 ER, 8 BB — serious control issues. Season ERA now 14.00. IP/G = 3.0 means season RSAR = 0 (below 3.5 IP/G minimum).",
+      "team": "KCR",
+      "position": "SP",
+      "summary": "Rough outing: 4.1 IP, 7 ER, 8 BB — serious control issues. Season ERA now 14.00. IP/G = 3.0 means season RSAR = 0 (below 3.5 IP/G minimum).",
       "sources": []
     },
     {
       "name": "Chase Burns",
-      "news": "Off day; last pitched Thursday April 16. On normal rotation schedule.",
+      "team": "CIN",
+      "position": "SP",
+      "summary": "Off day; last pitched Thursday April 16. On normal rotation schedule.",
       "sources": []
     },
     {
       "name": "Nathan Eovaldi",
-      "news": "Pitched April 18 (day before report date); off April 19.",
+      "team": "TEX",
+      "position": "SP",
+      "summary": "Pitched April 18 (day before report date); off April 19.",
       "sources": []
     },
     {
       "name": "Emmet Sheehan",
-      "news": "Started April 18 vs Rockies, took the loss 4-3. Off April 19.",
+      "team": "LAD",
+      "position": "SP",
+      "summary": "Started April 18 vs Rockies, took the loss 4-3. Off April 19.",
       "sources": []
     },
     {
       "name": "Reid Detmers",
-      "news": "Quality start: 6.0 IP, 2 ER, 6K despite the loss. ERA improved from 5.14 to 4.50. Solid performance.",
+      "team": "LAA",
+      "position": "SP",
+      "summary": "Quality start: 6.0 IP, 2 ER, 6K despite the loss. ERA improved from 5.14 to 4.50. Solid performance.",
       "sources": []
     }
   ],
@@ -86,16 +119,20 @@
     {
       "name": "Zack Wheeler",
       "team": "PHI",
+      "position": "SP",
       "status": "15-day IL",
-      "flag": true,
-      "note": "Venous thoracic outlet syndrome; placed on IL April 8; return target April 24-26 home series vs Atlanta Braves. 0.0 IP this season."
+      "previous_status": "",
+      "note": "Venous thoracic outlet syndrome; placed on IL April 8; return target April 24-26 home series vs Atlanta Braves. 0.0 IP this season.",
+      "source": null
     },
     {
       "name": "Francisco Lindor",
       "team": "NYM",
+      "position": "SS",
       "status": "Active / Monitor",
-      "flag": true,
-      "note": "Hamate bone surgery February 2026; playing through recovery; power limited early (.132 AVG, 0 HR in first 38 AB) but trending better (.310 last 7G, HR today)."
+      "previous_status": "",
+      "note": "Hamate bone surgery February 2026; playing through recovery; power limited early (.132 AVG, 0 HR in first 38 AB) but trending better (.310 last 7G, HR today).",
+      "source": null
     }
   ]
 }
