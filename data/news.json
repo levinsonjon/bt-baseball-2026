@@ -1,138 +1,236 @@
 {
-  "generated_at": "2026-04-22T04:35:00",
+  "generated_at": "2026-04-21T09:30:00Z",
   "window_hours": 24,
   "players": [
     {
       "name": "Cal Raleigh",
       "team": "SEA",
       "position": "C",
-      "summary": "2-for-3 with a HR at OAK. Batting .178 with 4 HR — power is there, average lagging.",
-      "sources": []
+      "summary": "Hit his 3rd HR of the season but Mariners fell 6-4 to Oakland. ESPN raised early concerns about his plummeting exit velocity (91.3→83.3 mph) and 33.3% K rate through 55 PAs.",
+      "sources": [
+        {
+          "title": "Cal Raleigh's solo home run (3)",
+          "url": "https://sports.yahoo.com/videos/cal-raleighs-solo-home-run-015117468.html"
+        },
+        {
+          "title": "Breaking down Cal Raleigh's 2026 struggles",
+          "url": "https://www.espn.com/mlb/story/_/id/48429223/mlb-2026-seattle-mariners-cal-raleigh-breakdown-struggles"
+        }
+      ]
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "1-for-4 with a HR in 7-4 road loss at CHC. Batting .258 with 4 HR — quietly trending up.",
-      "sources": []
+      "summary": "Harper has been 'absolutely raking' since April 1 — 1.188 OPS in April, 4 HRs, a triple. Phillies lost 5-1 to the Cubs despite his hot hitting.",
+      "sources": [
+        {
+          "title": "Harper is absolutely raking — Phillies are wasting it",
+          "url": "https://breakingac.com/news/2026/apr/18/philadelphia-phillies-news-bryce-harper-stats-elite-2026/"
+        }
+      ]
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
-      "summary": "Placed on 7-day concussion IL April 21 after head collision with Christian Walker (HOU) sprinting out a sac bunt on April 20. Return timeline TBD.",
-      "sources": []
+      "summary": "Hitting .304 through 15 Giants games with 2 SB and 6 RBI. Giants had an off day April 20 before starting a series vs the Dodgers on April 21.",
+      "sources": [
+        {
+          "title": "Luis Arraez 2026 stats — MLB.com",
+          "url": "https://www.mlb.com/player/luis-arraez-650333"
+        }
+      ]
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
-      "summary": "1-for-4, no extra-base hits. Batting .210 — off to a slow start in first NYM season.",
-      "sources": []
+      "summary": "Mets extended their losing streak to 11 games on April 19. Bichette is hitting .217 through 22 games on a struggling team. Off day April 20.",
+      "sources": [
+        {
+          "title": "Bo Bichette Mets Stats 2026 — StatMuse",
+          "url": "https://www.statmuse.com/mlb/ask/bo-bichette-mets-stats-2026"
+        }
+      ]
     },
     {
       "name": "Francisco Lindor",
       "team": "NYM",
       "position": "SS",
-      "summary": "1-for-3 with a 3-run HR vs MIN. Batting .181 but 2 HR and 5 RBI — finding his power stroke.",
-      "sources": []
+      "summary": "Slow start after February hamate surgery — hitting .200 through 20 games. Mets off April 20 following their 11-game losing streak.",
+      "sources": [
+        {
+          "title": "Mets' Lindor: Surprising injury update",
+          "url": "https://heavy.com/sports/mlb/new-york-mets/francisco-lindor-surprising-injury-update/"
+        }
+      ]
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
-      "summary": "2-for-4, 2 R, 1 RBI in CHC win. Batting .270 with team-high 14 R — elite speed and contact.",
-      "sources": []
+      "summary": "Cubs won their 6th straight 5-1. PCA bruised his right knee on a slide and is day-to-day; manager Craig Counsell hopes he returns Wednesday.",
+      "sources": [
+        {
+          "title": "Pete Crow-Armstrong's struggles becoming a problem for Cubs",
+          "url": "https://deadspin.com/pete-crow-armstrongs-struggles-are-becoming-a-problem-for-the-cubs/"
+        }
+      ]
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
-      "summary": "0-for-4 at COL. Batting .211 — slumping after strong April start. Still 3 HR, 13 RBI.",
-      "sources": []
+      "summary": "Won MLB's Play of the Week for his HR-robbing catch during April 14–20. Padres shut out the Tigers 3-0 on April 20 to open a new series.",
+      "sources": [
+        {
+          "title": "Jackson Merrill wins Play of the Week for HR robbery",
+          "url": "https://www.mlb.com/padres/video/jackson-merrill-wins-play-of-the-week-for-hr-robbery"
+        }
+      ]
     },
     {
-      "name": "Teoscar Hernandez",
+      "name": "Teoscar Hernández",
       "team": "LAD",
       "position": "OF",
-      "summary": "1-for-4 with a run at SFG. Batting .302 with 4 HR — best average on the roster.",
-      "sources": []
-    },
-    {
-      "name": "Giancarlo Stanton",
-      "team": "NYY",
-      "position": "DH",
-      "summary": "2-for-4, 2-run HR, 3 RBI at BOS. Batting .339 with 3 HR and 13 RBI — best YTD points on the team.",
-      "sources": []
+      "summary": "Hitting .306/.327/.531 with 3 HR and 11 RBI through 13 games; missed one Rockies game on rest but played April 20 in Dodgers' 12-3 win.",
+      "sources": [
+        {
+          "title": "Teoscar Hernandez And Dodgers Play Rockies On April 20",
+          "url": "https://www.fanduel.com/research/mlb/player-news/game-updates/teoscar-hernandez-and-dodgers-play-rockies-on-april-20"
+        }
+      ]
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
-      "summary": "Blown save vs MIN — 0 IP, 1 H, 2 BB, 2 ER. ERA now 9.95. Control issues early in 2026.",
-      "sources": []
-    },
-    {
-      "name": "Chase Burns",
-      "team": "CIN",
-      "position": "SP",
-      "summary": "5.2 IP, 5 H, 2 ER, 8 K, 2 BB — W at TB. ERA down to 1.62 in 3 GS. Historic start to 2026.",
-      "sources": []
+      "summary": "After five clean appearances to open 2026, had a rough outing amid the Mets' losing streak; ERA now 7.11 with 2 SVs. Mets off April 20.",
+      "sources": [
+        {
+          "title": "Mets fans learning the Devin Williams reality",
+          "url": "https://reviewingthebrew.com/mets-fans-quickly-learning-the-devin-williams-reality-that-brewers-and-yankees-fans-already-know-01kpf2wy1193"
+        }
+      ]
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
-      "summary": "Still on 15-day IL (thoracic outlet surgery Sept 2025). On track for Saturday April 25 debut vs ATL — limited to 6 IP/90 pitches.",
-      "sources": []
+      "summary": "On 15-day IL with thoracic outlet syndrome (surgery Sep 2025). Rehab start Apr 19 at Double-A Reading: 4 IP, 6 H, 4 ER, 4 K. Targeting late-April return vs Atlanta.",
+      "sources": [
+        {
+          "title": "Wheeler injury update after rough rehab outing",
+          "url": "https://heavy.com/sports/mlb/philadelphia-phillies/zack-wheeler-injury-update-rehab-outing/"
+        },
+        {
+          "title": "Wheeler targeting late-April return",
+          "url": "https://www.mlb.com/news/zack-wheeler-targeting-late-april-return-following-injury"
+        }
+      ]
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "Between starts. KCR beat BAL 6-5 on April 21. Ragans at 6.00 ERA, 18 BB in 21 IP — command is a concern.",
-      "sources": []
+      "summary": "Career-worst outing Apr 19 vs Yankees: 4.1 IP, 7 ER, career-high 8 BBs in 7-0 loss. Now 0-4, 6.00 ERA. Left thumb contusion (Apr 8 comebacker) was cleared.",
+      "sources": [
+        {
+          "title": "Cole Ragans reaches new low in loss to Yankees",
+          "url": "https://ca.sports.yahoo.com/news/cole-ragans-reaches-low-kansas-040434572.html"
+        },
+        {
+          "title": "Ragans thumb injury: expects to make next start",
+          "url": "https://www.rotowire.com/baseball/headlines/cole-ragans-injury-expects-to-make-next-start-996573"
+        }
+      ]
+    },
+    {
+      "name": "Chase Burns",
+      "team": "CIN",
+      "position": "SP",
+      "summary": "Emerging as one of 2026's best young starters: 1-1, 2.42 ERA, 22 K through 3 starts. Starts Tuesday Apr 21 vs Rays after Reds won 6-1 Monday.",
+      "sources": [
+        {
+          "title": "Reds' Chase Burns emerging as dominant pitcher in 2026",
+          "url": "https://nationaltoday.com/us/oh/cincinnati/news/2026/04/10/reds-chase-burns-emerging-as-dominant-pitcher-in-2026-mlb-season-1/"
+        }
+      ]
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
-      "summary": "Between starts. TEX lost to PIT. Eovaldi at 5.40 ERA in 4 GS — solid K rate (26 K) but ERA climbing.",
-      "sources": []
+      "summary": "After rough 0-2 start (11 ER in 8.2 IP), Eovaldi has stabilized — 2-3, 5.06 ERA. Pitched Apr 18 vs Seattle; next start ~Apr 23.",
+      "sources": [
+        {
+          "title": "Eovaldi 7 IP; Rangers beat Athletics 8-1",
+          "url": "https://www.washingtonpost.com/sports/mlb/2026/04/14/rangers-athletics-score-eovaldi-burger/aec243ca-37ba-11f1-90c4-9772c7fabc03_story.html"
+        }
+      ]
     },
     {
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
-      "summary": "Between starts. Yamamoto took the April 21 start vs SFG. Sheehan at 6.43 ERA in 3 GS, 14 IP.",
-      "sources": []
+      "summary": "2-0, 6.60 ERA through 3 starts; career 4-0 vs Colorado. Started Apr 18 at Coors (Rockies won 4-3). Next start ~Apr 23.",
+      "sources": [
+        {
+          "title": "Dodgers' Sheehan vies to continue mastery of Rockies",
+          "url": "https://yournews.com/2026/04/18/6812931/dodgers-emmet-sheehan-vies-to-continue-mastery-of-rockies/"
+        }
+      ]
     },
     {
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
-      "summary": "Started April 20 vs TOR (6 IP, 4 ER, 5 K). Season: 34.67 IP, 3.89 ERA, 6 GS. Next start likely April 25-26.",
-      "sources": []
+      "summary": "Took the loss vs Blue Jays Apr 20, Angels fall 5-2. Had been dominant last Tuesday vs Yankees (7 IP, 1 ER, 9 K). Now 1-2 on the season.",
+      "sources": [
+        {
+          "title": "Coming off gem, Reid Detmers leads Angels vs. Jays",
+          "url": "https://yournews.com/2026/04/20/6815202/coming-off-gem-reid-detmers-leads-angels-vs-jays/"
+        }
+      ]
+    },
+    {
+      "name": "Giancarlo Stanton",
+      "team": "NYY",
+      "position": "DH",
+      "summary": "Yankees off April 20; Stanton given rest ahead of Red Sox series. Through 20 games: .240 BA, 2 HR, 10 RBI. Shoulder management ongoing.",
+      "sources": [
+        {
+          "title": "Giancarlo Stanton update after removal from Yankees lineup",
+          "url": "https://www.yardbarker.com/mlb/articles/giancarlo_stanton_update_emerges_after_removal_from_yankees_lineup/s1_17615_43747055"
+        }
+      ]
     }
   ],
   "injuries": [
     {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "status": "7-day Concussion IL",
-      "previous_status": "",
-      "note": "Head collision with Christian Walker (HOU) on April 20 sprinting out a sacrifice bunt. Placed on 7-day concussion IL April 21. Return timeline TBD.",
-      "source": null
-    },
-    {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
-      "status": "15-day IL — returning Saturday",
-      "previous_status": "",
-      "note": "2026 debut set for Saturday April 25 vs Atlanta Braves, limited to 6 IP/90 pitches. Thoracic outlet surgery September 2025.",
-      "source": null
+      "status": "IL-15 (Thoracic Outlet Syndrome)",
+      "previous_status": "Healthy/Pre-season",
+      "note": "TOS decompression surgery Sep 23 2025. Rehab start Apr 19 at Reading: 4 IP, 6 H, 4 ER, 4 K. Target return: late April vs Atlanta (Apr 24-26).",
+      "source": {
+        "title": "Wheeler injury update after rough rehab outing",
+        "url": "https://heavy.com/sports/mlb/philadelphia-phillies/zack-wheeler-injury-update-rehab-outing/"
+      }
+    },
+    {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "position": "OF",
+      "status": "Day-to-day (bruised right knee)",
+      "previous_status": "Healthy",
+      "note": "Bruised right knee on a slide. Expected to miss Apr 21; manager Craig Counsell hopes he returns Wednesday Apr 22.",
+      "source": {
+        "title": "Pete Crow-Armstrong's struggles becoming a problem for Cubs",
+        "url": "https://deadspin.com/pete-crow-armstrongs-struggles-are-becoming-a-problem-for-the-cubs/"
+      }
     }
   ]
 }
