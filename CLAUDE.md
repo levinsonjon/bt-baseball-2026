@@ -68,11 +68,12 @@ Plists live in `~/Library/LaunchAgents/`. Manage with `launchctl load/unload`.
 
 ### Gmail OAuth
 
-Local scripts use credentials at `~/.config/personal-mcp/gmail/`. The GCP app (`personal-claude-mcp-486922`) is in Testing mode — tokens expire weekly. `update_health.py` sends a warning email when the token is about to expire.
+Local scripts use credentials at `~/.config/personal-mcp/gmail/`. The GCP app (`personal-claude-mcp-486922`) is in Testing mode — tokens expire weekly. `update_health.py` creates a macOS Reminder when the token is about to expire (previously emailed a warning, but email warnings are useless when the broken credential is the Gmail one).
 
 ### Known failure modes
 
 - **Gmail MCP connector disconnects** on claude.ai. Symptom: no drafts appear. Fix: re-authorize the connector at the trigger URL. Watch for read-only vs. full permissions on the OAuth consent screen — the connector needs draft-write scope.
+- **Gmail refresh token revoked (not just age-expired).** Google can invalidate the refresh token before its 7-day age TTL — e.g., if multiple clients race on refresh. Symptom: `send_email.log` shows `invalid_grant: Token has been expired or revoked.` and `data/*.json` stops updating even though remote drafts keep appearing. Fix: run the Gmail re-auth command (same as weekly token expiry). The Reminders warning fires on the next cron run after the failure.
 - **Schema drift from the agent.** Normalizer in `send_pending_email.py` covers common cases. If the agent invents a field we don't handle, the site gracefully degrades (falls back or shows empty); update the normalizer.
 - **Stream idle timeout** on Gmail MCP calls. Keep each draft body <30 KB. If the email HTML grows past that, split again.
 
