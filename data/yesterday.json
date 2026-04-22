@@ -1,25 +1,25 @@
 {
-  "date": "2026-04-20",
-  "generated_at": "2026-04-21T09:30:00Z",
+  "date": "2026-04-21",
+  "generated_at": "2026-04-22T04:35:00",
   "totals": {
     "hitters": {
-      "AB": 19,
-      "H": 7,
-      "R": 4,
-      "HR": 2,
-      "RBI": 5,
+      "AB": 0,
+      "H": 0,
+      "R": 0,
+      "HR": 0,
+      "RBI": 0,
       "SB": 0,
-      "points": 11.0
+      "points": 21.0
     },
     "pitchers": {
-      "IP": 5.0,
-      "H": 6,
-      "ER": 3,
-      "K": 7,
-      "BB": 2,
+      "IP": 0.0,
+      "H": 0,
+      "ER": 0,
+      "K": 0,
+      "BB": 0,
       "W": 0,
       "SV": 0,
-      "points": -0.2
+      "points": 1.18
     }
   },
   "players": [
@@ -28,38 +28,24 @@
       "team": "SEA",
       "position": "C",
       "type": "hitter",
-      "opponent": "vs OAK",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 1,
-        "HR": 1,
-        "RBI": 1,
-        "SB": 0
-      },
+      "stats": {},
       "points": 3.0,
-      "summary": "Solo HR (3rd of season) in 1st inning off sinker; Mariners fall 6-4"
+      "summary": "2-for-3 with a solo HR and a run scored; SEA win at OAK."
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "@ CHC",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "H": 2,
-        "AB": 4,
-        "R": 1,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 1.0,
-      "summary": "2-for-4, 1 R; Phillies score just 1 run in 5-1 Cubs win"
+      "stats": {},
+      "points": 4.0,
+      "summary": "1-for-4 with a HR and 2 RBI in 7-4 road loss at CHC."
     },
     {
       "name": "Luis Arraez",
@@ -67,11 +53,11 @@
       "position": "2B",
       "type": "hitter",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — Giants off day"
+      "summary": "DNP — placed on 7-day concussion IL on April 21."
     },
     {
       "name": "Bo Bichette",
@@ -79,11 +65,11 @@
       "position": "3B",
       "type": "hitter",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — Mets off day"
+      "summary": "1-for-4, no extra-base hits; NYM win vs MIN."
     },
     {
       "name": "Francisco Lindor",
@@ -91,68 +77,47 @@
       "position": "SS",
       "type": "hitter",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
-      "points": 0.0,
-      "summary": "DNP — Mets off day"
+      "points": 5.0,
+      "summary": "1-for-3 with a 3-run HR; NYM beat MIN."
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs PHI",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 1,
-        "HR": 0,
-        "RBI": 1,
-        "SB": 0
-      },
-      "points": 2.0,
-      "summary": "1-for-4, 1 RBI; Cubs win 6th straight 5-1"
+      "stats": {},
+      "points": 3.0,
+      "summary": "2-for-4, 2 R, 1 RBI in 7-4 CHC win vs PHI."
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs DET",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 3,
-        "R": 0,
-        "HR": 0,
-        "RBI": 1,
-        "SB": 0
-      },
-      "points": 1.0,
-      "summary": "1-for-3, 1 RBI; Padres blank Tigers 3-0"
+      "stats": {},
+      "points": 0.0,
+      "summary": "0-for-4 at COL. Quiet night for Merrill."
     },
     {
-      "name": "Teoscar Hernández",
+      "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ COL",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "H": 2,
-        "AB": 4,
-        "R": 1,
-        "HR": 1,
-        "RBI": 2,
-        "SB": 0
-      },
-      "points": 4.0,
-      "summary": "2-for-4, HR, 2 RBI; Dodgers rout Rockies 12-3 at Coors"
+      "stats": {},
+      "points": 1.0,
+      "summary": "1-for-4 with a run scored in LAD win at SFG."
     },
     {
       "name": "Giancarlo Stanton",
@@ -160,11 +125,11 @@
       "position": "DH",
       "type": "hitter",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
-      "points": 0.0,
-      "summary": "DNP — Yankees off day"
+      "points": 5.0,
+      "summary": "2-for-4 with a 2-run HR and 3 RBI in NYY win at BOS."
     },
     {
       "name": "Devin Williams",
@@ -172,35 +137,11 @@
       "position": "RP",
       "type": "rp",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — Mets off day"
-    },
-    {
-      "name": "Zack Wheeler",
-      "team": "PHI",
-      "position": "SP",
-      "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "On IL — Thoracic Outlet Syndrome",
-      "stats": {},
-      "points": 0.0,
-      "summary": "DNP — On IL; rehab start Apr 19 at Reading (4 IP, 4 ER)"
-    },
-    {
-      "name": "Cole Ragans",
-      "team": "KCR",
-      "position": "SP",
-      "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Off turn (pitched Apr 19)",
-      "stats": {},
-      "points": 0.0,
-      "summary": "DNP — pitched Apr 19 vs NYY (career-worst: 4.1 IP, 7 ER, 8 BB)"
+      "summary": "Blown save vs MIN — 0 IP, 1 H, 2 BB, 2 ER."
     },
     {
       "name": "Chase Burns",
@@ -208,11 +149,35 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Not scheduled (starts Apr 21)",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {},
+      "points": 1.18,
+      "summary": "5.2 IP, 5 H, 2 ER, 8 K — W at TB. ERA now 1.62."
+    },
+    {
+      "name": "Zack Wheeler",
+      "team": "PHI",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — next start Apr 21 @ TBR"
+      "summary": "DNP — 15-day IL; targeting Saturday April 25 debut vs ATL."
+    },
+    {
+      "name": "Cole Ragans",
+      "team": "KCR",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {},
+      "points": 0.0,
+      "summary": "DNP — between starts; KCR beat BAL 6-5."
     },
     {
       "name": "Nathan Eovaldi",
@@ -220,11 +185,11 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Off turn (pitched Apr 18)",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — pitched Apr 18 vs SEA; next start ~Apr 23"
+      "summary": "DNP — between starts; TEX lost to PIT."
     },
     {
       "name": "Emmet Sheehan",
@@ -232,29 +197,23 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Off turn (pitched Apr 18)",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — pitched Apr 18 vs COL; next start ~Apr 23"
+      "summary": "DNP — between starts; Yamamoto started vs SFG."
     },
     {
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs TOR",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "IP": 5.0,
-        "H": 6,
-        "ER": 3,
-        "K": 7,
-        "BB": 2
-      },
-      "points": -0.2,
-      "summary": "5 IP, 3 ER, 7 K; Vlad Jr. HR in 3rd; Angels fall 5-2"
+      "stats": {},
+      "points": 0.0,
+      "summary": "DNP — started April 20 vs TOR (6 IP, 4 ER); next start TBD."
     }
   ]
 }
