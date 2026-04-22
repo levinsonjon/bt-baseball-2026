@@ -33,15 +33,24 @@ function fmtAvg(h, ab) {
   return (h / ab).toFixed(3).replace(/^0/, "");
 }
 
+// Parse "YYYY-MM-DD" as a local-timezone date (not UTC midnight, which renders
+// as the previous day in any timezone west of UTC).
+function parseLocalDate(iso) {
+  if (!iso) return null;
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (m) return new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+  return new Date(iso);
+}
+
 function fmtDate(iso) {
-  if (!iso) return "";
-  const d = new Date(iso);
+  const d = parseLocalDate(iso);
+  if (!d) return "";
   return d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 }
 
 function fmtDateShort(iso) {
-  if (!iso) return "";
-  const d = new Date(iso);
+  const d = parseLocalDate(iso);
+  if (!d) return "";
   return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
 

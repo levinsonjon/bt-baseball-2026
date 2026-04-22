@@ -14,6 +14,7 @@ import json
 import urllib.request
 import urllib.error
 import urllib.parse
+import subprocess
 import time
 import sys
 import os
@@ -77,9 +78,34 @@ def log(msg):
         f.write(line + "\n")
 
 
+def notify_reauth_needed(reason):
+    """Create a persistent macOS Reminder so Jon sees the alert even though
+    cron runs while he's asleep. Gmail-based alerts can't be trusted here —
+    the failing credential is the Gmail one."""
+    reauth_cmd = (
+        f"GMAIL_OAUTH_PATH={GMAIL_OAUTH_PATH} "
+        f"GMAIL_CREDENTIALS_PATH={GMAIL_CREDS_PATH} "
+        f"npx @gongrzhe/server-gmail-autoauth-mcp auth"
+    )
+    body = f"{reason}\n\nRe-auth command:\n{reauth_cmd}"
+    name = "Fantasy Baseball: re-auth Gmail OAuth"
+    esc = lambda s: s.replace("\\", "\\\\").replace('"', '\\"')
+    script = (
+        f'tell application "Reminders" to make new reminder '
+        f'with properties {{name:"{esc(name)}", body:"{esc(body)}"}}'
+    )
+    try:
+        subprocess.run(["osascript", "-e", script], check=True, timeout=10,
+                       capture_output=True)
+        log(f"Created re-auth Reminder: {reason}")
+    except Exception as e:
+        log(f"WARN: failed to create re-auth Reminder: {e}")
+
+
 def send_alert_email(subject, body, html=False, cc=True):
     """Send an email via the personal Gmail API. Set html=True for HTML body.
-    Set cc=False to skip CC recipients (e.g. for admin-only alerts)."""
+    Set cc=False to skip CC recipients (e.g. for admin-only alerts).
+    Returns True on success, False on failure."""
     import base64
     from email.mime.text import MIMEText
 
@@ -127,8 +153,14 @@ def send_alert_email(subject, body, html=False, cc=True):
         req.add_header("Content-Type", "application/json")
         urllib.request.urlopen(req, timeout=15)
         log("Alert email sent.")
+        return True
     except Exception as e:
         log(f"Failed to send alert email: {e}")
+        err_str = str(e).lower()
+        if any(k in err_str for k in ("invalid_grant", "401", "unauthorized",
+                                       "token has been", "refresherror")):
+            notify_reauth_needed(f"Gmail send failed: {e}")
+        return False
 
 
 def check_gmail_reauth_needed():
@@ -1144,12 +1176,15 @@ def send_daily_email(roster, changes, yesterday_stats, game_date_display,
 </body></html>"""
 
     played_count = len(yesterday_stats)
-    send_alert_email(
+    ok = send_alert_email(
         f"Fantasy Baseball Daily \u2014 {today} ({played_count} played, {len(team_changes)} injury updates)",
         html,
         html=True,
     )
-    log(f"Daily email sent ({played_count} played, {len(team_changes)} injury changes).")
+    if ok:
+        log(f"Daily email sent ({played_count} played, {len(team_changes)} injury changes).")
+    else:
+        log(f"Daily email FAILED to send ({played_count} played, {len(team_changes)} injury changes) - see 'Failed to send alert email' above.")
 
 
 def main():
@@ -1185,29 +1220,14 @@ def main():
         reauth_msg = check_gmail_reauth_needed()
         if reauth_msg:
             log(f"REAUTH WARNING: {reauth_msg}")
-            send_alert_email(
-                "Fantasy Baseball: Gmail Token Expiring Soon",
-                f"{reauth_msg}\n\n"
-                f"Re-auth command:\n"
-                f"  GMAIL_OAUTH_PATH={GMAIL_OAUTH_PATH} \\\n"
-                f"  GMAIL_CREDENTIALS_PATH={GMAIL_CREDS_PATH} \\\n"
-                f"  npx @gongrzhe/server-gmail-autoauth-mcp auth",
-                cc=False,
-            )
+            notify_reauth_needed(reauth_msg)
 
         log("Daily update complete.")
     except Exception as e:
         log(f"ERROR: {e}")
         err_str = str(e).lower()
         if any(k in err_str for k in ("token", "401", "unauthorized", "invalid_grant", "expired")):
-            send_alert_email(
-                "Fantasy Baseball: Daily Update Failed — Token Expired",
-                f"The daily update job failed due to an authentication error.\n\n"
-                f"Error: {e}\n\n"
-                f"To fix: open Claude Code in the Personal project and ask Claude to "
-                f"re-authorize the gdrive-personal MCP server.\n\n"
-                f"Log: /Users/Jon/Claude/Personal/fantasy-baseball/health_update.log",
-            )
+            notify_reauth_needed(f"Daily update failed (auth error): {e}")
         raise
 
 

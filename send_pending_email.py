@@ -33,9 +33,7 @@ SEND_LOG = REPO_ROOT / "send_email.log"
 GMAIL_CREDS = Path.home() / ".config" / "personal-mcp" / "gmail" / "credentials.json"
 GMAIL_OAUTH = Path.home() / ".config" / "personal-mcp" / "gmail" / "gcp-oauth.keys.json"
 
-# Subject prefixes. Order matters in find_draft_by_prefix: "Fantasy Baseball DATA"
-# must be matched before "Fantasy Baseball" substring fallbacks. Use exact prefix
-# matching to keep them distinct.
+# Subject prefixes. startswith-matching keeps DATA and Daily distinct.
 DATA_SUBJECT_PREFIX = "Fantasy Baseball DATA"
 EMAIL_SUBJECT_PREFIX = "Fantasy Baseball Daily"
 
@@ -56,6 +54,31 @@ def log(msg: str):
     print(line)
     with open(SEND_LOG, "a") as f:
         f.write(line + "\n")
+
+
+def notify_reauth_needed(reason: str):
+    """Create a persistent macOS Reminder so Jon sees the alert even though
+    the cron jobs run while he's asleep. Gmail-based warnings don't work here
+    because the failing credential is the Gmail one."""
+    reauth_cmd = (
+        f"GMAIL_OAUTH_PATH={GMAIL_OAUTH} "
+        f"GMAIL_CREDENTIALS_PATH={GMAIL_CREDS} "
+        f"npx @gongrzhe/server-gmail-autoauth-mcp auth"
+    )
+    body = f"{reason}\n\nRe-auth command:\n{reauth_cmd}"
+    # AppleScript string-escape: backslashes then double-quotes.
+    name = "Fantasy Baseball: re-auth Gmail OAuth"
+    esc = lambda s: s.replace("\\", "\\\\").replace('"', '\\"')
+    script = (
+        f'tell application "Reminders" to make new reminder '
+        f'with properties {{name:"{esc(name)}", body:"{esc(body)}"}}'
+    )
+    try:
+        subprocess.run(["osascript", "-e", script], check=True, timeout=10,
+                       capture_output=True)
+        log(f"Created re-auth Reminder: {reason}")
+    except Exception as e:
+        log(f"WARN: failed to create re-auth Reminder: {e}")
 
 
 def build_gmail_service():
@@ -88,24 +111,71 @@ def build_gmail_service():
     return build("gmail", "v1", credentials=creds)
 
 
-def find_draft_by_prefix(service, prefix: str):
-    """Return the id of the most recent draft whose subject starts with `prefix`,
-    or None if no match. Uses startswith to keep DATA and Daily prefixes distinct."""
-    result = service.users().drafts().list(userId="me", maxResults=20).execute()
-    drafts = result.get("drafts", [])
-    if not drafts:
-        return None
+# Subject date parsers. DATA draft: "Fantasy Baseball DATA YYYY-MM-DD".
+# Email draft: "Fantasy Baseball Daily — Month DD, YYYY (...)".
+_DATA_SUBJECT_RE = re.compile(r"Fantasy Baseball DATA (\d{4}-\d{2}-\d{2})")
+_EMAIL_SUBJECT_RE = re.compile(
+    r"Fantasy Baseball Daily\s+[—\-]\s+([A-Za-z]+ \d{1,2},\s*\d{4})"
+)
 
+
+def _parse_draft_date(subject: str):
+    """Return the date encoded in the subject, or None if unparseable."""
+    m = _DATA_SUBJECT_RE.search(subject)
+    if m:
+        try:
+            return date.fromisoformat(m.group(1))
+        except ValueError:
+            return None
+    m = _EMAIL_SUBJECT_RE.search(subject)
+    if m:
+        for fmt in ("%B %d, %Y", "%b %d, %Y"):
+            try:
+                return datetime.strptime(m.group(1), fmt).date()
+            except ValueError:
+                continue
+    return None
+
+
+def find_drafts_by_prefix(service, prefix: str):
+    """Return a list of (draft_date, subject, id) tuples for every draft whose
+    subject starts with `prefix`, sorted chronologically (oldest first).
+    Drafts with unparseable subjects are skipped with a warning."""
+    result = service.users().drafts().list(userId="me", maxResults=50).execute()
+    drafts = result.get("drafts", [])
+    matches = []
     for draft_info in drafts:
         draft = service.users().drafts().get(
             userId="me", id=draft_info["id"], format="metadata",
         ).execute()
         headers = draft.get("message", {}).get("payload", {}).get("headers", [])
         subject = next((h["value"] for h in headers if h["name"] == "Subject"), "")
-        if subject.startswith(prefix):
-            log(f"Found draft: {subject} (id: {draft_info['id']})")
-            return draft_info["id"]
+        if not subject.startswith(prefix):
+            continue
+        draft_date = _parse_draft_date(subject)
+        if draft_date is None:
+            log(f"WARN: could not parse date from subject: {subject!r} — skipping")
+            continue
+        matches.append((draft_date, subject, draft_info["id"]))
+    matches.sort(key=lambda t: t[0])
+    return matches
 
+
+def current_data_watermark():
+    """Return the date already represented in data/yesterday.json, or None if
+    the file is missing/unparseable. Used to skip stale drafts that would
+    otherwise overwrite newer data with older data."""
+    path = DATA_DIR / "yesterday.json"
+    if not path.exists():
+        return None
+    try:
+        with open(path) as f:
+            payload = json.load(f)
+        d = payload.get("date")
+        if isinstance(d, str):
+            return date.fromisoformat(d)
+    except (json.JSONDecodeError, ValueError):
+        pass
     return None
 
 
@@ -198,6 +268,7 @@ def normalize_yesterday(data: dict, roster: dict) -> dict:
     tot_hit = {"AB": 0, "H": 0, "R": 0, "HR": 0, "RBI": 0, "SB": 0, "points": 0.0}
     tot_p = {"IP": 0.0, "H": 0, "ER": 0, "K": 0, "BB": 0, "W": 0, "SV": 0, "points": 0.0}
     players_out = []
+    empty_stats_played = 0
 
     for p in data.get("players", []):
         name = p.get("name", "")
@@ -226,6 +297,8 @@ def normalize_yesterday(data: dict, roster: dict) -> dict:
         })
 
         if not dnp:
+            if not stats:
+                empty_stats_played += 1
             try:
                 if ptype == "hitter":
                     for k in ("AB", "H", "R", "HR", "RBI", "SB"):
@@ -238,6 +311,10 @@ def normalize_yesterday(data: dict, roster: dict) -> dict:
                     tot_p["points"] += float(pts or 0)
             except (TypeError, ValueError) as e:
                 log(f"WARN: totals skipped for {name}: {e}")
+
+    if empty_stats_played:
+        log(f"WARN: {empty_stats_played} non-DNP player(s) had empty stats={{}} — "
+            f"agent schema drift; per-player stat columns will render blank on the site")
 
     return {
         "date": data.get("date", ""),
@@ -407,6 +484,15 @@ def consume_data_draft(service, draft_id: str):
         log(f"ERROR during data draft consumption (continuing): {e}")
 
 
+def _is_auth_error(exc: Exception) -> bool:
+    """Heuristic: does this look like an OAuth refresh/token failure?"""
+    s = str(exc).lower()
+    return any(k in s for k in (
+        "invalid_grant", "refresherror", "token has been expired",
+        "token has been revoked", "unauthorized", "401",
+    ))
+
+
 def main():
     log("--- Starting send_pending_email ---")
 
@@ -414,30 +500,64 @@ def main():
         service = build_gmail_service()
     except Exception as e:
         log(f"ERROR building Gmail service: {e}")
+        if _is_auth_error(e):
+            notify_reauth_needed(f"Gmail auth failed: {e}")
         sys.exit(1)
 
-    # Phase 1: consume the data draft (writes files, pushes, deletes the draft).
-    data_id = find_draft_by_prefix(service, DATA_SUBJECT_PREFIX)
-    if data_id:
-        consume_data_draft(service, data_id)
-    else:
-        log("No data draft found; skipping data sync")
+    watermark = current_data_watermark()
+    log(f"On-disk data watermark: {watermark}")
 
-    # Phase 2: find and send the email draft.
-    email_id = find_draft_by_prefix(service, EMAIL_SUBJECT_PREFIX)
-    if not email_id:
-        log("No email draft found — nothing to send")
-        sys.exit(0)
-
+    # Phase 1: consume DATA drafts in chronological order, skipping stale.
     try:
-        result = service.users().drafts().send(
-            userId="me", body={"id": email_id}
-        ).execute()
-        msg_id = result.get("id")
-        log(f"Email draft sent successfully (message ID: {msg_id})")
+        data_drafts = find_drafts_by_prefix(service, DATA_SUBJECT_PREFIX)
     except Exception as e:
-        log(f"ERROR sending email draft: {e}")
+        log(f"ERROR listing data drafts: {e}")
+        if _is_auth_error(e):
+            notify_reauth_needed(f"Gmail auth failed: {e}")
         sys.exit(1)
+
+    if not data_drafts:
+        log("No data draft found; skipping data sync")
+    for draft_date, subject, draft_id in data_drafts:
+        if watermark is not None and draft_date <= watermark:
+            log(f"Skipping stale data draft {subject!r} "
+                f"(date {draft_date} <= watermark {watermark})")
+            continue
+        log(f"Processing data draft: {subject} (id: {draft_id})")
+        consume_data_draft(service, draft_id)
+        watermark = draft_date  # advance so later drafts on same run compare correctly
+
+    # Phase 2: send EMAIL drafts in chronological order, skipping stale.
+    try:
+        email_drafts = find_drafts_by_prefix(service, EMAIL_SUBJECT_PREFIX)
+    except Exception as e:
+        log(f"ERROR listing email drafts: {e}")
+        if _is_auth_error(e):
+            notify_reauth_needed(f"Gmail auth failed: {e}")
+        sys.exit(1)
+
+    email_watermark = current_data_watermark()
+    sent_any = False
+    for draft_date, subject, draft_id in email_drafts:
+        if email_watermark is not None and draft_date < email_watermark:
+            log(f"Skipping stale email draft {subject!r} "
+                f"(date {draft_date} < watermark {email_watermark})")
+            continue
+        try:
+            result = service.users().drafts().send(
+                userId="me", body={"id": draft_id}
+            ).execute()
+            msg_id = result.get("id")
+            log(f"Sent email draft {subject!r} (message ID: {msg_id})")
+            sent_any = True
+        except Exception as e:
+            log(f"ERROR sending email draft {subject!r}: {e}")
+            if _is_auth_error(e):
+                notify_reauth_needed(f"Gmail auth failed while sending email: {e}")
+            sys.exit(1)
+
+    if not sent_any and not email_drafts:
+        log("No email draft found — nothing to send")
 
     log("--- Done ---")
 
