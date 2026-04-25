@@ -1,25 +1,25 @@
 {
-  "date": "2026-04-21",
-  "generated_at": "2026-04-22T04:35:00",
+  "date": "2026-04-24",
+  "generated_at": "2026-04-25T09:15:00Z",
   "totals": {
     "hitters": {
-      "AB": 0,
-      "H": 0,
-      "R": 0,
-      "HR": 0,
-      "RBI": 0,
-      "SB": 0,
-      "points": 21.0
+      "AB": 25,
+      "H": 8,
+      "R": 4,
+      "HR": 1,
+      "RBI": 3,
+      "SB": 1,
+      "points": 9.0
     },
     "pitchers": {
-      "IP": 0.0,
-      "H": 0,
-      "ER": 0,
-      "K": 0,
-      "BB": 0,
+      "IP": 7.2,
+      "H": 9,
+      "ER": 5,
+      "K": 11,
+      "BB": 2,
       "W": 0,
       "SV": 0,
-      "points": 1.18
+      "points": -0.7
     }
   },
   "players": [
@@ -28,48 +28,76 @@
       "team": "SEA",
       "position": "C",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "@ STL",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 3.0,
-      "summary": "2-for-3 with a solo HR and a run scored; SEA win at OAK."
+      "stats": {
+        "H": 0,
+        "AB": 3,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 0.0,
+      "summary": "0-for-3 with a strikeout; Mariners edged Cardinals 3-2 on Josh Naylor's sixth-inning solo HR."
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "@ ATL",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 4.0,
-      "summary": "1-for-4 with a HR and 2 RBI in 7-4 road loss at CHC."
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "HR": 1,
+        "RBI": 1,
+        "SB": 0
+      },
+      "points": 3.0,
+      "summary": "Solo HR in the 5th; Phillies fell 5-3 to the first-place Braves for their 10th straight loss."
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "vs MIA",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 0.0,
-      "summary": "DNP — placed on 7-day concussion IL on April 21."
+      "stats": {
+        "H": 3,
+        "AB": 4,
+        "R": 1,
+        "HR": 0,
+        "RBI": 1,
+        "SB": 1
+      },
+      "points": 3.0,
+      "summary": "3-for-4 with a stolen base and an RBI as the Giants beat the Marlins."
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "vs COL",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 0.0,
-      "summary": "1-for-4, no extra-base hits; NYM win vs MIN."
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 1.0,
+      "summary": "1-for-4 with a run scored; hit into DP in 5th as Mets fell 4-3 to the Rockies."
     },
     {
       "name": "Francisco Lindor",
@@ -77,23 +105,30 @@
       "position": "SS",
       "type": "hitter",
       "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
+      "dnp": true,
+      "dnp_reason": "10-day IL (left calf strain)",
       "stats": {},
-      "points": 5.0,
-      "summary": "1-for-3 with a 3-run HR; NYM beat MIN."
+      "points": 0.0,
+      "summary": "On 10-day IL with left calf strain; not expected back until mid-May."
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "@ LAD",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 3.0,
-      "summary": "2-for-4, 2 R, 1 RBI in 7-4 CHC win vs PHI."
+      "stats": {
+        "H": 1,
+        "AB": 3,
+        "R": 1,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 1.0,
+      "summary": "Led off the 9th with a single and scored the go-ahead run on Swanson's 2-run HR; Cubs rallied from 4-0 for 10th straight win."
     },
     {
       "name": "Jackson Merrill",
@@ -101,35 +136,30 @@
       "position": "OF",
       "type": "hitter",
       "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
+      "dnp": true,
+      "dnp_reason": "Team off day (travel)",
       "stats": {},
       "points": 0.0,
-      "summary": "0-for-4 at COL. Quiet night for Merrill."
+      "summary": "Padres off day — traveling to Mexico City for April 25-26 series vs. Arizona."
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "vs CHC",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 1.0,
-      "summary": "1-for-4 with a run scored in LAD win at SFG."
-    },
-    {
-      "name": "Giancarlo Stanton",
-      "team": "NYY",
-      "position": "DH",
-      "type": "hitter",
-      "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {},
-      "points": 5.0,
-      "summary": "2-for-4 with a 2-run HR and 3 RBI in NYY win at BOS."
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 0.0,
+      "summary": "1-for-4 as the Dodgers' bullpen squandered Sheehan's 10-K gem; Cubs won 6-4 for their 10th straight."
     },
     {
       "name": "Devin Williams",
@@ -137,23 +167,11 @@
       "position": "RP",
       "type": "rp",
       "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
+      "dnp": true,
+      "dnp_reason": "No appearance (Mets lost 4-3, no save opportunity)",
       "stats": {},
       "points": 0.0,
-      "summary": "Blown save vs MIN — 0 IP, 1 H, 2 BB, 2 ER."
-    },
-    {
-      "name": "Chase Burns",
-      "team": "CIN",
-      "position": "SP",
-      "type": "sp",
-      "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {},
-      "points": 1.18,
-      "summary": "5.2 IP, 5 H, 2 ER, 8 K — W at TB. ERA now 1.62."
+      "summary": "Did not appear; Colorado closer Senzatela finished the 4-3 Rockies win. Williams ERA sits at 9.95."
     },
     {
       "name": "Zack Wheeler",
@@ -161,11 +179,11 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
+      "dnp": true,
+      "dnp_reason": "Not scheduled (2026 debut Saturday vs. ATL)",
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — 15-day IL; targeting Saturday April 25 debut vs ATL."
+      "summary": "Season debut set for Saturday vs. Atlanta — first start since thoracic outlet surgery in September."
     },
     {
       "name": "Cole Ragans",
@@ -173,35 +191,61 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
+      "dnp": true,
+      "dnp_reason": "Not scheduled (Noah Cameron started for KC)",
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — between starts; KCR beat BAL 6-5."
+      "summary": "Did not start Friday; Ragans holds a 6.00 ERA through 4 starts with command issues (18 BB in 21 IP)."
+    },
+    {
+      "name": "Chase Burns",
+      "team": "CIN",
+      "position": "SP",
+      "type": "sp",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Not scheduled (Andrew Abbott started for CIN)",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Did not start; Burns leads Reds starters with 1.62 ERA and 24 Ks through 3 outings."
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
+      "opponent": "vs OAK",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 0.0,
-      "summary": "DNP — between starts; TEX lost to PIT."
+      "stats": {
+        "IP": 1.1,
+        "H": 5,
+        "ER": 4,
+        "K": 1,
+        "BB": 1,
+        "W": 0
+      },
+      "points": -3.25,
+      "summary": "Roughed up for 3 solo HRs on the first 7 pitches by Oakland's first four batters; exited early in 8-1 loss. Eovaldi (L, 2-3)."
     },
     {
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
+      "opponent": "vs CHC",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 0.0,
-      "summary": "DNP — between starts; Yamamoto started vs SFG."
+      "stats": {
+        "IP": 6.1,
+        "H": 4,
+        "ER": 1,
+        "K": 10,
+        "BB": 1,
+        "W": 0
+      },
+      "points": 2.55,
+      "summary": "Season-best 10 Ks in 6⅓ dominant innings, 1 ER; Dodgers bullpen blew the lead in 6-4 Cubs win. No decision."
     },
     {
       "name": "Reid Detmers",
@@ -209,11 +253,30 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
+      "dnp": true,
+      "dnp_reason": "Not scheduled (Yusei Kikuchi started for LAA)",
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — started April 20 vs TOR (6 IP, 4 ER); next start TBD."
+      "summary": "Did not start; Angels fell 5-3 to KC with Kikuchi on the mound. Detmers (3.89 ERA) pitches next turn."
+    },
+    {
+      "name": "Giancarlo Stanton",
+      "team": "NYY",
+      "position": "DH",
+      "type": "hitter",
+      "opponent": "@ HOU",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 3,
+        "R": 0,
+        "HR": 0,
+        "RBI": 1,
+        "SB": 0
+      },
+      "points": 1.0,
+      "summary": "RBI single before exiting in the 6th with right calf tightness; Yankees won 12-4. Considered day-to-day."
     }
   ]
 }
