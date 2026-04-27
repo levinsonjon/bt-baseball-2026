@@ -272,6 +272,13 @@ def normalize_name(name):
     return name
 
 
+def _lookup_name(p):
+    """Real MLB player name for external lookups (boxscore, MLB ID, ESPN news).
+    Falls back to the slot name. Differs from p["name"] only when a slot has
+    been mid-season-swapped (e.g. "Lindor/McGonigle" → "Kevin McGonigle")."""
+    return p.get("current_player") or p["name"]
+
+
 def load_my_roster():
     """Load Jon's drafted team from my_team.json."""
     with open(MY_TEAM_FILE) as f:
@@ -312,10 +319,11 @@ def fetch_yesterday_boxscores(roster):
 
     log(f"Found {len(game_pks)} completed games for {date_str}")
 
-    # Build roster lookup by normalized name
+    # Build roster lookup by normalized name (use real MLB name for matching;
+    # the value still carries the slot's "name" for downstream display).
     roster_lookup = {}
     for p in roster:
-        roster_lookup[normalize_name(p["name"])] = p
+        roster_lookup[normalize_name(_lookup_name(p))] = p
 
     # 2. Fetch each boxscore, extract roster player stats
     player_stats = {}
@@ -484,14 +492,15 @@ def resolve_player_ids(roster, boxscore_ids):
     to_search = []
 
     for p in roster:
-        norm = normalize_name(p["name"])
+        lookup = _lookup_name(p)
+        norm = normalize_name(lookup)
         if norm in boxscore_ids:
             resolved[norm] = boxscore_ids[norm]
             cache[norm] = boxscore_ids[norm]
         elif norm in cache:
             resolved[norm] = cache[norm]
         else:
-            to_search.append((norm, p["name"]))
+            to_search.append((norm, lookup))
 
     for norm, name in to_search:
         mlb_id = search_mlb_player_id(name)
@@ -516,7 +525,7 @@ def fetch_season_stats(roster, player_ids):
     all_ids = []
     id_to_name = {}
     for p in roster:
-        norm = normalize_name(p["name"])
+        norm = normalize_name(_lookup_name(p))
         mlb_id = player_ids.get(norm)
         if mlb_id:
             all_ids.append(str(mlb_id))
@@ -744,9 +753,9 @@ def fetch_player_news(roster, injuries):
     Returns dict: player_name -> short news string.
     """
     news = {}
-    roster_lookup = {}  # normalized name -> roster player name
+    roster_lookup = {}  # normalized real-MLB name -> slot display name
     for p in roster:
-        roster_lookup[normalize_name(p["name"])] = p["name"]
+        roster_lookup[normalize_name(_lookup_name(p))] = p["name"]
 
     # 1. ESPN general news — scan headlines for roster player names
     try:
@@ -956,7 +965,7 @@ STATUS_LABELS = {
 
 
 def send_daily_email(roster, changes, yesterday_stats, game_date_display,
-                     season_stats, player_news):
+                     player_news):
     """Send combined daily email with hitter/pitcher tables + injury updates."""
     today = datetime.now().strftime("%B %d, %Y")
     sheet_url = f"https://docs.google.com/spreadsheets/d/{config.GOOGLE_SHEET_ID}"
@@ -970,29 +979,26 @@ def send_daily_email(roster, changes, yesterday_stats, game_date_display,
     TD_TOT = 'style="padding:6px 10px;border-top:2px solid #1a3a5c;font-weight:bold;background:#e8f0fe"'
     TD_TOT_NUM = 'style="padding:6px 10px;border-top:2px solid #1a3a5c;font-weight:bold;background:#e8f0fe;text-align:right"'
 
-    # Filter injury changes to team-only
-    team_names = {normalize_name(p["name"]) for p in roster}
+    # Filter injury changes to team-only (match by real MLB name; ESPN's
+    # injury feed doesn't know about our composite slot labels)
+    team_names = {normalize_name(_lookup_name(p)) for p in roster}
     team_changes = [c for c in changes if normalize_name(c["name"]) in team_names]
 
     # --- Hitters table ---
     hitters = [p for p in roster if p["player_type"] == "hitter"]
     hitter_rows = ""
     tot_h = tot_ab = tot_r = tot_hr = tot_rbi = tot_sb = 0
-    tot_pre = tot_ytd = tot_pace = 0.0
+    tot_pre = 0.0
 
     for p in hitters:
         name = p["name"]
         pos = p["positions"][0] if p.get("positions") else ""
         day = yesterday_stats.get(name)
-        ss = season_stats.get(name, {})
         pre_proj = p.get("projected_points", 0)
-        ytd, pace = compute_points("hitter", ss)
         summary = generate_day_summary("hitter", day)
         news = player_news.get(name, "\u2014")
 
         tot_pre += pre_proj
-        tot_ytd += ytd
-        tot_pace += pace
 
         if day:
             s = day["stats"]
@@ -1010,14 +1016,14 @@ def send_daily_email(roster, changes, yesterday_stats, game_date_display,
               <td {TD_NUM}>{r_val}</td><td {TD_NUM}>{hr_val}</td>
               <td {TD_NUM}>{rbi_val}</td><td {TD_NUM}>{sb_val}</td>
               <td {TD}>{summary}</td><td {TD_NEWS}>{news}</td>
-              <td {TD_NUM}>{pre_proj:.0f}</td><td {TD_NUM}>{ytd:.1f}</td><td {TD_NUM}>{pace:.1f}</td>
+              <td {TD_NUM}>{pre_proj:.0f}</td>
             </tr>"""
         else:
             hitter_rows += f"""<tr style="color:#aaa">
               <td {TD}><strong>{name}</strong></td><td {TD}>{pos}</td>
               <td {TD_DNP} colspan="6">DNP</td>
               <td {TD_DNP}>{summary}</td><td {TD_NEWS}>{news}</td>
-              <td {TD_NUM}>{pre_proj:.0f}</td><td {TD_NUM}>{ytd:.1f}</td><td {TD_NUM}>{pace:.1f}</td>
+              <td {TD_NUM}>{pre_proj:.0f}</td>
             </tr>"""
 
     # Total row
@@ -1027,7 +1033,7 @@ def send_daily_email(roster, changes, yesterday_stats, game_date_display,
       <td {TD_TOT_NUM}>{tot_r}</td><td {TD_TOT_NUM}>{tot_hr}</td>
       <td {TD_TOT_NUM}>{tot_rbi}</td><td {TD_TOT_NUM}>{tot_sb}</td>
       <td {TD_TOT}></td><td {TD_TOT}></td>
-      <td {TD_TOT_NUM}>{tot_pre:.0f}</td><td {TD_TOT_NUM}>{tot_ytd:.1f}</td><td {TD_TOT_NUM}>{tot_pace:.1f}</td>
+      <td {TD_TOT_NUM}>{tot_pre:.0f}</td>
     </tr>"""
 
     hitters_html = f"""
@@ -1037,7 +1043,7 @@ def send_daily_email(roster, changes, yesterday_stats, game_date_display,
       <thead><tr style="background:#f5f5f5">
         <th {TH}>Player</th><th {TH}>Pos</th><th {TH}>Opp</th>
         <th {TH}>H/AB</th><th {TH}>R</th><th {TH}>HR</th><th {TH}>RBI</th><th {TH}>SB</th>
-        <th {TH}>Summary</th><th {TH}>News</th><th {TH}>Pre</th><th {TH}>YTD</th><th {TH}>Pace</th>
+        <th {TH}>Summary</th><th {TH}>News</th><th {TH}>Pre</th>
       </tr></thead>
       <tbody>{hitter_rows}</tbody>
     </table>"""
@@ -1046,31 +1052,22 @@ def send_daily_email(roster, changes, yesterday_stats, game_date_display,
     pitchers = [p for p in roster if p["player_type"] in ("sp", "rp")]
     pitcher_rows = ""
     ptot_ip = ptot_h = ptot_er = ptot_k = ptot_bb = 0.0
-    # Collect individual SP/RP values for team scoring formula
     sp_pre_vals = []
-    sp_ytd_vals = []
-    sp_pace_vals = []
-    rp_pre = rp_ytd = rp_pace = 0.0
+    rp_pre = 0.0
 
     for p in pitchers:
         name = p["name"]
         pos = p["positions"][0] if p.get("positions") else ""
         ptype = p["player_type"]
         day = yesterday_stats.get(name)
-        ss = season_stats.get(name, {})
         pre_proj = p.get("projected_points", 0)
-        ytd, pace = compute_points(ptype, ss)
         summary = generate_day_summary(ptype, day)
         news = player_news.get(name, "\u2014")
 
         if ptype == "sp":
             sp_pre_vals.append(pre_proj)
-            sp_ytd_vals.append(ytd)
-            sp_pace_vals.append(pace)
         else:  # rp
             rp_pre = pre_proj
-            rp_ytd = ytd
-            rp_pace = pace
 
         if day:
             s = day["stats"]
@@ -1091,23 +1088,19 @@ def send_daily_email(roster, changes, yesterday_stats, game_date_display,
               <td {TD_NUM}>{h_val}</td><td {TD_NUM}>{er_val}</td>
               <td {TD_NUM}>{k_val}</td><td {TD_NUM}>{bb_val}</td><td {TD}>{dec}</td>
               <td {TD}>{summary}</td><td {TD_NEWS}>{news}</td>
-              <td {TD_NUM}>{pre_proj:.1f}</td><td {TD_NUM}>{ytd:.1f}</td><td {TD_NUM}>{pace:.1f}</td>
+              <td {TD_NUM}>{pre_proj:.1f}</td>
             </tr>"""
         else:
             pitcher_rows += f"""<tr style="color:#aaa">
               <td {TD}><strong>{name}</strong></td><td {TD}>{pos}</td>
               <td {TD_DNP} colspan="7">DNP</td>
               <td {TD_DNP}>{summary}</td><td {TD_NEWS}>{news}</td>
-              <td {TD_NUM}>{pre_proj:.1f}</td><td {TD_NUM}>{ytd:.1f}</td><td {TD_NUM}>{pace:.1f}</td>
+              <td {TD_NUM}>{pre_proj:.1f}</td>
             </tr>"""
 
-    # Total row — team scoring: top 3 SP RSAR * 3.5 + RP points
+    # Total row — team scoring: top 3 SP projection * 3.5 + RP projection
     top3_pre = sum(sorted(sp_pre_vals, reverse=True)[:3])
-    top3_ytd = sum(sorted(sp_ytd_vals, reverse=True)[:3])
-    top3_pace = sum(sorted(sp_pace_vals, reverse=True)[:3])
     ptot_pre = top3_pre * config.SP_RSAR_MULTIPLIER + rp_pre
-    ptot_ytd = top3_ytd * config.SP_RSAR_MULTIPLIER + rp_ytd
-    ptot_pace = top3_pace * config.SP_RSAR_MULTIPLIER + rp_pace
 
     ip_tot_display = f'{ptot_ip:.1f}'
     pitcher_rows += f"""<tr>
@@ -1116,7 +1109,7 @@ def send_daily_email(roster, changes, yesterday_stats, game_date_display,
       <td {TD_TOT_NUM}>{int(ptot_h)}</td><td {TD_TOT_NUM}>{int(ptot_er)}</td>
       <td {TD_TOT_NUM}>{int(ptot_k)}</td><td {TD_TOT_NUM}>{int(ptot_bb)}</td>
       <td {TD_TOT}></td><td {TD_TOT}></td><td {TD_TOT}></td>
-      <td {TD_TOT_NUM}>{ptot_pre:.1f}</td><td {TD_TOT_NUM}>{ptot_ytd:.1f}</td><td {TD_TOT_NUM}>{ptot_pace:.1f}</td>
+      <td {TD_TOT_NUM}>{ptot_pre:.1f}</td>
     </tr>"""
 
     scoring_note = "SP: RSAR = (1.2&times;AvgERA \u2212 ERA)&times;(IP/9), top 3 &times; 3.5 &middot; RP: 5&times;(W+SV)"
@@ -1127,7 +1120,7 @@ def send_daily_email(roster, changes, yesterday_stats, game_date_display,
       <thead><tr style="background:#f5f5f5">
         <th {TH}>Player</th><th {TH}>Pos</th><th {TH}>Opp</th>
         <th {TH}>IP</th><th {TH}>H</th><th {TH}>ER</th><th {TH}>K</th><th {TH}>BB</th><th {TH}>Dec</th>
-        <th {TH}>Summary</th><th {TH}>News</th><th {TH}>Pre</th><th {TH}>YTD</th><th {TH}>Pace</th>
+        <th {TH}>Summary</th><th {TH}>News</th><th {TH}>Pre</th>
       </tr></thead>
       <tbody>{pitcher_rows}</tbody>
     </table>"""
@@ -1170,8 +1163,7 @@ def send_daily_email(roster, changes, yesterday_stats, game_date_display,
   {injury_html}
   <p style="margin-top:20px;font-size:12px">
     <a href="{sheet_url}" style="color:#1a73e8">View rankings sheet \u2192</a>
-    &nbsp;&middot;&nbsp; Pre = preseason projection &nbsp;&middot;&nbsp; YTD = season points to date
-    &nbsp;&middot;&nbsp; Pace = 162-game extrapolation
+    &nbsp;&middot;&nbsp; Pre = preseason projection
   </p>
 </body></html>"""
 
@@ -1203,18 +1195,14 @@ def main():
         changes = match_and_update(sheet_players, injuries, token)
 
         # Fetch yesterday's box scores for roster players
-        yesterday_stats, game_date_display, boxscore_ids = fetch_yesterday_boxscores(roster)
-
-        # Resolve MLB player IDs and fetch season stats
-        player_ids = resolve_player_ids(roster, boxscore_ids)
-        season_stats = fetch_season_stats(roster, player_ids)
+        yesterday_stats, game_date_display, _ = fetch_yesterday_boxscores(roster)
 
         # Fetch player news (ESPN news + MLB transactions + injury notes)
         player_news = fetch_player_news(roster, injuries)
 
-        # Send combined daily email (performance + season context + news + injuries)
+        # Send combined daily email (yesterday's performance + news + injuries)
         send_daily_email(roster, changes or [], yesterday_stats, game_date_display,
-                         season_stats, player_news)
+                         player_news)
 
         # Check if Gmail personal MCP token needs re-auth soon
         reauth_msg = check_gmail_reauth_needed()

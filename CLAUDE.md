@@ -105,6 +105,19 @@ Team AVG on the site is the **flat mean** of per-player AVGs (because each playe
 | `data/yesterday.json` | Per-player game stats for the previous day (written by local script from DATA draft) |
 | `data/news.json` | Synthesized news + injury report (written by local script from DATA draft) |
 
+## Mid-season player swaps
+
+When a roster slot changes player mid-season, we want to **carry forward** the prior player's accumulated stats into the slot rather than reset to zero. Mechanism:
+
+- The roster entry's `name` becomes a composite slot label (e.g. `"Lindor/McGonigle"`) — this is the season_stats key.
+- Add a `current_player` field with the real MLB name (e.g. `"Kevin McGonigle"`) — used for ALL external lookups (web search queries in `run_daily.py`, MLB Stats API and ESPN matching in `update_health.py`).
+- Pre-seed `data/season_stats.json` with the prior player's totals under the new composite key. The remote agent's daily accumulator (`update_season_stats`) adds the new player's daily box score on top.
+- Set `projected_points: 0` and `projected_stats: {}` if the new player has no preseason projection (option C). This makes the team page's projected total a lower bound.
+
+The `current_player` field is optional; absent it, `name` is used for both lookup and display (the default for all 15 untouched roster slots). When the prior-player carryover stops mattering (e.g. multiple weeks in), the slot can be renamed to just the current player's name and `current_player` removed.
+
+The 3:13am `update_health.py` email's "Season YTD"/"Pace" columns were removed when the SS slot was first swapped — MLB Stats API returns true cumulative stats per real player, which double-counts pre-swap games against the carryover. The website (sourced from `season_stats.json`) is the canonical scorekeeper.
+
 ## Email recipients
 
 - **To:** levinson.jon@gmail.com

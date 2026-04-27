@@ -62,18 +62,23 @@ def main():
 
     print(f"[daily] Roster loaded: {len(roster)} players")
 
-    # Generate search queries for each player
+    # Generate search queries for each player.
+    # `name` is the slot label (the season_stats key); `search_name` is the
+    # real MLB player to query the web for. They differ only when a slot has
+    # been mid-season-swapped — e.g. "Lindor/McGonigle" carrying Lindor's
+    # accumulated totals while searching daily box scores for McGonigle.
     date_str = report_date.strftime("%B %-d %Y")
     queries = []
     for player in roster:
         name = player["name"]
+        search_name = player.get("current_player") or name
         ptype = player["player_type"]
         queries.append({
             "player_name": name,
             "player_type": ptype,
-            "box_score_query": build_box_score_query(name, date_str),
-            "news_query": build_news_query(name, date_str),
-            "injury_query": build_injury_query(name),
+            "box_score_query": build_box_score_query(search_name, date_str),
+            "news_query": build_news_query(search_name, date_str),
+            "injury_query": build_injury_query(search_name),
         })
 
     print(f"\n[daily] Search queries to run (use Claude's WebSearch tool for each):")

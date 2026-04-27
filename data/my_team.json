@@ -87,25 +87,15 @@
       }
     },
     {
-      "name": "Francisco Lindor",
-      "team": "NYM",
+      "name": "Lindor/McGonigle",
+      "current_player": "Kevin McGonigle",
+      "team": "DET",
       "positions": [
         "SS"
       ],
       "player_type": "hitter",
-      "projected_points": 484.9,
-      "projected_stats": {
-        "AB": 571.4,
-        "PA": 642.5,
-        "H": 151.2,
-        "R": 92.0,
-        "HR": 25.3,
-        "RBI": 78.0,
-        "SB": 24.6,
-        "BB": 56.0,
-        "HBP": 10.3,
-        "AVG": 0.2646
-      }
+      "projected_points": 0,
+      "projected_stats": {}
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -150,7 +140,8 @@
       }
     },
     {
-      "name": "Teoscar Hern\u00e1ndez",
+      "name": "Teoscar Hernandez",
+      "current_player": "Teoscar Hern\u00e1ndez",
       "team": "LAD",
       "positions": [
         "OF"
