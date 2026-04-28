@@ -1,25 +1,25 @@
 {
-  "date": "2026-04-26",
-  "generated_at": "2026-04-27T05:35:00Z",
+  "date": "2026-04-27",
+  "generated_at": "2026-04-28T09:35:00Z",
   "totals": {
     "hitters": {
-      "AB": 24,
-      "H": 9,
-      "R": 6,
-      "HR": 1,
-      "RBI": 9,
-      "SB": 0,
-      "points": 16.0
+      "AB": 15,
+      "H": 3,
+      "R": 3,
+      "HR": 2,
+      "RBI": 4,
+      "SB": 1,
+      "points": 10.0
     },
     "pitchers": {
-      "IP": 24.33,
-      "H": 16,
-      "ER": 6,
-      "K": 29,
-      "BB": 7,
-      "W": 2,
+      "IP": 0.0,
+      "H": 0,
+      "ER": 0,
+      "K": 0,
+      "BB": 0,
+      "W": 0,
       "SV": 0,
-      "points": 7.07
+      "points": 0.0
     }
   },
   "players": [
@@ -28,118 +28,97 @@
       "team": "SEA",
       "position": "C",
       "type": "hitter",
-      "opponent": "@ STL",
+      "opponent": "@ MIN",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
         "H": 1,
-        "AB": 3,
+        "AB": 4,
         "R": 1,
         "HR": 1,
-        "RBI": 1,
+        "RBI": 2,
         "SB": 0
       },
-      "points": 3.0,
-      "summary": "Solo HR in the 4th inning in Seattle's 3-2 win at St. Louis, completing the series sweep."
+      "points": 4.0,
+      "summary": "Two-run HR in 8th (7th of season, 5th in last 7 games); Mariners lost 11-4 to Twins."
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "@ ATL",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 2,
-        "AB": 4,
-        "R": 2,
-        "HR": 0,
-        "RBI": 4,
-        "SB": 0
-      },
-      "points": 6.0,
-      "summary": "2-for-4, 2 R, 4 RBI; tiebreaking single in the 10th as Phillies snapped 10-game losing streak 8-5 over Atlanta."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Off day. Apr 26: 2 hits, 4 RBI as Phillies snapped 10-game losing streak vs. ATL 8-5 in 10."
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": "vs MIA",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 0,
-        "AB": 2,
-        "R": 0,
-        "HR": 0,
-        "RBI": 1,
-        "SB": 0
-      },
-      "points": 1.0,
-      "summary": "SAC bunt and fielder's choice RBI in Giants' 6-3 win over Miami; Landen Roupp dominated with 7.2 scoreless IP."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Off day. MLB-leading hit rate: .305 AVG, 32 H, only 4 Ks in 115 PA this season."
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": "vs COL",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 5,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
       "points": 0.0,
-      "summary": "1-for-5 (with 2 BB) in SS debut filling in for Lindor; Mets swept by Colorado in doubleheader 3-1, 3-0."
+      "summary": "Off day. Scouts flagging lingering left knee PCL concern from 2025; sprint speed down to 25.4 ft/sec."
     },
     {
-      "name": "Francisco Lindor",
-      "team": "NYM",
+      "name": "Lindor/McGonigle",
+      "team": "DET",
       "position": "SS",
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "10-day IL (left calf strain)",
+      "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
-      "summary": "On 10-day IL with left calf strain; in walking boot, won't be re-evaluated for 3 weeks, expected out until early June."
+      "summary": "Off day. McGonigle batting .322 with .904 OPS; reached safely in 23 straight starts (longest Tigers rookie streak since Austin Jackson 2010)."
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ LAD",
+      "opponent": "@ SDP",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 1,
+        "H": 0,
         "AB": 3,
         "R": 0,
         "HR": 0,
         "RBI": 0,
-        "SB": 0
+        "SB": 1
       },
-      "points": 0.0,
-      "summary": "1-for-3 with a walk and 2 Ks as Cubs were blanked 6-0 by the Dodgers. Was heavily booed at Dodger Stadium."
+      "points": 1.0,
+      "summary": "Stole 6th base of season; struck out looking; Cubs lost 9-7 in 3rd straight loss to surging Padres."
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs ARI",
+      "opponent": "vs CHC",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 2,
+        "H": 1,
         "AB": 4,
         "R": 1,
         "HR": 0,
@@ -147,26 +126,26 @@
         "SB": 0
       },
       "points": 2.0,
-      "summary": "2-for-4 in Padres' 12-7 Mexico City loss; D-backs rallied from a 6-run deficit to complete the series split."
+      "summary": "RBI single in 1st inning; Padres won 9-7 for 17th win in last 21 games."
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs CHC",
+      "opponent": "vs PIT",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 2,
-        "AB": 3,
-        "R": 2,
-        "HR": 0,
-        "RBI": 2,
+        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "HR": 1,
+        "RBI": 1,
         "SB": 0
       },
-      "points": 4.0,
-      "summary": "2-for-3, 2 R, 2 RBI; two-RBI single sparked the Dodgers' 6-run 4th inning en route to a 6-0 shutout of the Cubs."
+      "points": 3.0,
+      "summary": "Tiebreaking solo homer in 8th inning (5th HR of season); Dodgers beat Pirates 8-4 in comeback win."
     },
     {
       "name": "Giancarlo Stanton",
@@ -175,68 +154,46 @@
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Day-to-day (right calf tightness)",
+      "dnp_reason": "10-day IL (right calf strain)",
       "stats": {},
       "points": 0.0,
-      "summary": "Missed 2nd straight game with right calf tightness; Yankees IL decision expected Monday April 27."
+      "summary": "Placed on 10-day IL Apr 27. MRI confirmed low-grade right calf strain. Manager Boone: not too serious, return when eligible possible."
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": "vs COL",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 1.0,
-        "H": 0,
-        "ER": 0,
-        "K": 1,
-        "BB": 0,
-        "W": 0,
-        "SV": 0
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
       "points": 0.0,
-      "summary": "1 IP, 0 ER in Mets' doubleheader; no save opportunities as Mets dropped both games to Colorado."
+      "summary": "Off day. Threw scoreless 9th with 2 Ks on Apr 26 vs COL (game 2 of DH). Season ERA 7.56 over 10 appearances."
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ ATL",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 5.0,
-        "H": 3,
-        "ER": 2,
-        "K": 6,
-        "BB": 3,
-        "W": 0
-      },
-      "points": 0.8,
-      "summary": "2026 season debut: 5 IP, 3 H, 2 ER, 6 K, 3 BB (ND) in Phillies' 8-5 extra-inning win vs Atlanta; 15 whiffs generated."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Off day. 2026 debut Apr 25: 5 IP, 2 ER, 6 K in PHI 8-5 extra-inning win over ATL ending 10-game skid."
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs LAA",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 5,
-        "ER": 1,
-        "K": 11,
-        "BB": 0,
-        "W": 1
-      },
-      "points": 2.36,
-      "summary": "First win of 2026: 6 IP, 1 ER, 11 K, 0 BB in Royals' 12-1 blowout of the Angels. Was 0-5 in first 5 starts."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Did not start",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Lugo started Apr 27 (Royals beat Angels 11-9 in extras). Ragans ERA rising after left thumb injury from comebacker."
     },
     {
       "name": "Chase Burns",
@@ -245,29 +202,22 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled to start",
+      "dnp_reason": "Did not start",
       "stats": {},
       "points": 0.0,
-      "summary": "Did not pitch April 26; Reds hosted Detroit with a different starter. Burns maintaining 1.62 ERA through 3 starts."
+      "summary": "Last started Apr 25 at TB. 2.42 ERA through 4 starts; 98.5 mph fastball with elite slider generating Cy Young buzz."
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs OAK",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 7.0,
-        "H": 3,
-        "ER": 0,
-        "K": 7,
-        "BB": 2,
-        "W": 1
-      },
-      "points": 3.92,
-      "summary": "Best start of 2026: 7 shutout IP, 7 K, 2 BB (W) vs Athletics. ERA improves from 5.79 to 4.70."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Did not start",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Last started Apr 24 at OAK. 5.06 ERA, 9 HR allowed in 6 starts. Durability questions growing in Texas."
     },
     {
       "name": "Emmet Sheehan",
@@ -276,29 +226,22 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled to start",
+      "dnp_reason": "Did not start",
       "stats": {},
       "points": 0.0,
-      "summary": "Did not start April 26; Wrobleski got the nod in Dodgers' 6-0 win vs Cubs. Sheehan working through mechanical issues."
+      "summary": "Last started Apr 24 vs CHC: 6.1 IP, 1 ER, 10 K gem wasted by bullpen. ERA 4.78 through 5 starts."
     },
     {
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ KCR",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 5.33,
-        "H": 5,
-        "ER": 3,
-        "K": 4,
-        "BB": 2,
-        "W": 0
-      },
-      "points": -0.01,
-      "summary": "5.1 IP, 5 H, 3 ER, 4 K, 2 BB (L) in Angels' 12-1 blowout loss at Kansas City. ERA rises to 4.05."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Did not start",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Started Apr 26 at KC (5+ IP, 3 ER); Angels lost series sweep 11-9 in walk-off extras. ERA 4.60 through 8 starts."
     }
   ]
 }
