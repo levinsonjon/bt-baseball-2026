@@ -47,6 +47,7 @@ Subject prefixes are load-bearing — the local script routes on them.
 - **Model:** claude-sonnet-4-6
 - **Gmail connector UUID:** `13aa4679-35c5-4850-aaf8-148682f5ac13` (allowed tool: `mcp__gmail__create_draft`)
 - **Read-only for git.** `allow_unrestricted_git_push: true` in the config is misleading — the proxy refuses pushes with 403. API-level PAT injection does not work. Gmail is the handoff, full stop.
+- **Editing the prompt:** the trigger config (including the prompt) is editable via the `RemoteTrigger` API tool from inside a Claude Code session — no need to use the claude.ai web UI. Use `RemoteTrigger get` to fetch the current config, then `RemoteTrigger update` with a body containing the modified `job_config`. Preserve `environment_id`, `session_context.allowed_tools`, `session_context.model`, and `session_context.sources` exactly to avoid breaking the run environment.
 
 ### Local launchd jobs
 
@@ -115,6 +116,8 @@ When a roster slot changes player mid-season, we want to **carry forward** the p
 - Set `projected_points: 0` and `projected_stats: {}` if the new player has no preseason projection (option C). This makes the team page's projected total a lower bound.
 
 The `current_player` field is optional; absent it, `name` is used for both lookup and display (the default for all 15 untouched roster slots). When the prior-player carryover stops mattering (e.g. multiple weeks in), the slot can be renamed to just the current player's name and `current_player` removed.
+
+The remote trigger prompt honors `current_player` generically — it computes `search_name = current_player or name` for all WebSearches and uses `slot_name = name` as the canonical key in every JSON output and in `season_stats.json`. For swapped slots, the agent reads the existing `season_stats.json[slot_name]` carryover and ADDs yesterday's box-score deltas (recomputing AVG = H/AB and ERA = ER × 9 / IP) instead of overwriting from a season-totals page that would double-count pre-swap games. This means future swaps require ONLY (a) updating `data/my_team.json` (composite name, `current_player`, zero projections), (b) pre-seeding `season_stats.json` with the prior player's totals under the new key, and (c) optionally a launchd one-shot to fire the swap mid-season — no remote-prompt edit needed.
 
 The 3:13am `update_health.py` email's "Season YTD"/"Pace" columns were removed when the SS slot was first swapped — MLB Stats API returns true cumulative stats per real player, which double-counts pre-swap games against the carryover. The website (sourced from `season_stats.json`) is the canonical scorekeeper.
 
