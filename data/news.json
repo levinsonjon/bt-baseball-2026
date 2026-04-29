@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-04-28T09:35:00Z",
+  "generated_at": "2026-04-29T05:00:00Z",
   "window_hours": 24,
   "players": [
     {
       "name": "Cal Raleigh",
       "team": "SEA",
       "position": "C",
-      "summary": "Raleigh is on a power surge — 7 HRs this season with 5 in his last 7 games. Hit a two-run shot in the 8th of an 11-4 loss to Minnesota, keeping his hot power stretch going despite a .195 AVG.",
+      "summary": "Raleigh has homered 5 times in his last 7 games, erasing a brutal early-season slump (.161 before April 20). SEA won 7-1 over MIN behind a three-hit game each from Julio Rodríguez and Taylor Naylor.",
       "sources": [
         {
-          "title": "Mariners fall 11-4 to Twins as struggles continue",
-          "url": "https://komonews.com/sports/mariners/mariners-fall-11-4-to-twins-as-struggles-continue-major-league-baseball-professional-sports-cal-raleigh-hitting-pitching-randy-arozarena-luis-castillo-triple-a-rbis"
+          "title": "Cal Raleigh Is Once Again Making Mariners Panic Look Like a Terrible Investment",
+          "url": "https://www.si.com/mlb/mariners/onsi/cal-raleigh-is-once-again-making-mariners-panic-look-like-a-terrible-investment"
         }
       ]
     },
@@ -18,11 +18,11 @@
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "Harper delivered 2 hits and 4 RBIs on Apr 26 as the Phillies ended their 10-game losing streak with an 8-5 extra-inning win over Atlanta. Phillies open a home series vs. San Francisco on April 28.",
+      "summary": "Phillies blanked the Giants 7-0 with Jesus Luzardo going 7 shutout innings. Don Mattingly managed his first game for Philadelphia after the team fired its previous skipper. Harper contributed an RBI double.",
       "sources": [
         {
-          "title": "Bryce Harper, Phillies Snap 10-Game Skid With Extra-Inning Win Over Braves",
-          "url": "https://www.foxsports.com/stories/mlb/bryce-harper-leads-phillies-past-braves-85-in-10-innings-to-stop-10game-losing-streak"
+          "title": "SF Giants shut out by Phillies in Don Mattingly's first game as Philadelphia's manager",
+          "url": "https://www.pressdemocrat.com/2026/04/28/sf-giants-blown-out-by-phillies-in-mattinglys-first-game-as-philadelphias-manager/"
         }
       ]
     },
@@ -30,11 +30,11 @@
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
-      "summary": "Arraez leads the Giants with a .305 AVG and an MLB-best hit rate, having struck out only 4 times in 115 plate appearances this season. Giants off today before opening a road series at Philadelphia on April 28.",
+      "summary": "Giants were shut out for an MLB-leading 6th time this season in a 7-0 loss. Arraez doubled but was stranded; SFG managed only 2 hits all game against Luzardo.",
       "sources": [
         {
-          "title": "How Luis Arraez turns taking a pitch into performance art for SF Giants",
-          "url": "https://www.pressdemocrat.com/2026/04/27/luis-arraez-batting-stance-plate-discipline-sf-giants/"
+          "title": "Phillies post 2-hit shutout of Giants in first game since manager's firing",
+          "url": "https://www.953thescore.com/2026/04/28/phillies-post-2-hit-shutout-of-giants-in-first-game-since-managers-firing/"
         }
       ]
     },
@@ -42,23 +42,23 @@
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
-      "summary": "Scouts report Bichette is not fully healthy from a left knee PCL sprain sustained in September 2025, with his sprint speed down to 25.4 ft/sec. Mets are monitoring the situation; no IL placement currently.",
+      "summary": "Bichette opened scoring with a leadoff HR on the very first pitch of the game, then added a sacrifice fly in the 4th. Mets erupted for a big inning en route to an 8-0 shutout of Washington.",
       "sources": [
         {
-          "title": "Mets Bo Bichette reportedly has a hidden injury problem from Blue Jays",
-          "url": "https://sports.yahoo.com/articles/mets-bo-bichette-reportedly-hidden-015254587.html"
+          "title": "Soto and Bichette go deep as slumping Mets break out in 8-0 win over Nationals",
+          "url": "https://www.washingtonpost.com/sports/mlb/2026/04/28/mets-nationals-score-soto-bichette-holmes/320981d8-4370-11f1-b19d-32431046b5b4_story.html"
         }
       ]
     },
     {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
+      "name": "Francisco Lindor",
+      "team": "NYM",
       "position": "SS",
-      "summary": "Kevin McGonigle is batting .322 with a .904 OPS as one of the AL's top rookies in 2026. He reached safely in 23 consecutive starts, the longest streak by a Tigers rookie since Austin Jackson in 2010.",
+      "summary": "Lindor remains on the 10-day IL with a left calf strain suffered April 22 vs Minnesota. Mets re-evaluate in 3 weeks; projected 3–8 week absence. Ronny Mauricio recalled as replacement.",
       "sources": [
         {
-          "title": "Detroit Tigers Kevin McGonigle stays grounded during strong start",
-          "url": "https://eu.detroitnews.com/story/sports/mlb/tigers/2026/04/26/detroit-tigers-kevin-mcgonigle-stays-grounded-during-strong-start/89810146007/"
+          "title": "Francisco Lindor to be reevaluated in three weeks",
+          "url": "https://sny.tv/articles/mets-francisco-lindor-injury-update-4-24-26"
         }
       ]
     },
@@ -66,11 +66,11 @@
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
-      "summary": "PCA swiped his 6th base of the year but the Cubs dropped their 3rd straight game, 9-7 to the surging Padres. He's posting just a .605 OPS in a rough recent stretch and is overdue for a breakout.",
+      "summary": "PCA ended a 3-week homer drought with a clutch 3-run blast in the 7th inning to break open an 8-3 Cubs win vs San Diego. Cubs snapped a 3-game losing skid.",
       "sources": [
         {
-          "title": "Chicago Cubs at San Diego Padres Game Story 04/27/2026",
-          "url": "https://www.mlb.com/stories/game/823311"
+          "title": "Pete Crow-Armstrong hits 3-run homer and Cubs beat Padres 8-3 to stop 3-game slide",
+          "url": "https://www.washingtonpost.com/sports/mlb/2026/04/29/cubs-padres-score-pete-crowarmstrong/0a62c2a8-4388-11f1-b19d-32431046b5b4_story.html"
         }
       ]
     },
@@ -78,23 +78,23 @@
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
-      "summary": "Merrill drove in a run with a first-inning single as the Padres rolled to a 9-7 win. San Diego is scorching hot — 17 wins in 21 games — with Ty France (4 RBI, double and triple) leading Monday's charge.",
+      "summary": "Padres fell 3-8 to the Cubs as starter Walker Buehler surrendered 5 runs. Padres manager Craig Stammen left mid-game to attend a funeral; bench coach Randy Knorr finished managing.",
       "sources": [
         {
-          "title": "Padres outlast Cubs 9-7 behind Ty France 4-RBI night",
-          "url": "https://sports.yahoo.com/articles/padres-outlast-cubs-9-7-045424040.html"
+          "title": "MLB Gameday: Cubs 8, Padres 3 Final Score (04/28/2026)",
+          "url": "https://www.mlb.com/gameday/cubs-vs-padres/2026/04/28/823310/final/wrap"
         }
       ]
     },
     {
-      "name": "Teoscar Hernandez",
+      "name": "Teoscar Hernández",
       "team": "LAD",
       "position": "OF",
-      "summary": "Hernandez delivered the go-ahead blow — a tiebreaking solo homer leading off the 8th (his 5th of 2026) — as the Dodgers beat the Pirates 8-4. He's batting .328 with 15 RBIs and is one of the Dodgers' most clutch performers early in 2026.",
+      "summary": "Hernández sparked the Dodgers' offense with a 2-run single in the 1st inning, scoring Freeman and Ohtani. Kyle Tucker delivered a walk-off single to complete a Dodgers comeback win over Miami.",
       "sources": [
         {
-          "title": "Teoscar Hernandez hits tiebreaking homer in 8th inning and Dodgers beat Pirates 8-4",
-          "url": "https://abcnews.go.com/Sports/wireStory/teoscar-hernndez-hits-tiebreaking-homer-8th-inning-dodgers-121208022"
+          "title": "Kyle Tucker's walkoff single caps Dodgers' rally past Marlins",
+          "url": "https://yournews.com/2026/04/28/6861226/kyle-tuckers-walkoff-single-caps-dodgers-rally-past-marlins/"
         }
       ]
     },
@@ -102,11 +102,11 @@
       "name": "Giancarlo Stanton",
       "team": "NYY",
       "position": "DH",
-      "summary": "Stanton was placed on the 10-day IL on April 27 with a low-grade right calf strain. MRI confirmed the injury after he exited the April 25 game vs. Houston. Manager Boone: 'doesn't look too serious' and return when eligible is possible.",
+      "summary": "Stanton officially placed on the 10-day IL April 28 with a low-grade right calf strain suffered April 24 vs Houston while jogging to second base. MRI confirmed low-grade; Aaron Boone optimistic about a relatively quick return.",
       "sources": [
         {
-          "title": "Yankees slugger Giancarlo Stanton headed to injured list with low-grade right calf strain",
-          "url": "https://sports.yahoo.com/articles/yankees-await-results-mri-giancarlo-225952119.html"
+          "title": "Yankees place DH Giancarlo Stanton (calf) on IL",
+          "url": "https://yournews.com/2026/04/28/6863416/yankees-place-dh-giancarlo-stanton-calf-on-il/"
         }
       ]
     },
@@ -114,11 +114,11 @@
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
-      "summary": "Williams threw a scoreless 9th with 2 Ks on April 26 in the Mets' game 2 doubleheader loss to Colorado — a positive sign after a brutal stretch. His season ERA stands at 7.56 over 10 appearances.",
+      "summary": "Williams sat out the Mets' 8-0 blowout win over Washington. His early 2026 has been difficult with an ERA near 10.00 through 8 appearances; Mets are considering a reduced role.",
       "sources": [
         {
-          "title": "NY Mets scored 1 run in 18 innings and got swept by Colorado",
-          "url": "https://empiresportsmedia.com/new-york-mets/ny-mets-swept-rockies-doubleheader-april-2026/"
+          "title": "Why the Mets Should Move Devin Williams Out of the Closer Role",
+          "url": "https://lastwordonsports.com/baseball/2026/04/26/why-mets-should-replace-devin-williams-closer-role/"
         }
       ]
     },
@@ -126,7 +126,7 @@
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
-      "summary": "Wheeler made his 2026 debut on April 25 after 253 days away, going 5 IP, 3 H, 2 ER, 6 K, 3 BB in the Phillies' 8-5 extra-inning win over Atlanta that snapped a 10-game losing streak. He showed his velocity (94.7 mph avg) is intact.",
+      "summary": "Wheeler debuted April 26 vs Atlanta (5 IP, 2 ER, 6 K) in PHI's 8-5 extra-inning win. Velocity looked good after offseason blood-clot surgery; next start likely May 1.",
       "sources": [
         {
           "title": "Zack Wheeler returns strong as Phillies end losing streak",
@@ -138,11 +138,11 @@
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "Ragans didn't start as Seth Lugo pitched for KC's walk-off win over Los Angeles on April 27. His ERA has climbed after a left thumb injury from a comebacker vs. Cleveland earlier in April.",
+      "summary": "Ragans bounced back with an 11-K gem April 25 (6 IP, 1 ER, 0 BB) vs the Angels for his first 2026 win after a 0-4 start. Next start expected around April 30.",
       "sources": [
         {
-          "title": "Thomas walk-off home run caps Royals 6-run rally for sweep of Angels",
-          "url": "https://www.kctv5.com/2026/04/27/thomas-walk-off-home-run-caps-royals-6-run-rally-sweep-angels/"
+          "title": "Cole Ragans strikes out 11 in first win of 2026",
+          "url": "https://www.mlb.com/royals/news/cole-ragans-strikes-out-11-in-first-win-of-2026"
         }
       ]
     },
@@ -150,11 +150,11 @@
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
-      "summary": "Burns is one of 2026's breakout starters, holding a 2.42 ERA through 4 starts. His 98.5 mph fastball and low-90s slider with a 56.3% whiff rate have generated Cy Young buzz for the 2024 second-overall pick.",
+      "summary": "Burns recorded his 100th career strikeout — the fastest Reds pitcher ever to reach the milestone — during his 6-inning, 9-K gem vs Colorado. His season ERA stands at 2.60 through 6 starts.",
       "sources": [
         {
-          "title": "Chase Burns Forcing a Conversation the Reds Front Office Cannot Ignore",
-          "url": "https://www.si.com/mlb/reds/onsi/chase-burns-forcing-a-conversation-the-reds-front-office-can-t-ignore-01kpv33sj3g0"
+          "title": "Chase Burns makes Reds history in start against the Colorado Rockies",
+          "url": "https://sports.yahoo.com/articles/chase-burns-makes-reds-history-000224332.html"
         }
       ]
     },
@@ -162,11 +162,11 @@
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
-      "summary": "Eovaldi has been one of 2026's bigger disappointments, allowing 9 HR over 6 starts with a 5.06 ERA. Questions are growing in Texas about his durability and whether he can return to 2025 form.",
+      "summary": "Eovaldi is scheduled to start April 29 vs the Yankees (Jacob deGrom started the April 28 game for TEX). Eovaldi has a 5.79 ERA through 6 starts in 2026.",
       "sources": [
         {
-          "title": "Is Nathan Eovaldi Broken?",
-          "url": "https://dalsportsnation.com/2026/04/27/is-nathan-eovaldi-broken/"
+          "title": "Yankees vs. Rangers: Series preview, probable pitchers",
+          "url": "https://www.pinstripealley.com/yankees-game-information/185430/new-york-yankees-texas-rangers-series-preview-probable-pitchers-fried-degrom-schllitler-eovalidi"
         }
       ]
     },
@@ -174,10 +174,10 @@
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
-      "summary": "Sheehan was masterful on April 24 vs. Chicago (6.1 IP, 1 ER, career-tying 10 Ks) but the Dodgers' bullpen squandered the lead in a stunning loss. ERA sits at 4.78 through 5 starts — the number undersells how well he has pitched.",
+      "summary": "Sheehan pitched a gem April 24 vs the Cubs (6.1 IP, 10 K, career high) but the Dodgers bullpen blew the lead. Shohei Ohtani started April 28 vs Miami; Sheehan's next start is May 1 vs St. Louis.",
       "sources": [
         {
-          "title": "Dodgers waste Emmet Sheehan gem in stunning loss to Cubs",
+          "title": "Dodgers waste Emmet Sheehan's gem in stunning loss to Cubs",
           "url": "https://sports.yahoo.com/articles/dodgers-waste-emmet-sheehan-gem-053001594.html"
         }
       ]
@@ -186,10 +186,10 @@
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
-      "summary": "Detmers started April 26 at Kansas City, allowing 3 ER in 5+ innings. The Angels lost the series finale 11-9 on a walk-off homer on April 27. His ERA is 4.60 through 8 starts in 2026 — he's been rewarding the Angels' faith in keeping him in the rotation.",
+      "summary": "Detmers holds a 3.89 ERA through 6 starts and has been one of the Angels' most reliable starters in 2026. José Soriano started the April 28 game vs Chicago; Detmers's next turn is later this week.",
       "sources": [
         {
-          "title": "Reid Detmers Is Rewarding the Angels Faith in the Rotation",
+          "title": "Reid Detmers Is Rewarding the Angels' Faith in the Rotation",
           "url": "https://www.yardbarker.com/mlb/articles/reid_detmers_is_rewarding_the_angels_faith_in_the_rotation/s1_17194_43746532"
         }
       ]
@@ -197,27 +197,27 @@
   ],
   "injuries": [
     {
-      "name": "Giancarlo Stanton",
-      "team": "NYY",
-      "position": "DH",
-      "status": "10-day IL (right calf strain)",
-      "previous_status": "Day-to-day (calf tightness)",
-      "note": "Low-grade right calf strain confirmed by MRI on April 27. Exited April 25 game vs. HOU in 6th inning. Manager Boone said it doesn't look too serious but didn't want to wait. Return when eligible around May 5 is possible.",
+      "name": "Francisco Lindor",
+      "team": "NYM",
+      "position": "SS",
+      "status": "10-day IL",
+      "previous_status": "Active",
+      "note": "Left calf strain suffered April 22 vs Twins. In walking boot for 1 week; re-evaluation in 3 weeks. Could miss 3–8 weeks total.",
       "source": {
-        "title": "Yankees slugger Stanton headed to IL with low-grade right calf strain",
-        "url": "https://sports.yahoo.com/articles/yankees-await-results-mri-giancarlo-225952119.html"
+        "title": "Francisco Lindor to be reevaluated in three weeks",
+        "url": "https://sny.tv/articles/mets-francisco-lindor-injury-update-4-24-26"
       }
     },
     {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "status": "Day-to-day (lingering PCL)",
+      "name": "Giancarlo Stanton",
+      "team": "NYY",
+      "position": "DH",
+      "status": "10-day IL",
       "previous_status": "Active",
-      "note": "Multiple scouts report Bichette has not fully recovered from a left knee PCL sprain sustained in September 2025. Sprint speed down to 25.4 ft/sec from pre-injury levels. Mets monitoring but no IL placement announced.",
+      "note": "Low-grade right calf strain. Injured April 24 jogging to second base vs Astros; officially placed on IL April 28. Return TBD; Boone optimistic.",
       "source": {
-        "title": "Mets Bo Bichette reportedly has a hidden injury problem from Blue Jays",
-        "url": "https://sports.yahoo.com/articles/mets-bo-bichette-reportedly-hidden-015254587.html"
+        "title": "Yankees place DH Giancarlo Stanton (calf) on IL",
+        "url": "https://yournews.com/2026/04/28/6863416/yankees-place-dh-giancarlo-stanton-calf-on-il/"
       }
     }
   ]
