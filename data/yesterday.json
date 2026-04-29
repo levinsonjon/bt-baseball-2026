@@ -3,8 +3,8 @@
   "generated_at": "2026-04-29T05:00:00Z",
   "totals": {
     "hitters": {
-      "AB": 26,
-      "H": 9,
+      "AB": 30,
+      "H": 10,
       "R": 6,
       "HR": 2,
       "RBI": 10,
@@ -100,16 +100,23 @@
       "summary": "Leadoff HR on first pitch of game + sac fly; went 1-for-2 with 2 RBI in Mets' 8-0 blowout."
     },
     {
-      "name": "Francisco Lindor",
-      "team": "NYM",
+      "name": "Lindor/McGonigle",
+      "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "10-day IL — left calf strain",
-      "stats": {},
+      "opponent": "@ ATL",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "1-for-4 (single) in Tigers' 5-2 loss at Atlanta."
     },
     {
       "name": "Pete Crow-Armstrong",

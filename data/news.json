@@ -51,14 +51,18 @@
       ]
     },
     {
-      "name": "Francisco Lindor",
-      "team": "NYM",
+      "name": "Lindor/McGonigle",
+      "team": "DET",
       "position": "SS",
-      "summary": "Lindor remains on the 10-day IL with a left calf strain suffered April 22 vs Minnesota. Mets re-evaluate in 3 weeks; projected 3–8 week absence. Ronny Mauricio recalled as replacement.",
+      "summary": "Kevin McGonigle's first game in Jon's SS slot (replacing the IL'd Lindor): went 1-for-4 as Detroit's leadoff hitter in a 5-2 loss at Atlanta. Season slash entering the game: .309/.407/.500 with 1 HR, 8 RBI; ranks 26th in MLB OPS (.920).",
       "sources": [
         {
-          "title": "Francisco Lindor to be reevaluated in three weeks",
-          "url": "https://sny.tv/articles/mets-francisco-lindor-injury-update-4-24-26"
+          "title": "Kevin McGonigle 2026 batting Stats Per Game — ESPN",
+          "url": "https://www.espn.com/mlb/player/gamelog/_/id/5149072/kevin-mcgonigle"
+        },
+        {
+          "title": "Detroit Tigers vs. Atlanta Braves Box Score — April 28, 2026",
+          "url": "https://www.cbssports.com/mlb/gametracker/boxscore/MLB_20260428_DET@ATL/"
         }
       ]
     },
@@ -196,18 +200,6 @@
     }
   ],
   "injuries": [
-    {
-      "name": "Francisco Lindor",
-      "team": "NYM",
-      "position": "SS",
-      "status": "10-day IL",
-      "previous_status": "Active",
-      "note": "Left calf strain suffered April 22 vs Twins. In walking boot for 1 week; re-evaluation in 3 weeks. Could miss 3–8 weeks total.",
-      "source": {
-        "title": "Francisco Lindor to be reevaluated in three weeks",
-        "url": "https://sny.tv/articles/mets-francisco-lindor-injury-update-4-24-26"
-      }
-    },
     {
       "name": "Giancarlo Stanton",
       "team": "NYY",
