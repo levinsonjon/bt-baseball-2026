@@ -1,25 +1,25 @@
 {
-  "date": "2026-04-29",
-  "generated_at": "2026-04-30T09:00:00Z",
+  "date": "2026-04-30",
+  "generated_at": "2026-04-30T09:05:00Z",
   "totals": {
     "hitters": {
-      "AB": 17,
-      "H": 4,
-      "R": 3,
-      "HR": 2,
-      "RBI": 9,
+      "AB": 18,
+      "H": 3,
+      "R": 1,
+      "HR": 0,
+      "RBI": 3,
       "SB": 0,
-      "points": 14.0
+      "points": 4.0
     },
     "pitchers": {
-      "IP": 13.0,
-      "H": 11,
-      "ER": 2,
-      "K": 16,
+      "IP": 6.0,
+      "H": 5,
+      "ER": 4,
+      "K": 6,
       "BB": 2,
-      "W": 2,
+      "W": 0,
       "SV": 0,
-      "points": 5.28
+      "points": -1.2
     }
   },
   "players": [
@@ -28,31 +28,31 @@
       "team": "SEA",
       "position": "C",
       "type": "hitter",
-      "opponent": "@ MIN",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 3,
-        "H": 0,
-        "R": 0,
-        "HR": 0,
-        "RBI": 2,
-        "SB": 0
-      },
-      "points": 2.0,
-      "summary": "2 RBI (sac flies) in Mariners 5-3 win"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "vs SF",
-      "dnp": true,
+      "opponent": "vs SFG",
+      "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 0.0,
-      "summary": "Game postponed (rain)"
+      "stats": {
+        "AB": 5,
+        "H": 1,
+        "R": 1,
+        "HR": 0,
+        "RBI": 1,
+        "SB": 0
+      },
+      "points": 2.0,
+      "summary": "1-for-5 with bases-loaded walk (G1) and IBB (G2). PHI swept SFG doubleheader."
     },
     {
       "name": "Luis Arraez",
@@ -60,30 +60,37 @@
       "position": "2B",
       "type": "hitter",
       "opponent": "@ PHI",
-      "dnp": true,
+      "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 0.0,
-      "summary": "Game postponed (rain)"
+      "stats": {
+        "AB": 7,
+        "H": 2,
+        "R": 0,
+        "HR": 0,
+        "RBI": 2,
+        "SB": 0
+      },
+      "points": 2.0,
+      "summary": "2-for-7 across doubleheader; 2-run single in Game 2 ninth inning."
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": "vs WAS",
+      "opponent": "vs WSN",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
         "AB": 3,
-        "H": 1,
-        "R": 1,
-        "HR": 1,
-        "RBI": 2,
+        "H": 0,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
         "SB": 0
       },
-      "points": 4.0,
-      "summary": "Leadoff HR + sac fly — Mets 8-0"
+      "points": 0.0,
+      "summary": "0-for-3, Mets fell 5-4 to Washington."
     },
     {
       "name": "Lindor/McGonigle",
@@ -94,65 +101,51 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
-        "H": 1,
-        "R": 1,
+        "AB": 3,
+        "H": 0,
+        "R": 0,
         "HR": 0,
-        "RBI": 1,
+        "RBI": 0,
         "SB": 0
       },
-      "points": 2.0,
-      "summary": "Single, 1 RBI — Tigers 3-4 loss"
+      "points": 0.0,
+      "summary": "0-for-3 (McGonigle), Tigers beat Braves 5-2."
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ SD",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 3,
-        "H": 1,
-        "R": 1,
-        "HR": 1,
-        "RBI": 3,
-        "SB": 0
-      },
-      "points": 5.0,
-      "summary": "HR, 3 RBI — Cubs 5-4 win"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs CHC",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "R": 0,
-        "HR": 0,
-        "RBI": 1,
-        "SB": 0
-      },
-      "points": 1.0,
-      "summary": "1-for-4, 1 RBI — Padres 4-5 loss"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs MIA",
+      "opponent": null,
       "dnp": true,
-      "dnp_reason": null,
+      "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
-      "summary": "Planned rest day"
+      "summary": ""
     },
     {
       "name": "Giancarlo Stanton",
@@ -161,84 +154,85 @@
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "IL",
+      "dnp_reason": "10-day IL (right calf strain)",
       "stats": {},
       "points": 0.0,
-      "summary": "On injured list"
+      "summary": ""
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": "vs WAS",
-      "dnp": true,
+      "opponent": "vs WSN",
+      "dnp": false,
       "dnp_reason": null,
-      "stats": {},
+      "stats": {
+        "IP": 1.0,
+        "H": 0,
+        "ER": 0,
+        "K": 1,
+        "BB": 0,
+        "W": 0,
+        "SV": 0
+      },
       "points": 0.0,
-      "summary": "Not used — Mets 8-0 blowout win"
+      "summary": "Scoreless 9th (1 K). No save opportunity as Mets lost 5-4."
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs SF",
+      "opponent": null,
       "dnp": true,
-      "dnp_reason": null,
+      "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
-      "summary": "Game postponed"
+      "summary": ""
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
+      "opponent": "@ OAK",
+      "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 0.0,
-      "summary": "Off day"
+      "stats": {
+        "IP": 5.0,
+        "H": 5,
+        "ER": 4,
+        "K": 5,
+        "BB": 2,
+        "W": 0
+      },
+      "points": -1.2,
+      "summary": "5 IP, 4 ER, 5 K. KC lost 6-3 to Oakland; Ragans took the L."
     },
     {
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs COL",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 7,
-        "ER": 2,
-        "K": 9,
-        "BB": 1,
-        "W": 1
-      },
-      "points": 1.36,
-      "summary": "6 IP, 2 ER, 9K — W (Reds 7-2)"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs NYY",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 7.0,
-        "H": 4,
-        "ER": 0,
-        "K": 7,
-        "BB": 1,
-        "W": 1
-      },
-      "points": 3.92,
-      "summary": "7 IP, SHO, 7K — W (Rangers 3-0)"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Emmet Sheehan",
@@ -247,10 +241,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": null,
+      "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
-      "summary": "Off day"
+      "summary": ""
     },
     {
       "name": "Reid Detmers",
@@ -259,10 +253,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": null,
+      "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
-      "summary": "Off day"
+      "summary": ""
     }
   ]
 }

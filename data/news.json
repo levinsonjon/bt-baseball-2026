@@ -1,119 +1,59 @@
 {
-  "generated_at": "2026-04-30T09:00:00Z",
+  "generated_at": "2026-04-30T09:05:00Z",
   "window_hours": 24,
   "players": [
-    {
-      "name": "Cal Raleigh",
-      "team": "SEA",
-      "position": "C",
-      "summary": "Raleigh delivered two RBI via sacrifice flies as Seattle won the rubber game from Minnesota 5-3. He now leads the team with 18 RBIs on the season.",
-      "sources": []
-    },
-    {
-      "name": "Bryce Harper",
-      "team": "PHI",
-      "position": "1B",
-      "summary": "Harper's Wednesday game against San Francisco was rained out. The teams are expected to make it up as a doubleheader or separate date.",
-      "sources": []
-    },
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "summary": "The Giants-Phillies game was postponed for weather, giving Arraez an unplanned day off. He is batting .300 through 70 AB on the season.",
-      "sources": []
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "summary": "Bichette set the tone with a leadoff home run on the first pitch from Nationals starter Zack Littell, then added a sac fly for a 2-RBI night. The Mets blanked Washington 8-0 behind Clay Holmes and strong pitching.",
-      "sources": []
-    },
-    {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
-      "position": "SS",
-      "summary": "Kevin McGonigle extended his hit streak to 12 games with an infield single in the 2nd, driving in a run. He scored on a pickoff-throw error before Detroit fell on a Braves walkoff, 4-3.",
-      "sources": []
-    },
-    {
-      "name": "Pete Crow-Armstrong",
-      "team": "CHC",
-      "position": "OF",
-      "summary": "PCA hit a home run and drove in 3 runs as the Cubs edged the Padres 5-4 in San Diego. He is now batting .288 with 3 HR and 4 SBs on the season.",
-      "sources": []
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "summary": "Merrill went 1-for-4 with an RBI in San Diego's 5-4 loss to Chicago. The Padres bullpen could not hold the lead in the late innings.",
-      "sources": []
-    },
-    {
-      "name": "Teoscar Hernandez",
-      "team": "LAD",
-      "position": "OF",
-      "summary": "Hernandez received a planned rest day as the Dodgers hosted Miami. He is expected back in the lineup Thursday.",
-      "sources": []
-    },
     {
       "name": "Giancarlo Stanton",
       "team": "NYY",
       "position": "DH",
-      "summary": "Stanton remains on the injured list with no update on a return timeline.",
-      "sources": []
-    },
-    {
-      "name": "Devin Williams",
-      "team": "NYM",
-      "position": "RP",
-      "summary": "Williams was not called upon in the Mets' 8-0 rout of Washington — no save situation arose. His ERA has climbed to 10.29 on the season; the club says minor mechanical adjustments are being made.",
-      "sources": []
-    },
-    {
-      "name": "Chase Burns",
-      "team": "CIN",
-      "position": "SP",
-      "summary": "Burns struck out 9 over 6 innings and allowed 2 ER as Cincinnati routed Colorado 7-2. He improves to 4-1 with a 2.66 ERA — among the better SP values this fantasy season.",
-      "sources": []
-    },
-    {
-      "name": "Nathan Eovaldi",
-      "team": "TEX",
-      "position": "SP",
-      "summary": "Eovaldi delivered 7 scoreless innings vs. the Yankees, allowing only 4 hits while striking out 7. His ERA drops from 5.79 to 4.50 — a strong performance showing his ace-level upside.",
+      "summary": "Placed on 10-day IL April 28 with a low-grade right calf strain tweaked while running bases April 25. MRI confirmed minor strain; eligible to return ~May 8.",
       "sources": []
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "Ragans was not scheduled to pitch Wednesday; Michael Wacha started for KC vs. Oakland. Ragans has a 5.00 ERA in 5 starts but has averaged 5.4 innings per outing.",
+      "summary": "Rough start vs. Oakland (5 IP, 5 H, 4 ER, 2 BB, 5 K). KC lost 6-3 and Ragans took the loss. ERA climbs to 5.34 through 6 starts.",
       "sources": []
     },
     {
-      "name": "Zack Wheeler",
+      "name": "Devin Williams",
+      "team": "NYM",
+      "position": "RP",
+      "summary": "Pitched a clean 9th inning vs. Washington (1 K, 0 ER) but had no save opportunity as the Mets lost 5-4. ERA remains elevated at 8.60 through 7.1 IP on the season.",
+      "sources": []
+    },
+    {
+      "name": "Bryce Harper",
       "team": "PHI",
-      "position": "SP",
-      "summary": "Wheeler's scheduled start was lost to the Giants-Phillies postponement. He last pitched April 25 and should stay on rotation for the next game.",
+      "position": "1B",
+      "summary": "PHI swept SFG in a doubleheader. Harper walked twice (bases-loaded walk G1, IBB G2), going 1-for-5 with 1 R and 1 RBI across both games.",
       "sources": []
     },
     {
-      "name": "Emmet Sheehan",
-      "team": "LAD",
-      "position": "SP",
-      "summary": "Sheehan did not pitch Wednesday with Clayton Glasnow on the mound for LA. He holds a 3.71 ERA across 5 starts and is expected to pitch later in the week.",
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
+      "summary": "2-for-7 across the April 30 doubleheader at PHI. Delivered a 2-run single in the 9th of Game 2. Season average climbs to .313.",
       "sources": []
     },
     {
-      "name": "Reid Detmers",
-      "team": "LAA",
-      "position": "SP",
-      "summary": "Detmers sat out with Yusei Kikuchi starting for the Angels in a 3-2 loss to the White Sox. He carries a 3.89 ERA in 6 starts, right in line with projections.",
+      "name": "Kevin McGonigle",
+      "team": "DET",
+      "position": "SS",
+      "summary": "0-for-3 as Tigers beat Atlanta 5-2. Batting .178 (16-for-90) to start his MLB career.",
       "sources": []
     }
   ],
-  "injuries": []
+  "injuries": [
+    {
+      "name": "Giancarlo Stanton",
+      "team": "NYY",
+      "position": "DH",
+      "status": "10-day IL (right calf strain)",
+      "previous_status": "Active",
+      "note": "Low-grade right calf strain tweaked while running bases April 25. MRI confirmed minor strain. Eligible to return ~May 8.",
+      "source": null
+    }
+  ]
 }
