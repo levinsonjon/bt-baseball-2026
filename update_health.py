@@ -42,6 +42,10 @@ MLB_BOXSCORE_URL = "https://statsapi.mlb.com/api/v1/game/{game_pk}/boxscore"
 # Jon's roster file
 MY_TEAM_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "my_team.json")
 
+# Pipeline freshness check: data/yesterday.json watermark file
+YESTERDAY_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "yesterday.json")
+STALE_THRESHOLD_HOURS = 36
+
 # MLB player ID cache (maps normalized name -> MLB person ID)
 MLB_PLAYER_IDS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "mlb_player_ids.json")
 
@@ -161,6 +165,42 @@ def send_alert_email(subject, body, html=False, cc=True):
                                        "token has been", "refresherror")):
             notify_reauth_needed(f"Gmail send failed: {e}")
         return False
+
+
+def check_pipeline_freshness():
+    """Compare data/yesterday.json's date to today. If >36h stale, the daily
+    pipeline has silently failed for at least one cycle — fire a Reminder so
+    Jon notices before the lag piles up. The cause is usually Gmail OAuth
+    revocation (which the regular re-auth check catches only after expiry),
+    but can also be a remote-agent failure or local cron miss."""
+    try:
+        with open(YESTERDAY_FILE) as f:
+            payload = json.load(f)
+        date_str = payload.get("date")
+        if not date_str:
+            return
+        watermark = datetime.strptime(date_str, "%Y-%m-%d").date()
+    except (FileNotFoundError, json.JSONDecodeError, ValueError) as e:
+        log(f"Pipeline freshness check skipped: {e}")
+        return
+
+    expected = (datetime.now() - timedelta(days=1)).date()
+    age_days = (expected - watermark).days
+    if age_days <= 0:
+        return  # fresh
+    age_hours = age_days * 24
+    if age_hours < STALE_THRESHOLD_HOURS:
+        return  # within tolerance
+
+    msg = (
+        f"data/yesterday.json watermark is {age_days} day(s) behind "
+        f"(file shows {watermark}, expected {expected}). The daily pipeline "
+        f"hasn't pushed since then. Likely Gmail OAuth revoked again — re-auth "
+        f"and run send_pending_email.py. If credentials are fine, check the "
+        f"remote trigger (claude.ai) or send_email.log."
+    )
+    log(f"PIPELINE STALE: {msg}")
+    notify_reauth_needed(msg)
 
 
 def check_gmail_reauth_needed():
@@ -1209,6 +1249,9 @@ def main():
         if reauth_msg:
             log(f"REAUTH WARNING: {reauth_msg}")
             notify_reauth_needed(reauth_msg)
+
+        # Check that the daily report pipeline is keeping up
+        check_pipeline_freshness()
 
         log("Daily update complete.")
     except Exception as e:
