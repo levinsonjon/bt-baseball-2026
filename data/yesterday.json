@@ -1,25 +1,25 @@
 {
-  "date": "2026-04-28",
-  "generated_at": "2026-04-29T05:00:00Z",
+  "date": "2026-04-29",
+  "generated_at": "2026-04-30T09:00:00Z",
   "totals": {
     "hitters": {
-      "AB": 30,
-      "H": 10,
-      "R": 6,
+      "AB": 17,
+      "H": 4,
+      "R": 3,
       "HR": 2,
-      "RBI": 10,
+      "RBI": 9,
       "SB": 0,
-      "points": 18.0
+      "points": 14.0
     },
     "pitchers": {
-      "IP": 6.0,
-      "H": 7,
+      "IP": 13.0,
+      "H": 11,
       "ER": 2,
-      "K": 9,
-      "BB": 1,
-      "W": 1,
+      "K": 16,
+      "BB": 2,
+      "W": 2,
       "SV": 0,
-      "points": 1.36
+      "points": 5.28
     }
   },
   "players": [
@@ -32,34 +32,27 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 1,
+        "AB": 3,
+        "H": 0,
+        "R": 0,
         "HR": 0,
-        "RBI": 1,
+        "RBI": 2,
         "SB": 0
       },
       "points": 2.0,
-      "summary": "1-for-4 with a run scored and RBI in Mariners' 7-1 win over Twins."
+      "summary": "2 RBI (sac flies) in Mariners 5-3 win"
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "vs SFG",
-      "dnp": false,
+      "opponent": "vs SF",
+      "dnp": true,
       "dnp_reason": null,
-      "stats": {
-        "H": 2,
-        "AB": 4,
-        "R": 1,
-        "HR": 0,
-        "RBI": 2,
-        "SB": 0
-      },
-      "points": 3.0,
-      "summary": "2-for-4 with RBI double in Phillies' 7-0 shutout of Giants (Don Mattingly's managerial debut)."
+      "stats": {},
+      "points": 0.0,
+      "summary": "Game postponed (rain)"
     },
     {
       "name": "Luis Arraez",
@@ -67,37 +60,30 @@
       "position": "2B",
       "type": "hitter",
       "opponent": "@ PHI",
-      "dnp": false,
+      "dnp": true,
       "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
+      "stats": {},
       "points": 0.0,
-      "summary": "Doubled (1 of Giants' 2 total hits) in 7-0 shutout loss; SFG blanked for MLB-leading 6th time."
+      "summary": "Game postponed (rain)"
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": "vs WSN",
+      "opponent": "vs WAS",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
+        "AB": 3,
         "H": 1,
-        "AB": 2,
         "R": 1,
         "HR": 1,
         "RBI": 2,
         "SB": 0
       },
       "points": 4.0,
-      "summary": "Leadoff HR on first pitch of game + sac fly; went 1-for-2 with 2 RBI in Mets' 8-0 blowout."
+      "summary": "Leadoff HR + sac fly — Mets 8-0"
     },
     {
       "name": "Lindor/McGonigle",
@@ -108,34 +94,34 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 1,
         "AB": 4,
-        "R": 0,
+        "H": 1,
+        "R": 1,
         "HR": 0,
-        "RBI": 0,
+        "RBI": 1,
         "SB": 0
       },
-      "points": 0.0,
-      "summary": "1-for-4 (single) in Tigers' 5-2 loss at Atlanta."
+      "points": 2.0,
+      "summary": "Single, 1 RBI — Tigers 3-4 loss"
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ SDP",
+      "opponent": "@ SD",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 2,
-        "AB": 4,
-        "R": 2,
+        "AB": 3,
+        "H": 1,
+        "R": 1,
         "HR": 1,
         "RBI": 3,
         "SB": 0
       },
-      "points": 6.0,
-      "summary": "3-run HR in 7th broke game open; also scored in 6th — Cubs beat Padres 8-3."
+      "points": 5.0,
+      "summary": "HR, 3 RBI — Cubs 5-4 win"
     },
     {
       "name": "Jackson Merrill",
@@ -146,34 +132,27 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 1,
         "AB": 4,
-        "R": 1,
+        "H": 1,
+        "R": 0,
         "HR": 0,
-        "RBI": 0,
+        "RBI": 1,
         "SB": 0
       },
       "points": 1.0,
-      "summary": "Went 1-for-4 with a run scored in 3-8 Padres loss to Cubs."
+      "summary": "1-for-4, 1 RBI — Padres 4-5 loss"
     },
     {
-      "name": "Teoscar Hernández",
+      "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
       "type": "hitter",
       "opponent": "vs MIA",
-      "dnp": false,
+      "dnp": true,
       "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 0,
-        "HR": 0,
-        "RBI": 2,
-        "SB": 0
-      },
-      "points": 2.0,
-      "summary": "2-run single in 1st (scoring Freeman and Ohtani); Dodgers won on Kyle Tucker walk-off, 3-2."
+      "stats": {},
+      "points": 0.0,
+      "summary": "Planned rest day"
     },
     {
       "name": "Giancarlo Stanton",
@@ -182,34 +161,34 @@
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "10-day IL — right calf strain",
+      "dnp_reason": "IL",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "On injured list"
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": null,
+      "opponent": "vs WAS",
       "dnp": true,
-      "dnp_reason": "Did not appear (Mets 8-0 blowout win)",
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Not used — Mets 8-0 blowout win"
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
+      "opponent": "vs SF",
       "dnp": true,
-      "dnp_reason": "Off day in rotation (last started April 26 vs ATL)",
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Game postponed"
     },
     {
       "name": "Cole Ragans",
@@ -218,10 +197,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Off day in rotation (last started April 25 vs LAA)",
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Off day"
     },
     {
       "name": "Chase Burns",
@@ -240,19 +219,26 @@
         "W": 1
       },
       "points": 1.36,
-      "summary": "6 IP, 9 K (including 100th career K), 2 ER — Win No. 3. Reds beat Rockies 7-2."
+      "summary": "6 IP, 2 ER, 9K — W (Reds 7-2)"
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Off day in rotation (deGrom started April 28; Eovaldi starts April 29)",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs NYY",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 7.0,
+        "H": 4,
+        "ER": 0,
+        "K": 7,
+        "BB": 1,
+        "W": 1
+      },
+      "points": 3.92,
+      "summary": "7 IP, SHO, 7K — W (Rangers 3-0)"
     },
     {
       "name": "Emmet Sheehan",
@@ -261,10 +247,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Off day in rotation (Ohtani started April 28; Sheehan starts May 1)",
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Off day"
     },
     {
       "name": "Reid Detmers",
@@ -273,10 +259,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Off day in rotation (Soriano started for LAA April 28)",
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Off day"
     }
   ]
 }
