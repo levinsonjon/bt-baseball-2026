@@ -1,58 +1,137 @@
 {
-  "generated_at": "2026-04-30T09:05:00Z",
+  "generated_at": "2026-05-02T04:35:00Z",
   "window_hours": 24,
   "players": [
     {
-      "name": "Giancarlo Stanton",
-      "team": "NYY",
-      "position": "DH",
-      "summary": "Placed on 10-day IL April 28 with a low-grade right calf strain tweaked while running bases April 25. MRI confirmed minor strain; eligible to return ~May 8.",
-      "sources": []
-    },
-    {
-      "name": "Cole Ragans",
-      "team": "KCR",
-      "position": "SP",
-      "summary": "Rough start vs. Oakland (5 IP, 5 H, 4 ER, 2 BB, 5 K). KC lost 6-3 and Ragans took the loss. ERA climbs to 5.34 through 6 starts.",
-      "sources": []
-    },
-    {
-      "name": "Devin Williams",
-      "team": "NYM",
-      "position": "RP",
-      "summary": "Pitched a clean 9th inning vs. Washington (1 K, 0 ER) but had no save opportunity as the Mets lost 5-4. ERA remains elevated at 8.60 through 7.1 IP on the season.",
+      "name": "Cal Raleigh",
+      "team": "SEA",
+      "position": "C",
+      "summary": "Raleigh went 0-for-4 as the Mariners fell 6-7 to Kansas City at T-Mobile Park. He remains healthy and is Seattle's everyday catcher heading into May with no injury concerns.",
       "sources": []
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "PHI swept SFG in a doubleheader. Harper walked twice (bases-loaded walk G1, IBB G2), going 1-for-5 with 1 R and 1 RBI across both games.",
+      "summary": "Harper doubled and swiped a base in Philadelphia's 6-5 win at Miami, scoring a run. He looks healthy at first base and continues to be one of the Phillies' key contributors in a strong stretch of play.",
       "sources": []
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
-      "summary": "2-for-7 across the April 30 doubleheader at PHI. Delivered a 2-run single in the 9th of Game 2. Season average climbs to .313.",
+      "summary": "Arraez had the Giants' only extra-base hit — a double — but was thrown out aggressively trying to stretch it to a triple as San Francisco was shut out 3-0 by Tampa Bay. The Giants have been blanked a major-league-high seven times this season.",
       "sources": []
     },
     {
-      "name": "Kevin McGonigle",
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "summary": "Bichette went 1-for-4 with a run scored as the Mets edged the Angels 4-3 in Anaheim. He is healthy and playing third base daily in New York's lineup.",
+      "sources": []
+    },
+    {
+      "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
-      "summary": "0-for-3 as Tigers beat Atlanta 5-2. Batting .178 (16-for-90) to start his MLB career.",
+      "summary": "Kevin McGonigle went 0-for-5 as the Tigers dropped a 4-5 decision to Texas at Comerica Park. He remains the everyday shortstop in Detroit with no injury concerns.",
+      "sources": []
+    },
+    {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "position": "OF",
+      "summary": "Crow-Armstrong went 1-for-4 with a run scored in Chicago's 6-5 win over Arizona at Wrigley Field. He is healthy and hitting in his customary spot in the Cubs lineup.",
+      "sources": []
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "summary": "Merrill was scratched from the Padres lineup vs. the White Sox with an ankle sprain and is considered day-to-day. San Diego expects him back in the lineup within a few days barring setbacks.",
+      "sources": []
+    },
+    {
+      "name": "Teoscar Hernandez",
+      "team": "LAD",
+      "position": "OF",
+      "summary": "Hernández singled in the fourth inning but the Dodgers were routed 7-2 in St. Louis. He had a throwing error in the field but no injury concerns; LAD plans to keep him in the everyday lineup.",
+      "sources": []
+    },
+    {
+      "name": "Devin Williams",
+      "team": "NYM",
+      "position": "RP",
+      "summary": "Williams earned his third save of the season with a clean inning of relief, striking out one and allowing no baserunners. His ERA stands at 7.20 on the year but recent outings have been sharp.",
+      "sources": []
+    },
+    {
+      "name": "Zack Wheeler",
+      "team": "PHI",
+      "position": "SP",
+      "summary": "Wheeler bounced back with a strong outing — 6 IP, 1 ER, 8 strikeouts — earning his first win of 2026 in Philadelphia's 6-5 victory at Miami. He now has 14 Ks in 11 innings and a 2.45 ERA on the season.",
+      "sources": []
+    },
+    {
+      "name": "Cole Ragans",
+      "team": "KCR",
+      "position": "SP",
+      "summary": "Ragans allowed four earned runs in 5⅓ innings (no decision) as the Royals won 7-6 over Seattle. His ERA climbed to 5.25 and walk-rate concerns persist with 22 BB in 37.1 IP on the year.",
+      "sources": []
+    },
+    {
+      "name": "Chase Burns",
+      "team": "CIN",
+      "position": "SP",
+      "summary": "Burns was not in the rotation on May 1 as Brady Singer started a rain-delayed game for Cincinnati vs. Pittsburgh. Burns is healthy and expected back on regular turn.",
+      "sources": []
+    },
+    {
+      "name": "Nathan Eovaldi",
+      "team": "TEX",
+      "position": "SP",
+      "summary": "Eovaldi skipped a turn in the rotation as MacKenzie Gore started for Texas against Detroit on May 1. He is healthy and lined up for his next scheduled start.",
+      "sources": []
+    },
+    {
+      "name": "Emmet Sheehan",
+      "team": "LAD",
+      "position": "SP",
+      "summary": "Sheehan took the loss in Los Angeles's 7-2 defeat at St. Louis, allowing 4 earned runs in 4⅔ innings. Velocity concerns persist — his fastball sits 93.4 mph vs. his normal 96 — as he continues to work with coaches on mechanics.",
+      "sources": []
+    },
+    {
+      "name": "Reid Detmers",
+      "team": "LAA",
+      "position": "SP",
+      "summary": "Detmers was not scheduled to pitch on May 1 as Walbert Ureña started for the Angels vs. the Mets. He is healthy and set to make his next start on May 2.",
+      "sources": []
+    },
+    {
+      "name": "Giancarlo Stanton",
+      "team": "NYY",
+      "position": "DH",
+      "summary": "Stanton was officially placed on the 10-day IL (retroactive to April 25) with a left calf strain. He is expected to miss at least two more weeks and could return around mid-May.",
       "sources": []
     }
   ],
   "injuries": [
     {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "status": "day-to-day",
+      "previous_status": "healthy",
+      "note": "Ankle sprain; scratched from lineup vs. CWS on May 1",
+      "source": null
+    },
+    {
       "name": "Giancarlo Stanton",
       "team": "NYY",
       "position": "DH",
-      "status": "10-day IL (right calf strain)",
-      "previous_status": "Active",
-      "note": "Low-grade right calf strain tweaked while running bases April 25. MRI confirmed minor strain. Eligible to return ~May 8.",
+      "status": "IL-10",
+      "previous_status": "healthy",
+      "note": "Left calf strain; 10-day IL retroactive to April 25; ETA mid-May",
       "source": null
     }
   ]

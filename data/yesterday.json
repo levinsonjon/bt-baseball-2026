@@ -1,25 +1,25 @@
 {
-  "date": "2026-04-30",
-  "generated_at": "2026-04-30T09:05:00Z",
+  "date": "2026-05-01",
+  "generated_at": "2026-05-02T04:35:00Z",
   "totals": {
     "hitters": {
-      "AB": 18,
-      "H": 3,
-      "R": 1,
+      "AB": 29,
+      "H": 5,
+      "R": 3,
       "HR": 0,
-      "RBI": 3,
-      "SB": 0,
+      "RBI": 0,
+      "SB": 1,
       "points": 4.0
     },
     "pitchers": {
-      "IP": 6.0,
-      "H": 5,
-      "ER": 4,
-      "K": 6,
-      "BB": 2,
-      "W": 0,
-      "SV": 0,
-      "points": -1.2
+      "IP": 17.0,
+      "H": 13,
+      "ER": 9,
+      "K": 20,
+      "BB": 6,
+      "W": 1,
+      "SV": 1,
+      "points": 4.96
     }
   },
   "players": [
@@ -28,100 +28,114 @@
       "team": "SEA",
       "position": "C",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "vs KC",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "0-for-4; Mariners fell 6-7 to Royals"
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "vs SFG",
+      "opponent": "@ MIA",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
         "H": 1,
+        "AB": 4,
         "R": 1,
         "HR": 0,
-        "RBI": 1,
-        "SB": 0
+        "RBI": 0,
+        "SB": 1
       },
       "points": 2.0,
-      "summary": "1-for-5 with bases-loaded walk (G1) and IBB (G2). PHI swept SFG doubleheader."
+      "summary": "Double and stolen base, scored in PHI's 6-5 win at Miami"
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": "@ PHI",
+      "opponent": "@ TBR",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 7,
-        "H": 2,
+        "H": 1,
+        "AB": 4,
         "R": 0,
         "HR": 0,
-        "RBI": 2,
+        "RBI": 0,
         "SB": 0
       },
-      "points": 2.0,
-      "summary": "2-for-7 across doubleheader; 2-run single in Game 2 ninth inning."
+      "points": 0.0,
+      "summary": "1-for-4 with double; thrown out stretching to third; Giants blanked 3-0"
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": "vs WSN",
+      "opponent": "@ LAA",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
-        "H": 0,
-        "R": 0,
+        "H": 1,
+        "AB": 4,
+        "R": 1,
         "HR": 0,
         "RBI": 0,
         "SB": 0
       },
-      "points": 0.0,
-      "summary": "0-for-3, Mets fell 5-4 to Washington."
+      "points": 1.0,
+      "summary": "1-for-4 with a run scored; Mets edged Angels 4-3"
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": "@ ATL",
+      "opponent": "vs TEX",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
         "H": 0,
+        "AB": 5,
         "R": 0,
         "HR": 0,
         "RBI": 0,
         "SB": 0
       },
       "points": 0.0,
-      "summary": "0-for-3 (McGonigle), Tigers beat Braves 5-2."
+      "summary": "0-for-5 (McGonigle); Tigers fell 4-5 to Rangers"
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs ARI",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 1.0,
+      "summary": "1-for-4 with run scored; Cubs beat Diamondbacks 6-5"
     },
     {
       "name": "Jackson Merrill",
@@ -130,41 +144,36 @@
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Team off day",
+      "dnp_reason": "day-to-day",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "DNP — ankle sprain, day-to-day"
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "@ STL",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
       "points": 0.0,
-      "summary": ""
-    },
-    {
-      "name": "Giancarlo Stanton",
-      "team": "NYY",
-      "position": "DH",
-      "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "10-day IL (right calf strain)",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "summary": "1-for-4; Dodgers routed 7-2 at St. Louis"
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": "vs WSN",
+      "opponent": "@ LAA",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -174,41 +183,48 @@
         "K": 1,
         "BB": 0,
         "W": 0,
-        "SV": 0
+        "SV": 1
       },
-      "points": 0.0,
-      "summary": "Scoreless 9th (1 K). No save opportunity as Mets lost 5-4."
+      "points": 5.0,
+      "summary": "1 IP, 0H, 0ER, 1K; save no. 3; Mets won 4-3"
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ MIA",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 6.0,
+        "H": 3,
+        "ER": 1,
+        "K": 8,
+        "BB": 2,
+        "W": 1
+      },
+      "points": 2.36,
+      "summary": "6 IP, 1ER, 8K; earned W; PHI won 6-5 at Miami"
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ OAK",
+      "opponent": "@ SEA",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "IP": 5.0,
-        "H": 5,
+        "IP": 5.33,
+        "H": 4,
         "ER": 4,
-        "K": 5,
+        "K": 8,
         "BB": 2,
         "W": 0
       },
-      "points": -1.2,
-      "summary": "5 IP, 4 ER, 5 K. KC lost 6-3 to Oakland; Ragans took the L."
+      "points": -1.02,
+      "summary": "5.1 IP, 4ER, 8K; no decision; Royals won 7-6 at Seattle"
     },
     {
       "name": "Chase Burns",
@@ -217,10 +233,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Team off day",
+      "dnp_reason": "Not in rotation",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Not scheduled May 1; Singer started for CIN vs PIT"
     },
     {
       "name": "Nathan Eovaldi",
@@ -229,22 +245,29 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Team off day",
+      "dnp_reason": "Not in rotation",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Not scheduled May 1; Gore started for TEX vs DET"
     },
     {
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ STL",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 4.67,
+        "H": 6,
+        "ER": 4,
+        "K": 3,
+        "BB": 2,
+        "W": 0
+      },
+      "points": -1.38,
+      "summary": "4.2 IP, 4ER, 6H; took loss as LAD fell 7-2 at St. Louis"
     },
     {
       "name": "Reid Detmers",
@@ -253,10 +276,22 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Team off day",
+      "dnp_reason": "Not in rotation",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Not scheduled May 1; Ureña started for LAA vs NYM"
+    },
+    {
+      "name": "Giancarlo Stanton",
+      "team": "NYY",
+      "position": "DH",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "IL-10",
+      "stats": {},
+      "points": 0.0,
+      "summary": "DNP — 10-day IL, left calf strain (retroactive to April 25)"
     }
   ]
 }
