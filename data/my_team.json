@@ -141,7 +141,7 @@
     },
     {
       "name": "Teoscar Hernandez",
-      "current_player": "Teoscar Hern\u00e1ndez",
+      "current_player": "Teoscar Hernández",
       "team": "LAD",
       "positions": [
         "OF"
@@ -281,13 +281,14 @@
       }
     },
     {
-      "name": "Giancarlo Stanton",
+      "name": "Stanton/Rice",
+      "current_player": "Ben Rice",
       "team": "NYY",
       "positions": [
         "DH"
       ],
       "player_type": "hitter",
-      "projected_points": 377.8,
+      "projected_points": 0,
       "projected_stats": {}
     }
   ]
