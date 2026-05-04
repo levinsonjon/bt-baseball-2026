@@ -1,138 +1,146 @@
-{
-  "generated_at": "2026-05-02T04:35:00Z",
-  "window_hours": 24,
-  "players": [
-    {
-      "name": "Cal Raleigh",
-      "team": "SEA",
-      "position": "C",
-      "summary": "Raleigh went 0-for-4 as the Mariners fell 6-7 to Kansas City at T-Mobile Park. He remains healthy and is Seattle's everyday catcher heading into May with no injury concerns.",
-      "sources": []
-    },
-    {
-      "name": "Bryce Harper",
-      "team": "PHI",
-      "position": "1B",
-      "summary": "Harper doubled and swiped a base in Philadelphia's 6-5 win at Miami, scoring a run. He looks healthy at first base and continues to be one of the Phillies' key contributors in a strong stretch of play.",
-      "sources": []
-    },
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "summary": "Arraez had the Giants' only extra-base hit — a double — but was thrown out aggressively trying to stretch it to a triple as San Francisco was shut out 3-0 by Tampa Bay. The Giants have been blanked a major-league-high seven times this season.",
-      "sources": []
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "summary": "Bichette went 1-for-4 with a run scored as the Mets edged the Angels 4-3 in Anaheim. He is healthy and playing third base daily in New York's lineup.",
-      "sources": []
-    },
-    {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
-      "position": "SS",
-      "summary": "Kevin McGonigle went 0-for-5 as the Tigers dropped a 4-5 decision to Texas at Comerica Park. He remains the everyday shortstop in Detroit with no injury concerns.",
-      "sources": []
-    },
-    {
-      "name": "Pete Crow-Armstrong",
-      "team": "CHC",
-      "position": "OF",
-      "summary": "Crow-Armstrong went 1-for-4 with a run scored in Chicago's 6-5 win over Arizona at Wrigley Field. He is healthy and hitting in his customary spot in the Cubs lineup.",
-      "sources": []
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "summary": "Merrill was scratched from the Padres lineup vs. the White Sox with an ankle sprain and is considered day-to-day. San Diego expects him back in the lineup within a few days barring setbacks.",
-      "sources": []
-    },
-    {
-      "name": "Teoscar Hernandez",
-      "team": "LAD",
-      "position": "OF",
-      "summary": "Hernández singled in the fourth inning but the Dodgers were routed 7-2 in St. Louis. He had a throwing error in the field but no injury concerns; LAD plans to keep him in the everyday lineup.",
-      "sources": []
-    },
-    {
-      "name": "Devin Williams",
-      "team": "NYM",
-      "position": "RP",
-      "summary": "Williams earned his third save of the season with a clean inning of relief, striking out one and allowing no baserunners. His ERA stands at 7.20 on the year but recent outings have been sharp.",
-      "sources": []
-    },
-    {
-      "name": "Zack Wheeler",
-      "team": "PHI",
-      "position": "SP",
-      "summary": "Wheeler bounced back with a strong outing — 6 IP, 1 ER, 8 strikeouts — earning his first win of 2026 in Philadelphia's 6-5 victory at Miami. He now has 14 Ks in 11 innings and a 2.45 ERA on the season.",
-      "sources": []
-    },
-    {
-      "name": "Cole Ragans",
-      "team": "KCR",
-      "position": "SP",
-      "summary": "Ragans allowed four earned runs in 5⅓ innings (no decision) as the Royals won 7-6 over Seattle. His ERA climbed to 5.25 and walk-rate concerns persist with 22 BB in 37.1 IP on the year.",
-      "sources": []
-    },
-    {
-      "name": "Chase Burns",
-      "team": "CIN",
-      "position": "SP",
-      "summary": "Burns was not in the rotation on May 1 as Brady Singer started a rain-delayed game for Cincinnati vs. Pittsburgh. Burns is healthy and expected back on regular turn.",
-      "sources": []
-    },
-    {
-      "name": "Nathan Eovaldi",
-      "team": "TEX",
-      "position": "SP",
-      "summary": "Eovaldi skipped a turn in the rotation as MacKenzie Gore started for Texas against Detroit on May 1. He is healthy and lined up for his next scheduled start.",
-      "sources": []
-    },
-    {
-      "name": "Emmet Sheehan",
-      "team": "LAD",
-      "position": "SP",
-      "summary": "Sheehan took the loss in Los Angeles's 7-2 defeat at St. Louis, allowing 4 earned runs in 4⅔ innings. Velocity concerns persist — his fastball sits 93.4 mph vs. his normal 96 — as he continues to work with coaches on mechanics.",
-      "sources": []
-    },
-    {
-      "name": "Reid Detmers",
-      "team": "LAA",
-      "position": "SP",
-      "summary": "Detmers was not scheduled to pitch on May 1 as Walbert Ureña started for the Angels vs. the Mets. He is healthy and set to make his next start on May 2.",
-      "sources": []
-    },
-    {
-      "name": "Giancarlo Stanton",
-      "team": "NYY",
-      "position": "DH",
-      "summary": "Stanton was officially placed on the 10-day IL (retroactive to April 25) with a left calf strain. He is expected to miss at least two more weeks and could return around mid-May.",
-      "sources": []
-    }
-  ],
-  "injuries": [
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "status": "day-to-day",
-      "previous_status": "healthy",
-      "note": "Ankle sprain; scratched from lineup vs. CWS on May 1",
-      "source": null
-    },
-    {
-      "name": "Giancarlo Stanton",
-      "team": "NYY",
-      "position": "DH",
-      "status": "IL-10",
-      "previous_status": "healthy",
-      "note": "Left calf strain; 10-day IL retroactive to April 25; ETA mid-May",
-      "source": null
-    }
-  ]
-}
+[
+  {
+    "name": "Cal Raleigh",
+    "team": "SEA",
+    "position": "C",
+    "type": "hitter",
+    "headline": "Raleigh scratched vs. KC with soreness; day-to-day",
+    "summary": "Cal Raleigh was scratched before Saturday's game against Kansas City with general soreness requiring imaging. Mariners lost 3-2 in extra innings. Listed day-to-day.",
+    "injury_status": "day-to-day"
+  },
+  {
+    "name": "Bryce Harper",
+    "team": "PHI",
+    "position": "1B",
+    "type": "hitter",
+    "headline": "Harper 0-for-3 in Phillies' 4-0 loss at Miami",
+    "summary": "Harper went hitless in 3 at-bats as Andrew Painter outpitched the Phillies in Miami. Philadelphia drops the series opener.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Luis Arraez",
+    "team": "SFG",
+    "position": "2B",
+    "type": "hitter",
+    "headline": "Arraez 3-for-4 with double; batting .317 on season",
+    "summary": "Arraez had 3 hits including a double and scored a run in 4 at-bats. Giants lost to Tampa Bay despite his performance.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Bo Bichette",
+    "team": "NYM",
+    "position": "3B",
+    "type": "hitter",
+    "headline": "Bichette 1-for-4 in Mets' 4-3 loss at Anaheim",
+    "summary": "Bichette went 1-for-4 as the Mets dropped a 4-3 decision to the Angels. Batting .231 on the season.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Lindor/McGonigle",
+    "team": "DET",
+    "position": "SS",
+    "type": "hitter",
+    "headline": "McGonigle RBI single, stolen base; Tigers win 5-1",
+    "summary": "Kevin McGonigle drove in a run with a single and stole a base in the 2nd inning as Detroit beat Texas 5-1. Kumar Rocker (TEX) took the loss.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Pete Crow-Armstrong",
+    "team": "CHC",
+    "position": "OF",
+    "type": "hitter",
+    "headline": "PCA 0-for-3 as Imanaga gems Cubs past D-backs 2-0",
+    "summary": "Crow-Armstrong went hitless in 3 at-bats but drew a walk. Shota Imanaga tossed 7 shutout innings as Chicago blanked Arizona 2-0.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Jackson Merrill",
+    "team": "SDP",
+    "position": "OF",
+    "type": "hitter",
+    "headline": "Merrill 1-for-4 as Padres shut out 4-0 by White Sox",
+    "summary": "Merrill's infield single in the 9th was one of just 4 Padres hits. San Diego blanked 4-0 in their 4th straight loss.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Teoscar Hernandez",
+    "team": "LAD",
+    "position": "OF",
+    "type": "hitter",
+    "headline": "Hernandez 2-for-4 as Dodgers fall 3-2 to Cardinals",
+    "summary": "Hernandez went 2-for-4 with singles in the 7th and 9th innings as St. Louis earned their 6th straight win, 3-2.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Devin Williams",
+    "team": "NYM",
+    "position": "RP",
+    "type": "rp",
+    "headline": "Williams DNP; Mets lose 4-3 in Anaheim",
+    "summary": "Williams did not appear as the Mets dropped a 4-3 decision to the Angels. ERA stands at 7.20 through 12 appearances this season.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Zack Wheeler",
+    "team": "PHI",
+    "position": "SP",
+    "type": "sp",
+    "headline": "Wheeler off turn; started May 1 vs. Marlins (PHI won)",
+    "summary": "Wheeler is off turn for May 2. He started the series opener May 1 in Miami (Phillies won). Currently 2-0 with a 2.65 ERA through 3 starts (17 IP).",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Cole Ragans",
+    "team": "KCR",
+    "position": "SP",
+    "type": "sp",
+    "headline": "Ragans off turn; started May 1 at Seattle — ERA rises to 5.44",
+    "summary": "Ragans went 5⅓ innings with 4 ER and 8 Ks at Seattle on May 1. KC won 7-6 on Lane Thomas' walk-off. ERA climbs to 5.44 through 8 GS.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Chase Burns",
+    "team": "CIN",
+    "position": "SP",
+    "type": "sp",
+    "headline": "Burns off turn; scheduled to start May 3 vs. Pittsburgh",
+    "summary": "Burns is lined up for Sunday at home vs. the Pirates. He's 3-1 with a 2.65 ERA through 6 starts this season.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Nathan Eovaldi",
+    "team": "TEX",
+    "position": "SP",
+    "type": "sp",
+    "headline": "Eovaldi off turn; Rangers lose 5-1 at Detroit",
+    "summary": "Eovaldi did not pitch Friday as Kumar Rocker started for Texas. Rangers lost 5-1 at Detroit. Eovaldi is 3-1 with a 4.76 ERA through 7 starts.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Emmet Sheehan",
+    "team": "LAD",
+    "position": "SP",
+    "type": "sp",
+    "headline": "Sheehan off turn; rough May 1 start at STL (balk, 4 ER)",
+    "summary": "Sheehan started Thursday night at St. Louis, balking in the first inning, and allowed 4 ER in 4⅔ innings (8 K). ERA now 5.55 through 7 starts.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Reid Detmers",
+    "team": "LAA",
+    "position": "SP",
+    "type": "sp",
+    "headline": "Detmers 6⅓ IP, 8 K, W — Angels beat Mets 4-3",
+    "summary": "Detmers turned in a strong outing — 6⅓ innings, 7 H, 3 ER, 8 K, 2 BB — as the Angels won 4-3. Improves to 2-1 with a 4.28 ERA.",
+    "injury_status": "healthy"
+  },
+  {
+    "name": "Giancarlo Stanton",
+    "team": "NYY",
+    "position": "DH",
+    "type": "hitter",
+    "headline": "Stanton (IL-10, calf) taking cage swings; return still weeks away",
+    "summary": "Stanton was placed on the 10-day IL on April 23 with a right calf strain. He took his first batting cage swings May 1, but return is still weeks away.",
+    "injury_status": "IL-10"
+  }
+]
