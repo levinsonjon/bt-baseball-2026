@@ -1223,6 +1223,13 @@ def main():
     log("=" * 50)
     log("Starting daily fantasy baseball update...")
 
+    # Run the pipeline freshness check first — it's local-only (no network)
+    # and must fire even if downstream steps crash on DNS/OAuth/etc.
+    try:
+        check_pipeline_freshness()
+    except Exception as e:
+        log(f"WARN: pipeline freshness check failed: {e}")
+
     try:
         # Load Jon's roster
         roster = load_my_roster()
@@ -1249,9 +1256,6 @@ def main():
         if reauth_msg:
             log(f"REAUTH WARNING: {reauth_msg}")
             notify_reauth_needed(reauth_msg)
-
-        # Check that the daily report pipeline is keeping up
-        check_pipeline_freshness()
 
         log("Daily update complete.")
     except Exception as e:

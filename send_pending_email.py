@@ -327,17 +327,28 @@ def normalize_yesterday(data: dict, roster: dict) -> dict:
     }
 
 
-def normalize_news(data: dict, roster: dict) -> dict:
-    """Adapt news payload: summary field, roster-backed team/position, preserved sources."""
+def normalize_news(data, roster: dict) -> dict:
+    """Adapt news payload: summary field, roster-backed team/position, preserved sources.
+
+    Accepts two agent shapes:
+      - dict with "players" / "injuries" arrays (canonical)
+      - bare list of per-player dicts with "summary"/"headline"/"injury_status"
+        fields; injuries are derived from items where injury_status is set and
+        not one of {"healthy", "none", ""}.
+    """
+    if isinstance(data, list):
+        data = {"players": data}
+
+    players_in = data.get("players", [])
     players_out = []
-    for p in data.get("players", []):
+    for p in players_in:
         name = p.get("name", "")
         r = roster.get(name, {})
         players_out.append({
             "name": name,
             "team": p.get("team") or r.get("team", ""),
             "position": p.get("position") or r.get("position", ""),
-            "summary": p.get("summary") or p.get("news") or "",
+            "summary": p.get("summary") or p.get("news") or p.get("headline") or "",
             "sources": p.get("sources") or [],
         })
 
@@ -354,6 +365,22 @@ def normalize_news(data: dict, roster: dict) -> dict:
             "note": inj.get("note", ""),
             "source": inj.get("source"),
         })
+
+    if not injuries_out:
+        for p in players_in:
+            status = (p.get("injury_status") or "").strip().lower()
+            if status and status not in {"healthy", "none", "active"}:
+                name = p.get("name", "")
+                r = roster.get(name, {})
+                injuries_out.append({
+                    "name": name,
+                    "team": p.get("team") or r.get("team", ""),
+                    "position": p.get("position") or r.get("position", ""),
+                    "status": p.get("injury_status", ""),
+                    "previous_status": "",
+                    "note": p.get("headline") or p.get("summary") or "",
+                    "source": None,
+                })
 
     generated_at = data.get("generated_at") or ""
     if not generated_at and data.get("date"):
