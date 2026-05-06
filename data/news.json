@@ -1,263 +1,147 @@
 {
-  "generated_at": "2026-05-05T09:35:00Z",
+  "generated_at": "2026-05-06T04:35:00Z",
   "window_hours": 24,
   "players": [
     {
       "name": "Cal Raleigh",
       "team": "SEA",
       "position": "C",
-      "summary": "Raleigh sat out for the third straight game Monday with a sore right side. MRI results are pending; manager Dan Wilson expects an IL decision as soon as Tuesday. Mitch Garver is filling in at catcher.",
-      "sources": [
-        {
-          "title": "Cal Raleigh Injury: Still sitting out Monday | RotoWire",
-          "url": "https://www.rotowire.com/baseball/headlines/cal-raleigh-injury-still-sitting-out-monday-1001364"
-        },
-        {
-          "title": "Mariners catcher Cal Raleigh sitting out 3rd straight game | Washington Post",
-          "url": "https://www.washingtonpost.com/sports/mlb/2026/05/04/mariners-cal-raleigh-injury/abe1e87c-4809-11f1-a119-857cd2bf4fd4_story.html"
-        }
-      ]
+      "summary": "Returned to the lineup as DH after missing 3 games. Went 0-for-2 with a strikeout and groundout. Mariners won 5-4 over Atlanta.",
+      "sources": []
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "Harper went 3-for-4 with his 7th HR (393-ft solo shot to right-center off a sweeper), a double, and a single in the Phillies' 1-0 win over the Marlins. Nola worked 6 strong innings under new interim manager Mattingly; Phillies have won 4 straight.",
-      "sources": [
-        {
-          "title": "Bryce Harper, Aaron Nola have big nights as Phillies take 3 of 4 from Marlins",
-          "url": "https://breakingac.com/news/2026/may/04/philadelphia-phillies-news-bryce-harper-aaron-nola-miami-marlins-don-mattingly/"
-        },
-        {
-          "title": "Harper hits his 7th homer, Nola works 6 strong innings | Washington Post",
-          "url": "https://www.washingtonpost.com/sports/mlb/2026/05/04/phillies-marlins-score/b4595db4-4822-11f1-a119-857cd2bf4fd4_story.html"
-        }
-      ]
+      "summary": "Dominant night: 3-for-4, 2 home runs, 3 RBI in a 9-1 Phillies rout of Oakland. Harper's HR total moves to 9 on the season; PHI scored 6 in the 1st inning.",
+      "sources": []
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
-      "summary": "Arraez went 2-for-4 with two doubles and scored twice as San Francisco snapped a 6-game losing streak 3-2 over the Padres. Rookie Trevor McDonald tossed 7 sharp innings in his season debut.",
-      "sources": [
-        {
-          "title": "Schmitt homers, McDonald sharp as Giants edge Padres 3-2 to end 6-game skid",
-          "url": "https://mymotherlode.com/sports/baseball-general-news/10799072/schmitt-homers-mcdonald-sharp-as-giants-edge-padres-3-2-to-end-6-game-skid.html"
-        }
-      ]
+      "summary": "Giants dropped a 5-10 home loss to the Padres. Arraez went 1-for-4, no RBI. His batting average remains among the best in the NL at .316.",
+      "sources": []
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
-      "summary": "Bichette went 0-for-4 with a strikeout in the Mets' 4-2 win at Colorado. New York's four-run sixth inning was the difference; Williams closed it out.",
-      "sources": [
-        {
-          "title": "5/4/2026 Box Score: New York Mets 4 Colorado Rockies 2 | Mets News and Links",
-          "url": "https://www.metsnewslinks.com/2026/05/542026-gameday-new-york-mets-colorado.html"
-        }
-      ]
+      "summary": "NYM @ COL game postponed due to rain. Bichette did not play; game expected to be made up later.",
+      "sources": []
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
-      "summary": "Kevin McGonigle was named AL Rookie of the Month for March/April — hitting .328/.426/.509 with 15 extra-base hits and 22 runs in 31 games. He was given a scheduled rest day Monday vs Boston as the Tigers entered the day tied for first in the AL Central at 18-18.",
-      "sources": [
-        {
-          "title": "Kevin McGonigle is named AL Rookie of the Month | MLB.com",
-          "url": "https://www.mlb.com/tigers/video/kevin-mcgonigle-is-named-al-rookie-of-the-month"
-        },
-        {
-          "title": "Hits keep coming for Tigers' Kevin McGonigle — and now an award, too",
-          "url": "https://eu.detroitnews.com/story/sports/mlb/tigers/2026/05/04/kevin-mcgonigle-is-al-rookie-of-the-month-after-hot-start-for-detroit-tigers/89929890007/"
-        }
-      ]
+      "summary": "Kevin McGonigle returned to the Tigers lineup after Monday's scheduled off day. Went 0-for-2 with a stolen base vs Boston.",
+      "sources": []
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
-      "summary": "PCA led off the 9th with a triple (misplayed off the ivy wall) and scored the tying run on Hoerner's sac fly. Michael Conforto then hit a walk-off solo HR to cap the 5-4 comeback win, extending the Cubs' home win streak to 11 games.",
-      "sources": [
-        {
-          "title": "Michael Conforto's pinch-hit walk-off shot lifts Cubs over Reds",
-          "url": "https://www.thescore1260.com/2026/05/04/michael-confortos-pinch-hit-walk-off-shot-lifts-cubs-over-reds/"
-        }
-      ]
+      "summary": "Cubs were shut out 0-1 by Cincinnati on Nick Martinez's gem. PCA went 0-for-3; Cubs have dropped 4 of their last 5.",
+      "sources": []
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
-      "summary": "Merrill missed Monday's game vs San Francisco after aggravating a left ankle injury sustained Friday. He is listed as day-to-day and expressed frustration but hopes to return during the series.",
-      "sources": [
-        {
-          "title": "Jackson Merrill in question as Padres prep for Giants - CBS Sports",
-          "url": "https://www.cbssports.com/mlb/news/jackson-merrill-in-question-as-padres-prep-for-giants/"
-        }
-      ]
+      "summary": "Excellent game: 3-for-4, 2 RBI, 1 SB as Padres routed Giants 10-5 at San Francisco. Merrill is heating up, now batting .218 with 6 SB on the season.",
+      "sources": []
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
-      "summary": "Hernandez singled in the Dodgers' 8-3 win over the Astros but is expected to be placed on the 10-day IL around May 6 with a left groin strain — a condition he battled through for much of the 2025 season as well.",
-      "sources": [
-        {
-          "title": "Dodgers' Teoscar Hernandez Will Be Placed on IL With Groin Injury | Bleacher Report",
-          "url": "https://bleacherreport.com/articles/25193605-dodgers-teoscar-hernandez-will-be-placed-il-groin-injury"
-        },
-        {
-          "title": "Dodgers Bats Finally Awaken in Comfortable Win over Houston",
-          "url": "https://dodgersbeat.com/dodgers-vs-astros-recap-yoshinobu-yamamoto/"
-        }
-      ]
-    },
-    {
-      "name": "Devin Williams",
-      "team": "NYM",
-      "position": "RP",
-      "summary": "Williams nailed down his 4th save with a perfect 9th inning as the Mets beat the Rockies 4-2. His season ERA remains elevated at 6.55 but he continues to pick up save opportunities.",
-      "sources": [
-        {
-          "title": "New York Mets vs. Colorado Rockies Results - May 4, 2026 | CBS Sports",
-          "url": "https://www.cbssports.com/mlb/gametracker/recap/MLB_20260504_NYM@COL/"
-        }
-      ]
-    },
-    {
-      "name": "Zack Wheeler",
-      "team": "PHI",
-      "position": "SP",
-      "summary": "Wheeler did not pitch Monday (Nola started in the series finale). Through 2 starts since returning from thoracic outlet syndrome surgery, Wheeler has a 2.45 ERA with 14 K in 11 IP as the Phillies have won 4 straight under interim manager Don Mattingly.",
-      "sources": [
-        {
-          "title": "Wheeler sharp, Phillies survive late chaos to extend win streak | Philadelphia Baseball Review",
-          "url": "https://www.philadelphiabaseballreview.com/2026/05/phillies-harper-home-run-nola-shutout-marlins-series-win-2026.html"
-        }
-      ]
-    },
-    {
-      "name": "Cole Ragans",
-      "team": "KCR",
-      "position": "SP",
-      "summary": "Ragans did not start Monday as Michael Wacha opened the 4-game home series vs Cleveland. Ragans is lined up for Game 3. The Royals and Guardians are tied for first in the AL Central; Ragans expressed eagerness to help KC win the series.",
-      "sources": [
-        {
-          "title": "Cole Ragans eager to lead Royals to series win vs. Guardians",
-          "url": "https://www.news-daily.com/fieldlevel/cole-ragans-eager-to-lead-royals-to-series-win-vs-guardians/article_5f1868a7-2859-5ee0-8b62-8388960ba27b.html"
-        }
-      ]
-    },
-    {
-      "name": "Chase Burns",
-      "team": "CIN",
-      "position": "SP",
-      "summary": "Burns threw a career-high 7 scoreless innings vs the Pirates on Sunday (3 H, 1 BB, 7 K, 94 pitches) but got a no-decision as the Reds lost 1-0 on a walk-off in the 8th. He did not pitch Monday and is on regular rotation rest.",
-      "sources": [
-        {
-          "title": "Chase Burns throws seven scoreless innings, Reds lose to Pirates | MLB.com",
-          "url": "https://www.mlb.com/news/chase-burns-throws-seven-scoreless-innings-reds-lose-to-pirates"
-        }
-      ]
-    },
-    {
-      "name": "Nathan Eovaldi",
-      "team": "TEX",
-      "position": "SP",
-      "summary": "Eovaldi did not pitch Monday and is lined up to start Tuesday vs the Yankees — his 8th start of 2026. His last outing was 7 strong IP with 0 ER and 7 K vs New York on April 29, his best start of a season he began with a rocky stretch.",
-      "sources": [
-        {
-          "title": "Nathan Eovaldi, Rangers keep Yankees off the board",
-          "url": "https://yournews.com/2026/04/29/6868238/nathan-eovaldi-rangers-keep-yankees-off-the-board/"
-        }
-      ]
-    },
-    {
-      "name": "Emmet Sheehan",
-      "team": "LAD",
-      "position": "SP",
-      "summary": "Sheehan did not pitch Monday as Yamamoto (6 IP, 3 ER, 8 K) started in Houston. The Dodgers won 8-3 as the offense broke out of a slump, with Tucker, Freeland, Ohtani, and Freeman all driving in runs.",
-      "sources": [
-        {
-          "title": "Dodgers Bats Finally Awaken in Comfortable Win over Houston",
-          "url": "https://dodgersbeat.com/dodgers-vs-astros-recap-yoshinobu-yamamoto/"
-        }
-      ]
-    },
-    {
-      "name": "Reid Detmers",
-      "team": "LAA",
-      "position": "SP",
-      "summary": "Detmers did not pitch Monday as Jose Soriano (5-1, 0.84 ERA) started for the Angels vs the White Sox. Detmers remains in the rotation for his next scheduled turn.",
+      "summary": "Went 0-for-3 including a called strikeout in the 4th inning as Dodgers fell 1-2 to Houston. Placed on 10-day IL on May 6 with a Grade 1 left groin strain. Was batting .315 with 9 HR and 34 RBI in 33 games before the injury.",
       "sources": []
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
-      "summary": "Ben Rice was held out of Monday's lineup vs Baltimore after leaving Sunday's game with a left hand contusion sustained on a pickoff throw from Max Fried. X-rays were negative; he is day-to-day and could not swing with full force per manager Aaron Boone.",
-      "sources": [
-        {
-          "title": "Yankees' Ben Rice: Leaves early with hand contusion | CBS Sports",
-          "url": "https://www.cbssports.com/fantasy/baseball/news/yankees-ben-rice-leaves-early-with-hand-contusion/"
-        },
-        {
-          "title": "Ben Rice out of Yankees' starting lineup for final game vs. Orioles | MLB.com",
-          "url": "https://www.mlb.com/news/ben-rice-out-of-starting-lineup-may-4"
-        }
-      ]
+      "summary": "Ben Rice sat out May 5 due to a bruised left hand from a fielding play on May 3. X-rays negative; he is day-to-day and could return within a few days.",
+      "sources": []
+    },
+    {
+      "name": "Devin Williams",
+      "team": "NYM",
+      "position": "RP",
+      "summary": "NYM @ COL game postponed by rain. Williams did not pitch.",
+      "sources": []
+    },
+    {
+      "name": "Zack Wheeler",
+      "team": "PHI",
+      "position": "SP",
+      "summary": "Wheeler was not scheduled to start May 5. Next start TBD in coming days.",
+      "sources": []
+    },
+    {
+      "name": "Cole Ragans",
+      "team": "KCR",
+      "position": "SP",
+      "summary": "Left in the 1st inning after 2/3 IP after being struck on the left thumb by a 96 mph Jose Ramirez comebacker. Suffered a contusion; Royals still won 5-3 on Cinco de Mayo to extend their win streak to five. Ragans expects to make his next start vs Detroit and is not on the IL.",
+      "sources": []
+    },
+    {
+      "name": "Chase Burns",
+      "team": "CIN",
+      "position": "SP",
+      "summary": "Burns was not in the Reds' rotation on May 5. Next start TBD.",
+      "sources": []
+    },
+    {
+      "name": "Nathan Eovaldi",
+      "team": "TEX",
+      "position": "SP",
+      "summary": "Jacob deGrom made the start for Texas on May 5. Eovaldi is scheduled to pitch on May 6.",
+      "sources": []
+    },
+    {
+      "name": "Emmet Sheehan",
+      "team": "LAD",
+      "position": "SP",
+      "summary": "Shohei Ohtani made the start for the Dodgers vs Houston on May 5; LAD lost 1-2 to Peter Lambert. Sheehan did not pitch.",
+      "sources": []
+    },
+    {
+      "name": "Reid Detmers",
+      "team": "LAA",
+      "position": "SP",
+      "summary": "The Angels called up Sam Aldegheri from Triple-A Salt Lake on Monday to start Tuesday vs Chicago White Sox. Detmers did not pitch.",
+      "sources": []
     }
   ],
   "injuries": [
     {
-      "name": "Cal Raleigh",
-      "team": "SEA",
-      "position": "C",
-      "status": "Day-to-Day",
-      "previous_status": "Healthy",
-      "note": "Sore right side since Friday; out 3rd straight game; MRI results pending; IL decision expected as soon as Tuesday.",
-      "source": {
-        "title": "Cal Raleigh Injury: Still sitting out Monday | RotoWire",
-        "url": "https://www.rotowire.com/baseball/headlines/cal-raleigh-injury-still-sitting-out-monday-1001364"
-      }
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "status": "Day-to-Day",
-      "previous_status": "Healthy",
-      "note": "Left ankle injury aggravated Saturday vs Dodgers; missed Monday vs Giants; day-to-day, hopes to return during series.",
-      "source": {
-        "title": "Jackson Merrill in question as Padres prep for Giants",
-        "url": "https://www.cbssports.com/mlb/news/jackson-merrill-in-question-as-padres-prep-for-giants/"
-      }
-    },
-    {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
-      "status": "Day-to-Day → IL",
+      "status": "10-day IL (left groin strain)",
       "previous_status": "Healthy",
-      "note": "Left groin strain; played Monday but expected to be placed on 10-day IL around May 6.",
-      "source": {
-        "title": "Dodgers' Teoscar Hernandez Will Be Placed on IL With Groin Injury | Bleacher Report",
-        "url": "https://bleacherreport.com/articles/25193605-dodgers-teoscar-hernandez-will-be-placed-il-groin-injury"
-      }
+      "note": "Grade 1 left groin strain. Placed on IL May 6. Was batting .315/9HR/34RBI in 33 games before injury.",
+      "source": null
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
-      "status": "Day-to-Day",
+      "status": "Day-to-day (left hand contusion)",
       "previous_status": "Healthy",
-      "note": "Ben Rice: left hand contusion from Sunday pickoff throw; X-rays negative; out Monday, day-to-day.",
-      "source": {
-        "title": "Yankees' Ben Rice: Leaves early with hand contusion | CBS Sports",
-        "url": "https://www.cbssports.com/fantasy/baseball/news/yankees-ben-rice-leaves-early-with-hand-contusion/"
-      }
+      "note": "Bruised left hand from fielding a pickoff throw May 3. X-rays negative. Out of lineup May 4-5.",
+      "source": null
+    },
+    {
+      "name": "Cole Ragans",
+      "team": "KCR",
+      "position": "SP",
+      "status": "Day-to-day (left thumb contusion)",
+      "previous_status": "Healthy",
+      "note": "Hit by 96 mph Ramirez comebacker in 1st inning May 5. Expects to make next start vs Detroit. Not on IL.",
+      "source": null
     }
   ]
 }
