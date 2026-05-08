@@ -1,25 +1,25 @@
 {
-  "date": "2026-05-06",
-  "generated_at": "2026-05-07T10:45:00Z",
+  "date": "2026-05-07",
+  "generated_at": "2026-05-08T09:35:00Z",
   "totals": {
     "hitters": {
-      "AB": 24,
-      "H": 7,
-      "R": 5,
-      "HR": 1,
-      "RBI": 6,
-      "SB": 1,
-      "points": 13.0
+      "AB": 17,
+      "H": 4,
+      "R": 1,
+      "HR": 0,
+      "RBI": 2,
+      "SB": 0,
+      "points": 3.0
     },
     "pitchers": {
-      "IP": 18.33,
-      "H": 9,
-      "ER": 4,
-      "K": 18,
-      "BB": 3,
-      "W": 1,
-      "SV": 1,
-      "points": 10.71
+      "IP": 0.0,
+      "H": 0,
+      "ER": 0,
+      "K": 0,
+      "BB": 0,
+      "W": 0,
+      "SV": 0,
+      "points": 0.0
     }
   },
   "players": [
@@ -33,33 +33,33 @@
       "dnp_reason": null,
       "stats": {
         "H": 0,
-        "AB": 4,
+        "AB": 3,
         "R": 0,
         "HR": 0,
-        "RBI": 1,
+        "RBI": 0,
         "SB": 0
       },
-      "points": 1.0,
-      "summary": "0-for-4 with 3 Ks, drove in a run via GIDP in Mariners' 3-1 win over Atlanta. Returned as DH after 3-game absence with right side soreness."
+      "points": 0.0,
+      "summary": "0-for-3 with 3 strikeouts as DH; Mariners win 3-1 over Braves"
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "vs ATH",
+      "opponent": "vs OAK",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 0,
+        "H": 1,
         "AB": 4,
-        "R": 1,
+        "R": 0,
         "HR": 0,
         "RBI": 0,
         "SB": 0
       },
-      "points": 1.0,
-      "summary": "Reached on error in 8th-inning rally, scored as Phillies erased 3-2 deficit to win 6-3 over A's. Went 0-for-3 at plate."
+      "points": 0.0,
+      "summary": "1-for-4 in 12-1 blowout loss; A's hit four HRs off starter Painter"
     },
     {
       "name": "Luis Arraez",
@@ -68,48 +68,41 @@
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Thumb/hand soreness",
+      "dnp_reason": "Day-to-day (sore thumb)",
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — sat out with left thumb soreness vs. Padres"
+      "summary": "Giants off day; Arraez sitting with sore thumb; expected back this weekend vs Pirates"
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": "@ COL",
+      "opponent": "vs COL",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 1,
-        "HR": 0,
-        "RBI": 1,
-        "SB": 0
-      },
-      "points": 2.0,
-      "summary": "1-for-4 with 1 RBI and a run scored in Mets' 10-5 win at Coors Field."
-    },
-    {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
-      "position": "SS",
-      "type": "hitter",
-      "opponent": "vs BOS",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
+        "H": 0,
+        "AB": 3,
         "R": 0,
         "HR": 0,
         "RBI": 0,
         "SB": 0
       },
       "points": 0.0,
-      "summary": "1-for-4 in Detroit's loss as the Red Sox completed the series sweep."
+      "summary": "0-for-3 with a walk in 6-2 loss to Rockies; Mets fall to 14-22"
+    },
+    {
+      "name": "Lindor/McGonigle",
+      "team": "DET",
+      "position": "SS",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Tigers off day; McGonigle on 6-game hit streak, slashing .315/.407/.477"
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -121,33 +114,33 @@
       "dnp_reason": null,
       "stats": {
         "H": 2,
-        "AB": 3,
+        "AB": 4,
         "R": 1,
-        "HR": 1,
+        "HR": 0,
         "RBI": 2,
         "SB": 0
       },
-      "points": 4.0,
-      "summary": "2-for-3 with a tying 2-run HR off Graham Ashcraft in the 9th; Cubs won 7-6 in 10 innings for their 8th straight win."
+      "points": 3.0,
+      "summary": "2-for-4, 2 RBI including RBI single in Cubs' 7-run 4th inning; Cubs win 8-3 for 9th straight"
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ SFG",
+      "opponent": "vs STL",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 3,
-        "AB": 5,
-        "R": 2,
+        "H": 1,
+        "AB": 3,
+        "R": 0,
         "HR": 0,
-        "RBI": 2,
-        "SB": 1
+        "RBI": 0,
+        "SB": 0
       },
-      "points": 5.0,
-      "summary": "3-for-5, double, 2 RBI, stolen base and 2 runs scored as Padres routed Giants 10-5, tying season highs for hits and runs."
+      "points": 0.0,
+      "summary": "1-for-3 in tight 2-1 Padres loss; Masyn Winn's 7th-inning RBI triple was the difference"
     },
     {
       "name": "Teoscar Hernandez",
@@ -156,10 +149,10 @@
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "IL-10 — left groin strain",
+      "dnp_reason": "10-day IL (left groin strain)",
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — placed on 10-day IL with Grade 1 left groin (adductor) strain; out 'for weeks' per manager Dave Roberts"
+      "summary": "On 10-day IL since May 6; Grade 1 adductor strain; rehab assignment with Single-A Rancho Cucamonga upcoming"
     },
     {
       "name": "Stanton/Rice",
@@ -168,68 +161,46 @@
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Day-to-day — left hand contusion",
+      "dnp_reason": "Day-to-day (left hand contusion)",
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — Ben Rice missed 3rd straight game with left hand contusion; X-rays negative, no IL stint expected"
+      "summary": "4th straight DNP with hand contusion from May 3 vs BAL; X-rays negative; IL stint unlikely"
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": "@ COL",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 1.0,
-        "H": 0,
-        "ER": 0,
-        "K": 2,
-        "BB": 0,
-        "W": 0,
-        "SV": 1
-      },
-      "points": 5.0,
-      "summary": "Struck out 2 in a clean inning for his 5th save of 2026; Mets won 10-5 at Coors Field."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Not used",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Not used in 6-2 Mets loss; rested after earning 5th save the night before"
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs ATH",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.33,
-        "H": 5,
-        "ER": 3,
-        "K": 4,
-        "BB": 1,
-        "W": 0
-      },
-      "points": 0.55,
-      "summary": "6.1 IP, 5 H, 3 ER in home return from thoracic outlet surgery; no decision as Phillies rallied in the 8th to win 6-3."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Not scheduled",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Not scheduled; started May 6 (6.1 IP, 5H, 3ER, 4K; PHI won 6-3 vs OAK)"
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs CLE",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 3.0,
-        "H": 1,
-        "ER": 0,
-        "K": 4,
-        "BB": 2,
-        "W": 0
-      },
-      "points": 1.68,
-      "summary": "Left after 3 scoreless IP with left triceps/elbow soreness vs. Cleveland; manager optimistic it is not serious. No decision."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Day-to-day (left triceps/elbow soreness)",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Awaiting test results after leaving May 6 start early with left triceps/elbow soreness"
     },
     {
       "name": "Chase Burns",
@@ -238,29 +209,22 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Off day — not scheduled to start",
+      "dnp_reason": "Not scheduled",
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — Brady Singer started for Cincinnati vs. Cubs"
+      "summary": "Not scheduled; last started May 3 (7 IP, 0 ER vs PIT); NL WAR leader, 2.21 ERA"
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ NYY",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 8.0,
-        "H": 3,
-        "ER": 1,
-        "K": 8,
-        "BB": 0,
-        "W": 1
-      },
-      "points": 3.48,
-      "summary": "Dominant 8-IP gem, 8 K, 0 BB, 1 ER (Judge solo HR) as Rangers won 6-1; second consecutive masterpiece vs. New York in 8 days."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Not scheduled",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Not scheduled; dominated May 6 (8 IP, 0 ER, 8 K vs NYY; TEX won 6-1)"
     },
     {
       "name": "Emmet Sheehan",
@@ -269,10 +233,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Off day — not scheduled to start",
+      "dnp_reason": "Not scheduled",
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — Tyler Glasnow started vs. Astros and exited after 1st inning with low back pain; Dodgers won 12-2"
+      "summary": "Not scheduled; starts May 8 at Cardinals in St. Louis"
     },
     {
       "name": "Reid Detmers",
@@ -281,10 +245,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Off day — next start Friday vs. TOR",
+      "dnp_reason": "Not scheduled",
       "stats": {},
       "points": 0.0,
-      "summary": "DNP — Walbert Urena started for Angels; Detmers next scheduled for Friday vs. Toronto"
+      "summary": "Not scheduled; last started May 5; next start May 10 vs Toronto"
     }
   ]
 }
