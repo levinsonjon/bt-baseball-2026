@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-05-10T09:35:00Z",
+  "generated_at": "2026-05-12T04:35:00Z",
   "window_hours": 24,
   "players": [
     {
       "name": "Cal Raleigh",
       "team": "SEA",
       "position": "C",
-      "summary": "Raleigh went 0-for-3 as Mariners fell 6-1 to Chicago. He is 0-for-13 in three games since returning from a right-side injury and batting .170 on the season. Team is easing him back in DH duties.",
+      "summary": "Raleigh is mired in a 0-for-29 slump over his last 7 games, with his batting average plummeting. The Mariners dropped him in the batting order and have used him at DH while monitoring right-side tightness. He says he is 'searching for answers.'",
       "sources": [
         {
-          "title": "Mariners-White Sox Lineups: Cal Raleigh gets another DH day",
-          "url": "https://sports.mynorthwest.com/mlb/seattle-mariners/seattle-mariners-white-sox-lineups-cal-raleigh-another-dh-day"
+          "title": "Cal Raleigh searching for answers during slump: 'It's been really ugly'",
+          "url": "https://www.spokesman.com/stories/2026/may/11/cal-raleigh-searching-for-answers-during-slump-its/"
         }
       ]
     },
@@ -18,11 +18,11 @@
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "Harper was removed before his first at-bat Saturday with a migraine, replaced by Felix Reyes. Team expects him available Sunday. This is the third migraine-related absence for a Phillies player in 2026. Harper is batting .285 with 9 HR and 24 RBI.",
+      "summary": "Harper exited Saturday's game (May 9 vs. Colorado) in the 1st inning with a sudden migraine. He was expected to return for Sunday's finale and the Phillies had an off day Monday. Not currently on the injured list.",
       "sources": [
         {
-          "title": "Phillies 1B Bryce Harper exits 9-3 victory with migraine — ESPN",
-          "url": "https://www.espn.com/mlb/story/_/id/48725851/phillies-1b-bryce-harper-exits-1st-inning-migraine"
+          "title": "Bryce Harper departs Saturday's Phillies game with migraine",
+          "url": "https://philliesnation.com/2026/05/philadelphia-phillies-bryce-harper-injury-update-news-migraine-left-game-exit-early/"
         }
       ]
     },
@@ -30,11 +30,11 @@
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
-      "summary": "Arraez went 1-for-4 while managing a sore right thumb that flared up on the prior road trip. He is day-to-day. His .314 average ranks top-10 in the NL despite the nagging injury.",
+      "summary": "Arraez went 2-for-4 with 2 runs scored as the Giants dismantled the Dodgers 9-3 to open a four-game series at LA. He had a key hit in the 7th-inning rally when San Francisco broke a 3-3 tie with a 5-run inning. Batting .315 on the season.",
       "sources": [
         {
-          "title": "Giants' Luis Arraez: Out again due to sore thumb — CBS Sports",
-          "url": "https://www.cbssports.com/fantasy/baseball/news/giants-luis-arraez-out-again-due-to-sore-thumb/"
+          "title": "Giants 9-3 Dodgers (May 11, 2026) Game Recap - ESPN",
+          "url": "https://www.espn.com/mlb/recap?gameId=401815303"
         }
       ]
     },
@@ -42,11 +42,11 @@
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
-      "summary": "Bichette went 0-for-3 with a walk in the Mets' 2-1 loss to Arizona. He had a chance with two runners on late but grounded out. Mets offense has been quiet this weekend series.",
+      "summary": "Scouts believe Bichette is not fully healthy, likely still nursing a PCL sprain from last September. His sprint speed is measurably down. With Francisco Lindor and Ronny Mauricio both injured, Bichette may shift back to shortstop.",
       "sources": [
         {
-          "title": "5/9/2026 Box Score: Arizona Diamondbacks 2 New York Mets 1",
-          "url": "https://www.metsnewslinks.com/2026/05/592026-gameday-new-york-mets-arizona.html"
+          "title": "Scouts Believe Mets' Bo Bichette is Not Fully Healthy",
+          "url": "https://www.si.com/mlb/mets/onsi/scouts-believe-mets-bo-bichette-is-not-fully-healthy"
         }
       ]
     },
@@ -54,11 +54,11 @@
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
-      "summary": "Kevin McGonigle went 0-for-2 with a HBP and committed his 4th error of the season, but did score a run in the 8th on a Riley Greene double. Tigers fell 5-1 to Kansas City. Michael Wacha won with 6 strong innings.",
+      "summary": "Kevin McGonigle (DET) continues to put together one of the best rookie seasons in Tigers history, leading AL rookies in hits, doubles, and batting average. Detroit opens a 3-game road series at Citi Field starting Tuesday, May 12.",
       "sources": [
         {
-          "title": "Royals 5-1 Tigers (May 9, 2026) Box Score — ESPN",
-          "url": "https://www.espn.com/mlb/boxscore/_/gameId/401815276"
+          "title": "Kevin McGonigle's first-month performance review with Tigers: Historically high marks",
+          "url": "https://eu.detroitnews.com/story/sports/mlb/tigers/2026/04/30/detroit-tigers-kevin-mcgonigle-first-month-performance-historically-good/89873450007/"
         }
       ]
     },
@@ -66,11 +66,11 @@
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
-      "summary": "Crow-Armstrong went 0-for-3 and exited the game after fouling a ball off his right knee, receiving a bruised right knee diagnosis. He is day-to-day. The Cubs were shut out 6-0 by Texas, ending their 10-game win streak.",
+      "summary": "PCA and the Cubs had an off day Monday before a 3-game road series at Atlanta starting Tuesday. Chicago was shut out twice in its most recent series vs. Texas, raising concerns about the offense.",
       "sources": [
         {
-          "title": "Cubs' Pete Crow-Armstrong: Exits with bruised knee — CBS Sports",
-          "url": "https://www.cbssports.com/fantasy/baseball/news/cubs-pete-crow-armstrong-exits-with-bruised-knee/"
+          "title": "Enhanced Box Score: Rangers 3, Cubs 0 - May 10, 2026",
+          "url": "https://www.bleachernation.com/cubs/2026/05/10/enhanced-box-score-rangers-3-cubs-0-may-10-2026/"
         }
       ]
     },
@@ -78,11 +78,11 @@
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
-      "summary": "Merrill went 1-for-4 as the Padres beat St. Louis 4-2. He had been on a hot May stretch (.471 over 4 games entering Saturday). Padres pitching held the Cardinals in check after a 6-0 shutout loss the night before.",
+      "summary": "Merrill and the Padres split their 4-game home series with St. Louis and have an off day Monday. In Sunday's dramatic extra-innings win, Merrill was intentionally walked in the 10th to load the bases and set up San Diego's walk-off victory.",
       "sources": [
         {
-          "title": "Padres 4-2 Cardinals (May 9, 2026) Box Score — ESPN",
-          "url": "https://www.espn.com/mlb/boxscore/_/gameId/401815282"
+          "title": "Padres rally to beat Cardinals in extra innings, splitting series",
+          "url": "https://www.fultonsun.com/news/2026/may/11/padres-rally-to-beat-cardinals-in-extra-innings-splitting-series/"
         }
       ]
     },
@@ -90,11 +90,23 @@
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
-      "summary": "Hernandez went 1-for-4 with a run scored, but Dodgers fell 7-2 as Blake Snell's season debut was rough (5 ER in 3 IP). Spencer Strider threw 6 scoreless for Atlanta. Hernandez is fully healthy after battling a groin issue in 2025.",
+      "summary": "Manager Dave Roberts gave Hernández a planned rest day Monday as the Dodgers hosted the Giants (who won 9-3). He has a .614 OPS in May with no HR since April 15. Roberts hinted Alex Call could get more starts in left field.",
       "sources": [
         {
-          "title": "Atlanta Braves at Los Angeles Dodgers Game Story — 05/09/2026",
-          "url": "https://www.mlb.com/stories/game/823955"
+          "title": "Dave Roberts suggests potential change is coming with Teoscar Hernández",
+          "url": "https://dodgerblue.com/teoscar-hernandez-could-lose-starts-to-alex-call-amid-struggles/2026/05/11/"
+        }
+      ]
+    },
+    {
+      "name": "Stanton/Rice",
+      "team": "NYY",
+      "position": "DH",
+      "summary": "Ben Rice crushed his 13th homer of the season — a 374-foot 2-run blast to left-center off Baltimore's Brandon Young in the 3rd inning — but the Yankees fell 3-2 to the Orioles. Rice and Aaron Judge became the first Yankees duo with 13+ HRs each in the team's first 42 games.",
+      "sources": [
+        {
+          "title": "Yankees' Ben Rice unlocks historic feat with Aaron Judge after huge HR vs. Orioles",
+          "url": "https://clutchpoints.com/mlb/new-york-yankees/yankees-news-ben-rice-historic-feat-aaron-judge-huge-hr-orioles"
         }
       ]
     },
@@ -102,10 +114,10 @@
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
-      "summary": "Williams did not appear as Mets fell 2-1. He has had 6 consecutive scoreless outings (8 K, 5.2 IP) after a rough start to the season. ERA stands at 6.00 but trending sharply down. Strong candidate to pick up saves as Mets stabilize.",
+      "summary": "Williams has turned the corner after a rocky April, stringing together 6 consecutive scoreless outings and converting 5 saves. His ERA has dropped from a peak of 10.29 to around 6.0. The Mets are cautiously optimistic his signature changeup is returning to form.",
       "sources": [
         {
-          "title": "Devin Williams Starting to Turn the Corner — Metsmerized Online",
+          "title": "Devin Williams Starting to Turn the Corner - Metsmerized Online",
           "url": "https://metsmerizedonline.com/devin-williams-starting-to-turn-the-corner/"
         }
       ]
@@ -114,11 +126,11 @@
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
-      "summary": "Wheeler did not start Saturday. He returned from thoracic outlet surgery and is 1-0 with a 2.45 ERA in two starts, averaging 93.6 mph on his fastball. His next start is expected this week vs the Athletics.",
+      "summary": "Wheeler has made 3 solid starts (1-0, 3.11 ERA, 18 K in 17.1 IP) since returning from thoracic outlet syndrome surgery. The Phillies are managing his workload carefully as he rebuilds arm strength. They had a scheduled off day Monday.",
       "sources": [
         {
-          "title": "Zack Wheeler makes 2026 debut for Phillies",
-          "url": "https://www.mlb.com/news/zack-wheeler-phillies-2026-debut"
+          "title": "Zack Wheeler 2026 Game by Game Pitching Logs",
+          "url": "https://www.baseball-almanac.com/players/pitchinglogs.php?p=wheelza01&y=2026"
         }
       ]
     },
@@ -126,10 +138,10 @@
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "Ragans is on the 15-day IL (retroactive to May 7) with left elbow impingement (valgus extension overload). He exited his May 6 start vs Cleveland in the 3rd inning with triceps/elbow soreness. No timetable for return has been given.",
+      "summary": "Ragans was placed on the 15-day IL (retroactive to May 7) with left elbow impingement (valgus extension overload, pitcher's elbow). He exited his May 6 start vs. Cleveland after 3 innings with tricep and elbow soreness. The Royals have not given a return timeline.",
       "sources": [
         {
-          "title": "Royals Place Cole Ragans On IL With Elbow Impingement — MLB Trade Rumors",
+          "title": "Royals Place Cole Ragans On IL With Elbow Impingement - MLB Trade Rumors",
           "url": "https://www.mlbtraderumors.com/2026/05/royals-place-cole-ragans-on-il-with-elbow-impingement.html"
         }
       ]
@@ -138,11 +150,11 @@
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
-      "summary": "Burns delivered his 7th quality start in 8 outings: 6 IP, 4 H, 1 ER, 2 K, 3 BB. Win improves him to 4-1 with a 2.12 ERA. Reds snapped an 8-game losing streak 3-1 over Houston. Burns matched his season low with 2 strikeouts but kept the lineup off-balance.",
+      "summary": "Burns has been outstanding for Cincinnati, posting a 2.21 ERA over 41.2 IP in 7 starts and leading the NL in pitching WAR. The Reds had a scheduled off day Monday; Burns is expected to start Tuesday vs. Washington.",
       "sources": [
         {
-          "title": "Chase Burns' strong start helps Reds snap 8-game skid 3-1 over Astros — Washington Post",
-          "url": "https://www.washingtonpost.com/sports/mlb/2026/05/09/astros-reds-score/ec3140f6-4bf8-11f1-a119-857cd2bf4fd4_story.html"
+          "title": "Chase Burns, your National League leader in pitching WAR",
+          "url": "https://www.redreporter.com/cincinnati-reds-analysis/50741/chase-burns-national-league-leader-wins-above-replacement-war"
         }
       ]
     },
@@ -150,11 +162,11 @@
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
-      "summary": "Eovaldi did not start Saturday — Jack Leiter threw for Texas in the 6-0 shutout of Chicago. Eovaldi owns a 4.15 ERA over 8 starts and his next outing is expected this coming week.",
+      "summary": "Eovaldi was scratched from Monday's start vs. Arizona due to left side tightness — he woke up with discomfort and had imaging done before first pitch. The Rangers are awaiting results to determine severity. Oblique injuries can often lead to extended absences.",
       "sources": [
         {
-          "title": "Rangers 6-0 Cubs (May 9, 2026) Game Recap — ESPN",
-          "url": "https://www.espn.com/mlb/recap/_/gameId/401815275"
+          "title": "Eovaldi scratched with left side tightness; Rangers turn to bullpen",
+          "url": "https://www.mlb.com/news/nathan-eovaldi-scratched-from-start-against-diamondbacks"
         }
       ]
     },
@@ -162,11 +174,11 @@
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
-      "summary": "Sheehan started Friday May 8 vs Atlanta (4.2 IP, 1 ER, Dodgers won 3-1). Manager Roberts praised his stuff and competitiveness. ERA is 5.22 on the season but he's showing progress. Did not pitch Saturday.",
+      "summary": "Sheehan was not in Monday's rotation as Roki Sasaki started for the Dodgers in a 9-3 loss to San Francisco. Sheehan (2-2, 5.22 ERA) is projected to start later this week on the road in St. Louis.",
       "sources": [
         {
-          "title": "Emmet Sheehan shows progress, bullpen thrives in Dodgers' win over Braves — Yahoo Sports",
-          "url": "https://ca.sports.yahoo.com/news/emmet-sheehan-shines-bullpen-thrives-045541287.html"
+          "title": "Giants 9-3 Dodgers (May 11, 2026) Game Recap - ESPN",
+          "url": "https://www.espn.com/mlb/recap?gameId=401815303"
         }
       ]
     },
@@ -174,86 +186,38 @@
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
-      "summary": "Detmers took the loss Friday May 8 at Toronto (3.2 IP, 2 ER, career-high 6 BB, 2 H). Angels lost 2-0. Falls to 1-2 on the season. Command was an issue with the unusual walk total. Did not pitch Saturday.",
+      "summary": "Detmers was not scheduled for Monday's start as Brent Suter took the mound for the Angels in a 7-2 loss to Cleveland. Detmers (1-2, 4.28 ERA) will look to bounce back in his next scheduled outing.",
       "sources": [
         {
-          "title": "Los Angeles Angels vs. Toronto Blue Jays Box Score — May 8, 2026 — CBS Sports",
-          "url": "https://www.cbssports.com/mlb/gametracker/boxscore/MLB_20260508_LAA@TOR/"
-        }
-      ]
-    },
-    {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "summary": "Ben Rice missed his 4th consecutive game with a left hand contusion suffered fielding a throw from Max Fried vs Baltimore. He is day-to-day and the Yankees do not expect an IL stint. Paul Goldschmidt has taken over at first.",
-      "sources": [
-        {
-          "title": "Ben Rice hasn't done a lot since hand injury, but Yankees still think he'll avoid IL",
-          "url": "https://sny.tv/articles/ben-rice-hasnt-done-a-lot-hand-injury-yankees-still-think-avoid-il"
+          "title": "Guardians 7-2 Angels (May 11, 2026) Final Score - ESPN",
+          "url": "https://www.espn.com/mlb/game/_/gameId/401815298"
         }
       ]
     }
   ],
   "injuries": [
     {
-      "name": "Bryce Harper",
-      "team": "PHI",
-      "position": "1B",
-      "status": "Migraine (day-to-day)",
-      "previous_status": "Active",
-      "note": "Exited bottom of 1st vs Colorado with migraine; expected available Sunday per trainer",
-      "source": {
-        "title": "Phillies 1B Bryce Harper exits 9-3 victory with migraine — ESPN",
-        "url": "https://www.espn.com/mlb/story/_/id/48725851/phillies-1b-bryce-harper-exits-1st-inning-migraine"
-      }
-    },
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "status": "Sore thumb (day-to-day)",
-      "previous_status": "Active",
-      "note": "Thumb issue flared up on prior road trip; played through it Saturday; monitoring day-to-day",
-      "source": {
-        "title": "Giants' Luis Arraez: Out again due to sore thumb — CBS Sports",
-        "url": "https://www.cbssports.com/fantasy/baseball/news/giants-luis-arraez-out-again-due-to-sore-thumb/"
-      }
-    },
-    {
-      "name": "Pete Crow-Armstrong",
-      "team": "CHC",
-      "position": "OF",
-      "status": "Bruised right knee (day-to-day)",
-      "previous_status": "Active",
-      "note": "Exited May 9 game after fouling ball off right knee; Cubs monitoring for next series",
-      "source": {
-        "title": "Cubs' Pete Crow-Armstrong: Exits with bruised knee — CBS Sports",
-        "url": "https://www.cbssports.com/fantasy/baseball/news/cubs-pete-crow-armstrong-exits-with-bruised-knee/"
-      }
-    },
-    {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
       "status": "15-day IL (left elbow impingement)",
       "previous_status": "Active",
-      "note": "Placed on IL retroactive to May 7; valgus extension overload; awaiting imaging results; no timetable",
+      "note": "Pitcher's elbow (VEO); placed May 8 retroactive to May 7; return timeline TBD",
       "source": {
-        "title": "Royals Place Cole Ragans On IL With Elbow Impingement — MLB Trade Rumors",
+        "title": "Royals Place Cole Ragans On IL With Elbow Impingement",
         "url": "https://www.mlbtraderumors.com/2026/05/royals-place-cole-ragans-on-il-with-elbow-impingement.html"
       }
     },
     {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "status": "Hand contusion (day-to-day)",
+      "name": "Nathan Eovaldi",
+      "team": "TEX",
+      "position": "SP",
+      "status": "Day-to-Day (left side tightness)",
       "previous_status": "Active",
-      "note": "Ben Rice — 4th consecutive game missed; left hand contusion; not expected to go on IL",
+      "note": "Late scratch May 11 vs. Arizona; underwent imaging; results pending; possible IL move",
       "source": {
-        "title": "Ben Rice hasn't done a lot since hand injury — SNY",
-        "url": "https://sny.tv/articles/ben-rice-hasnt-done-a-lot-hand-injury-yankees-still-think-avoid-il"
+        "title": "Eovaldi scratched with left side tightness; Rangers turn to bullpen",
+        "url": "https://www.mlb.com/news/nathan-eovaldi-scratched-from-start-against-diamondbacks"
       }
     }
   ]
