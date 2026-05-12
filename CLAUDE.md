@@ -69,7 +69,16 @@ Plists live in `~/Library/LaunchAgents/`. Manage with `launchctl load/unload`.
 
 ### Gmail OAuth
 
-Local scripts use credentials at `~/.config/personal-mcp/gmail/`. The GCP app (`personal-claude-mcp-486922`) is in Testing mode — tokens expire weekly. `update_health.py` creates a macOS Reminder when the token is about to expire (previously emailed a warning, but email warnings are useless when the broken credential is the Gmail one). It also fires a Reminder if `data/yesterday.json` is more than 36 hours stale, catching silent pipeline failures even when no auth error is raised (e.g. remote agent stalled, missed cron).
+Local scripts use credentials at `~/.config/personal-mcp/gmail-fb/` — a dedicated OAuth client ID separate from the `gmail-personal` MCP server's `gmail/` folder. This separation was introduced 2026-05-12 after the third mid-week revocation; previously, concurrent token refreshes between the MCP server and the cron scripts kept triggering Google's rotation-revocation policy. The GCP app (`personal-claude-mcp-486922`) is in Testing mode — tokens still expire weekly, but the two clients now have independent refresh tokens and can't race.
+
+Re-auth command for the cron scripts (after weekly expiry):
+```
+GMAIL_OAUTH_PATH=/Users/Jon/.config/personal-mcp/gmail-fb/gcp-oauth.keys.json \
+GMAIL_CREDENTIALS_PATH=/Users/Jon/.config/personal-mcp/gmail-fb/credentials.json \
+npx @gongrzhe/server-gmail-autoauth-mcp auth
+```
+
+`update_health.py` creates a macOS Reminder when the token is about to expire (previously emailed a warning, but email warnings are useless when the broken credential is the Gmail one). It also fires a Reminder if `data/yesterday.json` is more than 36 hours stale, catching silent pipeline failures even when no auth error is raised (e.g. remote agent stalled, missed cron). Reminder osascript timeout is 60s (was 10s — too tight for cold-wake cron, every alert during the 5/8-12 outage silently timed out).
 
 ### Known failure modes
 

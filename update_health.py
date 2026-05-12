@@ -28,8 +28,13 @@ import config
 CREDS_PATH = os.path.expanduser("~/.config/personal-mcp/gdrive/.gdrive-server-credentials.json")
 OAUTH_PATH = os.path.expanduser("~/.config/personal-mcp/gdrive/gcp-oauth.keys.json")
 
-GMAIL_CREDS_PATH = os.path.expanduser("~/.config/personal-mcp/gmail/credentials.json")
-GMAIL_OAUTH_PATH = os.path.expanduser("~/.config/personal-mcp/gmail/gcp-oauth.keys.json")
+# Dedicated OAuth client for the fantasy-baseball cron scripts. Kept separate
+# from `~/.config/personal-mcp/gmail/` (used by the gmail-personal MCP server)
+# because concurrent refreshes between the MCP server and these cron jobs
+# triggered Google's rotation-revocation policy three times (Apr 30, May 1,
+# May 9) — each time bricking the daily pipeline mid-week.
+GMAIL_CREDS_PATH = os.path.expanduser("~/.config/personal-mcp/gmail-fb/credentials.json")
+GMAIL_OAUTH_PATH = os.path.expanduser("~/.config/personal-mcp/gmail-fb/gcp-oauth.keys.json")
 ALERT_EMAIL = "levinson.jon@gmail.com"
 
 # ESPN public injuries API
@@ -99,7 +104,7 @@ def notify_reauth_needed(reason):
         f'with properties {{name:"{esc(name)}", body:"{esc(body)}"}}'
     )
     try:
-        subprocess.run(["osascript", "-e", script], check=True, timeout=10,
+        subprocess.run(["osascript", "-e", script], check=True, timeout=60,
                        capture_output=True)
         log(f"Created re-auth Reminder: {reason}")
     except Exception as e:

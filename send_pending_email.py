@@ -29,9 +29,13 @@ REPO_ROOT = Path(__file__).parent
 DATA_DIR = REPO_ROOT / "data"
 SEND_LOG = REPO_ROOT / "send_email.log"
 
-# Gmail OAuth credentials (same ones used by local MCP server)
-GMAIL_CREDS = Path.home() / ".config" / "personal-mcp" / "gmail" / "credentials.json"
-GMAIL_OAUTH = Path.home() / ".config" / "personal-mcp" / "gmail" / "gcp-oauth.keys.json"
+# Dedicated OAuth client for the fantasy-baseball cron scripts. Kept separate
+# from `~/.config/personal-mcp/gmail/` (used by the gmail-personal MCP server)
+# because concurrent refreshes between the MCP server and these cron jobs
+# triggered Google's rotation-revocation policy three times (Apr 30, May 1,
+# May 9) — each time bricking the daily pipeline mid-week.
+GMAIL_CREDS = Path.home() / ".config" / "personal-mcp" / "gmail-fb" / "credentials.json"
+GMAIL_OAUTH = Path.home() / ".config" / "personal-mcp" / "gmail-fb" / "gcp-oauth.keys.json"
 
 # Subject prefixes. startswith-matching keeps DATA and Daily distinct.
 DATA_SUBJECT_PREFIX = "Fantasy Baseball DATA"
@@ -74,7 +78,7 @@ def notify_reauth_needed(reason: str):
         f'with properties {{name:"{esc(name)}", body:"{esc(body)}"}}'
     )
     try:
-        subprocess.run(["osascript", "-e", script], check=True, timeout=10,
+        subprocess.run(["osascript", "-e", script], check=True, timeout=60,
                        capture_output=True)
         log(f"Created re-auth Reminder: {reason}")
     except Exception as e:
