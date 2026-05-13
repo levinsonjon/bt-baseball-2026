@@ -1,25 +1,25 @@
 {
-  "date": "2026-05-11",
-  "generated_at": "2026-05-12T04:35:00Z",
+  "date": "2026-05-12",
+  "generated_at": "2026-05-13T09:00:00Z",
   "totals": {
     "hitters": {
-      "AB": 7,
-      "H": 3,
-      "R": 3,
-      "HR": 1,
+      "AB": 30,
+      "H": 6,
+      "R": 6,
+      "HR": 2,
       "RBI": 2,
-      "SB": 0,
-      "points": 6.0
+      "SB": 1,
+      "points": 11.0
     },
     "pitchers": {
-      "IP": 0.0,
-      "H": 0,
-      "ER": 0,
-      "K": 0,
+      "IP": 8.33,
+      "H": 6,
+      "ER": 1,
+      "K": 5,
       "BB": 0,
-      "W": 0,
-      "SV": 0,
-      "points": 0.0
+      "W": 2,
+      "SV": 1,
+      "points": 13.1
     }
   },
   "players": [
@@ -28,146 +28,203 @@
       "team": "SEA",
       "position": "C",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Off day for Seattle. Raleigh is mired in a 0-for-29 slump over his last 7 games."
+      "opponent": "@HOU",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 2,
+        "AB": 4,
+        "R": 3,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 3.0,
+      "summary": "Snapped 0-for-38 hitless streak with singles in the 7th and 9th innings; scored three runs in Mariners' 10-2 win at Houston."
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Phillies off day. Harper exited May 9 game with a migraine but was expected back before the off day."
+      "opponent": "@BOS",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "HR": 1,
+        "RBI": 1,
+        "SB": 0
+      },
+      "points": 3.0,
+      "summary": "Back-to-back HR with Schwarber in the 1st — Harper's 11th of the year; Phillies won 2-1 at Fenway behind Wheeler's gem."
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": "@ LAD",
+      "opponent": "@LAD",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 2,
-        "AB": 4,
-        "R": 2,
+        "H": 0,
+        "AB": 3,
+        "R": 0,
         "HR": 0,
         "RBI": 0,
         "SB": 0
       },
-      "points": 2.0,
-      "summary": "2-for-4, 2 R as Giants routed Dodgers 9-3; key single in the 7th-inning 5-run rally that broke a 3-3 tie."
+      "points": 0.0,
+      "summary": "0-for-3 with an intentional walk; Giants won 6-2 at Dodger Stadium for 2nd straight win in the series."
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Mets off day before Tuesday's Tigers series. Scouts note lingering knee (PCL sprain) affecting his sprint speed."
+      "opponent": "vs DET",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 1.0,
+      "summary": "Scored a run in the 3rd as Mets routed Detroit 10-2; leads team with 37 hits this season."
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Tigers off day before opening 3-game series at Citi Field (starts May 12). McGonigle leads AL rookies in hits."
+      "opponent": "@NYM",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 0,
+        "AB": 3,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 1
+      },
+      "points": 1.0,
+      "summary": "Drew a walk and swiped his 6th steal of the season; excellent defense in Tigers' 10-2 loss at Citi Field."
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "@ATL",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
       "points": 0.0,
-      "summary": "Cubs off day before road series at Atlanta (starts May 12). Chicago was shut out twice in last Rangers series."
+      "summary": "0-for-4 but robbed a hit with a leaping wall catch in CF; Cubs fell to NL-best Braves (29-13)."
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "@MIL",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
       "points": 0.0,
-      "summary": "Padres off day after splitting 4-game home series vs Cardinals. Merrill drew a key IBB in Sunday's extra-innings walk-off win."
+      "summary": "Singled in the 3rd inning; Padres lost 6-4 as Milwaukee extended winning streak to five."
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs SFG",
+      "opponent": null,
       "dnp": true,
-      "dnp_reason": "Manager rest day",
+      "dnp_reason": "IL-15",
       "stats": {},
       "points": 0.0,
-      "summary": "Rested by manager Dave Roberts amid May slump (.614 OPS, no HR since Apr 15). Alex Call may see more playing time."
+      "summary": "On 15-day IL with left groin strain since May 6; expected return ~May 21."
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": "@ BAL",
+      "opponent": "@BAL",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
         "H": 1,
-        "AB": 3,
+        "AB": 4,
         "R": 1,
         "HR": 1,
-        "RBI": 2,
+        "RBI": 1,
         "SB": 0
       },
-      "points": 4.0,
-      "summary": "Ben Rice blasted 374-ft 2-run HR (13th of season) off Baltimore's Brandon Young in the 3rd; Yankees fell 3-2."
+      "points": 3.0,
+      "summary": "HR in Yankees' 11-3 blowout of Orioles; Rice and Judge forming a historic HR duo in franchise history."
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Mets off day. Williams has 6 consecutive scoreless outings and 5 SV; ERA dropped from 10.29 peak to ~6.0."
+      "opponent": "vs DET",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 1.0,
+        "H": 0,
+        "ER": 0,
+        "K": 1,
+        "BB": 0,
+        "W": 1,
+        "SV": 1
+      },
+      "points": 10.0,
+      "summary": "W+SV after Mets bullpen mistranslation; extended scoreless streak to 7 straight, now 2W/6SV on the season."
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Phillies off day. Wheeler (1-0, 3.11 ERA) has made 3 solid starts since returning from thoracic outlet syndrome surgery."
+      "opponent": "@BOS",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 7.33,
+        "H": 6,
+        "ER": 1,
+        "K": 4,
+        "BB": 0,
+        "W": 1
+      },
+      "points": 3.1,
+      "summary": "Masterful 7.1 IP at Fenway: 6H/1ER/0BB/4K on 87 pitches; 2nd win, ERA drops to 2.55."
     },
     {
       "name": "Cole Ragans",
@@ -176,10 +233,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "15-day IL (left elbow impingement)",
+      "dnp_reason": "IL-15",
       "stats": {},
       "points": 0.0,
-      "summary": "On 15-day IL (retro May 7) with left elbow impingement (VEO/pitcher's elbow). Exited May 6 start early; timeline TBD."
+      "summary": "On 15-day IL (retroactive May 7) — left elbow impingement; no structural damage, no return timetable."
     },
     {
       "name": "Chase Burns",
@@ -191,19 +248,19 @@
       "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
-      "summary": "Reds off day Monday. Burns (3-3, 2.21 ERA) leads NL in pitching WAR; next start Tuesday vs Washington."
+      "summary": "Not his rotation turn; last started May 10 (6 IP, 1 ER). ERA 2.21 on the season."
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs ARI",
+      "opponent": null,
       "dnp": true,
-      "dnp_reason": "Day-to-Day (left side tightness)",
+      "dnp_reason": "Day-to-day",
       "stats": {},
       "points": 0.0,
-      "summary": "Late scratch vs Arizona due to left side tightness; underwent imaging with results pending. Possible IL move."
+      "summary": "Scratched from start vs. ARI with left side tightness; Rangers testing for oblique strain — potential IL stint."
     },
     {
       "name": "Emmet Sheehan",
@@ -212,10 +269,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled to pitch",
+      "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
-      "summary": "Not in Monday's rotation (Roki Sasaki started in 9-3 loss). Sheehan's next start projected for road trip to St. Louis."
+      "summary": "Not scheduled Tuesday; next start Thu May 14 vs. Giants at Dodger Stadium."
     },
     {
       "name": "Reid Detmers",
@@ -224,10 +281,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled to pitch",
+      "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
-      "summary": "Not scheduled Monday; Brent Suter started for Angels in 7-2 loss to Cleveland. Detmers awaits next turn."
+      "summary": "Not his rotation turn; Detmers (ERA 4.28) scheduled for Wed May 13 vs. Guardians."
     }
   ]
 }
