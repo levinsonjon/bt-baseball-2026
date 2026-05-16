@@ -1,25 +1,25 @@
 {
-  "date": "2026-05-14",
-  "generated_at": "2026-05-15T08:35:00Z",
+  "date": "2026-05-15",
+  "generated_at": "2026-05-16T04:35:00Z",
   "totals": {
     "hitters": {
-      "AB": 18,
-      "H": 4,
-      "R": 1,
-      "HR": 0,
-      "RBI": 1,
-      "SB": 2,
-      "points": 4.0
+      "AB": 29,
+      "H": 12,
+      "R": 6,
+      "HR": 2,
+      "RBI": 6,
+      "SB": 0,
+      "points": 14.0
     },
     "pitchers": {
-      "IP": 12.0,
-      "H": 4,
-      "ER": 2,
-      "K": 13,
-      "BB": 4,
-      "W": 2,
+      "IP": 0.0,
+      "H": 0,
+      "ER": 0,
+      "K": 0,
+      "BB": 0,
+      "W": 0,
       "SV": 0,
-      "points": 4.72
+      "points": 0.0
     }
   },
   "players": [
@@ -33,52 +33,52 @@
       "dnp_reason": "10-day IL (right oblique strain)",
       "stats": {},
       "points": 0.0,
-      "summary": "Placed on 10-day IL with right oblique strain — first IL stint of career. No timetable set."
+      "summary": "On 10-day IL with right oblique strain; first IL stint of his career."
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "@ BOS",
+      "opponent": "@ PIT",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 0,
-        "AB": 3,
-        "R": 0,
+        "H": 4,
+        "AB": 5,
+        "R": 1,
         "HR": 0,
-        "RBI": 0,
+        "RBI": 2,
         "SB": 0
       },
-      "points": 0.0,
-      "summary": "0-for-3, walk; PHI beat BOS 3-1 on Schwarber's MLB-leading 18th HR (Luzardo 6 scoreless IP)"
+      "points": 3.0,
+      "summary": "4-for-5 with 2-RBI single in the 9th; Phillies rallied to beat Pirates 11-9 in 10 innings."
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": "@ LAD",
+      "opponent": "@ ATH",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 1,
-        "AB": 2,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 1
+        "H": 4,
+        "AB": 5,
+        "R": 1,
+        "HR": 1,
+        "RBI": 1,
+        "SB": 0
       },
-      "points": 1.0,
-      "summary": "1-for-2, walk, SB; Giants fell 5-2 at Dodger Stadium"
+      "points": 3.0,
+      "summary": "4-for-5 with first HR of 2026 (solo in 4th); came within a triple of the cycle in 5-2 loss."
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": "vs DET",
+      "opponent": "vs NYY",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -90,100 +90,88 @@
         "SB": 0
       },
       "points": 0.0,
-      "summary": "0-for-4, walk, 2 Ks; Mets completed 3-game sweep of Tigers 9-4"
+      "summary": "0-for-4; Mets blanked 5-2 by Cam Schlittler in Subway Series opener."
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": "@ NYM",
+      "opponent": "vs TOR",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
         "H": 0,
         "AB": 3,
-        "R": 0,
+        "R": 1,
         "HR": 0,
         "RBI": 0,
         "SB": 0
       },
-      "points": 0.0,
-      "summary": "0-for-3, 2 Ks (McGonigle vs McLean); made jaw-dropping defensive stop. Tigers swept 4-9."
+      "points": 1.0,
+      "summary": "Walked and scored on wild pitch in Tigers' 3-2 walk-off win over Blue Jays."
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ ATL",
+      "opponent": "@ CWS",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 0,
-        "AB": 2,
-        "R": 0,
+        "H": 1,
+        "AB": 4,
+        "R": 1,
         "HR": 0,
-        "RBI": 0,
-        "SB": 1
+        "RBI": 2,
+        "SB": 0
       },
-      "points": 1.0,
-      "summary": "0-for-2, walk, 11th SB of season; Cubs shutout Braves 2-0"
+      "points": 3.0,
+      "summary": "1-for-4 with 2 RBI in Cubs' 10-5 Crosstown Classic win over White Sox."
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Rest day",
-      "stats": {},
+      "opponent": "@ SEA",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
       "points": 0.0,
-      "summary": "Planned rest vs LHP Kyle Harrison after 2-for-22 over last 6 games. Padres lost 1-7."
+      "summary": "0-for-4; Padres blanked Mariners 2-0 behind Randy Vasquez's six shutout innings."
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs SFG",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 3,
-        "AB": 4,
-        "R": 1,
-        "HR": 0,
-        "RBI": 1,
-        "SB": 0
-      },
-      "points": 2.0,
-      "summary": "3-for-4, R, RBI; third hit chased Giants starter Roupp in 6th of Dodgers' 5-2 series-split win"
-    },
-    {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Team off day",
+      "dnp_reason": "10-day IL (left groin strain)",
       "stats": {},
       "points": 0.0,
-      "summary": "Yankees off day; road series at Mets begins Friday."
+      "summary": "On IL with Grade 1 left groin strain; rehab assignment begins May 16, potential return May 18."
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": null,
+      "opponent": "vs NYY",
       "dnp": true,
-      "dnp_reason": "No appearance",
+      "dnp_reason": "No save situation (Mets lost 5-2)",
       "stats": {},
       "points": 0.0,
-      "summary": "Did not appear; Mets led 9-4 with McLean going 7 IP. Six straight scoreless outings entering the day."
+      "summary": "Did not pitch; Mets fell 5-2 to Yankees in Subway Series opener."
     },
     {
       "name": "Zack Wheeler",
@@ -192,10 +180,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled",
+      "dnp_reason": "Off day (Aaron Nola started)",
       "stats": {},
       "points": 0.0,
-      "summary": "Not scheduled May 14; last start May 12 (7.1 IP, 1 ER, W). Next turn ~May 17."
+      "summary": "Not his scheduled start; Aaron Nola pitched Phillies' 11-9 comeback win over Pirates."
     },
     {
       "name": "Cole Ragans",
@@ -204,29 +192,22 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "15-day IL (left elbow impingement)",
+      "dnp_reason": "15-day IL (elbow impingement)",
       "stats": {},
       "points": 0.0,
-      "summary": "On 15-day IL (ret. May 7) with left elbow impingement (VEO). Return before June unlikely."
+      "summary": "On 15-day IL retroactive to May 7 with left elbow valgus extension overload (pitcher's elbow)."
     },
     {
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs WAS",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 2,
-        "ER": 0,
-        "K": 7,
-        "BB": 2,
-        "W": 1
-      },
-      "points": 3.36,
-      "summary": "6 shutout IP, 7 Ks; Reds rout Nationals 15-1 (W, 5-1). 1 ER allowed over last 3 starts."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Off day (pitched May 14)",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Not scheduled; threw 6 shutout innings in Reds' 15-1 rout of Nationals on May 14."
     },
     {
       "name": "Nathan Eovaldi",
@@ -238,26 +219,19 @@
       "dnp_reason": "Day-to-day (left side tightness)",
       "stats": {},
       "points": 0.0,
-      "summary": "Day-to-day; threw bullpen Wed feeling good. Targets Sunday start vs HOU pending staff approval."
+      "summary": "Day-to-day after being scratched May 12 with left side tightness; expected back ~May 17."
     },
     {
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs SFG",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 2,
-        "ER": 2,
-        "K": 6,
-        "BB": 2,
-        "W": 1
-      },
-      "points": 1.36,
-      "summary": "6 IP, 2 ER, 6 Ks; Dodgers salvage series split vs Giants 5-2 (W, 3-1)"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Off day (pitched May 14)",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Not scheduled; went 6 IP, 2 ER, 6 K in Dodgers' 5-2 win at Giants on May 14."
     },
     {
       "name": "Reid Detmers",
@@ -266,10 +240,29 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Team off day",
+      "dnp_reason": "Off day (Kochanowicz started)",
       "stats": {},
       "points": 0.0,
-      "summary": "Angels off day. Last start May 13 at CLE: took L (1-4) in Guardians 4-2 sweep clincher."
+      "summary": "Did not start; Jack Kochanowicz took the loss in Angels' 6-0 shutout loss to Dodgers."
+    },
+    {
+      "name": "Stanton/Rice",
+      "team": "NYY",
+      "position": "DH",
+      "type": "hitter",
+      "opponent": "@ NYM",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 3,
+        "AB": 4,
+        "R": 2,
+        "HR": 1,
+        "RBI": 1,
+        "SB": 0
+      },
+      "points": 4.0,
+      "summary": "3-for-4, 14th HR of 2026 season, 2 runs scored in Yankees' 5-2 Subway Series win."
     }
   ]
 }

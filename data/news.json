@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-05-15T08:35:00Z",
+  "generated_at": "2026-05-16T04:35:00Z",
   "window_hours": 24,
   "players": [
     {
       "name": "Cal Raleigh",
       "team": "SEA",
       "position": "C",
-      "summary": "Cal Raleigh placed on 10-day IL Thursday with a right oblique strain — first IL stint of his career in six MLB seasons. He aggravated the injury leaving Wednesday's game in the 8th inning. Imaging scheduled when the team returns to Seattle Friday; recovery outlook is 2–6 weeks.",
+      "summary": "Placed on 10-day IL May 14 with right oblique strain — first IL stint of his six-year career. Mariners have given no return timeline.",
       "sources": [
         {
-          "title": "Mariners place Cal Raleigh on 10-day IL with right oblique strain",
-          "url": "https://www.nbcsports.com/mlb/news/mariners-scuffling-star-catcher-cal-raleigh-placed-on-10-day-injured-list-with-right-oblique-strain"
+          "title": "Cal Raleigh placed on IL with oblique strain",
+          "url": "https://www.mlb.com/news/cal-raleigh-placed-on-il-with-oblique-strain"
         }
       ]
     },
@@ -18,11 +18,11 @@
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "Harper and the Phillies swept Boston at Fenway, winning 3-1 Thursday behind Jesus Luzardo's six scoreless innings and Kyle Schwarber's go-ahead two-run homer in the 8th. Harper drew a walk but was held hitless in the low-scoring affair.",
+      "summary": "Went 4-for-5 with a 2-RBI single in the 9th to help Phillies erase a 6-run deficit and win 11-9 in 10 innings. Harper was Philadelphia's clutch catalyst in a memorable comeback.",
       "sources": [
         {
-          "title": "Schwarber's MLB-leading 18th homer lifts Phillies past Red Sox 3-1",
-          "url": "https://www.washingtonpost.com/sports/mlb/2026/05/14/phillies-red-sox-score/c49424a4-5004-11f1-97e7-22c6c29ff0d8_story.html"
+          "title": "Phillies erase 6-run deficit, down Pirates in 10",
+          "url": "https://fieldlevelmedia.com/mlb/phillies-erase-6-run-deficit-down-pirates-in-10-innings/"
         }
       ]
     },
@@ -30,11 +30,11 @@
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
-      "summary": "Arraez went 1-for-2 with a walk and a stolen base as the Giants fell 5-2 at Dodger Stadium in the series finale. His leadoff single in the 4th was one of just two San Francisco hits off Emmet Sheehan.",
+      "summary": "Went 4-for-5 with his first home run of 2026 (solo in 4th off Civale) and came within a triple of the cycle. A bright spot in the Giants' 5-2 loss to the Athletics.",
       "sources": [
         {
-          "title": "Giants vs Dodgers May 14 2026 box score",
-          "url": "https://www.cbssports.com/mlb/gametracker/boxscore/MLB_20260514_SF@LAD/"
+          "title": "Luis Arraez's four-hit night, first homer of 2026",
+          "url": "https://www.nbcsportsbayarea.com/mlb/san-francisco-giants/luis-arraezs-four-hit-game-first-homer-of-season-a-bright-spot-in-giants-loss/1938279/"
         }
       ]
     },
@@ -42,11 +42,11 @@
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
-      "summary": "Bichette went 0-for-4 with a walk and two strikeouts as the Mets completed a three-game sweep of the Tigers 9-4. Nolan McLean was dominant with seven innings; Bichette was the lone Mets regular without a hit or RBI.",
+      "summary": "Went 0-for-4 as Cam Schlittler dominated (9 K over 6.2 IP) in a 5-2 Yankees win. Bichette's prolonged 2026 slump is generating trade speculation with his .226 average.",
       "sources": [
         {
-          "title": "Mets 9 Tigers 4 final score",
-          "url": "https://www.mlb.com/gameday/tigers-vs-mets/2026/05/14/823630/final"
+          "title": "Bo Bichette contract and slump put Mets trade talk in focus",
+          "url": "https://www.mogazmasr.com/104482"
         }
       ]
     },
@@ -54,11 +54,11 @@
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
-      "summary": "Kevin McGonigle went 0-for-3 with two strikeouts against McLean but flashed his defensive brilliance with a jaw-dropping play to rob AJ Ewing of a hit. The Tigers were swept 9-4; McGonigle may be hitting the rookie wall after a fast start.",
+      "summary": "Kevin McGonigle walked and scored on a wild pitch in the 3rd inning of Detroit's 3-2 win over Toronto. The 21-year-old rookie continues a strong MLB debut, batting over .300.",
       "sources": [
         {
-          "title": "Tigers vs Mets May 14 box score",
-          "url": "https://www.mlb.com/gameday/tigers-vs-mets/2026/05/14/823630/final"
+          "title": "Tigers 3, Blue Jays 2 — May 15, 2026",
+          "url": "https://www.espn.com/mlb/recap?gameId=401815351"
         }
       ]
     },
@@ -66,11 +66,11 @@
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
-      "summary": "PCA walked and swiped his 11th base of the season in the 3rd inning but went hitless for the fourth straight game as the Cubs shutout the Braves 2-0 behind Ian Happ's homer and five combined pitchers.",
+      "summary": "Contributed 2 RBI in the Cubs' 10-5 Crosstown Classic win over the White Sox. PCA has rebounded with strong play over his last 15 games after a slow start to 2026.",
       "sources": [
         {
-          "title": "Cubs 2-0 Braves final score",
-          "url": "https://www.mlb.com/gameday/cubs-vs-braves/2026/05/14/824926/final"
+          "title": "Enhanced Box Score: Cubs 10, White Sox 5",
+          "url": "https://www.bleachernation.com/cubs/2026/05/15/enhanced-box-score-cubs-10-white-sox-5-may-15-2026/"
         }
       ]
     },
@@ -78,11 +78,11 @@
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
-      "summary": "Merrill sat out the Padres' series finale against LHP Kyle Harrison after going 2-for-22 over his last six games. The Padres dropped the game 7-1. He is expected back in the lineup Friday.",
+      "summary": "Went hitless in the Padres' efficient 2-0 win at Seattle. Randy Vasquez threw six shutout innings; Merrill has been streaky in 2026 after his outstanding 2024 rookie season.",
       "sources": [
         {
-          "title": "Padres' Jackson Merrill not in Thursday's lineup",
-          "url": "https://www.cbssports.com/fantasy/baseball/news/padres-jackson-merrill-not-in-thursdays-lineup/"
+          "title": "Padres 2, Mariners 0 — May 15 recap",
+          "url": "https://www.cbssports.com/mlb/gametracker/recap/MLB_20260515_SD@SEA/"
         }
       ]
     },
@@ -90,26 +90,19 @@
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
-      "summary": "Hernandez went 3-for-4 with a run and an RBI as the Dodgers salvaged a series split over the Giants 5-2. His third hit of the night chased Giants starter Landen Roupp with runners on 2nd and 3rd in the 6th — a strong bounce-back for the outfielder who had been pressing.",
+      "summary": "Set to begin a rehab assignment with Single-A Rancho Cucamonga on May 16, with potential activation as early as May 18. Has been on the 10-day IL since May 6 with a Grade 1 left groin strain.",
       "sources": [
         {
-          "title": "Emmet Sheehan and Alex Call lead Dodgers to series split vs Giants",
-          "url": "https://www.truebluela.com/dodgers-scores-standings/115840/alex-call-emmet-sheehan-teoscar-hernandez-giants"
+          "title": "Teoscar Hernandez set for rehab assignment",
+          "url": "https://www.mlb.com/news/teoscar-hernandez-set-for-rehab-assignment"
         }
       ]
-    },
-    {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "summary": "The Yankees had an off day Thursday before beginning a road series at the Mets on Friday. Ben Rice is expected back in the lineup when New York resumes play.",
-      "sources": []
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
-      "summary": "Williams did not appear in the Mets' 9-4 sweep-clincher with a comfortable lead and McLean going 7 innings. He carries six consecutive scoreless outings and a 43.5% whiff rate on his airbender changeup — up from 37.3% a year ago.",
+      "summary": "Did not pitch as the Mets fell 5-2 to the Yankees. Williams has been excellent recently with six consecutive scoreless outings entering the Subway Series.",
       "sources": [
         {
           "title": "Mets' Devin Williams finding his groove in 2026",
@@ -121,11 +114,11 @@
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
-      "summary": "Wheeler was not scheduled May 14. His May 12 start was historic: only 16 pitches through three innings (fewest since at least 2000), finishing with 7.1 IP, 1 ER in a 2-1 Phillies win at Fenway. Next turn projected ~May 17.",
+      "summary": "Not scheduled on May 15; Aaron Nola pitched the Phillies' 11-9 comeback win. Wheeler has a 2.25 ERA through five starts since his April 25 debut following shoulder surgery.",
       "sources": [
         {
-          "title": "Wheeler threw 16 pitches through three innings vs Red Sox",
-          "url": "https://thelibertyline.com/2026/05/13/zack-wheeler-16-pitches-red-sox/"
+          "title": "Can Zack Wheeler sustain his strong 2026 start?",
+          "url": "https://www.rotoballer.com/player-news/can-zack-wheeler-sustain-his-strong-start-to-2026/1860679"
         }
       ]
     },
@@ -133,10 +126,10 @@
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "Ragans is on the 15-day IL (retroactive to May 7) with a left elbow impingement (valgus extension overload). He exited his last start after three innings with elbow tightness. A return before June appears unlikely; the Royals are still evaluating next steps.",
+      "summary": "Remains on 15-day IL (retroactive to May 7) with valgus extension overload in his left elbow. Royals expect a minimal IL stay but no firm return date has been announced.",
       "sources": [
         {
-          "title": "Royals place Cole Ragans on IL with elbow impingement",
+          "title": "Royals Place Cole Ragans On IL With Elbow Impingement",
           "url": "https://www.mlbtraderumors.com/2026/05/royals-place-cole-ragans-on-il-with-elbow-impingement.html"
         }
       ]
@@ -145,11 +138,11 @@
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
-      "summary": "Burns was dominant Thursday — 6 shutout innings, 7 Ks, 2 hits in Cincinnati's 15-1 demolition of the Nationals. He improved to 5-1 with his season ERA now at 2.05, having surrendered just one earned run over his last three starts combined.",
+      "summary": "Did not pitch May 15 after firing 6 shutout innings in the Reds' 15-1 rout of Washington on May 14. Burns remains one of baseball's elite young arms with a 2.05 ERA.",
       "sources": [
         {
-          "title": "Reds get six shutout innings from Burns, rout Nationals 15-1",
-          "url": "https://www.washingtonpost.com/sports/mlb/2026/05/14/nationals-reds-score/c9e9defc-4fc9-11f1-97e7-22c6c29ff0d8_story.html"
+          "title": "How Chase Burns has dominated in 2026",
+          "url": "https://www.mlb.com/news/chase-burns-april-2026-breakdown"
         }
       ]
     },
@@ -157,7 +150,7 @@
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
-      "summary": "Eovaldi remains day-to-day after being scratched May 11 with left side tightness. He threw a bullpen session Wednesday and reported feeling good, targeting a start Sunday at Houston. The Rangers' medical staff will confirm before he returns.",
+      "summary": "Day-to-day after being scratched May 12 with left side tightness. Threw a bullpen and is expected to return to the rotation around May 17 in Houston.",
       "sources": [
         {
           "title": "Rangers' Nathan Eovaldi shares crucial injury update",
@@ -169,11 +162,11 @@
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
-      "summary": "Sheehan turned in six strong innings — 2 R, 2 H, 6 Ks, 2 BB — as the Dodgers salvaged a 5-2 series split vs San Francisco. He improved to 3-1. Alex Call delivered the go-ahead RBI single, with Teoscar Hernandez setting the table with three hits.",
+      "summary": "Did not pitch May 15 after his best start of 2026 (6 IP, 2 H, 2 ER, 6 K) in the Dodgers' 5-2 win at San Francisco on May 14. Dave Roberts called it his best outing of the year.",
       "sources": [
         {
-          "title": "Emmet Sheehan Dodgers salvage series split vs Giants",
-          "url": "https://www.953thescore.com/2026/05/14/emmet-sheehan-dodgers-salvage-series-split-vs-giants/"
+          "title": "Emmet Sheehan shows growth in Dodgers win",
+          "url": "https://www.thesportingtribune.com/2026/05/15/emmet-sheehan-shows-growth-as-pitcher-and-leader-in-dodgers-win"
         }
       ]
     },
@@ -181,11 +174,23 @@
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
-      "summary": "Detmers had an off day May 14; his start came May 13 at Cleveland where he took the loss (1-4) as Angel Martinez hit a leadoff homer in a 4-2 Guardians sweep-clinching win. The Angels were outscored 14-6 in the three-game series.",
+      "summary": "Did not start May 15; Jack Kochanowicz started for the Angels and allowed 6 runs in the Dodgers' 6-0 shutout win. Detmers continues to work through the LAA rotation.",
       "sources": [
         {
-          "title": "Angel Martinez leads Guardians to sweep of Angels",
-          "url": "https://spectrumnews1.com/oh/columbus/news/2026/05/14/guardians-beat-angels-4-2"
+          "title": "Dodgers vs. Angels box score — May 15, 2026",
+          "url": "https://www.cbssports.com/mlb/gametracker/boxscore/MLB_20260515_LAD@LAA/"
+        }
+      ]
+    },
+    {
+      "name": "Stanton/Rice",
+      "team": "NYY",
+      "position": "DH",
+      "summary": "Ben Rice went 3-for-4 with his 14th homer of 2026 and scored twice in the Yankees' 5-2 Subway Series opener at Citi Field. Batting .338, he is one of the AL's hottest hitters.",
+      "sources": [
+        {
+          "title": "Yankees vs. Mets recap: Ben Rice homer, Schlittler dominates",
+          "url": "https://www.pinstripealley.com/yankees-scores-standings/188337/yankees-score-recap-subway-series-mets-cam-schlittler-clay-holmes-injury-ben-rice-homer"
         }
       ]
     }
@@ -197,21 +202,33 @@
       "position": "C",
       "status": "10-day IL (right oblique strain)",
       "previous_status": "Active",
-      "note": "First IL stint of Raleigh's career. Aggravated right side in 8th inning of May 13 game. Imaging scheduled Friday. Recovery outlook 2-6 weeks; no official timetable set.",
+      "note": "Placed on IL May 14. First IL stint of his six-year career. No return timeline given.",
       "source": {
-        "title": "Mariners place Cal Raleigh on 10-day IL with right oblique strain",
-        "url": "https://www.nbcsports.com/mlb/news/mariners-scuffling-star-catcher-cal-raleigh-placed-on-10-day-injured-list-with-right-oblique-strain"
+        "title": "Cal Raleigh placed on IL with oblique strain",
+        "url": "https://www.mlb.com/news/cal-raleigh-placed-on-il-with-oblique-strain"
+      }
+    },
+    {
+      "name": "Teoscar Hernandez",
+      "team": "LAD",
+      "position": "OF",
+      "status": "10-day IL (left groin strain)",
+      "previous_status": "10-day IL (left groin strain)",
+      "note": "Grade 1 abductor strain. Rehab at Single-A Rancho Cucamonga begins May 16; potential activation May 18.",
+      "source": {
+        "title": "Teoscar Hernandez set for rehab assignment",
+        "url": "https://www.mlb.com/news/teoscar-hernandez-set-for-rehab-assignment"
       }
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "status": "15-day IL (left elbow impingement)",
-      "previous_status": "15-day IL (left elbow impingement)",
-      "note": "On IL since May 7 with valgus extension overload. Exited last start after 3 IP with elbow tightness. Return in June more likely than minimum window; team still evaluating.",
+      "status": "15-day IL (elbow impingement)",
+      "previous_status": "Active",
+      "note": "Placed retroactive to May 7 with VEO (pitcher's elbow). Return TBD; Royals hopeful for short stay.",
       "source": {
-        "title": "Royals place Cole Ragans on IL with elbow impingement",
+        "title": "Royals Place Cole Ragans On IL",
         "url": "https://www.mlbtraderumors.com/2026/05/royals-place-cole-ragans-on-il-with-elbow-impingement.html"
       }
     },
@@ -221,9 +238,9 @@
       "position": "SP",
       "status": "Day-to-day (left side tightness)",
       "previous_status": "Active",
-      "note": "Scratched May 11 vs ARI with left side tightness. Bullpen session May 13 went well. Targeting Sunday start vs HOU; medical staff sign-off still needed.",
+      "note": "Scratched from May 12 start; threw bullpen, expected to return to rotation ~May 17.",
       "source": {
-        "title": "Rangers' Nathan Eovaldi shares crucial injury update",
+        "title": "Rangers' Nathan Eovaldi injury update",
         "url": "https://clutchpoints.com/mlb/texas-rangers/rangers-news-nathan-eovaldi-crucial-injury-update"
       }
     }
