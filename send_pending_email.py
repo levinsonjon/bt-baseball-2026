@@ -23,7 +23,7 @@ import re
 import subprocess
 import sys
 from pathlib import Path
-from datetime import datetime, date, timedelta
+from datetime import datetime, date, timedelta, timezone
 
 REPO_ROOT = Path(__file__).parent
 DATA_DIR = REPO_ROOT / "data"
@@ -175,9 +175,10 @@ def current_data_watermark():
     try:
         with open(path) as f:
             payload = json.load(f)
-        d = payload.get("date")
-        if isinstance(d, str):
-            return date.fromisoformat(d)
+        if isinstance(payload, dict):
+            d = payload.get("date")
+            if isinstance(d, str):
+                return date.fromisoformat(d)
     except (json.JSONDecodeError, ValueError):
         pass
     return None
@@ -260,8 +261,12 @@ def _load_roster_index() -> dict:
     return out
 
 
-def normalize_yesterday(data: dict, roster: dict) -> dict:
+def normalize_yesterday(data, roster: dict) -> dict:
     """Adapt remote agent's yesterday payload to the schema the site reads.
+
+    Accepts two agent shapes:
+      - dict with date/generated_at/players (canonical)
+      - bare list of per-player dicts (date defaults to yesterday, generated_at to now UTC)
 
     Handles common field-name drift from the agent:
       - player_type → type, fantasy_points → points
@@ -269,6 +274,13 @@ def normalize_yesterday(data: dict, roster: dict) -> dict:
       - team/position filled in from the roster if missing
       - rebuild totals.{hitters,pitchers} from per-player stats
     """
+    if isinstance(data, list):
+        data = {
+            "date": (date.today() - timedelta(days=1)).isoformat(),
+            "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "players": data,
+        }
+
     tot_hit = {"AB": 0, "H": 0, "R": 0, "HR": 0, "RBI": 0, "SB": 0, "points": 0.0}
     tot_p = {"IP": 0.0, "H": 0, "ER": 0, "K": 0, "BB": 0, "W": 0, "SV": 0, "points": 0.0}
     players_out = []
@@ -372,17 +384,22 @@ def normalize_news(data, roster: dict) -> dict:
 
     if not injuries_out:
         for p in players_in:
-            status = (p.get("injury_status") or "").strip().lower()
-            if status and status not in {"healthy", "none", "active"}:
+            injury_flag = p.get("injury_flag")
+            status = (p.get("injury_curr") or p.get("injury_status") or "").strip()
+            is_injured = (
+                injury_flag is True
+                or (status and status.lower() not in {"healthy", "none", "active"})
+            )
+            if is_injured:
                 name = p.get("name", "")
                 r = roster.get(name, {})
                 injuries_out.append({
                     "name": name,
                     "team": p.get("team") or r.get("team", ""),
                     "position": p.get("position") or r.get("position", ""),
-                    "status": p.get("injury_status", ""),
-                    "previous_status": "",
-                    "note": p.get("headline") or p.get("summary") or "",
+                    "status": p.get("injury_curr") or p.get("injury_status") or "",
+                    "previous_status": p.get("injury_prev") or p.get("previous_status") or "",
+                    "note": p.get("injury_note") or p.get("headline") or p.get("summary") or "",
                     "source": None,
                 })
 
@@ -497,7 +514,7 @@ def consume_data_draft(service, draft_id: str):
 
         report_date = date.today() - timedelta(days=1)
         y = blocks.get("yesterday-data") or {}
-        if isinstance(y.get("date"), str):
+        if isinstance(y, dict) and isinstance(y.get("date"), str):
             try:
                 report_date = date.fromisoformat(y["date"])
             except ValueError:
