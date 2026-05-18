@@ -1,198 +1,20 @@
 {
-  "generated_at": "2026-05-17T09:35:00Z",
+  "generated_at": "2026-05-18T13:47:54Z",
   "window_hours": 24,
   "players": [
     {
       "name": "Cal Raleigh",
       "team": "SEA",
       "position": "C",
-      "summary": "Cal Raleigh placed on 10-day IL for first time in career with right oblique strain. Mariners will shut him down one week then reassess; earliest return May 24.",
-      "sources": [
-        {
-          "title": "Cal Raleigh on his oblique injury and rehab timeline",
-          "url": "https://www.mlb.com/news/cal-raleigh-on-his-oblique-injury-and-rehab-timeline"
-        }
-      ]
-    },
-    {
-      "name": "Bryce Harper",
-      "team": "PHI",
-      "position": "1B",
-      "summary": "Harper laced a 2-run double in the 9th inning at PNC Park Saturday, healthy after his May 9 migraine scare. He is batting .283 with 11 HR and 29 RBI on the season.",
-      "sources": [
-        {
-          "title": "Bryce Harper and Phillies face Pirates on May 16",
-          "url": "https://www.fanduel.com/research/mlb/player-news/game-updates/bryce-harper-and-phillies-play-pirates-on-may-16"
-        }
-      ]
-    },
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "summary": "Arraez went 4-for-5 with his first HR of the season in a 5-2 loss to the Athletics. His thumb has cleared up and he's on a hot streak.",
-      "sources": [
-        {
-          "title": "Giants observations: Loss to Athletics — NBC Sports Bay Area",
-          "url": "https://www.nbcsportsbayarea.com/mlb/san-francisco-giants/observations-loss-athletics-luis-arraez/1938263/"
-        }
-      ]
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "summary": "Bichette went 0-for-2 with a walk and scored a run in the Mets' 6-3 win. Scout concerns persist about a lingering PCL knee issue from 2025 affecting his sprint speed (25.4 ft/sec, down from last year).",
-      "sources": [
-        {
-          "title": "MLB Scouts Give Mets Concerning Injury Update on Bo Bichette",
-          "url": "https://heavy.com/sports/mlb/new-york-mets/concerning-bo-bichette-injury-update/"
-        }
-      ]
-    },
-    {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
-      "position": "SS",
-      "summary": "Kevin McGonigle singled in 4 AB as the Tigers fell 2-1 in 10 innings to the Blue Jays. The rookie recently signed an 8-year, $150M extension and is a leading AL ROY candidate.",
-      "sources": [
-        {
-          "title": "MLB Rookie Rankings: Kevin McGonigle better than expected for Tigers",
-          "url": "https://www.cbssports.com/mlb/news/mlb-rookie-rankings-kevin-mcgonigle-munetaka-murakami-jj-wetherholt-chase-delauter/"
-        }
-      ]
-    },
-    {
-      "name": "Pete Crow-Armstrong",
-      "team": "CHC",
-      "position": "OF",
-      "summary": "PCA belted a 2-run homer in the 9th to make the Cubs' 8-3 loss to the White Sox more respectable. He's on a six-game hitting streak and finding his swing after a slow start.",
-      "sources": [
-        {
-          "title": "Cubs' Pete Crow-Armstrong: Smacks late homer in blowout loss",
-          "url": "https://www.cbssports.com/fantasy/baseball/news/cubs-pete-crow-armstrong-smacks-late-homer-in-blowout-loss/"
-        }
-      ]
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "summary": "Merrill drove in the game's first run with an RBI single in the 1st inning as the Padres beat Seattle 7-4. He is hitting .471 over his last four contests after a 0-for-16 cold stretch.",
-      "sources": [
-        {
-          "title": "Jackson Merrill hits walk-off double vs. Mariners",
-          "url": "https://www.mlb.com/news/jackson-merrill-hits-walk-off-double-as-padres-win-vs-mariners"
-        }
-      ]
-    },
-    {
-      "name": "Teoscar Hernandez",
-      "team": "LAD",
-      "position": "OF",
-      "summary": "Teoscar Hernandez returned from the IL Saturday and posted 2 RBI in the Dodgers' 15-2 blowout win over the Angels. Since being dropped in the lineup he has been the Dodgers' hottest hitter.",
-      "sources": [
-        {
-          "title": "Teoscar Hernandez Responded Really Well To Dodgers Lineup Change",
-          "url": "https://dodgerblue.com/teoscar-hernandez-responded-really-well-to-challenge/2026/05/16/"
-        }
-      ]
-    },
-    {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "summary": "Ben Rice went 0-for-3 in the Yankees' 6-3 loss at Citi Field in his first game back from a left hand contusion. He leads all of baseball with a 1.214 OPS on the season.",
-      "sources": [
-        {
-          "title": "New York Yankees Announce Ben Rice Decision For Mets Game",
-          "url": "https://heavy.com/sports/mlb/new-york-yankees/announce-ben-rice-decision-for-mets-game-sat/"
-        }
-      ]
-    },
-    {
-      "name": "Devin Williams",
-      "team": "NYM",
-      "position": "RP",
-      "summary": "Williams nailed down save #7 in the Mets' 6-3 win over the Yankees, extending his scoreless streak to 7 outings. His resurgence is tied to adjustments in pitch mix with the Mets' coaching staff.",
-      "sources": [
-        {
-          "title": "Devin Williams secures save for Mets | 05/16/2026",
-          "url": "https://www.mlb.com/video/devin-williams-secures-save-for-new-york-mets-win-6-3"
-        }
-      ]
-    },
-    {
-      "name": "Zack Wheeler",
-      "team": "PHI",
-      "position": "SP",
-      "summary": "Wheeler earned a win Friday vs. Miami (6 IP, 1 ER, 8 K) and is between starts. He has a 2.25 ERA in 5 outings since returning from thoracic outlet surgery — one of the best comeback stories of 2026.",
-      "sources": [
-        {
-          "title": "Can Zack Wheeler Sustain His Strong Start to 2026?",
-          "url": "https://www.rotoballer.com/player-news/can-zack-wheeler-sustain-his-strong-start-to-2026/1860679"
-        }
-      ]
+      "summary": "Cal Raleigh placed on the 10-day IL with a right oblique strain, his first career IL stint. Earliest return is estimated May 24, with Mitch Garver and Jhonny Pereda handling catching duties in Seattle.",
+      "sources": []
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "Ragans remains on the 15-day IL (retroactive to May 7) with left elbow impingement. He has been playing catch with increasing intensity as of May 13 but no return date has been announced.",
-      "sources": [
-        {
-          "title": "Cole Ragans Making Headway in Rehab",
-          "url": "https://www.rotoballer.com/player-news/cole-ragans-making-headway-in-rehab/1861487"
-        }
-      ]
-    },
-    {
-      "name": "Chase Burns",
-      "team": "CIN",
-      "position": "SP",
-      "summary": "Burns is between starts after reaching 100 strikeouts faster than any pitcher in Reds history. He last started Tuesday (win, 6 IP, 9 K vs. Rockies) and is one of the best young starters in baseball.",
-      "sources": [
-        {
-          "title": "Chase Burns reaches 100 Ks faster than any Reds pitcher",
-          "url": "https://www.mlb.com/news/chase-burns-throws-seven-scoreless-innings-reds-lose-to-pirates"
-        }
-      ]
-    },
-    {
-      "name": "Nathan Eovaldi",
-      "team": "TEX",
-      "position": "SP",
-      "summary": "Eovaldi was scratched May 12 with left side tightness but threw a bullpen May 14 and said he feels good. He is expected to make his scheduled start Sunday May 17.",
-      "sources": [
-        {
-          "title": "Rangers' Nathan Eovaldi scratched due to left side tightness — ESPN",
-          "url": "https://www.espn.com/mlb/story/_/id/48744303/rangers-nathan-eovaldi-face-d-backs-due-tight-side"
-        }
-      ]
-    },
-    {
-      "name": "Emmet Sheehan",
-      "team": "LAD",
-      "position": "SP",
-      "summary": "Sheehan is between starts after his best outing of 2026 (6 IP, 2 ER, 6 K vs. Giants on May 14, per Dave Roberts). Wrobleski started for LAD on Saturday vs. the Angels.",
-      "sources": [
-        {
-          "title": "Emmet Sheehan shows growth as pitcher and leader in Dodgers win",
-          "url": "https://www.thesportingtribune.com/2026/05/15/emmet-sheehan-shows-growth-as-pitcher-and-leader-in-dodgers-win"
-        }
-      ]
-    },
-    {
-      "name": "Reid Detmers",
-      "team": "LAA",
-      "position": "SP",
-      "summary": "Detmers was not scheduled to start Saturday; Jose Soriano started for LAA vs. the Dodgers (LAA lost 15-2). Detmers has a 5.80 ERA across 10 starts this season in his return to the rotation.",
-      "sources": [
-        {
-          "title": "Reid Detmers 2026 pitching stats — ESPN",
-          "url": "https://www.espn.com/mlb/player/gamelog/_/id/4326697/reid-detmers"
-        }
-      ]
+      "summary": "Cole Ragans remains on the 15-day IL with left elbow impingement (valgus extension overload), placed May 8. He threw off a mound on May 16 with increasing intensity, a positive sign toward his return.",
+      "sources": []
     }
   ],
   "injuries": [
@@ -202,11 +24,8 @@
       "position": "C",
       "status": "10-day IL (right oblique strain)",
       "previous_status": "Active",
-      "note": "First career IL stint; earliest return May 24; Mariners optimistic it will not be long-term.",
-      "source": {
-        "title": "Cal Raleigh on his oblique injury and rehab timeline",
-        "url": "https://www.mlb.com/news/cal-raleigh-on-his-oblique-injury-and-rehab-timeline"
-      }
+      "note": "First career IL stint; earliest return May 24; Mitch Garver and Jhonny Pereda handling catching duties.",
+      "source": null
     },
     {
       "name": "Cole Ragans",
@@ -214,35 +33,8 @@
       "position": "SP",
       "status": "15-day IL (left elbow impingement)",
       "previous_status": "Active",
-      "note": "Placed on IL retroactive to May 7 after exiting May 6 start vs. Guardians with triceps and elbow soreness.",
-      "source": {
-        "title": "Cole Ragans Injury: Exits with sore triceps",
-        "url": "https://www.rotowire.com/baseball/headlines/cole-ragans-injury-exits-with-sore-triceps-1001846"
-      }
-    },
-    {
-      "name": "Nathan Eovaldi",
-      "team": "TEX",
-      "position": "SP",
-      "status": "Day-to-day (left side tightness)",
-      "previous_status": "Active",
-      "note": "Scratched May 12 start vs. Arizona; bullpen session May 14 went well; expects to start Sunday May 17.",
-      "source": {
-        "title": "Rangers' Nathan Eovaldi scratched due to left side tightness",
-        "url": "https://www.espn.com/mlb/story/_/id/48744303/rangers-nathan-eovaldi-face-d-backs-due-tight-side"
-      }
-    },
-    {
-      "name": "Teoscar Hernandez",
-      "team": "LAD",
-      "position": "OF",
-      "status": "Active (returned from 10-day IL)",
-      "previous_status": "10-day IL (left groin strain)",
-      "note": "Activated from IL for Saturday's game; contributed 2 RBI in Dodgers' 15-2 win over Angels.",
-      "source": {
-        "title": "Teoscar Hernandez Responded Well To Dodgers Lineup Change",
-        "url": "https://dodgerblue.com/teoscar-hernandez-responded-really-well-to-challenge/2026/05/16/"
-      }
+      "note": "Left elbow impingement (valgus extension overload); placed May 8; threw off mound May 16 with increasing intensity.",
+      "source": null
     }
   ]
 }

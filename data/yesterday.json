@@ -1,25 +1,25 @@
 {
-  "date": "2026-05-16",
-  "generated_at": "2026-05-17T09:35:00Z",
+  "date": "2026-05-17",
+  "generated_at": "2026-05-18T13:43:07Z",
   "totals": {
     "hitters": {
-      "AB": 27,
-      "H": 9,
-      "R": 4,
-      "HR": 2,
-      "RBI": 8,
+      "AB": 31,
+      "H": 8,
+      "R": 5,
+      "HR": 3,
+      "RBI": 5,
       "SB": 0,
-      "points": 14.0
+      "points": 13.0
     },
     "pitchers": {
-      "IP": 1.0,
-      "H": 0,
+      "IP": 15.0,
+      "H": 7,
       "ER": 0,
-      "K": 2,
-      "BB": 0,
-      "W": 0,
-      "SV": 1,
-      "points": 5.0
+      "K": 16,
+      "BB": 2,
+      "W": 3,
+      "SV": 0,
+      "points": 12.84
     }
   },
   "players": [
@@ -30,74 +30,74 @@
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "10-day IL (right oblique strain)",
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "On 10-day IL for first time in career with right oblique strain; earliest return May 24."
+      "summary": "Cal Raleigh placed on the 10-day IL with a right oblique strain, his first career IL stint. Earliest return May 24."
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "@ PIT",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
       "stats": {
         "H": 1,
         "AB": 4,
-        "R": 0,
-        "HR": 0,
-        "RBI": 2,
+        "R": 1,
+        "HR": 1,
+        "RBI": 1,
         "SB": 0
       },
-      "points": 2.0,
-      "summary": "1-for-4 with a 2-run double in the 9th inning at PNC Park."
+      "points": 3.0,
+      "summary": "Bryce Harper went 1-for-4 with a home run and a run scored as the Phillies defeated the Pirates."
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": "@ ATH",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 4,
+        "H": 3,
         "AB": 5,
-        "R": 1,
+        "R": 2,
         "HR": 1,
         "RBI": 1,
         "SB": 0
       },
-      "points": 3.0,
-      "summary": "4-for-5 with his first HR of the season (solo), a double, single, and infield single; Giants lost 5-2."
+      "points": 4.0,
+      "summary": "Luis Arraez went 3-for-5 with a home run and 2 runs scored as the Giants beat the Athletics."
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": "vs NYY",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
       "stats": {
         "H": 0,
-        "AB": 2,
-        "R": 1,
+        "AB": 3,
+        "R": 0,
         "HR": 0,
         "RBI": 0,
         "SB": 0
       },
-      "points": 1.0,
-      "summary": "0-for-2 with a walk and a run scored; Mets beat Yankees 6-3."
+      "points": 0.0,
+      "summary": "Bo Bichette went 0-for-3 as the Mets hosted the Yankees."
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": "vs TOR",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -109,71 +109,14 @@
         "SB": 0
       },
       "points": 0.0,
-      "summary": "1-for-4 with a single; Tigers fell 2-1 to Blue Jays in 10 innings."
+      "summary": "Kevin McGonigle went 1-for-4 as the Tigers fell to the Blue Jays 4-1 at Comerica Park."
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs CWS",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 3,
-        "R": 1,
-        "HR": 1,
-        "RBI": 2,
-        "SB": 0
-      },
-      "points": 4.0,
-      "summary": "1-for-3 with a walk and a 2-run HR in the 9th; Cubs lost 8-3 to White Sox."
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "@ SEA",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 3,
-        "R": 0,
-        "HR": 0,
-        "RBI": 1,
-        "SB": 0
-      },
-      "points": 1.0,
-      "summary": "RBI single in the 1st inning to open the scoring; Padres won 7-4."
-    },
-    {
-      "name": "Teoscar Hernandez",
-      "team": "LAD",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "@ LAA",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 3,
-        "R": 1,
-        "HR": 0,
-        "RBI": 2,
-        "SB": 0
-      },
-      "points": 3.0,
-      "summary": "Returned from IL; 1-for-3 with 2 RBI and a run scored in Dodgers' 15-2 blowout win."
-    },
-    {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "type": "hitter",
-      "opponent": "@ NYM",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -185,27 +128,84 @@
         "SB": 0
       },
       "points": 0.0,
-      "summary": "0-for-3; Yankees fell 6-3 to Mets."
+      "summary": "Pete Crow-Armstrong went 0-for-3 as the Cubs played at Chicago."
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "HR": 0,
+        "RBI": 1,
+        "SB": 0
+      },
+      "points": 2.0,
+      "summary": "Jackson Merrill hit an RBI double as the Padres won 8-3 over the Mariners."
+    },
+    {
+      "name": "Teoscar Hernandez",
+      "team": "LAD",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 1,
+        "SB": 0
+      },
+      "points": 1.0,
+      "summary": "Teoscar Hernández went 1-for-4 with an RBI as the Dodgers played at Anaheim."
+    },
+    {
+      "name": "Stanton/Rice",
+      "team": "NYY",
+      "position": "DH",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "HR": 1,
+        "RBI": 1,
+        "SB": 0
+      },
+      "points": 3.0,
+      "summary": "Ben Rice hit a home run and drove in a run as the Yankees played at the Mets."
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": "vs NYY",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
       "stats": {
         "IP": 1.0,
         "H": 0,
         "ER": 0,
-        "K": 2,
+        "K": 0,
         "BB": 0,
-        "W": 0,
-        "SV": 1
+        "W": 1,
+        "SV": 0
       },
       "points": 5.0,
-      "summary": "Notched save #7 in Mets' 6-3 win; 7 straight scoreless outings."
+      "summary": "Devin Williams earned a win in relief as the Mets hosted the Yankees."
     },
     {
       "name": "Zack Wheeler",
@@ -213,11 +213,18 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Not scheduled (between starts)",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Between starts; earned win vs. Marlins on Friday (6 IP, 1 ER, 8 K)."
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 7.0,
+        "H": 4,
+        "ER": 0,
+        "K": 8,
+        "BB": 1,
+        "W": 1
+      },
+      "points": 3.92,
+      "summary": "Zack Wheeler threw 7 shutout innings with 8 strikeouts as the Phillies defeated the Pirates."
     },
     {
       "name": "Cole Ragans",
@@ -226,10 +233,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "15-day IL (left elbow impingement)",
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "On 15-day IL (retro May 7) with left elbow impingement; playing catch, no return date."
+      "summary": "Cole Ragans remains on the 15-day IL with left elbow impingement. Threw off a mound May 16 showing progress."
     },
     {
       "name": "Chase Burns",
@@ -238,10 +245,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled (between starts)",
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "Between starts; reached 100 Ks faster than any Reds pitcher in history. Last started Tuesday."
+      "summary": "Chase Burns did not start May 17; last start was May 14 vs. Washington."
     },
     {
       "name": "Nathan Eovaldi",
@@ -249,11 +256,18 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Day-to-day (left side tightness)",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Scratched May 12 with left side tightness; threw bullpen May 14 and feels good; expects to start Sunday."
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 7.0,
+        "H": 3,
+        "ER": 0,
+        "K": 8,
+        "BB": 1,
+        "W": 1
+      },
+      "points": 3.92,
+      "summary": "Nathan Eovaldi threw 7 shutout innings with 8 strikeouts as the Rangers defeated the Astros."
     },
     {
       "name": "Emmet Sheehan",
@@ -262,10 +276,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled (between starts)",
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "Between starts; posted best outing of 2026 (6 IP, 2 ER, 6 K) vs. Giants on May 14."
+      "summary": "Emmet Sheehan did not start May 17; Roki Sasaki started for the Dodgers."
     },
     {
       "name": "Reid Detmers",
@@ -274,10 +288,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled (between starts)",
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "Not his rotation turn Saturday; Soriano started for LAA vs. LAD. Detmers has 5.80 ERA in 10 starts."
+      "summary": "Reid Detmers did not start May 17; Grayson Rodriguez made his Angels debut."
     }
   ]
 }
