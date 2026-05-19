@@ -1,40 +1,119 @@
 {
-  "generated_at": "2026-05-18T13:47:54Z",
+  "generated_at": "",
   "window_hours": 24,
   "players": [
     {
-      "name": "Cal Raleigh",
-      "team": "SEA",
+      "name": "Raleigh/Jeffers",
+      "team": "MIN",
       "position": "C",
-      "summary": "Cal Raleigh placed on the 10-day IL with a right oblique strain, his first career IL stint. Earliest return is estimated May 24, with Mitch Garver and Jhonny Pereda handling catching duties in Seattle.",
+      "summary": "0-for-3 as Twins blanked HOU 3-0. Jeffers hitting .159 since taking the C slot.",
+      "sources": []
+    },
+    {
+      "name": "Bryce Harper",
+      "team": "PHI",
+      "position": "1B",
+      "summary": "Walk, stolen base, run scored in PHI 5-4 win vs CIN. Harper on pace for 550-pt season.",
+      "sources": []
+    },
+    {
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
+      "summary": "Sac fly RBI in 12-2 loss at ARI. Arraez batting .343 on season.",
+      "sources": []
+    },
+    {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "summary": "3-for-6, HR, 3 RBI in NYM 16-7 win at WAS (12 inn.). Best single game of the year.",
+      "sources": []
+    },
+    {
+      "name": "Lindor/McGonigle",
+      "team": "DET",
+      "position": "SS",
+      "summary": "1-for-3 with walk as DET fell 8-2 to CLE. McGonigle batting .177 in the slot.",
+      "sources": []
+    },
+    {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "position": "OF",
+      "summary": "0-for-4 in 9-3 Cubs loss to MIL. Slumping at .242 AVG on season.",
+      "sources": []
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "summary": "Stole 9th bag; Padres shut out LAD 1-0. SB pace tracking for 30+ on the season.",
+      "sources": []
+    },
+    {
+      "name": "Teoscar Hernandez",
+      "team": "LAD",
+      "position": "OF",
+      "summary": "0-for-3 with GIDP in LAD 1-0 loss at SDP. Yu Darvish stifled the Dodgers lineup.",
+      "sources": []
+    },
+    {
+      "name": "Stanton/Rice",
+      "team": "NYY",
+      "position": "DH",
+      "summary": "Solo HR in NYY 7-6 win over TOR. Rice has 8 HR on the season.",
+      "sources": []
+    },
+    {
+      "name": "Devin Williams",
+      "team": "NYM",
+      "position": "RP",
+      "summary": "Unused in Mets 16-7 win. Williams has 7 saves and 4.50 ERA on the year.",
+      "sources": []
+    },
+    {
+      "name": "Zack Wheeler",
+      "team": "PHI",
+      "position": "SP",
+      "summary": "1.85 ERA through 6 starts; Painter started Monday opener vs CIN. Wheeler next vs CLE.",
       "sources": []
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "Cole Ragans remains on the 15-day IL with left elbow impingement (valgus extension overload), placed May 8. He threw off a mound on May 16 with increasing intensity, a positive sign toward his return.",
+      "summary": "Threw 30-pitch bullpen Sunday, feeling good. No return date set; progress encouraging.",
+      "sources": []
+    },
+    {
+      "name": "Chase Burns",
+      "team": "CIN",
+      "position": "SP",
+      "summary": "On track to start Tuesday May 19 at PHI. Elite 2.05 ERA through 9 starts.",
+      "sources": []
+    },
+    {
+      "name": "Nathan Eovaldi",
+      "team": "TEX",
+      "position": "SP",
+      "summary": "Scratched from Monday start vs ARI; threw bullpen session Monday. Targeting Sunday start in HOU.",
+      "sources": []
+    },
+    {
+      "name": "Emmet Sheehan",
+      "team": "LAD",
+      "position": "SP",
+      "summary": "Next start Tuesday May 19 at Padres. 4.86 ERA on the season.",
+      "sources": []
+    },
+    {
+      "name": "Reid Detmers",
+      "team": "LAA",
+      "position": "SP",
+      "summary": "Rotation turn skipped Monday; Walbert Urena started vs OAK. No injury. 5.80 ERA.",
       "sources": []
     }
   ],
-  "injuries": [
-    {
-      "name": "Cal Raleigh",
-      "team": "SEA",
-      "position": "C",
-      "status": "10-day IL (right oblique strain)",
-      "previous_status": "Active",
-      "note": "First career IL stint; earliest return May 24; Mitch Garver and Jhonny Pereda handling catching duties.",
-      "source": null
-    },
-    {
-      "name": "Cole Ragans",
-      "team": "KCR",
-      "position": "SP",
-      "status": "15-day IL (left elbow impingement)",
-      "previous_status": "Active",
-      "note": "Left elbow impingement (valgus extension overload); placed May 8; threw off mound May 16 with increasing intensity.",
-      "source": null
-    }
-  ]
+  "injuries": []
 }

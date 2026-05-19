@@ -1,74 +1,83 @@
 {
-  "Bryce Harper": {
-    "AB": 170,
-    "H": 48,
-    "AVG": 0.282,
-    "HR": 12,
-    "RBI": 30,
-    "R": 28,
+  "Raleigh/Jeffers": {
+    "AB": 164,
+    "H": 26,
+    "AVG": 0.159,
+    "HR": 7,
+    "RBI": 18,
+    "R": 16,
     "SB": 2
   },
+  "Bryce Harper": {
+    "AB": 173,
+    "H": 48,
+    "AVG": 0.277,
+    "HR": 12,
+    "RBI": 30,
+    "R": 29,
+    "SB": 3
+  },
   "Luis Arraez": {
-    "AB": 174,
+    "AB": 178,
     "H": 61,
-    "AVG": 0.351,
+    "AVG": 0.343,
     "HR": 3,
-    "RBI": 14,
+    "RBI": 15,
     "R": 19,
     "SB": 5
   },
   "Bo Bichette": {
-    "AB": 173,
-    "H": 38,
-    "AVG": 0.22,
-    "HR": 2,
-    "RBI": 17,
-    "R": 18,
+    "AB": 179,
+    "H": 41,
+    "AVG": 0.229,
+    "HR": 3,
+    "RBI": 20,
+    "R": 20,
     "SB": 1
   },
   "Lindor/McGonigle": {
-    "AB": 138,
-    "H": 24,
-    "AVG": 0.174,
+    "AB": 141,
+    "H": 25,
+    "AVG": 0.177,
     "HR": 2,
     "RBI": 8,
     "R": 11,
     "SB": 4
   },
   "Pete Crow-Armstrong": {
-    "AB": 161,
+    "AB": 165,
     "H": 40,
-    "AVG": 0.248,
+    "AVG": 0.242,
     "HR": 5,
     "RBI": 21,
     "R": 26,
     "SB": 11
   },
   "Jackson Merrill": {
-    "AB": 142,
-    "H": 33,
-    "AVG": 0.232,
+    "AB": 146,
+    "H": 34,
+    "AVG": 0.233,
     "HR": 3,
     "RBI": 21,
     "R": 23,
-    "SB": 7
+    "SB": 8
   },
   "Teoscar Hernandez": {
-    "AB": 126,
+    "AB": 129,
     "H": 33,
-    "AVG": 0.262,
+    "AVG": 0.256,
     "HR": 4,
     "RBI": 22,
     "R": 18,
     "SB": 1
   },
   "Stanton/Rice": {
-    "AB": 124,
-    "H": 29,
+    "AB": 128,
+    "H": 30,
     "AVG": 0.234,
-    "HR": 7,
-    "RBI": 19,
-    "R": 16,
+    "HR": 8,
+    "RBI": 20,
+    "R": 17,
     "SB": 1
   },
   "Devin Williams": {
@@ -133,14 +142,5 @@
     "K": 59,
     "BB": 19,
     "W": 1
-  },
-  "Raleigh/Jeffers": {
-    "AB": 161,
-    "H": 26,
-    "AVG": 0.161,
-    "HR": 7,
-    "RBI": 18,
-    "R": 16,
-    "SB": 2
   }
 }
