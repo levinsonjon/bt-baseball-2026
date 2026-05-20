@@ -1,119 +1,264 @@
 {
-  "generated_at": "",
+  "generated_at": "2026-05-20T08:35:00Z",
   "window_hours": 24,
   "players": [
     {
       "name": "Raleigh/Jeffers",
       "team": "MIN",
       "position": "C",
-      "summary": "0-for-3 as Twins blanked HOU 3-0. Jeffers hitting .159 since taking the C slot.",
-      "sources": []
+      "summary": "Ryan Jeffers placed on 10-day IL with a fractured left hamate bone (sustained May 18 vs. Astros). Surgery required; team expects 6-8 week recovery timeline. Alex Jackson called up.",
+      "sources": [
+        {
+          "title": "Ryan Jeffers Diagnosed With Hamate Fracture - MLB Trade Rumors",
+          "url": "https://www.mlbtraderumors.com/2026/05/twins-ryan-jeffers-hamate-fracture-alex-jackson.html"
+        },
+        {
+          "title": "How Long Will Ryan Jeffers Be Out After Hamate Fracture",
+          "url": "https://www.si.com/mlb/twins/onsi/how-long-will-ryan-jeffers-be-out-after-suffering-hamate-fracture"
+        }
+      ]
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "Walk, stolen base, run scored in PHI 5-4 win vs CIN. Harper on pace for 550-pt season.",
-      "sources": []
+      "summary": "Phillies fell 4-1 to the Reds as Chase Burns dominated; Harper went 0-for-3 with a hard comebacker that Burns fielded and threw him out. No injury concerns.",
+      "sources": [
+        {
+          "title": "Phillies' offense goes quiet in 4-1 loss to Reds - Philadelphia Inquirer",
+          "url": "https://www.inquirer.com/phillies/phillies-reds-score-trea-turner-chase-burns-jesus-luzardo-20260519.html"
+        }
+      ]
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
-      "summary": "Sac fly RBI in 12-2 loss at ARI. Arraez batting .343 on season.",
-      "sources": []
+      "summary": "Arraez went 2-for-4 in a multi-hit effort, but Giants fell 5-3 to the Diamondbacks as Ketel Marte hit a walk-off 3-run HR in the 9th. Batting around .302 on the season.",
+      "sources": [
+        {
+          "title": "Giants' Luis Arraez: Multi-hit effort in defeat - CBS Sports",
+          "url": "https://www.cbssports.com/fantasy/baseball/news/giants-luis-arraez-multi-hit-effort-in-defeat-1003165/"
+        }
+      ]
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
-      "summary": "3-for-6, HR, 3 RBI in NYM 16-7 win at WAS (12 inn.). Best single game of the year.",
-      "sources": []
+      "summary": "Career highlight: hit two home runs in the first two innings (2-run HR in the 1st and 2nd) driving in 4, powering a 5-0 Mets lead. NYM blew it and lost 9-6 to Nationals. Entering game at .219 with 3 HR.",
+      "sources": [
+        {
+          "title": "Watch Mets' Bo Bichette launch second HR in 2 innings vs. Nationals - Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/watch-mets-bo-bichette-launch-004051626.html"
+        },
+        {
+          "title": "Nationals 9-6 Mets (May 19, 2026) Game Recap - ESPN",
+          "url": "https://www.espn.com/mlb/recap?gameId=401815408"
+        }
+      ]
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
-      "summary": "1-for-3 with walk as DET fell 8-2 to CLE. McGonigle batting .177 in the slot.",
-      "sources": []
+      "summary": "McGonigle went 1-for-4, singling in the 9th to put the tying run in scoring position, but Tigers fell 4-3 to Guardians (4th straight loss). McGonigle batting .322 with a .904 OPS in his rookie campaign.",
+      "sources": [
+        {
+          "title": "Guardians survive ninth-inning scare to beat Tigers 4-3 - Washington Post",
+          "url": "https://www.washingtonpost.com/sports/mlb/2026/05/19/guardians-tigers-score/a78f3f6c-53ef-11f1-9c40-7a0a12d9e745_story.html"
+        }
+      ]
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
-      "summary": "0-for-4 in 9-3 Cubs loss to MIL. Slumping at .242 AVG on season.",
-      "sources": []
+      "summary": "PCA singled in the 8th as Cubs fell 5-2 to Brewers. MLB fined him $5,000 (announced May 19) for a profane exchange with a White Sox fan on May 17; suspension was avoided.",
+      "sources": [
+        {
+          "title": "Cubs' Pete Crow-Armstrong fined $5,000 for fan interaction - Chicago Sun-Times",
+          "url": "https://chicago.suntimes.com/cubs/2026/05/19/the-cubs-pete-crow-armstrong-fined-5k-for-fan-interaction"
+        },
+        {
+          "title": "Pete Crow-Armstrong Officially Avoids Suspension - Bleacher Nation",
+          "url": "https://www.bleachernation.com/cubs/2026/05/19/pete-crow-armstrong-fined/"
+        }
+      ]
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
-      "summary": "Stole 9th bag; Padres shut out LAD 1-0. SB pace tracking for 30+ on the season.",
-      "sources": []
+      "summary": "Padres fell 5-4 to Dodgers in a competitive series game; Merrill went 1-for-4 as San Diego held a late lead but couldn't hold on. Merrill batting .202 through mid-May.",
+      "sources": [
+        {
+          "title": "Dodgers Win Electric Battle vs. Padres to Even Series - Dodgers Nation",
+          "url": "https://dodgersnation.com/dodgers-win-electric-battle-vs-padres-to-even-series/2026/05/19/"
+        }
+      ]
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
-      "summary": "0-for-3 with GIDP in LAD 1-0 loss at SDP. Yu Darvish stifled the Dodgers lineup.",
-      "sources": []
-    },
-    {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "summary": "Solo HR in NYY 7-6 win over TOR. Rice has 8 HR on the season.",
-      "sources": []
+      "summary": "Doubled in the 5th inning and scored on a Shohei Ohtani groundout in the Dodgers' 5-4 comeback win over the Padres. Freddie Freeman hit two home runs to power the rally.",
+      "sources": [
+        {
+          "title": "Dodgers 5-4 Padres (May 19, 2026) Game Recap - ESPN",
+          "url": "https://www.espn.com/mlb/recap/_/gameId/401815417"
+        }
+      ]
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
-      "summary": "Unused in Mets 16-7 win. Williams has 7 saves and 4.50 ERA on the year.",
-      "sources": []
+      "summary": "Williams was not used as Mets fell 9-6 to Nationals after blowing a 5-0 lead (no save opportunity). Williams has been outstanding: 7 saves and a 6-game consecutive scoreless streak.",
+      "sources": [
+        {
+          "title": "Mets' Devin Williams finding his groove in 2026 - MLB.com",
+          "url": "https://www.mlb.com/news/mets-devin-williams-settling-in-2026"
+        }
+      ]
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
-      "summary": "1.85 ERA through 6 starts; Painter started Monday opener vs CIN. Wheeler next vs CLE.",
-      "sources": []
+      "summary": "Wheeler was not scheduled to start Tuesday. Phillies lost 4-1 to Reds (Luzardo started). Wheeler maintains an elite 1.85 ERA through 6 starts on the 2026 season.",
+      "sources": [
+        {
+          "title": "Reds 4-1 Phillies (May 19, 2026) Box Score - ESPN",
+          "url": "https://www.espn.com/mlb/boxscore/_/gameId/401815406"
+        }
+      ]
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "Threw 30-pitch bullpen Sunday, feeling good. No return date set; progress encouraging.",
-      "sources": []
+      "summary": "On 15-day IL (retroactive to May 7) with left elbow impingement (valgus extension overload/VEO). Royals received an encouraging update: minimal IL stay expected after a 3-4 day throwing shutdown.",
+      "sources": [
+        {
+          "title": "Royals Place Cole Ragans On IL With Elbow Impingement - MLB Trade Rumors",
+          "url": "https://www.mlbtraderumors.com/2026/05/royals-place-cole-ragans-on-il-with-elbow-impingement.html"
+        },
+        {
+          "title": "Royals Receive Encouraging Update on Cole Ragans - SI.com",
+          "url": "https://www.si.com/mlb/royals/onsi/royals-receive-encouraging-update-on-cole-ragans-injury-status-brian3"
+        }
+      ]
     },
     {
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
-      "summary": "On track to start Tuesday May 19 at PHI. Elite 2.05 ERA through 9 starts.",
-      "sources": []
+      "summary": "Dominant gem: 6 IP, 9 K, 0 BB, 1 ER (Trea Turner solo HR) in Reds' 4-1 win over Phillies. Burns improves to 6-1 with an ERA of 1.83; was hit by a Harper comebacker but stayed in and finished six strong innings.",
+      "sources": [
+        {
+          "title": "Chase Burns strikes out 9 and flashes All-Star form for Reds - Washington Post",
+          "url": "https://www.washingtonpost.com/sports/mlb/2026/05/19/cincinnati-reds-burns-phillies/bd13b170-53f3-11f1-9c40-7a0a12d9e745_story.html"
+        },
+        {
+          "title": "Reds vs. Phillies Box Score May 19, 2026 - CBS Sports",
+          "url": "https://www.cbssports.com/mlb/gametracker/boxscore/MLB_20260519_CIN@PHI/"
+        }
+      ]
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
-      "summary": "Scratched from Monday start vs ARI; threw bullpen session Monday. Targeting Sunday start in HOU.",
-      "sources": []
+      "summary": "Scratched from his scheduled Monday start vs. Arizona with left side tightness. Eovaldi threw a bullpen session and told reporters he feels good, expecting to make his next start Sunday vs. the Astros.",
+      "sources": [
+        {
+          "title": "Rangers' Nathan Eovaldi scratched due to left side tightness - ESPN",
+          "url": "https://www.espn.com/mlb/story/_/id/48744303/rangers-nathan-eovaldi-face-d-backs-due-tight-side"
+        }
+      ]
     },
     {
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
-      "summary": "Next start Tuesday May 19 at Padres. 4.86 ERA on the season.",
-      "sources": []
+      "summary": "Rough outing: allowed 4 runs in just 4 innings against Padres, but Dodgers rallied from a 4-1 deficit for a 5-4 win (Freeman homered twice, including a go-ahead shot). Sheehan's ERA rises to 5.26.",
+      "sources": [
+        {
+          "title": "Dodgers Win Electric Battle vs. Padres to Even Series - Dodgers Nation",
+          "url": "https://dodgersnation.com/dodgers-win-electric-battle-vs-padres-to-even-series/2026/05/19/"
+        },
+        {
+          "title": "Dodgers 5-4 Padres Game Recap - ESPN",
+          "url": "https://www.espn.com/mlb/recap/_/gameId/401815417"
+        }
+      ]
     },
     {
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
-      "summary": "Rotation turn skipped Monday; Walbert Urena started vs OAK. No injury. 5.80 ERA.",
-      "sources": []
+      "summary": "Pitched 6 solid innings as Angels edged the Athletics 2-1 in dramatic fashion; Zach Neto broke up the A's no-hit bid with a walk-off 2-run HR in the 9th inning to complete the comeback.",
+      "sources": [
+        {
+          "title": "Athletics vs. Angels (May 19, 2026) Box Score - ESPN",
+          "url": "https://www.espn.com/mlb/boxscore/_/gameId/401815415"
+        }
+      ]
+    },
+    {
+      "name": "Stanton/Rice",
+      "team": "NYY",
+      "position": "DH",
+      "summary": "Ben Rice hit a go-ahead 2-run HR (16th of the season) off Dylan Cease in the 5th inning, powering the Yankees to a 5-4 win over the Blue Jays. He's now tied with Aaron Judge for the team home run lead.",
+      "sources": [
+        {
+          "title": "Ben Rice, Ryan McMahon homer to power Yankees past Blue Jays",
+          "url": "https://www.thesportsleader.com/2026/05/19/ben-rice-ryan-mcmahon-homer-to-power-yankees-past-blue-jays/"
+        },
+        {
+          "title": "Yankees 5-4 Blue Jays (May 19, 2026) Game Recap - ESPN",
+          "url": "https://www.espn.com/mlb/recap?gameId=401815409"
+        }
+      ]
     }
   ],
-  "injuries": []
+  "injuries": [
+    {
+      "name": "Raleigh/Jeffers",
+      "team": "MIN",
+      "position": "C",
+      "status": "10-day IL (fractured left hamate)",
+      "previous_status": "Active",
+      "note": "Surgery required. Expected recovery timeline of 6-8 weeks; Alex Jackson called up to replace him.",
+      "source": {
+        "title": "Ryan Jeffers Diagnosed With Hamate Fracture - MLB Trade Rumors",
+        "url": "https://www.mlbtraderumors.com/2026/05/twins-ryan-jeffers-hamate-fracture-alex-jackson.html"
+      }
+    },
+    {
+      "name": "Cole Ragans",
+      "team": "KCR",
+      "position": "SP",
+      "status": "15-day IL (left elbow impingement/VEO, retroactive to May 7)",
+      "previous_status": "Active",
+      "note": "Royals received encouraging update; minimal IL stay expected after 3-4 day throwing shutdown.",
+      "source": {
+        "title": "Royals Place Cole Ragans On IL - MLB Trade Rumors",
+        "url": "https://www.mlbtraderumors.com/2026/05/royals-place-cole-ragans-on-il-with-elbow-impingement.html"
+      }
+    },
+    {
+      "name": "Nathan Eovaldi",
+      "team": "TEX",
+      "position": "SP",
+      "status": "Day-to-day (left side tightness)",
+      "previous_status": "Active",
+      "note": "Scratched from Monday start vs. Arizona; threw bullpen, expects to start Sunday vs. Houston.",
+      "source": {
+        "title": "Rangers' Nathan Eovaldi scratched due to left side tightness - ESPN",
+        "url": "https://www.espn.com/mlb/story/_/id/48744303/rangers-nathan-eovaldi-face-d-backs-due-tight-side"
+      }
+    }
+  ]
 }

@@ -1,25 +1,25 @@
 {
-  "date": "2026-05-18",
-  "generated_at": "2026-05-19T09:47:27Z",
+  "date": "2026-05-19",
+  "generated_at": "2026-05-20T08:35:00Z",
   "totals": {
     "hitters": {
-      "AB": 34,
-      "H": 6,
+      "AB": 31,
+      "H": 9,
       "R": 4,
-      "HR": 2,
-      "RBI": 5,
-      "SB": 2,
+      "HR": 3,
+      "RBI": 6,
+      "SB": 0,
       "points": 13.0
     },
     "pitchers": {
-      "IP": 0.0,
-      "H": 0,
-      "ER": 0,
-      "K": 0,
-      "BB": 0,
-      "W": 0,
+      "IP": 16.0,
+      "H": 12,
+      "ER": 6,
+      "K": 18,
+      "BB": 3,
+      "W": 1,
       "SV": 0,
-      "points": 0.0
+      "points": 2.96
     }
   },
   "players": [
@@ -28,211 +28,169 @@
       "team": "MIN",
       "position": "C",
       "type": "hitter",
-      "opponent": "HOU",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 3,
-        "H": 0,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "10-day IL (fractured left hamate)",
+      "stats": {},
       "points": 0.0,
-      "summary": "0-for-3 as MIN blanked HOU 3-0; Joey Bell hit two HRs"
+      "summary": ""
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "CIN",
+      "opponent": "vs CIN",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
         "H": 0,
-        "R": 1,
+        "AB": 3,
+        "R": 0,
         "HR": 0,
         "RBI": 0,
-        "SB": 1
+        "SB": 0
       },
-      "points": 2.0,
-      "summary": "Walked, stole 2nd, scored on Garcia sac fly; PHI won 5-4"
+      "points": 0.0,
+      "summary": "Went 0-for-3; Phillies held to 1 run by Chase Burns in 4-1 loss"
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": "ARI",
+      "opponent": "@ ARI",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
+        "H": 2,
         "AB": 4,
-        "H": 0,
         "R": 0,
         "HR": 0,
-        "RBI": 1,
+        "RBI": 0,
         "SB": 0
       },
-      "points": 1.0,
-      "summary": "Sac fly RBI in 3rd; 0-for-4 otherwise as SFG fell 12-2 at ARI"
+      "points": 0.0,
+      "summary": "Went 2-for-4 with an error; Giants fell 5-3 as Ketel Marte hit walk-off 3-run HR in 9th"
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": "WAS",
+      "opponent": "@ WSH",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 6,
-        "H": 3,
+        "H": 2,
+        "AB": 4,
         "R": 2,
-        "HR": 1,
-        "RBI": 3,
+        "HR": 2,
+        "RBI": 4,
         "SB": 0
       },
-      "points": 6.0,
-      "summary": "3-for-6, HR, 2B, 2R, 3 RBI — NYM routed WAS 16-7 in 12 innings"
+      "points": 8.0,
+      "summary": "Two-HR, 4-RBI game; Mets built 5-0 lead but fell 9-6 to Nationals"
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": "CLE",
+      "opponent": "vs CLE",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
         "H": 1,
+        "AB": 4,
         "R": 0,
         "HR": 0,
         "RBI": 0,
         "SB": 0
       },
       "points": 0.0,
-      "summary": "1-for-3 (single, walk); DET fell 8-2 to Guardians"
+      "summary": "Went 1-for-4 (single in 9th); Tigers fell 4-3 to Guardians"
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": "MIL",
+      "opponent": "vs MIL",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
+        "H": 1,
         "AB": 4,
-        "H": 0,
         "R": 0,
         "HR": 0,
         "RBI": 0,
         "SB": 0
       },
       "points": 0.0,
-      "summary": "0-for-4; Cubs lost 9-3 to Brewers at Wrigley"
+      "summary": "Went 1-for-4 (single in 8th); Cubs fell 5-2 to Brewers"
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "LAD",
+      "opponent": "vs LAD",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
         "H": 1,
+        "AB": 4,
         "R": 0,
         "HR": 0,
         "RBI": 0,
-        "SB": 1
+        "SB": 0
       },
-      "points": 1.0,
-      "summary": "Stole 9th bag; SDP shut out LAD 1-0 on Andujar solo HR"
+      "points": 0.0,
+      "summary": "Went 1-for-4; Padres fell 5-4 to Dodgers"
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
       "type": "hitter",
-      "opponent": "SDP",
+      "opponent": "@ SDP",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
-        "H": 0,
-        "R": 0,
+        "H": 1,
+        "AB": 4,
+        "R": 1,
         "HR": 0,
         "RBI": 0,
         "SB": 0
       },
-      "points": 0.0,
-      "summary": "0-for-3 with GIDP; LAD blanked 1-0 at San Diego"
-    },
-    {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "type": "hitter",
-      "opponent": "TOR",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "R": 1,
-        "HR": 1,
-        "RBI": 1,
-        "SB": 0
-      },
-      "points": 3.0,
-      "summary": "Solo HR; NYY beat Blue Jays 7-6, Chisholm hit go-ahead 2-run HR"
+      "points": 1.0,
+      "summary": "Doubled in the 5th and scored on Ohtani groundout in Dodgers' 5-4 win over Padres"
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": "WAS",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 0.0,
-        "H": 0,
-        "ER": 0,
-        "K": 0,
-        "BB": 0,
-        "W": 0,
-        "SV": 0
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Not used; Mets lost 9-6 (no save opportunity)",
+      "stats": {},
       "points": 0.0,
-      "summary": "DNP — Mets used 7 pitchers in 16-7 win; Williams not needed"
+      "summary": ""
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": "CIN",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 0.0,
-        "H": 0,
-        "ER": 0,
-        "K": 0,
-        "BB": 0,
-        "W": 0,
-        "SV": 0
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Not scheduled to start",
+      "stats": {},
       "points": 0.0,
-      "summary": "DNP — Andrew Painter started PHI series opener vs CIN; Wheeler next vs CLE"
+      "summary": ""
     },
     {
       "name": "Cole Ragans",
@@ -240,99 +198,99 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 0.0,
-        "H": 0,
-        "ER": 0,
-        "K": 0,
-        "BB": 0,
-        "W": 0,
-        "SV": 0
-      },
+      "dnp": true,
+      "dnp_reason": "15-day IL (left elbow impingement)",
+      "stats": {},
       "points": 0.0,
-      "summary": "DNP — 15-day IL (left elbow impingement); threw 30-pitch bullpen Sunday, progress encouraging"
+      "summary": ""
     },
     {
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
       "type": "sp",
-      "opponent": "PHI",
+      "opponent": "@ PHI",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "IP": 0.0,
-        "H": 0,
-        "ER": 0,
-        "K": 0,
+        "IP": 6.0,
+        "H": 3,
+        "ER": 1,
+        "K": 9,
         "BB": 0,
-        "W": 0,
-        "SV": 0
+        "W": 1
       },
-      "points": 0.0,
-      "summary": "DNP — Scheduled to start Tuesday May 19 at PHI; 2.05 ERA through 9 starts"
+      "points": 2.36,
+      "summary": "Dominant 6-IP gem: 9 K, 0 BB, 1 ER (Turner solo HR). Record 6-1, ERA 1.83 in Reds' 4-1 win"
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": "ARI",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 0.0,
-        "H": 0,
-        "ER": 0,
-        "K": 0,
-        "BB": 0,
-        "W": 0,
-        "SV": 0
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Not scheduled (scratched Mon with left side tightness)",
+      "stats": {},
       "points": 0.0,
-      "summary": "DNP — Scratched with left side tightness; threw bullpen Monday, targeting Sunday start in HOU"
+      "summary": ""
     },
     {
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
       "type": "sp",
-      "opponent": "SDP",
+      "opponent": "@ SDP",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "IP": 0.0,
-        "H": 0,
-        "ER": 0,
-        "K": 0,
-        "BB": 0,
-        "W": 0,
-        "SV": 0
+        "IP": 4.0,
+        "H": 5,
+        "ER": 4,
+        "K": 2,
+        "BB": 1,
+        "W": 0
       },
-      "points": 0.0,
-      "summary": "DNP — Next start Tuesday May 19 at Padres; 4.86 ERA on season"
+      "points": -1.76,
+      "summary": "Allowed 4 ER in 4 IP; Dodgers rallied from 4-1 deficit for 5-4 win over Padres"
     },
     {
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": "OAK",
+      "opponent": "vs OAK",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "IP": 0.0,
-        "H": 0,
-        "ER": 0,
-        "K": 0,
-        "BB": 0,
-        "W": 0,
-        "SV": 0
+        "IP": 6.0,
+        "H": 4,
+        "ER": 1,
+        "K": 7,
+        "BB": 2,
+        "W": 0
       },
-      "points": 0.0,
-      "summary": "DNP — Walbert Urena started vs OAK; Detmers rotation turn skipped, no injury; 5.80 ERA"
+      "points": 2.36,
+      "summary": "Solid 6 IP, 1 ER; Angels won 2-1 on Neto's walk-off 2-run HR in the 9th"
+    },
+    {
+      "name": "Stanton/Rice",
+      "team": "NYY",
+      "position": "DH",
+      "type": "hitter",
+      "opponent": "vs TOR",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "HR": 1,
+        "RBI": 2,
+        "SB": 0
+      },
+      "points": 4.0,
+      "summary": "Go-ahead 2-run HR (16th) off Dylan Cease in the 5th powered Yankees' 5-4 win over Blue Jays"
     }
   ]
 }
