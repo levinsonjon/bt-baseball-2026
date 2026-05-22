@@ -1,25 +1,25 @@
 {
-  "date": "2026-05-19",
-  "generated_at": "2026-05-20T08:35:00Z",
+  "date": "2026-05-21",
+  "generated_at": "2026-05-22T04:36:00Z",
   "totals": {
     "hitters": {
-      "AB": 31,
-      "H": 9,
-      "R": 4,
-      "HR": 3,
-      "RBI": 6,
+      "AB": 19,
+      "H": 2,
+      "R": 1,
+      "HR": 1,
+      "RBI": 5,
       "SB": 0,
-      "points": 13.0
+      "points": 7.0
     },
     "pitchers": {
-      "IP": 16.0,
-      "H": 12,
-      "ER": 6,
-      "K": 18,
-      "BB": 3,
-      "W": 1,
-      "SV": 0,
-      "points": 2.96
+      "IP": 1.0,
+      "H": 1,
+      "ER": 0,
+      "K": 1,
+      "BB": 0,
+      "W": 0,
+      "SV": 1,
+      "points": 5.0
     }
   },
   "players": [
@@ -33,14 +33,57 @@
       "dnp_reason": "10-day IL (fractured left hamate)",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Placed on 10-day IL on May 21 with fractured left hamate; surgery required, expected return mid-July."
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "vs CIN",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Phillies had a scheduled off day Thursday."
+    },
+    {
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Giants had a scheduled off day Thursday."
+    },
+    {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "type": "hitter",
+      "opponent": "@ WAS",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 2,
+        "SB": 0
+      },
+      "points": 2.0,
+      "summary": "1-for-4, 2-RBI single up the middle in the 3rd inning — accounted for both Mets runs in a 2-1 win at Washington."
+    },
+    {
+      "name": "Lindor/McGonigle",
+      "team": "DET",
+      "position": "SS",
+      "type": "hitter",
+      "opponent": "vs CLE",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -52,64 +95,7 @@
         "SB": 0
       },
       "points": 0.0,
-      "summary": "Went 0-for-3; Phillies held to 1 run by Chase Burns in 4-1 loss"
-    },
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "type": "hitter",
-      "opponent": "@ ARI",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 2,
-        "AB": 4,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 0.0,
-      "summary": "Went 2-for-4 with an error; Giants fell 5-3 as Ketel Marte hit walk-off 3-run HR in 9th"
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "type": "hitter",
-      "opponent": "@ WSH",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 2,
-        "AB": 4,
-        "R": 2,
-        "HR": 2,
-        "RBI": 4,
-        "SB": 0
-      },
-      "points": 8.0,
-      "summary": "Two-HR, 4-RBI game; Mets built 5-0 lead but fell 9-6 to Nationals"
-    },
-    {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
-      "position": "SS",
-      "type": "hitter",
-      "opponent": "vs CLE",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 0.0,
-      "summary": "Went 1-for-4 (single in 9th); Tigers fell 4-3 to Guardians"
+      "summary": "0-for-3 with a walk; Tigers fell 3-1 as Guardians completed a 4-game sweep at Detroit."
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -120,7 +106,7 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 1,
+        "H": 0,
         "AB": 4,
         "R": 0,
         "HR": 0,
@@ -128,18 +114,49 @@
         "SB": 0
       },
       "points": 0.0,
-      "summary": "Went 1-for-4 (single in 8th); Cubs fell 5-2 to Brewers"
+      "summary": "0-for-4 in Cubs' 5-0 shutout loss to Milwaukee; Cubs swept in 3-game series at Wrigley."
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs LAD",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Day-to-day (back)",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Left May 20 game vs. LAD with apparent back injury; Padres had off day Thursday, awaiting imaging results."
+    },
+    {
+      "name": "Teoscar Hernandez",
+      "team": "LAD",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "vs ARI",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
         "H": 1,
+        "AB": 4,
+        "R": 1,
+        "HR": 1,
+        "RBI": 3,
+        "SB": 0
+      },
+      "points": 5.0,
+      "summary": "1-for-4, 3-run HR off Corbin Burnes in 6th inning; ended 23-game homerless drought in Dodgers' 3-1 win over Arizona."
+    },
+    {
+      "name": "Stanton/Rice",
+      "team": "NYY",
+      "position": "DH",
+      "type": "hitter",
+      "opponent": "vs TOR",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 0,
         "AB": 4,
         "R": 0,
         "HR": 0,
@@ -147,38 +164,27 @@
         "SB": 0
       },
       "points": 0.0,
-      "summary": "Went 1-for-4; Padres fell 5-4 to Dodgers"
-    },
-    {
-      "name": "Teoscar Hernandez",
-      "team": "LAD",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "@ SDP",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 1,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 1.0,
-      "summary": "Doubled in the 5th and scored on Ohtani groundout in Dodgers' 5-4 win over Padres"
+      "summary": "0-for-4 with 2 K; Yankees shut out 2-0 by Toronto's bullpen in series finale."
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Not used; Mets lost 9-6 (no save opportunity)",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ WAS",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 1.0,
+        "H": 1,
+        "ER": 0,
+        "K": 1,
+        "BB": 0,
+        "W": 0,
+        "SV": 1
+      },
+      "points": 5.0,
+      "summary": "1 IP, 1 H, 0 ER, 1 K — save #7; stranded potential tying run on 2nd to preserve Mets' 2-1 win."
     },
     {
       "name": "Zack Wheeler",
@@ -187,10 +193,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled to start",
+      "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Phillies off day; Wheeler (3-0, 1.99 ERA) starts Friday vs. Cleveland."
     },
     {
       "name": "Cole Ragans",
@@ -202,26 +208,19 @@
       "dnp_reason": "15-day IL (left elbow impingement)",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "On 15-day IL with left elbow impingement since May 7; threw 30-pitch bullpen May 18, expected return ~May 22."
     },
     {
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ PHI",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 3,
-        "ER": 1,
-        "K": 9,
-        "BB": 0,
-        "W": 1
-      },
-      "points": 2.36,
-      "summary": "Dominant 6-IP gem: 9 K, 0 BB, 1 ER (Turner solo HR). Record 6-1, ERA 1.83 in Reds' 4-1 win"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Reds off day; Burns (6-1, 1.83 ERA) was dominant in last start May 19 vs. PHI (6 IP, 9 K, W)."
     },
     {
       "name": "Nathan Eovaldi",
@@ -230,67 +229,34 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled (scratched Mon with left side tightness)",
+      "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Rangers off day; Eovaldi next starts May 22 vs. LAA after 7 scoreless vs. HOU on May 17."
     },
     {
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ SDP",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 4.0,
-        "H": 5,
-        "ER": 4,
-        "K": 2,
-        "BB": 1,
-        "W": 0
-      },
-      "points": -1.76,
-      "summary": "Allowed 4 ER in 4 IP; Dodgers rallied from 4-1 deficit for 5-4 win over Padres"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Not scheduled; Dustin May started",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Dustin May started for LAD on May 21 in 3-1 win vs. ARI; Sheehan's next turn ~May 24-25."
     },
     {
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs OAK",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 4,
-        "ER": 1,
-        "K": 7,
-        "BB": 2,
-        "W": 0
-      },
-      "points": 2.36,
-      "summary": "Solid 6 IP, 1 ER; Angels won 2-1 on Neto's walk-off 2-run HR in the 9th"
-    },
-    {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "type": "hitter",
-      "opponent": "vs TOR",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 1,
-        "HR": 1,
-        "RBI": 2,
-        "SB": 0
-      },
-      "points": 4.0,
-      "summary": "Go-ahead 2-run HR (16th) off Dylan Cease in the 5th powered Yankees' 5-4 win over Blue Jays"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Not scheduled; Jose Soriano started",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Jose Soriano started for LAA on May 21 in 3-2 loss to Oakland; Detmers projected next in rotation."
     }
   ]
 }
