@@ -1,156 +1,119 @@
 {
-  "generated_at": "2026-05-23T00:00:00Z",
+  "generated_at": "",
   "window_hours": 24,
   "players": [
     {
       "name": "Raleigh/Jeffers",
       "team": "MIN",
       "position": "C",
-      "summary": "Ryan Jeffers (IL-10, fractured hamate) had surgery May 20; expected return 6-8 weeks. Twins using a committee at catcher.",
+      "summary": "Ryan Jeffers (MIN) is on the 60-day IL with a fractured left hamate. Underwent surgery May 19; expected return in 6–8 weeks. Alex Jackson recalled from Triple-A as replacement.",
       "sources": []
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "Harper went 3-for-4 with an RBI as Philadelphia blanked Cleveland 3-0. Zack Wheeler was dominant on the mound.",
+      "summary": "Harper went 0-for-3 with an RBI in PHI's game vs CLE on May 24. No injury concerns.",
       "sources": []
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
-      "summary": "Arraez went 2-for-4 with two runs scored in San Francisco’s win over Chicago. His .347 season average leads the team.",
+      "summary": "Arraez had 1 hit in 3 AB in SFG's win over CWS, snapping a 6-game losing streak. Season AVG sits at .322.",
       "sources": []
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
-      "summary": "Bichette went 0-for-4 in the Mets’ loss at Miami. Scouts have flagged a possible lingering PCL concern in his left knee; the Mets are monitoring.",
+      "summary": "Bichette went 1-for-4 vs MIA. Day-to-day with a lingering PCL sprain in his left knee dating to September 2025; playing through it.",
       "sources": []
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
-      "summary": "Kevin McGonigle hit a solo homer (his 4th of the season) and scored in Detroit’s game at Baltimore. Impressive power from the 19-year-old.",
+      "summary": "Kevin McGonigle (DET) went 2-for-4 with a run and 2 RBI in DET's win over BAL. Solid young contributor holding his own at SS.",
       "sources": []
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
-      "summary": "PCA went 0-for-4 as the Cubs were shut out by Houston 3-0. Chicago was held in check all night by the Astros’ pitching.",
+      "summary": "PCA went 0-for-3 with a sacrifice fly RBI in CHC's 8-5 loss to HOU. Cubs continue to struggle in the NL Central.",
       "sources": []
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
-      "summary": "Merrill bounced back with a hit, a run, and a stolen base (SB No. 9) in San Diego’s win over Oakland — good to see him back after leaving the May 21 game with back tightness from a wall collision.",
+      "summary": "Merrill (SDP) sat out May 24 with sore ribs from a wall collision on May 20. Listed day-to-day; expected to return early this week.",
       "sources": []
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
-      "summary": "Teoscar had his biggest game of the season: 3-for-4 with a grand slam and 6 RBI as the Dodgers beat Milwaukee. A dominant night at the plate.",
+      "summary": "Teoscar went 1-for-3 with a run scored in LAD's 5-1 win over MIL. No injury concerns.",
       "sources": []
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
-      "summary": "Ben Rice’s game (NYY vs BOS) was postponed due to rain. No stats for May 23.",
+      "summary": "Ben Rice (NYY) went 0-for-3 in NYY's 2-0 shutout win over TBR. Defensive contributions solid but bat still searching for consistency.",
       "sources": []
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
-      "summary": "Williams did not appear as the Mets lost to Miami. He was held back for a save situation that never materialized.",
+      "summary": "Williams was roughed up vs MIA: 1/3 IP, 2 H, 4 ER, 2 BB — took the loss. Season ERA climbs to 6.23. Command has been shaky.",
       "sources": []
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
-      "summary": "Wheeler was masterful: 6 IP, 2 H, 0 ER, 6 K, 1 BB in a 3-0 Phillies win over Cleveland. Win No. 5 drops his ERA to 1.60 on the season.",
+      "summary": "Wheeler did not pitch May 24 (started Sat May 23 vs CLE, earned his 6th win). Season ERA now 1.41 over 51 IP — dominant all spring.",
       "sources": []
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "Ragans remains on the IL with left elbow impingement (out since May 8) and is on a Triple-A rehab assignment. No firm return date.",
+      "summary": "Ragans remains on the 15-day IL with left elbow VEO/impingement. Completed Triple-A rehab; return from IL appears imminent this week.",
       "sources": []
     },
     {
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
-      "summary": "Burns did not pitch in Cincinnati’s doubleheader (makeup of postponed Friday game). He is fully healthy — stated he’s “100% fine” after being hit by a line drive last week.",
+      "summary": "Burns did not pitch May 24; CIN vs STL was rained out. Maintaining a sterling 1.99 ERA over 59.67 IP.",
       "sources": []
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
-      "summary": "Eovaldi threw 7 solid innings (5 H, 3 ER, 6 K) but took a no-decision as Texas won 5-3 at LA. ERA edges up to 3.65.",
+      "summary": "Eovaldi did not pitch May 24 (started Sat May 23). Season ERA now 3.67 over 68.67 IP; consistent innings-eater.",
       "sources": []
     },
     {
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
-      "summary": "Sheehan did not start; Roki Sasaki took the Dodgers’ rotation spot. His next scheduled turn is TBD.",
+      "summary": "Sheehan was not scheduled to pitch May 24. Season ERA 4.93 over 45.67 IP; recent starts trending better.",
       "sources": []
     },
     {
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
-      "summary": "Detmers is scheduled to start Sunday, May 24, for the Angels vs. Texas. No outing on May 23.",
+      "summary": "Detmers was outstanding: 8 IP, 1 H, 1 ER, career-high 14 K, 0 BB in LAA's 2-1 walk-off win over TEX. No decision but an absolute gem — ERA drops to 4.87.",
       "sources": []
     }
   ],
-  "injuries": [
-    {
-      "name": "Raleigh/Jeffers",
-      "team": "MIN",
-      "position": "C",
-      "status": "",
-      "previous_status": "",
-      "note": "IL-10 (fractured hamate, surgery May 20)",
-      "source": null
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "status": "",
-      "previous_status": "",
-      "note": "Active (possible PCL concern, Mets monitoring)",
-      "source": null
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "status": "",
-      "previous_status": "",
-      "note": "Active (returning from back strain, wall collision May 21)",
-      "source": null
-    },
-    {
-      "name": "Cole Ragans",
-      "team": "KCR",
-      "position": "SP",
-      "status": "",
-      "previous_status": "",
-      "note": "IL-15 (left elbow impingement since May 8, Triple-A rehab)",
-      "source": null
-    }
-  ]
+  "injuries": []
 }

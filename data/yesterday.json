@@ -1,25 +1,25 @@
 {
-  "date": "2026-05-23",
-  "generated_at": "",
+  "date": "2026-05-24",
+  "generated_at": "2026-05-25T10:57:37Z",
   "totals": {
     "hitters": {
-      "AB": 27,
-      "H": 10,
-      "R": 6,
-      "HR": 2,
-      "RBI": 8,
-      "SB": 1,
-      "points": 17.0
+      "AB": 0,
+      "H": 0,
+      "R": 0,
+      "HR": 0,
+      "RBI": 0,
+      "SB": 0,
+      "points": 6.0
     },
     "pitchers": {
-      "IP": 13.0,
-      "H": 7,
-      "ER": 3,
-      "K": 12,
-      "BB": 3,
-      "W": 1,
+      "IP": 0.0,
+      "H": 0,
+      "ER": 0,
+      "K": 0,
+      "BB": 0,
+      "W": 0,
       "SV": 0,
-      "points": 4.28
+      "points": 3.5
     }
   },
   "players": [
@@ -40,18 +40,11 @@
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "CLE",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "H": 3,
-        "AB": 4,
-        "R": 1,
-        "HR": 0,
-        "RBI": 1,
-        "SB": 0
-      },
-      "points": 2.0,
+      "stats": {},
+      "points": 1.0,
       "summary": ""
     },
     {
@@ -59,18 +52,11 @@
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": "CHW",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "H": 2,
-        "AB": 4,
-        "R": 2,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 2.0,
+      "stats": {},
+      "points": 0.0,
       "summary": ""
     },
     {
@@ -78,17 +64,10 @@
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": "@MIA",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "H": 0,
-        "AB": 4,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
+      "stats": {},
       "points": 0.0,
       "summary": ""
     },
@@ -97,17 +76,10 @@
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": "@BAL",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 1,
-        "HR": 1,
-        "RBI": 1,
-        "SB": 0
-      },
+      "stats": {},
       "points": 3.0,
       "summary": ""
     },
@@ -116,18 +88,11 @@
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": "HOU",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "H": 0,
-        "AB": 4,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 0.0,
+      "stats": {},
+      "points": 1.0,
       "summary": ""
     },
     {
@@ -135,18 +100,11 @@
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "ATH",
-      "dnp": false,
+      "opponent": null,
+      "dnp": true,
       "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 3,
-        "R": 1,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 1
-      },
-      "points": 2.0,
+      "stats": {},
+      "points": 0.0,
       "summary": ""
     },
     {
@@ -154,18 +112,11 @@
       "team": "LAD",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@MIL",
+      "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "H": 3,
-        "AB": 4,
-        "R": 1,
-        "HR": 1,
-        "RBI": 6,
-        "SB": 0
-      },
-      "points": 8.0,
+      "stats": {},
+      "points": 1.0,
       "summary": ""
     },
     {
@@ -174,7 +125,7 @@
       "position": "DH",
       "type": "hitter",
       "opponent": null,
-      "dnp": true,
+      "dnp": false,
       "dnp_reason": null,
       "stats": {},
       "points": 0.0,
@@ -186,7 +137,7 @@
       "position": "RP",
       "type": "rp",
       "opponent": null,
-      "dnp": true,
+      "dnp": false,
       "dnp_reason": null,
       "stats": {},
       "points": 0.0,
@@ -197,18 +148,11 @@
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": "CLE",
-      "dnp": false,
+      "opponent": null,
+      "dnp": true,
       "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 2,
-        "ER": 0,
-        "K": 6,
-        "BB": 1,
-        "W": 1
-      },
-      "points": 3.36,
+      "stats": {},
+      "points": 0.0,
       "summary": ""
     },
     {
@@ -240,18 +184,11 @@
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": "@LAA",
-      "dnp": false,
+      "opponent": null,
+      "dnp": true,
       "dnp_reason": null,
-      "stats": {
-        "IP": 7.0,
-        "H": 5,
-        "ER": 3,
-        "K": 6,
-        "BB": 2,
-        "W": 0
-      },
-      "points": 0.92,
+      "stats": {},
+      "points": 0.0,
       "summary": ""
     },
     {
@@ -272,10 +209,10 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": true,
+      "dnp": false,
       "dnp_reason": null,
       "stats": {},
-      "points": 0.0,
+      "points": 3.5,
       "summary": ""
     }
   ]
