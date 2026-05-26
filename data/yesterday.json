@@ -1,25 +1,25 @@
 {
-  "date": "2026-05-24",
-  "generated_at": "2026-05-25T10:57:37Z",
+  "date": "2026-05-25",
+  "generated_at": "2026-05-26T08:37:00Z",
   "totals": {
     "hitters": {
-      "AB": 0,
-      "H": 0,
-      "R": 0,
-      "HR": 0,
-      "RBI": 0,
+      "AB": 28,
+      "H": 5,
+      "R": 2,
+      "HR": 1,
+      "RBI": 4,
       "SB": 0,
-      "points": 6.0
+      "points": 7.0
     },
     "pitchers": {
-      "IP": 0.0,
-      "H": 0,
-      "ER": 0,
-      "K": 0,
-      "BB": 0,
+      "IP": 6.0,
+      "H": 5,
+      "ER": 2,
+      "K": 8,
+      "BB": 2,
       "W": 0,
       "SV": 0,
-      "points": 3.5
+      "points": 1.36
     }
   },
   "players": [
@@ -30,46 +30,67 @@
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": null,
+      "dnp_reason": "IL — hamate fracture",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Ryan Jeffers on IL; hamate fracture surgery completed, out 6-8 weeks."
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "@ SDP",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 1.0,
-      "summary": ""
+      "stats": {
+        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 0.0,
+      "summary": "0-for-4 with GIDP in PHI's 3-0 win at SDP; Schwarber HR and Marsh 2-run HR carried the offense."
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "vs ARI",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "1-for-4 (double) in SFG's 6-2 loss to ARI; Giants managed just 5 hits."
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "vs CIN",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "stats": {
+        "H": 3,
+        "AB": 4,
+        "R": 1,
+        "HR": 0,
+        "RBI": 1,
+        "SB": 0
+      },
+      "points": 2.0,
+      "summary": "3-for-4 (3 singles), 1 R, 1 RBI in NYM's 7-2 loss to CIN; third multi-hit game in last 9."
     },
     {
       "name": "Lindor/McGonigle",
@@ -77,71 +98,99 @@
       "position": "SS",
       "type": "hitter",
       "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
       "stats": {},
-      "points": 3.0,
-      "summary": ""
+      "points": 0.0,
+      "summary": "Detroit Tigers had a Memorial Day off day. Kevin McGonigle healthy, slashing .312 on the season."
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "@ PIT",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 1.0,
-      "summary": ""
+      "stats": {
+        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 0.0,
+      "summary": "0-for-4 in Cubs' 1-2 loss at PIT; Chicago extended losing streak to 8 games."
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
+      "opponent": "vs PHI",
+      "dnp": false,
       "dnp_reason": null,
-      "stats": {},
+      "stats": {
+        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "0-for-4 with multiple Ks in SDP's 0-3 shutout loss to PHI at Petco Park."
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "vs COL",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 1.0,
-      "summary": ""
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "HR": 1,
+        "RBI": 3,
+        "SB": 0
+      },
+      "points": 5.0,
+      "summary": "Hit a 3-run HR in the 7th inning to spark LAD's 4-run rally; Dodgers won 5-3 comeback vs COL."
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "@ KCR",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {},
+      "stats": {
+        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "0-for-4 as NYY DH in 4-3 win at KCR; Volpe's 9th-inning 2-run single was the game-winner."
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
+      "opponent": "vs CIN",
+      "dnp": true,
+      "dnp_reason": "No save opportunity (7-2 loss)",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Did not pitch in Mets' 7-2 blowout loss to CIN; no save situation."
     },
     {
       "name": "Zack Wheeler",
@@ -150,10 +199,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": null,
+      "dnp_reason": "Not scheduled",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Not his turn in rotation; dominant May (1.38 ERA, 30:5 K:BB through 32.2 IP)."
     },
     {
       "name": "Cole Ragans",
@@ -162,10 +211,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": null,
+      "dnp_reason": "15-Day IL — left elbow impingement",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "On 15-day IL since May 8; Triple-A rehab start completed, possible return May 27."
     },
     {
       "name": "Chase Burns",
@@ -174,10 +223,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": null,
+      "dnp_reason": "Not scheduled (starts May 26)",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Scheduled to start May 26 vs NYM; elite 1.83 ERA through 10 starts."
     },
     {
       "name": "Nathan Eovaldi",
@@ -186,22 +235,29 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": null,
+      "dnp_reason": "Not scheduled",
       "stats": {},
       "points": 0.0,
-      "summary": ""
+      "summary": "Not his turn in rotation; TEX was no-hit 9-0 by HOU on May 25 (Rocker started for TEX). Eovaldi ERA 3.65 through 11 starts."
     },
     {
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
+      "opponent": "vs COL",
+      "dnp": false,
       "dnp_reason": null,
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "stats": {
+        "IP": 6.0,
+        "H": 5,
+        "ER": 2,
+        "K": 8,
+        "BB": 2,
+        "W": 0
+      },
+      "points": 1.36,
+      "summary": "6 IP, 5 H, 2 ER, 8 K; no decision as LAD rallied for 5-3 comeback win. Hit by 103.8 mph comebacker in 4th but continued."
     },
     {
       "name": "Reid Detmers",
@@ -209,11 +265,11 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
+      "dnp": true,
+      "dnp_reason": "Not scheduled (started May 24)",
       "stats": {},
-      "points": 3.5,
-      "summary": ""
+      "points": 0.0,
+      "summary": "Pitched May 24 vs TEX: career-high 14 K over 8 IP, 1 ER. LAA won on walk-off; Detmers took no decision."
     }
   ]
 }
