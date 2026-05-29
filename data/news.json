@@ -1,198 +1,111 @@
 {
-  "generated_at": "2026-05-26T08:37:00Z",
+  "generated_at": "2026-05-28T04:35:00Z",
   "window_hours": 24,
   "players": [
     {
       "name": "Raleigh/Jeffers",
       "team": "MIN",
       "position": "C",
-      "summary": "Ryan Jeffers diagnosed with hamate bone fracture on May 19, underwent surgery, out 6-8 weeks. Expected return around early July. Alex Jackson called up as backup.",
-      "sources": [
-        {
-          "title": "Ryan Jeffers To Miss 6-8 Weeks Recovering From Hamate Surgery",
-          "url": "https://zonecoverage.com/2026/mn-twins-news/ryan-jeffers-to-miss-6-8-weeks-recovering-from-hamate-surgery/"
-        }
-      ]
+      "summary": "Ryan Jeffers remains on the IL with a hamate fracture. Surgery was performed May 19 and his expected return date is approximately July 3. MIN has been managing their catching duties in his absence.",
+      "sources": []
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "Harper went 0-for-4 in PHI's 3-0 win at SDP. Healthy after a May 9 ocular migraine episode; Schwarber's MLB-leading 21st HR and Marsh's 2-run blast carried the Phillies.",
-      "sources": [
-        {
-          "title": "Phillies vs. Padres May 25 2026 Box Score",
-          "url": "https://www.espn.com/mlb/boxscore/_/gameId/401815497"
-        }
-      ]
+      "summary": "Harper went 1-for-4 with a run scored in PHI's 3-0 shutout win over SDP. Continues to anchor PHI's lineup with 13 home runs and a .271 average through 50 games. Healthy and productive.",
+      "sources": []
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
-      "summary": "Arraez went 1-for-4 (double) in SFG's 6-2 loss to ARI. Generating All-Star buzz — slashing .320 with elite defense (league-leading +8 OAA) at 2B, the Giants' brightest spot in a tough 2026.",
-      "sources": [
-        {
-          "title": "Giants still have a bright spot: All-Star candidate Luis Arraez",
-          "url": "https://sfstandard.com/2026/05/20/luis-arraez-sf-giants-all-star/"
-        }
-      ]
+      "summary": "Arraez went 2-for-3 with 2 RBI, pushing his batting average to .325. He remains among the NL leaders in batting average and has been one of the most consistent hitters in your lineup all season.",
+      "sources": []
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
-      "summary": "Bichette went 3-for-4 (3 singles) in the Mets' 7-2 loss to CIN — his third multi-hit game in 9 contests, batting .308 in that stretch. A bright spot in an otherwise difficult season (.227 overall).",
-      "sources": [
-        {
-          "title": "Reds 7 Mets 2 Post Game Notes 5/25/2026",
-          "url": "https://www.metsnewslinks.com/2026/05/reds-7-mets-2-post-game-notes-5252026.html"
-        }
-      ]
+      "summary": "Bichette went 1-for-4 with a run scored in NYM's win. Batting .218 on the season while providing steady production at third base. His counting stats (27 RBI, 24 R) remain strong.",
+      "sources": []
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
-      "summary": "Detroit had a Memorial Day off day. Kevin McGonigle is healthy — slashing .312/.411/.481 on the season with his 8-year/$150M extension secured. One of the AL's top young shortstops.",
-      "sources": [
-        {
-          "title": "Kevin McGonigle Detroit Tigers 2026",
-          "url": "https://www.mlb.com/player/kevin-mcgonigle-805808"
-        }
-      ]
+      "summary": "Kevin McGonigle went 2-for-4 and scored a run in DET's 4-0 shutout win over LAA. The young shortstop continues to hold down the slot capably since replacing Lindor, hitting .195 with solid defense.",
+      "sources": []
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
-      "summary": "PCA went 0-for-4 in Cubs' 1-2 loss at PIT, extending Chicago's 8-game skid. Slashing .197 in May (.225 overall); acknowledged he's 'trying too hard.' Moved to leadoff to kickstart his bat.",
-      "sources": [
-        {
-          "title": "Pete Crow-Armstrong Cubs struggles 2026",
-          "url": "https://cubbiescrib.com/pete-crow-armstrong-says-the-quiet-part-out-loud-regarding-embarrassing-cubs-struggles"
-        }
-      ]
+      "summary": "PCA went 1-for-4 with a run and an RBI. Still on pace for 35+ steals on the season with 11 SB through roughly 50 games. Remains CHC's most dynamic offensive threat.",
+      "sources": []
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
-      "summary": "Merrill went 0-for-4 in SDP's shutout loss to PHI. Returned May 23 after back soreness from a wall collision (MRI/CT negative). Hitting just .217 on the season despite excellent defense.",
-      "sources": [
-        {
-          "title": "Jackson Merrill returns to Padres lineup after back injury",
-          "url": "https://www.mlb.com/news/jackson-merrill-returns-to-padres-lineup-after-back-injury"
-        }
-      ]
+      "summary": "Merrill went 1-for-4 in SDP's 3-0 shutout loss to PHI. Batting .202 on the season, going through a tough stretch offensively. Still contributing with 9 SB and solid center field defense.",
+      "sources": []
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
-      "summary": "Hernandez blasted a 3-run HR in the 7th inning to ignite LAD's 4-run comeback rally in a 5-3 win vs COL. Scorching hot: .385 AVG, 3 HR, 15 RBI over the last 15 games.",
-      "sources": [
-        {
-          "title": "Dodgers 5 Rockies 3 comeback win 7th inning",
-          "url": "https://dodgersdigest.com/2026/05/25/dodgers-5-rockies-3-after-early-frustration-a-4-run-7th-provides-a-late-comeback-win/"
-        }
-      ]
-    },
-    {
-      "name": "Devin Williams",
-      "team": "NYM",
-      "position": "RP",
-      "summary": "Williams did not pitch in the Mets' 7-2 blowout loss; no save opportunity. After a rocky start to 2026, he has been resurgent with 10+ consecutive scoreless outings and 3 saves in that span.",
-      "sources": [
-        {
-          "title": "Mets Devin Williams finding groove 2026",
-          "url": "https://www.mlb.com/news/mets-devin-williams-settling-in-2026"
-        }
-      ]
-    },
-    {
-      "name": "Zack Wheeler",
-      "team": "PHI",
-      "position": "SP",
-      "summary": "Not Wheeler's day to pitch. He has been dominant in May: 1.38 ERA, 0.77 WHIP, 30:5 K:BB through 32.2 IP — five straight quality starts since returning from thoracic outlet decompression surgery.",
-      "sources": [
-        {
-          "title": "Zack Wheeler strong 2026 return",
-          "url": "https://www.rotoballer.com/player-news/can-zack-wheeler-sustain-his-strong-start-to-2026/1860679"
-        }
-      ]
-    },
-    {
-      "name": "Cole Ragans",
-      "team": "KCR",
-      "position": "SP",
-      "summary": "Ragans remains on the 15-day IL with left elbow impingement (VEO) since May 8. Completed a Triple-A rehab start; the Royals are optimistic about a return as soon as May 27 vs NYY.",
-      "sources": [
-        {
-          "title": "Royals Cole Ragans Set to Return From Elbow Injury",
-          "url": "https://www.yardbarker.com/mlb/articles/royals_cole_ragans_set_to_return_from_elbow_injury/s1_17615_43872824"
-        }
-      ]
-    },
-    {
-      "name": "Chase Burns",
-      "team": "CIN",
-      "position": "SP",
-      "summary": "Burns starts May 26 vs the Mets. He carries a stellar 1.83 ERA through 10 starts — one of baseball's best young arms with a 28.2% strikeout rate and just 7.9% walk rate.",
-      "sources": [
-        {
-          "title": "Chase Burns Reds new ace 2026",
-          "url": "https://lastwordonsports.com/baseball/2026/05/22/reds-chase-burns-stellar-sophomore-season/"
-        }
-      ]
-    },
-    {
-      "name": "Nathan Eovaldi",
-      "team": "TEX",
-      "position": "SP",
-      "summary": "Not Eovaldi's scheduled start. The Rangers were no-hit 9-0 by Houston on May 25 (Rocker took the loss). Eovaldi has settled in with a 3.65 ERA through 11 starts after a tough opening stretch.",
-      "sources": [
-        {
-          "title": "Astros 9-0 Rangers no-hitter May 25 2026",
-          "url": "https://www.cbssports.com/mlb/gametracker/recap/MLB_20260525_HOU@TEX/"
-        }
-      ]
-    },
-    {
-      "name": "Emmet Sheehan",
-      "team": "LAD",
-      "position": "SP",
-      "summary": "Sheehan delivered 6 solid innings (5 H, 2 ER, 8 K) in LAD's 5-3 come-from-behind win vs COL. He was struck by a 103.8 mph comebacker in the 4th but stayed in. LAD rallied with 4 runs in the 7th; no decision for Sheehan.",
-      "sources": [
-        {
-          "title": "Colorado Rockies vs Los Angeles Dodgers recap May 25 2026",
-          "url": "https://www.cbssports.com/mlb/gametracker/recap/MLB_20260525_COL@LAD/"
-        }
-      ]
-    },
-    {
-      "name": "Reid Detmers",
-      "team": "LAA",
-      "position": "SP",
-      "summary": "Detmers pitched May 24 (not 25): career-high 14 K over 8 IP with 1 ER vs TEX, earning Box-Toppers Player of the Day. Did not earn the win (tied when he exited, LAA won walk-off). Next start ahead.",
-      "sources": [
-        {
-          "title": "Detmers career-high 14 K May 24 2026",
-          "url": "https://www.box-toppers.com/blog/2026/5/25/angels-detmers-tops-players-for-sunday-may-24-posting-seasons-highest-game-score"
-        }
-      ]
+      "summary": "INJURY UPDATE: Teoscar Hernández left Tuesday's game in the 2nd inning with a left hamstring strain after going 0-for-1. An MRI has been scheduled for May 28. He is expected to miss a minimum of 2 to 4 weeks. LAD will need to adjust their outfield rotation during his absence.",
+      "sources": []
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
-      "summary": "Ben Rice went 0-for-4 as NYY DH in the 4-3 walk-off win at KCR; Volpe's 9th-inning 2-run single was the winning blow. Rice leads the Yankees with 33 RBI and is having a breakout year (.282 AVG, 16 HR overall).",
-      "sources": [
-        {
-          "title": "Volpe hero as Yankees extend Royals dominance",
-          "url": "https://www.thesportsleader.com/2026/05/25/anthony-volpe-the-hero-as-yankees-extend-dominance-over-royals/"
-        }
-      ]
+      "summary": "Ben Rice went 2-for-4 with a run and 3 RBI in NYY's win. Rice continues to provide solid production as the DH, proving to be an effective occupant of the Stanton slot with strong RBI production.",
+      "sources": []
+    },
+    {
+      "name": "Devin Williams",
+      "team": "NYM",
+      "position": "RP",
+      "summary": "Williams worked a scoreless inning to earn his 9th save of the season, working around 3 walks with a strikeout. His season ERA has improved to 5.89 after a rough early stretch. 13 W+SV on the year.",
+      "sources": []
+    },
+    {
+      "name": "Cole Ragans",
+      "team": "KCR",
+      "position": "SP",
+      "summary": "INJURY UPDATE: Cole Ragans suffered a setback during his IL rehab assignment for pitcher's elbow (VEO). He has been on the IL since May 8 and the return timeline is now uncertain following the setback. KCR will continue to monitor his recovery before scheduling a return.",
+      "sources": []
+    },
+    {
+      "name": "Chase Burns",
+      "team": "CIN",
+      "position": "SP",
+      "summary": "Burns pitched on May 26 and was not scheduled today. He continues to have a breakout season with a 2.08 ERA over 65.0 IP across 11 starts, making him one of your top fantasy assets this year.",
+      "sources": []
+    },
+    {
+      "name": "Nathan Eovaldi",
+      "team": "TEX",
+      "position": "SP",
+      "summary": "Eovaldi last started on May 23 and lines up for his next start around May 28-29. He has been consistent this season with a 3.67 ERA over 68.67 IP in 11 starts, providing steady innings for your staff.",
+      "sources": []
+    },
+    {
+      "name": "Emmet Sheehan",
+      "team": "LAD",
+      "position": "SP",
+      "summary": "Sheehan was not scheduled on May 27. The LAD righty holds a 4.71 ERA over 51.67 IP in 10 starts this season, pitching to contact and logging quality innings for a deep LAD rotation.",
+      "sources": []
+    },
+    {
+      "name": "Reid Detmers",
+      "team": "LAA",
+      "position": "SP",
+      "summary": "Detmers was not scheduled on May 27. The LAA lefty leads your pitching staff in strikeouts with 80 K through 12 starts, though his 4.87 ERA reflects a tough run-support environment in Anaheim.",
+      "sources": []
     }
   ],
   "injuries": [
@@ -200,37 +113,28 @@
       "name": "Raleigh/Jeffers",
       "team": "MIN",
       "position": "C",
-      "status": "IL (hamate fracture)",
+      "status": "IL – hamate fracture",
+      "previous_status": "IL – hamate fracture",
+      "note": "Ryan Jeffers had surgery May 19; expected return ~July 3.",
+      "source": null
+    },
+    {
+      "name": "Teoscar Hernandez",
+      "team": "LAD",
+      "position": "OF",
+      "status": "IL – left hamstring strain (new)",
       "previous_status": "Active",
-      "note": "Surgery completed; out 6-8 weeks, estimated return early July.",
-      "source": {
-        "title": "Ryan Jeffers Hamate Fracture Surgery",
-        "url": "https://zonecoverage.com/2026/mn-twins-news/ryan-jeffers-to-miss-6-8-weeks-recovering-from-hamate-surgery/"
-      }
+      "note": "Left May 27 game in 2nd inning; MRI scheduled May 28; minimum 2-4 weeks out.",
+      "source": null
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "status": "15-Day IL (left elbow impingement)",
-      "previous_status": "Active",
-      "note": "Left elbow VEO; Triple-A rehab start complete, targeting May 27 return vs NYY.",
-      "source": {
-        "title": "Royals Cole Ragans return from elbow IL",
-        "url": "https://athlonsports.com/mlb/kansas-city-royals/royals-cole-ragans-return-from-elbow-injury"
-      }
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "status": "Active (day-to-day)",
-      "previous_status": "day-to-day (back soreness)",
-      "note": "Returned to lineup May 23; MRI/CT negative after wall collision attempting to rob Ohtani HR.",
-      "source": {
-        "title": "Jackson Merrill returns after back injury",
-        "url": "https://www.mlb.com/news/jackson-merrill-returns-to-padres-lineup-after-back-injury"
-      }
+      "status": "IL – elbow (VEO), rehab setback",
+      "previous_status": "IL – elbow (VEO)",
+      "note": "Suffered setback during rehab assignment; return timeline uncertain.",
+      "source": null
     }
   ]
 }
