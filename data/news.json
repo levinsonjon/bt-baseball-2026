@@ -1,140 +1,63 @@
 {
-  "generated_at": "2026-05-28T04:35:00Z",
+  "generated_at": "",
   "window_hours": 24,
   "players": [
     {
-      "name": "Raleigh/Jeffers",
-      "team": "MIN",
-      "position": "C",
-      "summary": "Ryan Jeffers remains on the IL with a hamate fracture. Surgery was performed May 19 and his expected return date is approximately July 3. MIN has been managing their catching duties in his absence.",
+      "name": "Ryan Jeffers",
+      "team": "",
+      "position": "",
+      "summary": "Jeffers on IL — hamate fracture",
       "sources": []
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "Harper went 1-for-4 with a run scored in PHI's 3-0 shutout win over SDP. Continues to anchor PHI's lineup with 13 home runs and a .271 average through 50 games. Healthy and productive.",
+      "summary": "Harper day-to-day — wrist soreness",
       "sources": []
     },
     {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "summary": "Arraez went 2-for-3 with 2 RBI, pushing his batting average to .325. He remains among the NL leaders in batting average and has been one of the most consistent hitters in your lineup all season.",
-      "sources": []
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "summary": "Bichette went 1-for-4 with a run scored in NYM's win. Batting .218 on the season while providing steady production at third base. His counting stats (27 RBI, 24 R) remain strong.",
-      "sources": []
-    },
-    {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
-      "position": "SS",
-      "summary": "Kevin McGonigle went 2-for-4 and scored a run in DET's 4-0 shutout win over LAA. The young shortstop continues to hold down the slot capably since replacing Lindor, hitting .195 with solid defense.",
-      "sources": []
-    },
-    {
-      "name": "Pete Crow-Armstrong",
-      "team": "CHC",
-      "position": "OF",
-      "summary": "PCA went 1-for-4 with a run and an RBI. Still on pace for 35+ steals on the season with 11 SB through roughly 50 games. Remains CHC's most dynamic offensive threat.",
-      "sources": []
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "summary": "Merrill went 1-for-4 in SDP's 3-0 shutout loss to PHI. Batting .202 on the season, going through a tough stretch offensively. Still contributing with 9 SB and solid center field defense.",
-      "sources": []
-    },
-    {
-      "name": "Teoscar Hernandez",
-      "team": "LAD",
-      "position": "OF",
-      "summary": "INJURY UPDATE: Teoscar Hernández left Tuesday's game in the 2nd inning with a left hamstring strain after going 0-for-1. An MRI has been scheduled for May 28. He is expected to miss a minimum of 2 to 4 weeks. LAD will need to adjust their outfield rotation during his absence.",
-      "sources": []
-    },
-    {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "summary": "Ben Rice went 2-for-4 with a run and 3 RBI in NYY's win. Rice continues to provide solid production as the DH, proving to be an effective occupant of the Stanton slot with strong RBI production.",
-      "sources": []
-    },
-    {
-      "name": "Devin Williams",
-      "team": "NYM",
-      "position": "RP",
-      "summary": "Williams worked a scoreless inning to earn his 9th save of the season, working around 3 walks with a strikeout. His season ERA has improved to 5.89 after a rough early stretch. 13 W+SV on the year.",
+      "name": "Teoscar Hernández",
+      "team": "",
+      "position": "",
+      "summary": "Hernández to 10-day IL — hamstring strain (NEW)",
       "sources": []
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "INJURY UPDATE: Cole Ragans suffered a setback during his IL rehab assignment for pitcher's elbow (VEO). He has been on the IL since May 8 and the return timeline is now uncertain following the setback. KCR will continue to monitor his recovery before scheduling a return.",
+      "summary": "Ragans IL — elbow, rehab setback",
       "sources": []
     },
     {
-      "name": "Chase Burns",
-      "team": "CIN",
-      "position": "SP",
-      "summary": "Burns pitched on May 26 and was not scheduled today. He continues to have a breakout season with a 2.08 ERA over 65.0 IP across 11 starts, making him one of your top fantasy assets this year.",
+      "name": "Ben Rice",
+      "team": "",
+      "position": "",
+      "summary": "Ben Rice DTD — left hand contusion (NEW)",
       "sources": []
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
-      "summary": "Eovaldi last started on May 23 and lines up for his next start around May 28-29. He has been consistent this season with a 3.67 ERA over 68.67 IP in 11 starts, providing steady innings for your staff.",
+      "summary": "Eovaldi takes L as Rangers no-hit by Astros",
       "sources": []
     },
     {
-      "name": "Emmet Sheehan",
-      "team": "LAD",
+      "name": "Zack Wheeler",
+      "team": "PHI",
       "position": "SP",
-      "summary": "Sheehan was not scheduled on May 27. The LAD righty holds a 4.71 ERA over 51.67 IP in 10 starts this season, pitching to contact and logging quality innings for a deep LAD rotation.",
+      "summary": "Wheeler dominant — 1.41 ERA through 8 starts",
       "sources": []
     },
     {
-      "name": "Reid Detmers",
-      "team": "LAA",
-      "position": "SP",
-      "summary": "Detmers was not scheduled on May 27. The LAA lefty leads your pitching staff in strikeouts with 80 K through 12 starts, though his 4.87 ERA reflects a tough run-support environment in Anaheim.",
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
+      "summary": "Arraez batting .320 — 65 H in 203 AB",
       "sources": []
     }
   ],
-  "injuries": [
-    {
-      "name": "Raleigh/Jeffers",
-      "team": "MIN",
-      "position": "C",
-      "status": "IL – hamate fracture",
-      "previous_status": "IL – hamate fracture",
-      "note": "Ryan Jeffers had surgery May 19; expected return ~July 3.",
-      "source": null
-    },
-    {
-      "name": "Teoscar Hernandez",
-      "team": "LAD",
-      "position": "OF",
-      "status": "IL – left hamstring strain (new)",
-      "previous_status": "Active",
-      "note": "Left May 27 game in 2nd inning; MRI scheduled May 28; minimum 2-4 weeks out.",
-      "source": null
-    },
-    {
-      "name": "Cole Ragans",
-      "team": "KCR",
-      "position": "SP",
-      "status": "IL – elbow (VEO), rehab setback",
-      "previous_status": "IL – elbow (VEO)",
-      "note": "Suffered setback during rehab assignment; return timeline uncertain.",
-      "source": null
-    }
-  ]
+  "injuries": []
 }

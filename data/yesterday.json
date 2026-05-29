@@ -1,223 +1,147 @@
 {
-  "date": "2026-05-27",
-  "generated_at": "2026-05-28T04:35:00Z",
+  "date": "2026-05-28",
+  "generated_at": "2026-05-29T09:57:54Z",
   "totals": {
     "hitters": {
-      "AB": 28,
-      "H": 10,
-      "R": 5,
+      "AB": 0,
+      "H": 0,
+      "R": 0,
       "HR": 0,
-      "RBI": 6,
+      "RBI": 0,
       "SB": 0,
-      "points": 11.0
+      "points": 5.0
     },
     "pitchers": {
-      "IP": 1.0,
+      "IP": 0.0,
       "H": 0,
       "ER": 0,
-      "K": 1,
-      "BB": 3,
+      "K": 0,
+      "BB": 0,
       "W": 0,
-      "SV": 1,
-      "points": 5.0
+      "SV": 0,
+      "points": -1.2
     }
   },
   "players": [
     {
-      "name": "Raleigh/Jeffers",
+      "name": "Ryan Jeffers",
       "team": "MIN",
       "position": "C",
       "type": "hitter",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "IL – hamate fracture (Ryan Jeffers)",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "Ryan Jeffers on IL with hamate fracture (surgery May 19, ETA ~July 3)"
+      "summary": "On 10-day IL, hamate fracture (since May 19). No return timeline."
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "vs SDP",
+      "opponent": "OFF",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "R": 1,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 1.0,
-      "summary": "1-for-4, run scored in PHI's 3-0 win over SDP"
+      "stats": {},
+      "points": 0.0,
+      "summary": "Off day (PHI). Wrist soreness, day-to-day."
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "OFF",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "AB": 3,
-        "H": 2,
-        "R": 0,
-        "HR": 0,
-        "RBI": 2,
-        "SB": 0
-      },
-      "points": 2.0,
-      "summary": "2-for-3 with 2 RBI in SFG win"
+      "stats": {},
+      "points": 0.0,
+      "summary": "Off day (SFG)."
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "OFF",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "R": 1,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 1.0,
-      "summary": "1-for-4, run scored in NYM win"
+      "stats": {},
+      "points": 0.0,
+      "summary": "Off day (NYM)."
     },
     {
-      "name": "Lindor/McGonigle",
+      "name": "Kevin McGonigle",
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": "@ LAA",
+      "opponent": "OAK",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 2,
-        "R": 1,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
+      "stats": {},
       "points": 1.0,
-      "summary": "Kevin McGonigle 2-for-4, scored in DET's 4-0 win over LAA"
+      "summary": "1-for-4, RBI single. Tigers lost 7-1 to Athletics."
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
+      "opponent": "STL",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "R": 1,
-        "HR": 0,
-        "RBI": 1,
-        "SB": 0
-      },
-      "points": 2.0,
-      "summary": "1-for-4, run and RBI in CHC win"
+      "stats": {},
+      "points": 1.0,
+      "summary": "1-for-5, scored a run. Cubs beat Cardinals."
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ PHI",
+      "opponent": "OFF",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
+      "stats": {},
       "points": 0.0,
-      "summary": "1-for-4 in SDP's 3-0 loss to PHI"
+      "summary": "Off day (SDP)."
     },
     {
-      "name": "Teoscar Hernandez",
+      "name": "Teoscar Hernández",
       "team": "LAD",
       "position": "OF",
-      "type": "hitter",
-      "opponent": "vs COL",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 1,
-        "H": 0,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 0.0,
-      "summary": "Left game in 2nd inning with left hamstring strain (0-for-1)"
-    },
-    {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
       "type": "hitter",
       "opponent": null,
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 2,
-        "R": 1,
-        "HR": 0,
-        "RBI": 3,
-        "SB": 0
-      },
-      "points": 4.0,
-      "summary": "Ben Rice 2-for-4, run and 3 RBI in NYY win"
+      "stats": {},
+      "points": 0.0,
+      "summary": "Placed on 10-day IL May 28, left hamstring strain."
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": null,
+      "opponent": "OFF",
       "dnp": false,
       "dnp_reason": null,
-      "stats": {
-        "IP": 1.0,
-        "H": 0,
-        "ER": 0,
-        "K": 1,
-        "BB": 3,
-        "W": 0,
-        "SV": 1
-      },
-      "points": 5.0,
-      "summary": "1.0 IP, 0 ER, 1 K, 3 BB – 9th save of season"
+      "stats": {},
+      "points": 0.0,
+      "summary": "Off day (NYM)."
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Not scheduled",
+      "opponent": "OFF",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "Not scheduled May 27 – next start TBD"
+      "summary": "Off day (PHI)."
     },
     {
       "name": "Cole Ragans",
@@ -225,11 +149,11 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "IL – elbow (VEO), rehab setback",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "IL – suffered rehab setback, return timeline uncertain"
+      "summary": "On IL (elbow inflammation, May 8). Rehab setback reported."
     },
     {
       "name": "Chase Burns",
@@ -237,23 +161,23 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Pitched May 26",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "Pitched May 26 – not scheduled today"
+      "summary": "No start today (last start May 26)."
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Not scheduled",
+      "opponent": "HOU",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
-      "points": 0.0,
-      "summary": "Last started May 23 – next start ~May 28-29"
+      "points": -1.2,
+      "summary": "5.0 IP, 4 ER, L. Astros' Tatsuya Imai threw combined no-hitter vs Rangers; Eovaldi took the loss."
     },
     {
       "name": "Emmet Sheehan",
@@ -261,11 +185,11 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Not scheduled",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "Not scheduled May 27"
+      "summary": "No start today (last start May 25)."
     },
     {
       "name": "Reid Detmers",
@@ -273,11 +197,23 @@
       "position": "SP",
       "type": "sp",
       "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Not scheduled",
+      "dnp": false,
+      "dnp_reason": null,
       "stats": {},
       "points": 0.0,
-      "summary": "Not scheduled May 27"
+      "summary": "No start today (last start May 24)."
+    },
+    {
+      "name": "Ben Rice",
+      "team": "NYY",
+      "position": "DH",
+      "type": "hitter",
+      "opponent": "LAD",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {},
+      "points": 3.0,
+      "summary": "2-for-3, solo HR and 2B before leaving with left hand contusion (X-rays negative, DTD)."
     }
   ]
 }
