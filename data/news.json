@@ -1,63 +1,226 @@
 {
-  "generated_at": "",
+  "generated_at": "2026-05-30T09:35:00Z",
   "window_hours": 24,
   "players": [
     {
-      "name": "Ryan Jeffers",
-      "team": "",
-      "position": "",
-      "summary": "Jeffers on IL — hamate fracture",
-      "sources": []
+      "name": "Raleigh/Jeffers",
+      "team": "MIN",
+      "position": "C",
+      "summary": "Ryan Jeffers fractured his hamate bone and had surgery; expected to miss 6-8 weeks with an early July return target. Twins selected journeyman Alex Jackson to take his roster spot.",
+      "sources": [
+        {
+          "title": "Ryan Jeffers Diagnosed With Hamate Fracture — MLB Trade Rumors",
+          "url": "https://www.mlbtraderumors.com/2026/05/twins-ryan-jeffers-hamate-fracture-alex-jackson.html"
+        }
+      ]
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "Harper day-to-day — wrist soreness",
-      "sources": []
+      "summary": "Went 0-for-4 in Phillies' 4-2 loss at Dodger Stadium as Wrobleski dominated through 7 innings. All 4 Dodgers runs came on solo HRs from Freeman, Muncy, Ohtani, and Will Smith.",
+      "sources": [
+        {
+          "title": "Justin Wrobleski's Dominant Start Beats Zack Wheeler and Phils — Dodgers Beat",
+          "url": "https://dodgersbeat.com/dodgers-vs-phillies-recap-justin-wrobleski-solo-shots/"
+        }
+      ]
     },
     {
-      "name": "Teoscar Hernández",
-      "team": "",
-      "position": "",
-      "summary": "Hernández to 10-day IL — hamstring strain (NEW)",
-      "sources": []
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
+      "summary": "Picked up a single at Coors Field but Giants fell 8-6 to Colorado. Season batting average holds at .319 — still among MLB's best contact hitters.",
+      "sources": [
+        {
+          "title": "Giants vs. Rockies (May 29, 2026) — FOX Sports",
+          "url": "https://www.foxsports.com/mlb/san-francisco-giants-vs-colorado-rockies-may-29-2026-game-boxscore-95554"
+        }
+      ]
+    },
+    {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "summary": "Singled and scored in the Mets' wild 9-7 comeback win over Miami in 10 innings. MJ Melendez hit the walk-off 2-run homer after NYM had squandered a 4-run lead.",
+      "sources": [
+        {
+          "title": "Mets 9-7 Marlins (May 29, 2026) — ESPN",
+          "url": "https://www.espn.com/mlb/game/_/gameId/401815538"
+        }
+      ]
+    },
+    {
+      "name": "Lindor/McGonigle",
+      "team": "DET",
+      "position": "SS",
+      "summary": "Kevin McGonigle went 1-for-4 with a single as Detroit fell 4-3 to the White Sox in 10 innings on a walk-off homer by Manny Vargas.",
+      "sources": [
+        {
+          "title": "Detroit Tigers vs. Chicago White Sox — CBS Sports",
+          "url": "https://www.cbssports.com/mlb/gametracker/boxscore/MLB_20260529_DET@CHW/"
+        }
+      ]
+    },
+    {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "position": "OF",
+      "summary": "Hit a double in the 9th and scored in a losing effort as the Cubs dropped a 6-5 decision in St. Louis. Imanaga took the loss; Riley O'Brien earned the save for the Cardinals.",
+      "sources": [
+        {
+          "title": "Cardinals 6, Cubs 5 (05/29/2026) — MLB.com",
+          "url": "https://www.mlb.com/gameday/cubs-vs-cardinals/2026/05/29/823055/final/wrap"
+        }
+      ]
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "summary": "Merrill's first homer since May 4 — a 2-run blast off Mitchell Parker in the 7th — gave the Padres a 7-5 win over Washington, snapping a 4-game losing streak.",
+      "sources": [
+        {
+          "title": "Merrill 2-run HR in 7th gives Padres 7-5 win over Nationals — Washington Post",
+          "url": "https://www.washingtonpost.com/sports/mlb/2026/05/29/padres-nationals-score/e3f54676-5bcf-11f1-8a9d-afb1148204e1_story.html"
+        }
+      ]
+    },
+    {
+      "name": "Teoscar Hernandez",
+      "team": "LAD",
+      "position": "OF",
+      "summary": "Placed on the 10-day IL with a Grade 1 left hamstring strain suffered May 28 while running to first vs Colorado. Dave Roberts expects a 1-3 week absence; Ryan Ward recalled.",
+      "sources": [
+        {
+          "title": "Dodgers Move Teoscar Hernandez to IL — Dodger Nation",
+          "url": "https://dodgersnation.com/dodgers-move-teoscar-hernandez-to-il-in-back-to-back-injury/2026/05/28/"
+        }
+      ]
+    },
+    {
+      "name": "Stanton/Rice",
+      "team": "NYY",
+      "position": "DH",
+      "summary": "Ben Rice drove in a run in the Yankees' 8-2 rout of Oakland. New York's offense was powered by Goldschmidt (3 RBI) and Judge (2 RBI).",
+      "sources": [
+        {
+          "title": "Yankees 8, Athletics 2 (05/29/2026) — MLB.com",
+          "url": "https://www.mlb.com/gameday/yankees-vs-athletics/2026/05/29/825002/final/box"
+        }
+      ]
+    },
+    {
+      "name": "Devin Williams",
+      "team": "NYM",
+      "position": "RP",
+      "summary": "Pitched a scoreless inning (3 K, 3 BB) but didn't earn a save as the Mets blew a 4-run lead before winning 9-7 over Miami in 10 innings on Melendez's walk-off shot.",
+      "sources": [
+        {
+          "title": "Mets 9-7 Marlins (May 29, 2026) — ESPN",
+          "url": "https://www.espn.com/mlb/game/_/gameId/401815538"
+        }
+      ]
+    },
+    {
+      "name": "Zack Wheeler",
+      "team": "PHI",
+      "position": "SP",
+      "summary": "Surrendered 4 solo home runs over 6 innings to Freeman, Muncy, Ohtani, and Will Smith — only the 2nd time in his career allowing 4 HRs in a start. PHI fell 4-2 in the series opener at LAD.",
+      "sources": [
+        {
+          "title": "Long ball bites Wheeler in Dodgers series opener — Phillies Nation",
+          "url": "https://philliesnation.com/2026/05/philadelphia-phillies-mlb-news-los-angeles-dodgers-zack-wheeler-may-29-2026-recap/"
+        }
+      ]
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "Ragans IL — elbow, rehab setback",
-      "sources": []
+      "summary": "Suffered a setback during his rehab outing — reported similar pain to his original elbow impingement. Shut down from throwing again; return timeline now uncertain.",
+      "sources": [
+        {
+          "title": "Cole Ragans Pauses Rehab After Elbow Stiffness — MLB Trade Rumors",
+          "url": "https://www.mlbtraderumors.com/2026/05/cole-ragans-pauses-rehab-after-experiencing-elbow-stiffness.html"
+        }
+      ]
     },
     {
-      "name": "Ben Rice",
-      "team": "",
-      "position": "",
-      "summary": "Ben Rice DTD — left hand contusion (NEW)",
+      "name": "Chase Burns",
+      "team": "CIN",
+      "position": "SP",
+      "summary": "Off day between starts after winning his 5th on May 27. Paddack started for Cincinnati vs Atlanta; Braves won 8-3. Burns' next start expected over the weekend.",
       "sources": []
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
-      "summary": "Eovaldi takes L as Rangers no-hit by Astros",
-      "sources": []
+      "summary": "Did not start Friday's game vs Kansas City — MacKenzie Gore took the ball and dealt 6.1 shutout IP in a 9-1 Rangers win. Eovaldi's status for his next turn in the rotation is unclear.",
+      "sources": [
+        {
+          "title": "Rangers 9-1 Royals (May 29, 2026) — ESPN",
+          "url": "https://www.espn.com/mlb/recap?gameId=401815544"
+        }
+      ]
     },
     {
-      "name": "Zack Wheeler",
-      "team": "PHI",
+      "name": "Emmet Sheehan",
+      "team": "LAD",
       "position": "SP",
-      "summary": "Wheeler dominant — 1.41 ERA through 8 starts",
+      "summary": "Not scheduled to start Friday as Wrobleski opened the Phillies series for the Dodgers. Sheehan remains healthy and in the rotation; next start expected over the weekend.",
       "sources": []
     },
     {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "summary": "Arraez batting .320 — 65 H in 203 AB",
-      "sources": []
+      "name": "Reid Detmers",
+      "team": "LAA",
+      "position": "SP",
+      "summary": "Dominant 6-inning, 8-K performance (90 pitches) earned the win in Angels' 5-4 road victory at Tampa Bay. Following his career-high 14-K outing May 24, Detmers looks to be turning a corner.",
+      "sources": [
+        {
+          "title": "Reid Detmers against the Rays — MLB.com",
+          "url": "https://www.mlb.com/angels/video/reid-detmers-against-the-rays-x5132"
+        }
+      ]
     }
   ],
-  "injuries": []
+  "injuries": [
+    {
+      "name": "Raleigh/Jeffers",
+      "team": "MIN",
+      "position": "C",
+      "status": "10-Day IL (hamate fracture)",
+      "previous_status": "Active",
+      "note": "Fractured hamate bone, surgery performed ~May 20. Expected return early July at the earliest.",
+      "source": {
+        "title": "Ryan Jeffers Diagnosed With Hamate Fracture — MLB Trade Rumors",
+        "url": "https://www.mlbtraderumors.com/2026/05/twins-ryan-jeffers-hamate-fracture-alex-jackson.html"
+      }
+    },
+    {
+      "name": "Teoscar Hernandez",
+      "team": "LAD",
+      "position": "OF",
+      "status": "10-Day IL (left hamstring strain)",
+      "previous_status": "Active",
+      "note": "Grade 1 left hamstring strain suffered May 28 at Colorado. Roberts expects 1-3 week absence; Ryan Ward recalled.",
+      "source": {
+        "title": "Dodgers Move Teoscar Hernandez to IL — Dodger Nation",
+        "url": "https://dodgersnation.com/dodgers-move-teoscar-hernandez-to-il-in-back-to-back-injury/2026/05/28/"
+      }
+    },
+    {
+      "name": "Cole Ragans",
+      "team": "KCR",
+      "position": "SP",
+      "status": "15-Day IL (left elbow impingement — rehab setback)",
+      "previous_status": "Rehabbing",
+      "note": "Experienced similar pain as original injury during rehab outing; shut down from throwing again. Timeline uncertain.",
+      "source": {
+        "title": "Cole Ragans Pauses Rehab — MLB Trade Rumors",
+        "url": "https://www.mlbtraderumors.com/2026/05/cole-ragans-pauses-rehab-after-experiencing-elbow-stiffness.html"
+      }
+    }
+  ]
 }
