@@ -1,41 +1,202 @@
 {
-  "generated_at": "2026-05-31T08:00:00Z",
+  "generated_at": "2026-06-01T04:35:00Z",
   "window_hours": 24,
   "players": [
     {
       "name": "Raleigh/Jeffers",
       "team": "MIN",
       "position": "C",
-      "summary": "Ryan Jeffers on IL-60 after hamate bone surgery May 19. Expected to miss 6-8 weeks from surgery date.",
-      "sources": []
+      "summary": "Ryan Jeffers remains on the IL with a fractured left hamate bone that required surgery. He's expected to miss 6-8 weeks and unlikely to return before early July.",
+      "sources": [
+        {
+          "title": "Ryan Jeffers Diagnosed With Hamate Fracture - MLB Trade Rumors",
+          "url": "https://www.mlbtraderumors.com/2026/05/twins-ryan-jeffers-hamate-fracture-alex-jackson.html"
+        }
+      ]
+    },
+    {
+      "name": "Bryce Harper",
+      "team": "PHI",
+      "position": "1B",
+      "summary": "Harper went 0-for-3 in the Phillies' 9-1 series finale loss to the Dodgers as Yamamoto was dominant with 10 strikeouts. Phillies dropped 2 of 3 in LA.",
+      "sources": [
+        {
+          "title": "Phillies vs. Dodgers (May 31, 2026) Box Score - ESPN",
+          "url": "https://www.espn.com/mlb/boxscore/_/gameId/401815579"
+        }
+      ]
+    },
+    {
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
+      "summary": "Arraez contributed 2 RBI and 2 runs in the Giants' 19-6 rout of the Rockies at Coors Field. His season batting average now sits around .327, maintaining his All-Star-caliber contact approach.",
+      "sources": [
+        {
+          "title": "Giants vs. Rockies (May 31, 2026) Box Score - ESPN",
+          "url": "https://www.espn.com/mlb/boxscore/_/gameId/401815576"
+        }
+      ]
+    },
+    {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "summary": "Bichette went hitless (0-for-3) as the Mets completed a dominant 3-game sweep of the Marlins 10-1. He's batting .223 this season with 5 HR and 27 RBI.",
+      "sources": [
+        {
+          "title": "Marlins vs. Mets (May 31, 2026) Box Score - ESPN",
+          "url": "https://www.espn.com/mlb/boxscore/_/gameId/401815568"
+        }
+      ]
+    },
+    {
+      "name": "Lindor/McGonigle",
+      "team": "DET",
+      "position": "SS",
+      "summary": "Kevin McGonigle singled, walked, and stole his 9th base (perfect 9-for-9 this season) in the Tigers' 2-1 loss to the White Sox. He signed an 8-year, $150M extension in April and is batting around .291.",
+      "sources": [
+        {
+          "title": "White Sox 2, Tigers 1 recap - Bless You Boys",
+          "url": "https://www.blessyouboys.com/detroit-tigers-scores-standings/91818/detroit-tigers-recap-white-sox-keider-montero-drew-anderson-spencer-torkelson"
+        }
+      ]
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
-      "summary": "4-for-5 with HR, 2 RBI, 2 runs as Cubs win at St. Louis. Batting .237 on the season.",
-      "sources": []
+      "summary": "PCA went 1-for-4 in Sunday's 5-1 series finale loss to the Cardinals, a day after a career night (4-for-5, HR, 2 R, 2 RBI). He's now at 7 HR and slashing .239/.327/.391 on the season.",
+      "sources": [
+        {
+          "title": "Cubs vs. Cardinals (May 31, 2026) Box Score - ESPN",
+          "url": "https://www.espn.com/mlb/boxscore/_/gameId/401815572"
+        }
+      ]
     },
     {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "summary": "Ben Rice goes 4-for-5 with HR, 2 doubles, 2 RBI, 2R as Yankees win their 5th straight. Batting .239 on the season.",
-      "sources": []
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "summary": "Merrill went 2-for-4 with 2 singles but was caught stealing in the 9th inning to end the game as the Padres lost 4-2 to close out a frustrating May series in Washington.",
+      "sources": [
+        {
+          "title": "Padres wrap mediocre May with series loss to Nationals",
+          "url": "https://www.dailygazette.com/tribune/padres-wrap-mediocre-may-with-series-loss-to-nationals/article_c1e1e031-2eae-5d65-a7a1-34d7f959b737.html"
+        }
+      ]
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
-      "summary": "Teoscar Hernandez placed on IL-10 with Grade 1 left hamstring strain suffered May 27. Expected ~4-week absence.",
-      "sources": []
+      "summary": "Hernandez remains on the 10-day IL with a Grade 1 left hamstring strain suffered against Colorado on May 27. MRI results were encouraging and a mid-June return is possible.",
+      "sources": [
+        {
+          "title": "Teoscar Hernandez expected to miss 1 month with hamstring strain - Yahoo Sports",
+          "url": "https://sports.yahoo.com/mlb/article/teoscar-hernandez-expected-to-miss-1-month-with-hamstring-strain-dodgers-place-him-on-il-233120077.html"
+        }
+      ]
+    },
+    {
+      "name": "Devin Williams",
+      "team": "NYM",
+      "position": "RP",
+      "summary": "Williams did not appear in the Mets' 10-1 blowout win. He's been settling in as closer recently after a rough start to the 2026 season, with multiple consecutive scoreless outings.",
+      "sources": [
+        {
+          "title": "Mets' Devin Williams finding his groove in 2026 - MLB.com",
+          "url": "https://www.mlb.com/news/mets-devin-williams-settling-in-2026"
+        }
+      ]
+    },
+    {
+      "name": "Zack Wheeler",
+      "team": "PHI",
+      "position": "SP",
+      "summary": "Wheeler was off rotation Sunday, having started Friday May 29 (6 IP, 4 ER, 4 solo HR allowed in a PHI win). Next start projected around June 3. Season ERA is a sparkling 1.89 in 9 starts.",
+      "sources": [
+        {
+          "title": "Zack Wheeler Has Atypical Start in Phillies Loss to Dodgers - Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/zack-wheeler-atypical-start-phillies-160039216.html"
+        }
+      ]
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "summary": "Cole Ragans remains on IL-15 with elbow impingement. Rehab start canceled after elbow stiffness returned. Return timeline uncertain.",
-      "sources": []
+      "summary": "Ragans suffered a setback in his rehab from a left elbow impingement (valgus extension overload) and was shut down for 2-3 days for re-evaluation. He's been on the IL since May 7 and his return timeline is uncertain.",
+      "sources": [
+        {
+          "title": "Cole Ragans has setback in rehab from elbow injury - MLB.com",
+          "url": "https://www.mlb.com/news/cole-ragans-has-setback-in-rehab-from-elbow-injury"
+        }
+      ]
+    },
+    {
+      "name": "Chase Burns",
+      "team": "CIN",
+      "position": "SP",
+      "summary": "Burns was off rotation Sunday and is scheduled to start June 1 vs Kansas City. He's the NL leader in pitching WAR with a 1.99 ERA, allowing 2 or fewer runs in 9 of 10 starts this season.",
+      "sources": [
+        {
+          "title": "Chase Burns, your National League leader in pitching WAR - Red Reporter",
+          "url": "https://www.redreporter.com/cincinnati-reds-analysis/50741/chase-burns-national-league-leader-wins-above-replacement-war"
+        }
+      ]
+    },
+    {
+      "name": "Nathan Eovaldi",
+      "team": "TEX",
+      "position": "SP",
+      "summary": "Eovaldi was off rotation Sunday as Jack Leiter started Texas' 6-3 win over KC. He recently missed a start with left side tightness but returned and is listed day-to-day.",
+      "sources": [
+        {
+          "title": "Rangers' Nathan Eovaldi scratched due to left side tightness - ESPN",
+          "url": "https://www.espn.com/mlb/story/_/id/48744303/rangers-nathan-eovaldi-face-d-backs-due-tight-side"
+        }
+      ]
+    },
+    {
+      "name": "Emmet Sheehan",
+      "team": "LAD",
+      "position": "SP",
+      "summary": "Sheehan was off rotation Sunday (Yamamoto started the Dodgers' 9-1 win). He starts June 1 at Arizona vs Eduardo Rodriguez. Season line: 3-1, 4.70 ERA in 10 starts.",
+      "sources": [
+        {
+          "title": "Dodgers 9-1 Phillies (May 31, 2026) Game Recap - ESPN",
+          "url": "https://www.espn.com/mlb/recap/_/gameId/401815579"
+        }
+      ]
+    },
+    {
+      "name": "Reid Detmers",
+      "team": "LAA",
+      "position": "SP",
+      "summary": "Detmers was off rotation Sunday and is slated to start June 1 vs the Mariners. His last start was a career-high 14 strikeouts over 8 scoreless innings vs Texas on May 24.",
+      "sources": [
+        {
+          "title": "Reid Detmers hits new career-high in Angels' walk-off win",
+          "url": "https://www.thesportingtribune.com/2026/05/24/reid-detmers-hits-new-career-high-in-angels-walk-off-win"
+        }
+      ]
+    },
+    {
+      "name": "Stanton/Rice",
+      "team": "NYY",
+      "position": "DH",
+      "summary": "Ben Rice had a massive 4-for-5, 4-RBI game (double and triple) as the Yankees erupted for 13 runs in the 3rd inning — the first time in AL history — in a 13-8 win over the Athletics.",
+      "sources": [
+        {
+          "title": "Yankees 13-8 Athletics (May 31, 2026) Final Score - ESPN",
+          "url": "https://www.espn.com/mlb/game/_/gameId/401815578/yankees-athletics"
+        },
+        {
+          "title": "Yankees catcher Ben Rice after 4-hit performance - ClutchPoints",
+          "url": "https://clutchpoints.com/mlb/new-york-yankees/yankees-news-ben-rice-big-win-athletics-4-hit-performance"
+        }
+      ]
     }
   ],
   "injuries": [
@@ -43,28 +204,37 @@
       "name": "Raleigh/Jeffers",
       "team": "MIN",
       "position": "C",
-      "status": "IL-60",
-      "previous_status": "Healthy",
-      "note": "Ryan Jeffers — fractured hamate, surgery May 19, out 6-8 weeks",
-      "source": null
+      "status": "10-day IL (fractured left hamate)",
+      "previous_status": "Active",
+      "note": "Fractured left hamate bone, surgery required. Expected to miss 6-8 weeks; return unlikely before early July.",
+      "source": {
+        "title": "Ryan Jeffers Diagnosed With Hamate Fracture - MLB Trade Rumors",
+        "url": "https://www.mlbtraderumors.com/2026/05/twins-ryan-jeffers-hamate-fracture-alex-jackson.html"
+      }
     },
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
-      "status": "IL-10",
-      "previous_status": "Healthy",
-      "note": "Grade 1 left hamstring strain suffered May 27; ~4-week absence expected",
-      "source": null
+      "status": "10-day IL (hamstring strain)",
+      "previous_status": "Active",
+      "note": "Grade 1 left hamstring strain. Placed on IL ~May 28. Expected to miss ~1 month; mid-June return possible.",
+      "source": {
+        "title": "Teoscar Hernandez expected to miss 1 month - Yahoo Sports",
+        "url": "https://sports.yahoo.com/mlb/article/teoscar-hernandez-expected-to-miss-1-month-with-hamstring-strain-dodgers-place-him-on-il-233120077.html"
+      }
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "status": "IL-15",
-      "previous_status": "IL-15 (elbow impingement)",
-      "note": "Elbow stiffness halted rehab assignment; return timeline uncertain",
-      "source": null
+      "status": "IL (left elbow impingement, rehab setback)",
+      "previous_status": "Rehabbing",
+      "note": "Left elbow impingement (valgus extension overload). On IL since May 7. Suffered rehab setback; shut down 2-3 days for re-evaluation.",
+      "source": {
+        "title": "Cole Ragans has setback in rehab from elbow injury - MLB.com",
+        "url": "https://www.mlb.com/news/cole-ragans-has-setback-in-rehab-from-elbow-injury"
+      }
     }
   ]
 }
