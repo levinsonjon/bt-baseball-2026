@@ -1,25 +1,25 @@
 {
-  "date": "2026-05-29",
-  "generated_at": "2026-05-30T09:35:00Z",
+  "date": "2026-05-30",
+  "generated_at": "2026-05-31T08:00:00Z",
   "totals": {
     "hitters": {
-      "AB": 28,
-      "H": 6,
-      "R": 3,
-      "HR": 1,
-      "RBI": 3,
+      "AB": 26,
+      "H": 12,
+      "R": 5,
+      "HR": 2,
+      "RBI": 5,
       "SB": 0,
-      "points": 7.0
+      "points": 12.0
     },
     "pitchers": {
-      "IP": 13.0,
-      "H": 8,
-      "ER": 6,
-      "K": 15,
+      "IP": 11.33,
+      "H": 9,
+      "ER": 5,
+      "K": 16,
       "BB": 5,
-      "W": 1,
-      "SV": 0,
-      "points": 0.72
+      "W": 2,
+      "SV": 1,
+      "points": 5.79
     }
   },
   "players": [
@@ -30,10 +30,10 @@
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "10-Day IL (fractured hamate bone)",
+      "dnp_reason": "IL-60 (hamate surgery)",
       "stats": {},
       "points": 0.0,
-      "summary": "On IL since May 19 with fractured hamate bone; surgery performed. Expected back early July."
+      "summary": ""
     },
     {
       "name": "Bryce Harper",
@@ -41,132 +41,6 @@
       "position": "1B",
       "type": "hitter",
       "opponent": "@ LAD",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 0,
-        "AB": 4,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 0.0,
-      "summary": "0-for-4 with 3 K as Wrobleski dominated PHI through 7 IP; Dodgers won 4-2 on 4 solo HRs."
-    },
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "type": "hitter",
-      "opponent": "@ COL",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 0.0,
-      "summary": "1-for-4, singled at Coors Field. Giants lost 8-6 to Colorado."
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "type": "hitter",
-      "opponent": "vs MIA",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 1,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 1.0,
-      "summary": "1-for-4, singled and scored. Mets rallied past Marlins 9-7 in 10 innings on Melendez walk-off 2-run HR."
-    },
-    {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
-      "position": "SS",
-      "type": "hitter",
-      "opponent": "@ CWS",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 0.0,
-      "summary": "1-for-4, 6th-inning single. Tigers fell 4-3 to White Sox in 10 innings on Vargas walk-off HR."
-    },
-    {
-      "name": "Pete Crow-Armstrong",
-      "team": "CHC",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "@ STL",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 1,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 1.0,
-      "summary": "1-for-4, 9th-inning double and scored. Cubs fell 6-5 to Cardinals; Riley O'Brien saved it for STL."
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "vs WSH",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 1,
-        "HR": 1,
-        "RBI": 2,
-        "SB": 0
-      },
-      "points": 4.0,
-      "summary": "1-for-4, go-ahead 2-run HR in the 7th (first since May 4). Padres beat Nationals 7-5, ending 4-game skid."
-    },
-    {
-      "name": "Teoscar Hernandez",
-      "team": "LAD",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "10-Day IL (left hamstring strain)",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Placed on IL after straining left hamstring May 28 vs Rockies. Grade 1; expected back in 1-3 weeks."
-    },
-    {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "type": "hitter",
-      "opponent": "@ ATH",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -178,7 +52,133 @@
         "SB": 0
       },
       "points": 1.0,
-      "summary": "1-for-4, RBI single. Yankees cruised 8-2 over Oakland; Goldschmidt led with 3 RBI."
+      "summary": "1-for-4, RBI single; Phillies lose 4-3"
+    },
+    {
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
+      "type": "hitter",
+      "opponent": "@ COL",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 2,
+        "AB": 4,
+        "R": 1,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 1.0,
+      "summary": "2-for-4, R; Giants win at COL"
+    },
+    {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "type": "hitter",
+      "opponent": "vs MIA",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 0,
+        "AB": 3,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 0.0,
+      "summary": "0-for-3; Mets edge Marlins"
+    },
+    {
+      "name": "Lindor/McGonigle",
+      "team": "DET",
+      "position": "SS",
+      "type": "hitter",
+      "opponent": "@ CWS",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 0,
+        "AB": 1,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 0.0,
+      "summary": "0-for-1 (late sub); Tigers at CWS"
+    },
+    {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "@ STL",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 4,
+        "AB": 5,
+        "R": 2,
+        "HR": 1,
+        "RBI": 2,
+        "SB": 0
+      },
+      "points": 5.0,
+      "summary": "4-for-5, HR, 2 RBI, 2R; Cubs win"
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "@ WSH",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 0.0,
+      "summary": "1-for-4; Nationals 9-4 Padres"
+    },
+    {
+      "name": "Teoscar Hernandez",
+      "team": "LAD",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "IL-10 (hamstring strain)",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
+    },
+    {
+      "name": "Stanton/Rice",
+      "team": "NYY",
+      "position": "DH",
+      "type": "hitter",
+      "opponent": "@ ATH",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 4,
+        "AB": 5,
+        "R": 2,
+        "HR": 1,
+        "RBI": 2,
+        "SB": 0
+      },
+      "points": 5.0,
+      "summary": "4-for-5, HR, 2 doubles, 2 RBI, 2R; Yankees 5th straight W"
     },
     {
       "name": "Devin Williams",
@@ -192,32 +192,25 @@
         "IP": 1.0,
         "H": 0,
         "ER": 0,
-        "K": 3,
-        "BB": 3,
+        "K": 1,
+        "BB": 0,
         "W": 0,
-        "SV": 0
+        "SV": 1
       },
-      "points": 0.0,
-      "summary": "1 IP, 3 K, 3 BB. No save — game went to extras before Mets won 9-7 on Melendez 10th-inning HR."
+      "points": 5.0,
+      "summary": "SV 9; 1.0 IP perfect 9th in Mets 6-1 win"
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ LAD",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 5,
-        "ER": 4,
-        "K": 4,
-        "BB": 1,
-        "W": 0
-      },
-      "points": -0.64,
-      "summary": "6 IP, 4 ER (4 solo HRs: Freeman, Muncy, Ohtani, Smith). PHI lost 4-2 in Dodgers series opener."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Pitched May 29",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Cole Ragans",
@@ -226,22 +219,29 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "15-Day IL (left elbow impingement — rehab setback)",
+      "dnp_reason": "IL-15 (elbow impingement)",
       "stats": {},
       "points": 0.0,
-      "summary": "Suffered setback in rehab outing; similar pain as original injury. Shut down from throwing again; timeline uncertain."
+      "summary": ""
     },
     {
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Off day — not scheduled to start",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Not scheduled Friday; last started May 27 (win). Paddack started for CIN vs ATL (Braves won 8-3)."
+      "opponent": "vs ATL",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 5.33,
+        "H": 4,
+        "ER": 2,
+        "K": 8,
+        "BB": 2,
+        "W": 1
+      },
+      "points": 0.99,
+      "summary": "W — 5.1 IP, 4H, 2ER, 8K vs ATL"
     },
     {
       "name": "Nathan Eovaldi",
@@ -250,10 +250,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Scratched — MacKenzie Gore started TEX vs KCR",
+      "dnp_reason": "Pitched May 28",
       "stats": {},
       "points": 0.0,
-      "summary": "Did not start; Gore dealt 6.1 shutout IP as Rangers blasted Royals 9-1."
+      "summary": ""
     },
     {
       "name": "Emmet Sheehan",
@@ -262,29 +262,29 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Off day — Wrobleski started for LAD vs PHI",
+      "dnp_reason": "Pitched May 29",
       "stats": {},
       "points": 0.0,
-      "summary": "Not scheduled Friday; Wrobleski took the Dodgers' PHI series opener. Sheehan remains healthy and in rotation."
+      "summary": ""
     },
     {
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ TBR",
+      "opponent": "@ TB",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "IP": 6.0,
-        "H": 3,
-        "ER": 2,
-        "K": 8,
-        "BB": 1,
+        "IP": 5.0,
+        "H": 5,
+        "ER": 3,
+        "K": 7,
+        "BB": 3,
         "W": 1
       },
-      "points": 1.36,
-      "summary": "6 IP, 3 H, 2 ER, 8 K on 90 pitches. Earned the W in Angels' 5-4 win at Tampa Bay."
+      "points": -0.2,
+      "summary": "W — 5.0 IP, 5H, 3ER, 7K at TB"
     }
   ]
 }
