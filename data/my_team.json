@@ -1,11 +1,11 @@
 {
-  "updated": "2026-05-18T00:00:00",
+  "updated": "2026-06-01T11:12:51",
   "pick_number": 9,
   "players": [
     {
-      "name": "Raleigh/Jeffers",
-      "current_player": "Ryan Jeffers",
-      "team": "MIN",
+      "name": "Jeffers/Basallo",
+      "current_player": "Samuel Basallo",
+      "team": "BAL",
       "positions": [
         "C"
       ],
@@ -131,7 +131,7 @@
     },
     {
       "name": "Teoscar Hernandez",
-      "current_player": "Teoscar Hern\u00e1ndez",
+      "current_player": "Teoscar Hernández",
       "team": "LAD",
       "positions": [
         "OF"
