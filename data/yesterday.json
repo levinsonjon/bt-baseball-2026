@@ -1,82 +1,44 @@
 {
-  "date": "2026-05-31",
-  "generated_at": "2026-06-01T04:35:00Z",
+  "date": "2026-06-15",
+  "generated_at": "2026-06-16T22:46:45Z",
   "totals": {
     "hitters": {
-      "AB": 26,
-      "H": 10,
-      "R": 5,
-      "HR": 0,
-      "RBI": 6,
-      "SB": 1,
-      "points": 12.0
+      "AB": 22,
+      "H": 9,
+      "R": 3,
+      "HR": 2,
+      "RBI": 4,
+      "SB": 0,
+      "points": 9.0
     },
     "pitchers": {
-      "IP": 0.0,
-      "H": 0,
+      "IP": 11.0,
+      "H": 6,
       "ER": 0,
-      "K": 0,
-      "BB": 0,
-      "W": 0,
+      "K": 16,
+      "BB": 4,
+      "W": 2,
       "SV": 0,
-      "points": 0.0
+      "points": 6.2
     }
   },
   "players": [
     {
-      "name": "Raleigh/Jeffers",
-      "team": "MIN",
+      "name": "Jeffers/Basallo",
+      "team": "BAL",
       "position": "C",
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "10-day IL (fractured left hamate)",
+      "dnp_reason": "Orioles off day",
       "stats": {},
       "points": 0.0,
-      "summary": "Ryan Jeffers on IL with fractured left hamate; surgery required, out 6-8 weeks."
+      "summary": "Samuel Basallo did not play; Orioles were off June 15."
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "type": "hitter",
-      "opponent": "vs LAD",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 0,
-        "AB": 3,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
-      "points": 0.0,
-      "summary": "0-for-3 with a walk and K in Phillies' 9-1 loss to Dodgers (Yamamoto: 10 Ks)."
-    },
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "type": "hitter",
-      "opponent": "@ COL",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 2,
-        "AB": 3,
-        "R": 2,
-        "HR": 0,
-        "RBI": 2,
-        "SB": 0
-      },
-      "points": 4.0,
-      "summary": "2-for-3 with sac fly, 2 RBI, 2 R in Giants' 19-6 rout at Coors Field."
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
       "type": "hitter",
       "opponent": "vs MIA",
       "dnp": false,
@@ -86,60 +48,98 @@
         "AB": 3,
         "R": 0,
         "HR": 0,
+        "RBI": 1,
+        "SB": 0
+      },
+      "points": 1.0,
+      "summary": "0-for-3 with a sacrifice-fly RBI in the Phillies' 7-0 win over Miami."
+    },
+    {
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
         "RBI": 0,
         "SB": 0
       },
       "points": 0.0,
-      "summary": "0-for-3 in Mets' 10-1 sweep-clinching win over Marlins."
+      "summary": "In the Giants' lineup June 15; exact box-score line unconfirmed from available sources."
+    },
+    {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "type": "hitter",
+      "opponent": "@ CIN",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 3,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
+        "SB": 0
+      },
+      "points": 0.0,
+      "summary": "3-for-4 with a double — 3 of the Mets' 6 hits in a 12-0 loss at Cincinnati."
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": "@ CHW",
+      "opponent": "@ HOU",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 1,
-        "AB": 4,
-        "R": 1,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 1
+        "H": 2,
+        "AB": 3,
+        "R": 2,
+        "HR": 1,
+        "RBI": 1,
+        "SB": 0
       },
-      "points": 2.0,
-      "summary": "1-for-4, walk, stole 9th base (9/9 season) in Tigers' 2-1 loss to White Sox."
+      "points": 4.0,
+      "summary": "Kevin McGonigle went 2-for-3 with a HR and 2 runs in Detroit's 9-3 win at Houston."
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ STL",
+      "opponent": "vs COL",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 1,
+        "H": 4,
         "AB": 4,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
+        "R": 1,
+        "HR": 1,
+        "RBI": 2,
         "SB": 0
       },
-      "points": 0.0,
-      "summary": "1-for-4 in Cubs' 5-1 series finale loss to Cardinals (Liberatore dominant)."
+      "points": 4.0,
+      "summary": "Hit for the cycle (MLB's first of 2026) in the Cubs' 5-4 walk-off win over Colorado."
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ WAS",
+      "opponent": "vs STL",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 2,
+        "H": 0,
         "AB": 4,
         "R": 0,
         "HR": 0,
@@ -147,7 +147,7 @@
         "SB": 0
       },
       "points": 0.0,
-      "summary": "2 singles in Padres' 4-2 loss to Nationals; caught stealing in 9th to end game."
+      "summary": "0-for-4 but robbed a home run on defense in the Padres' 3-0 loss to St. Louis."
     },
     {
       "name": "Teoscar Hernandez",
@@ -156,10 +156,10 @@
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "10-day IL (hamstring strain)",
+      "dnp_reason": "10-day IL (L hamstring strain)",
       "stats": {},
       "points": 0.0,
-      "summary": "Hernandez on IL with Grade 1 left hamstring strain; mid-June return possible."
+      "summary": "On the IL since May 27 with a Grade 1 left hamstring strain."
     },
     {
       "name": "Devin Williams",
@@ -171,19 +171,26 @@
       "dnp_reason": "No appearance",
       "stats": {},
       "points": 0.0,
-      "summary": "Did not pitch in Mets' 10-1 blowout win over Marlins."
+      "summary": "Did not pitch; last appeared June 12 vs Atlanta."
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Not scheduled (started May 29)",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Wheeler off rotation; started Fri May 29 vs LAD (6 IP, 4 ER). Next start ~June 3."
+      "opponent": "vs MIA",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 6.0,
+        "H": 2,
+        "ER": 0,
+        "K": 9,
+        "BB": 1,
+        "W": 1
+      },
+      "points": 3.4,
+      "summary": "6 scoreless 2-hit innings, 9 K, in a 7-0 win over Miami (now 6-1, 2.01 ERA)."
     },
     {
       "name": "Cole Ragans",
@@ -192,22 +199,29 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "IL (left elbow impingement)",
+      "dnp_reason": "15-day IL (L elbow, rehab setback)",
       "stats": {},
       "points": 0.0,
-      "summary": "Ragans on IL with elbow impingement; suffered setback during rehab, shut down for re-evaluation."
+      "summary": "On the IL since May 8; suffered a mid-June rehab setback, no return date."
     },
     {
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Not scheduled (starts June 1)",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Burns off today; starts June 1 vs KC. NL pitching WAR leader with 1.99 ERA."
+      "opponent": "vs NYM",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 5.0,
+        "H": 4,
+        "ER": 0,
+        "K": 7,
+        "BB": 3,
+        "W": 1
+      },
+      "points": 2.8,
+      "summary": "5 scoreless innings, 7 K, W in a 12-0 rout of the Mets — 11th straight start allowing 2 or fewer runs."
     },
     {
       "name": "Nathan Eovaldi",
@@ -216,10 +230,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled",
+      "dnp_reason": "Between starts (last June 14)",
       "stats": {},
       "points": 0.0,
-      "summary": "Eovaldi off rotation; Rangers won 6-3 behind Leiter. Recently day-to-day with left side tightness."
+      "summary": "Did not pitch June 15; threw 7 IP, 3 ER for the win at Boston on June 14."
     },
     {
       "name": "Emmet Sheehan",
@@ -228,10 +242,10 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled (starts June 1)",
+      "dnp_reason": "Between starts (last June 14)",
       "stats": {},
       "points": 0.0,
-      "summary": "Sheehan off rotation (Yamamoto started 9-1 win). Starts June 1 vs Arizona."
+      "summary": "Did not pitch June 15; last started June 14 vs the White Sox."
     },
     {
       "name": "Reid Detmers",
@@ -240,29 +254,22 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Not scheduled",
+      "dnp_reason": "Between starts (last June 10)",
       "stats": {},
       "points": 0.0,
-      "summary": "Detmers off rotation; starts June 1 vs Seattle. Last start: career-high 14 Ks on May 24 vs TEX."
+      "summary": "Did not pitch June 15; last started June 10 vs Houston."
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": "vs OAK",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 4,
-        "AB": 5,
-        "R": 2,
-        "HR": 0,
-        "RBI": 4,
-        "SB": 0
-      },
-      "points": 6.0,
-      "summary": "4-for-5 (double, triple), 4 RBI in Yankees' historic 13-8 win (13-run 3rd inning, first in AL history)."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Yankees off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Ben Rice did not play; Yankees were off June 15."
     }
   ]
 }
