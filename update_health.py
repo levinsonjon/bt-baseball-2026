@@ -200,9 +200,12 @@ def check_pipeline_freshness():
     msg = (
         f"data/yesterday.json watermark is {age_days} day(s) behind "
         f"(file shows {watermark}, expected {expected}). The daily pipeline "
-        f"hasn't pushed since then. Likely Gmail OAuth revoked again — re-auth "
-        f"and run send_pending_email.py. If credentials are fine, check the "
-        f"remote trigger (claude.ai) or send_email.log."
+        f"hasn't pushed since then. Check send_email.log for the cause, in "
+        f"likelihood order: (1) remote agent shipping empty DATA drafts (no "
+        f"JSON blocks) — check the remote trigger on claude.ai; "
+        f"send_pending_email.py now fires its own specific Reminder for this. "
+        f"(2) Gmail OAuth revoked — re-auth and run send_pending_email.py. "
+        f"(3) local cron miss / Mac offline at run time."
     )
     log(f"PIPELINE STALE: {msg}")
     notify_reauth_needed(msg)

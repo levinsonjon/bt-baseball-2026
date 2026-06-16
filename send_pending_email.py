@@ -60,18 +60,11 @@ def log(msg: str):
         f.write(line + "\n")
 
 
-def notify_reauth_needed(reason: str):
+def _make_reminder(name: str, body: str, log_label: str):
     """Create a persistent macOS Reminder so Jon sees the alert even though
-    the cron jobs run while he's asleep. Gmail-based warnings don't work here
-    because the failing credential is the Gmail one."""
-    reauth_cmd = (
-        f"GMAIL_OAUTH_PATH={GMAIL_OAUTH} "
-        f"GMAIL_CREDENTIALS_PATH={GMAIL_CREDS} "
-        f"npx @gongrzhe/server-gmail-autoauth-mcp auth"
-    )
-    body = f"{reason}\n\nRe-auth command:\n{reauth_cmd}"
+    the cron jobs run while he's asleep. Gmail-based warnings don't work for
+    auth failures because the failing credential is the Gmail one."""
     # AppleScript string-escape: backslashes then double-quotes.
-    name = "Fantasy Baseball: re-auth Gmail OAuth"
     esc = lambda s: s.replace("\\", "\\\\").replace('"', '\\"')
     script = (
         f'tell application "Reminders" to make new reminder '
@@ -80,9 +73,40 @@ def notify_reauth_needed(reason: str):
     try:
         subprocess.run(["osascript", "-e", script], check=True, timeout=60,
                        capture_output=True)
-        log(f"Created re-auth Reminder: {reason}")
+        log(f"Created Reminder: {log_label}")
     except Exception as e:
-        log(f"WARN: failed to create re-auth Reminder: {e}")
+        log(f"WARN: failed to create Reminder ({log_label}): {e}")
+
+
+def notify_reauth_needed(reason: str):
+    """Reminder for a Gmail OAuth failure, with the re-auth command in the body."""
+    reauth_cmd = (
+        f"GMAIL_OAUTH_PATH={GMAIL_OAUTH} "
+        f"GMAIL_CREDENTIALS_PATH={GMAIL_CREDS} "
+        f"npx @gongrzhe/server-gmail-autoauth-mcp auth"
+    )
+    body = f"{reason}\n\nRe-auth command:\n{reauth_cmd}"
+    _make_reminder("Fantasy Baseball: re-auth Gmail OAuth", body, reason)
+
+
+def notify_empty_data_drafts(count: int, latest_subject: str):
+    """Reminder for the distinct failure mode where the remote agent creates
+    DATA drafts whose body has no JSON blocks (empty/skeleton). This is NOT an
+    OAuth problem — re-authing won't help — so it gets its own clearly-worded
+    alert pointing at the remote trigger instead of the credentials."""
+    body = (
+        f"The remote agent created {count} DATA draft(s) with no embedded JSON "
+        f"blocks (empty/skeleton body) — most recent: {latest_subject}. The "
+        f"website can't update and is going stale.\n\n"
+        f"This is NOT a Gmail OAuth problem; re-authing will not help. The "
+        f"remote agent on claude.ai is shipping empty DATA draft bodies. "
+        f"Check the remote trigger (trig_01AWGDMAqyJY5oZNYiqKQQdT) and "
+        f"send_email.log. Recovery: once good drafts appear, "
+        f"send_pending_email.py drains them automatically."
+    )
+    _make_reminder(
+        "Fantasy Baseball: remote agent producing EMPTY data drafts",
+        body, f"{count} empty DATA draft(s)")
 
 
 def build_gmail_service():
@@ -491,26 +515,28 @@ def git_commit_and_push(paths: list[Path], report_date: date):
     log("Pushed to origin/main")
 
 
-def consume_data_draft(service, draft_id: str):
+def consume_data_draft(service, draft_id: str) -> str:
     """
     Extract JSON payloads from the data draft, write them to data/*.json,
     commit + push to origin/main, then delete the draft (it has served its
     purpose — no need to clutter Jon's drafts folder).
 
     Logs and swallows errors. The email send should proceed regardless.
+    Returns a status string: "ok" (synced), "empty" (no body / no JSON blocks
+    — the remote agent shipped an empty draft), or "error".
     """
     try:
         html = get_draft_html(service, draft_id)
         if not html:
             log("WARN: data draft had no body; skipping sync")
-            return
+            return "empty"
         blocks = extract_json_blocks(html)
         if not blocks:
             log("WARN: no JSON blocks found in data draft; skipping sync")
-            return
+            return "empty"
         written = write_data_files(blocks)
         if not written:
-            return
+            return "error"
 
         report_date = date.today() - timedelta(days=1)
         y = blocks.get("yesterday-data") or {}
@@ -528,8 +554,10 @@ def consume_data_draft(service, draft_id: str):
             log(f"Deleted data draft {draft_id}")
         except Exception as e:
             log(f"WARN: failed to delete data draft: {e}")
+        return "ok"
     except Exception as e:
         log(f"ERROR during data draft consumption (continuing): {e}")
+        return "error"
 
 
 def _is_auth_error(exc: Exception) -> bool:
@@ -566,14 +594,30 @@ def main():
 
     if not data_drafts:
         log("No data draft found; skipping data sync")
+    synced = 0
+    empty = 0
+    last_empty_subject = None
     for draft_date, subject, draft_id in data_drafts:
         if watermark is not None and draft_date <= watermark:
             log(f"Skipping stale data draft {subject!r} "
                 f"(date {draft_date} <= watermark {watermark})")
             continue
         log(f"Processing data draft: {subject} (id: {draft_id})")
-        consume_data_draft(service, draft_id)
-        watermark = draft_date  # advance so later drafts on same run compare correctly
+        status = consume_data_draft(service, draft_id)
+        if status == "ok":
+            synced += 1
+            watermark = draft_date  # advance so later drafts compare correctly
+        elif status == "empty":
+            empty += 1
+            last_empty_subject = subject
+
+    # If the remote agent shipped only empty DATA drafts and nothing synced,
+    # alert with a cause-specific Reminder. This is the failure mode where the
+    # agent creates a DATA draft with no JSON blocks — distinct from OAuth, so
+    # it must not be misdiagnosed as a credential problem.
+    if synced == 0 and empty > 0:
+        log(f"ALERT: {empty} DATA draft(s) had no JSON blocks; nothing synced")
+        notify_empty_data_drafts(empty, last_empty_subject or "(unknown)")
 
     # Phase 2: send EMAIL drafts in chronological order, skipping stale.
     try:
