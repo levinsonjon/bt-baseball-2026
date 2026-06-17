@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-16T22:46:45Z",
+  "generated_at": "2026-06-17T16:00:00Z",
   "window_hours": 24,
   "players": [
     {
       "name": "Jeffers/Basallo",
       "team": "BAL",
       "position": "C",
-      "summary": "Rookie C/DH Samuel Basallo continues to hit (multiple HRs in June, including June 12 vs San Diego), splitting catching duties with Adley Rutschman and DHing often.",
+      "summary": "Rookie C/DH Samuel Basallo went 1-for-4 with an RBI June 16 at Seattle; continues to split catching duties with Adley Rutschman and DH often.",
       "sources": [
         {
           "title": "Samuel Basallo 2026 Game Log - ESPN",
@@ -18,11 +18,11 @@
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
-      "summary": "Harper added a sac-fly RBI in a 7-0 shutout of the Marlins on June 15; hitting in the middle of the Phillies order.",
+      "summary": "Harper reached base with a walk and scored a run June 16 vs Miami; hitting in the middle of the Phillies order.",
       "sources": [
         {
-          "title": "Phillies 7-0 Marlins (Jun 15, 2026) - ESPN",
-          "url": "https://www.espn.com/mlb/recap/_/gameId/401815765"
+          "title": "Bryce Harper Game Log - ESPN",
+          "url": "https://www.espn.com/mlb/player/gamelog/_/id/30951/bryce-harper"
         }
       ]
     },
@@ -30,7 +30,7 @@
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
-      "summary": "Arraez remains among the NL contact leaders for San Francisco, hitting around .320 as the Giants' table-setter.",
+      "summary": "Arraez was out of the Giants' lineup June 16; remains among the NL contact leaders, hitting around .320 as San Francisco's table-setter.",
       "sources": [
         {
           "title": "Luis Arraez - FanGraphs",
@@ -42,11 +42,11 @@
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
-      "summary": "Bichette had 3 of the Mets' 6 hits in a 12-0 loss at Cincinnati on June 15; a bright spot in a quiet stretch.",
+      "summary": "Bichette went 2-for-5 with an RBI June 16 at Cincinnati; a second straight multi-hit game amid a quieter stretch.",
       "sources": [
         {
-          "title": "Reds 12-0 Mets (Jun 15, 2026) - ESPN",
-          "url": "https://www.espn.com/mlb/recap/_/gameId/401815766"
+          "title": "Bo Bichette Game Log - ESPN",
+          "url": "https://www.espn.com/mlb/player/gamelog/_/id/40235/bo-bichette"
         }
       ]
     },
@@ -54,12 +54,8 @@
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
-      "summary": "Rookie Kevin McGonigle homered June 15 at Houston and has reached base in 24 straight games — an All-Star-caliber start for Detroit.",
+      "summary": "Rookie Kevin McGonigle went 1-for-3 with a walk June 16 at Houston; he has reached base in 25 straight games — an All-Star-caliber start for Detroit.",
       "sources": [
-        {
-          "title": "Tigers 9-3 Astros (Jun 15, 2026) - ESPN",
-          "url": "https://www.espn.com/mlb/recap/_/gameId/401815768"
-        },
         {
           "title": "Kevin McGonigle's hot streak - SI",
           "url": "https://www.si.com/mlb/tigers/onsi/news/kevin-mcgonigle-hot-streak-turning-him-mlb-most-exciting-prospect"
@@ -70,11 +66,11 @@
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
-      "summary": "Crow-Armstrong hit for the cycle June 15 — MLB's first of 2026 — in a 5-4 walk-off win over the Rockies; slashing .277 with 13 HR and 16 SB.",
+      "summary": "Crow-Armstrong homered again June 16 vs Colorado (1-for-5, 1 RBI, 1 R), a day after hitting for the cycle; up to 14 HR with elite defense and baserunning.",
       "sources": [
         {
-          "title": "PCA hits for cycle as Cubs walk off Rockies - Washington Post",
-          "url": "https://www.washingtonpost.com/sports/mlb/2026/06/16/cubs-rockies-score-crowarmstrong-cycle/"
+          "title": "Pete Crow-Armstrong Game Log - ESPN",
+          "url": "https://www.espn.com/mlb/player/gamelog/_/id/4683763/pete-crow-armstrong"
         }
       ]
     },
@@ -82,11 +78,11 @@
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
-      "summary": "Merrill returned to the lineup June 15 after a one-game rib scare (MRI/CT negative), going 0-for-4 but robbing a home run in a 3-0 loss to St. Louis.",
+      "summary": "Merrill went 1-for-4 with a double and an RBI June 16 at St. Louis; fully back in the lineup after a one-game rib scare (MRI/CT negative).",
       "sources": [
         {
-          "title": "Jackson Merrill returns to Padres' lineup - MLB.com",
-          "url": "https://www.mlb.com/news/jackson-merrill-returns-to-padres-lineup-after-back-injury"
+          "title": "Jackson Merrill Game Log - ESPN",
+          "url": "https://www.espn.com/mlb/player/gamelog/_/id/5083074/jackson-merrill"
         }
       ]
     },
@@ -106,7 +102,7 @@
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
-      "summary": "Williams (Mets closer) has settled in after a rough April, stringing together scoreless outings; 10 saves on the year.",
+      "summary": "Williams (Mets closer) did not pitch June 16; has settled in after a rough April, stringing together scoreless outings with 10 saves on the year.",
       "sources": [
         {
           "title": "Mets' Devin Williams finding his groove - MLB.com",
@@ -118,7 +114,7 @@
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
-      "summary": "Wheeler dominated June 15 — 6 scoreless 2-hit innings, 9 K — lowering his ERA to 2.01; among the NL's best despite a late start to 2026.",
+      "summary": "Wheeler is between starts after dominating June 15 — 6 scoreless 2-hit innings, 9 K — which lowered his ERA to 2.01, among the NL's best.",
       "sources": [
         {
           "title": "Zack Wheeler News - RotoWire",
@@ -142,7 +138,7 @@
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
-      "summary": "Burns extended a historic rookie run June 15 — 5 scoreless innings, 7 K in a 12-0 win — his 11th straight start allowing 2 or fewer runs.",
+      "summary": "Burns is between starts after a historic rookie run — June 15's 5 scoreless innings, 7 K, was his 11th straight start allowing 2 or fewer runs.",
       "sources": [
         {
           "title": "Chase Burns' dominance among greatest Reds stretches - SI",
@@ -154,7 +150,7 @@
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
-      "summary": "Eovaldi earned the win June 14 at Boston (7 IP, 3 ER); the 36-year-old is healthy after a mid-May side-tightness scare.",
+      "summary": "Eovaldi is between starts after winning June 14 at Boston (7 IP, 3 ER); the 36-year-old is healthy following a mid-May side-tightness scare.",
       "sources": [
         {
           "title": "Nathan Eovaldi Game Log - ESPN",
@@ -166,7 +162,7 @@
       "name": "Emmet Sheehan",
       "team": "LAD",
       "position": "SP",
-      "summary": "Sheehan remains in the Dodgers' rotation despite an up-and-down 4.76 ERA; home runs have been the recurring issue, but he's healthy.",
+      "summary": "Sheehan remains in the Dodgers' rotation despite an up-and-down ERA; home runs have been the recurring issue, but he's healthy and between starts.",
       "sources": [
         {
           "title": "Emmet Sheehan Game Log - ESPN",
@@ -178,7 +174,7 @@
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
-      "summary": "Detmers owns strong peripherals (97 K over 81 IP, ~29% K-rate) though his 2-win record lags; healthy and entrenched in the Angels rotation.",
+      "summary": "Detmers tossed 7 scoreless innings (3 H, 3 K) for the win June 16 at Arizona, dropping his ERA to 4.31; now 3-2 with strong peripherals (91 K over 81.1 IP).",
       "sources": [
         {
           "title": "Reid Detmers Game Log - ESPN",
@@ -190,7 +186,7 @@
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
-      "summary": "Ben Rice is in a full breakout for the Yankees (~.300, 1.000+ OPS, ~19 HR), hitting cleanup amid Aaron Judge's absence; HR June 14 at Toronto.",
+      "summary": "Ben Rice homered with 2 RBI, 2 runs and 2 walks June 16 vs the White Sox; in a full breakout (~.300, 1.000+ OPS, 13 HR), hitting cleanup amid Aaron Judge's absence.",
       "sources": [
         {
           "title": "From Ivy League catcher to Yankees' cleanup hitter - ESPN",
@@ -222,18 +218,6 @@
       "source": {
         "title": "Royals' Ragans has setback in rehab - ESPN",
         "url": "https://www.espn.com/mlb/story/_/id/49054370/royals-ragans-setback-rehab-injured-left-elbow"
-      }
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "status": "Active (returned)",
-      "previous_status": "Day-to-day (rib soreness)",
-      "note": "Returned June 15 after one game out; MRI and CT scan came back negative.",
-      "source": {
-        "title": "Jackson Merrill returns to Padres' lineup - MLB.com",
-        "url": "https://www.mlb.com/news/jackson-merrill-returns-to-padres-lineup-after-back-injury"
       }
     }
   ]

@@ -1,25 +1,25 @@
 {
-  "date": "2026-06-15",
-  "generated_at": "2026-06-16T22:46:45Z",
+  "date": "2026-06-16",
+  "generated_at": "2026-06-17T16:00:00Z",
   "totals": {
     "hitters": {
-      "AB": 22,
-      "H": 9,
-      "R": 3,
+      "AB": 28,
+      "H": 7,
+      "R": 4,
       "HR": 2,
-      "RBI": 4,
+      "RBI": 6,
       "SB": 0,
-      "points": 9.0
+      "points": 12.0
     },
     "pitchers": {
-      "IP": 11.0,
-      "H": 6,
+      "IP": 7.0,
+      "H": 3,
       "ER": 0,
-      "K": 16,
-      "BB": 4,
-      "W": 2,
+      "K": 3,
+      "BB": 0,
+      "W": 1,
       "SV": 0,
-      "points": 6.2
+      "points": 3.9
     }
   },
   "players": [
@@ -28,12 +28,19 @@
       "team": "BAL",
       "position": "C",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Orioles off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Samuel Basallo did not play; Orioles were off June 15."
+      "opponent": "@ SEA",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "HR": 0,
+        "RBI": 1,
+        "SB": 0
+      },
+      "points": 1,
+      "summary": "Samuel Basallo went 1-for-4 with an RBI in Baltimore's game at Seattle."
     },
     {
       "name": "Bryce Harper",
@@ -46,13 +53,13 @@
       "stats": {
         "H": 0,
         "AB": 3,
-        "R": 0,
+        "R": 1,
         "HR": 0,
-        "RBI": 1,
+        "RBI": 0,
         "SB": 0
       },
-      "points": 1.0,
-      "summary": "0-for-3 with a sacrifice-fly RBI in the Phillies' 7-0 win over Miami."
+      "points": 1,
+      "summary": "0-for-3 with a walk and a run scored against Miami."
     },
     {
       "name": "Luis Arraez",
@@ -60,18 +67,11 @@
       "position": "2B",
       "type": "hitter",
       "opponent": null,
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "H": 0,
-        "AB": 4,
-        "R": 0,
-        "HR": 0,
-        "RBI": 0,
-        "SB": 0
-      },
+      "dnp": true,
+      "dnp_reason": "Did not play June 16",
+      "stats": {},
       "points": 0.0,
-      "summary": "In the Giants' lineup June 15; exact box-score line unconfirmed from available sources."
+      "summary": "Luis Arraez was out of the Giants' lineup June 16."
     },
     {
       "name": "Bo Bichette",
@@ -82,15 +82,15 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 3,
-        "AB": 4,
+        "H": 2,
+        "AB": 5,
         "R": 0,
         "HR": 0,
-        "RBI": 0,
+        "RBI": 1,
         "SB": 0
       },
-      "points": 0.0,
-      "summary": "3-for-4 with a double — 3 of the Mets' 6 hits in a 12-0 loss at Cincinnati."
+      "points": 1,
+      "summary": "2-for-5 with an RBI in the Mets' game at Cincinnati."
     },
     {
       "name": "Lindor/McGonigle",
@@ -101,15 +101,15 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 2,
+        "H": 1,
         "AB": 3,
-        "R": 2,
-        "HR": 1,
-        "RBI": 1,
+        "R": 0,
+        "HR": 0,
+        "RBI": 0,
         "SB": 0
       },
-      "points": 4.0,
-      "summary": "Kevin McGonigle went 2-for-3 with a HR and 2 runs in Detroit's 9-3 win at Houston."
+      "points": 0,
+      "summary": "Kevin McGonigle went 1-for-3 with a walk at Houston."
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -120,34 +120,34 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 4,
-        "AB": 4,
+        "H": 1,
+        "AB": 5,
         "R": 1,
         "HR": 1,
-        "RBI": 2,
+        "RBI": 1,
         "SB": 0
       },
-      "points": 4.0,
-      "summary": "Hit for the cycle (MLB's first of 2026) in the Cubs' 5-4 walk-off win over Colorado."
+      "points": 3,
+      "summary": "Homered (1-for-5, 1 RBI, 1 R) in the Cubs' game vs Colorado."
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs STL",
+      "opponent": "@ STL",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "H": 0,
+        "H": 1,
         "AB": 4,
         "R": 0,
         "HR": 0,
-        "RBI": 0,
+        "RBI": 1,
         "SB": 0
       },
-      "points": 0.0,
-      "summary": "0-for-4 but robbed a home run on defense in the Padres' 3-0 loss to St. Louis."
+      "points": 1,
+      "summary": "1-for-4 with a double and an RBI at St. Louis."
     },
     {
       "name": "Teoscar Hernandez",
@@ -171,26 +171,19 @@
       "dnp_reason": "No appearance",
       "stats": {},
       "points": 0.0,
-      "summary": "Did not pitch; last appeared June 12 vs Atlanta."
+      "summary": "Did not pitch June 16."
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs MIA",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 2,
-        "ER": 0,
-        "K": 9,
-        "BB": 1,
-        "W": 1
-      },
-      "points": 3.4,
-      "summary": "6 scoreless 2-hit innings, 9 K, in a 7-0 win over Miami (now 6-1, 2.01 ERA)."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Between starts (last June 15)",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Did not pitch June 16; threw 6 scoreless vs Miami on June 15."
     },
     {
       "name": "Cole Ragans",
@@ -202,26 +195,19 @@
       "dnp_reason": "15-day IL (L elbow, rehab setback)",
       "stats": {},
       "points": 0.0,
-      "summary": "On the IL since May 8; suffered a mid-June rehab setback, no return date."
+      "summary": "On the IL since May 8; mid-June rehab setback, no return date."
     },
     {
       "name": "Chase Burns",
       "team": "CIN",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs NYM",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 5.0,
-        "H": 4,
-        "ER": 0,
-        "K": 7,
-        "BB": 3,
-        "W": 1
-      },
-      "points": 2.8,
-      "summary": "5 scoreless innings, 7 K, W in a 12-0 rout of the Mets — 11th straight start allowing 2 or fewer runs."
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Between starts (last June 15)",
+      "stats": {},
+      "points": 0.0,
+      "summary": "Did not pitch June 16; threw 5 scoreless vs the Mets on June 15."
     },
     {
       "name": "Nathan Eovaldi",
@@ -233,7 +219,7 @@
       "dnp_reason": "Between starts (last June 14)",
       "stats": {},
       "points": 0.0,
-      "summary": "Did not pitch June 15; threw 7 IP, 3 ER for the win at Boston on June 14."
+      "summary": "Did not pitch June 16; won at Boston June 14."
     },
     {
       "name": "Emmet Sheehan",
@@ -245,31 +231,45 @@
       "dnp_reason": "Between starts (last June 14)",
       "stats": {},
       "points": 0.0,
-      "summary": "Did not pitch June 15; last started June 14 vs the White Sox."
+      "summary": "Did not pitch June 16; last started June 14."
     },
     {
       "name": "Reid Detmers",
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Between starts (last June 10)",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Did not pitch June 15; last started June 10 vs Houston."
+      "opponent": "@ ARI",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 7.0,
+        "H": 3,
+        "ER": 0,
+        "K": 3,
+        "BB": 0,
+        "W": 1
+      },
+      "points": 3.92,
+      "summary": "7 scoreless innings, 3 hits, 3 K \u2014 earned the win at Arizona."
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Yankees off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": "Ben Rice did not play; Yankees were off June 15."
+      "opponent": "vs CWS",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "H": 1,
+        "AB": 4,
+        "R": 2,
+        "HR": 1,
+        "RBI": 2,
+        "SB": 0
+      },
+      "points": 5,
+      "summary": "Ben Rice homered with 2 RBI, 2 runs and 2 walks vs the White Sox."
     }
   ]
 }
