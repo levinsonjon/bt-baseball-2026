@@ -1,224 +1,25 @@
 {
-  "generated_at": "2026-06-17T16:00:00Z",
+  "generated_at": "2026-06-23T13:53:14Z",
   "window_hours": 24,
-  "players": [
-    {
-      "name": "Jeffers/Basallo",
-      "team": "BAL",
-      "position": "C",
-      "summary": "Rookie C/DH Samuel Basallo went 1-for-4 with an RBI June 16 at Seattle; continues to split catching duties with Adley Rutschman and DH often.",
-      "sources": [
-        {
-          "title": "Samuel Basallo 2026 Game Log - ESPN",
-          "url": "https://www.espn.com/mlb/player/gamelog/_/id/4917646/samuel-basallo"
-        }
-      ]
-    },
-    {
-      "name": "Bryce Harper",
-      "team": "PHI",
-      "position": "1B",
-      "summary": "Harper reached base with a walk and scored a run June 16 vs Miami; hitting in the middle of the Phillies order.",
-      "sources": [
-        {
-          "title": "Bryce Harper Game Log - ESPN",
-          "url": "https://www.espn.com/mlb/player/gamelog/_/id/30951/bryce-harper"
-        }
-      ]
-    },
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "summary": "Arraez was out of the Giants' lineup June 16; remains among the NL contact leaders, hitting around .320 as San Francisco's table-setter.",
-      "sources": [
-        {
-          "title": "Luis Arraez - FanGraphs",
-          "url": "https://www.fangraphs.com/players/luis-arraez/18568/stats/batting"
-        }
-      ]
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "summary": "Bichette went 2-for-5 with an RBI June 16 at Cincinnati; a second straight multi-hit game amid a quieter stretch.",
-      "sources": [
-        {
-          "title": "Bo Bichette Game Log - ESPN",
-          "url": "https://www.espn.com/mlb/player/gamelog/_/id/40235/bo-bichette"
-        }
-      ]
-    },
-    {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
-      "position": "SS",
-      "summary": "Rookie Kevin McGonigle went 1-for-3 with a walk June 16 at Houston; he has reached base in 25 straight games — an All-Star-caliber start for Detroit.",
-      "sources": [
-        {
-          "title": "Kevin McGonigle's hot streak - SI",
-          "url": "https://www.si.com/mlb/tigers/onsi/news/kevin-mcgonigle-hot-streak-turning-him-mlb-most-exciting-prospect"
-        }
-      ]
-    },
-    {
-      "name": "Pete Crow-Armstrong",
-      "team": "CHC",
-      "position": "OF",
-      "summary": "Crow-Armstrong homered again June 16 vs Colorado (1-for-5, 1 RBI, 1 R), a day after hitting for the cycle; up to 14 HR with elite defense and baserunning.",
-      "sources": [
-        {
-          "title": "Pete Crow-Armstrong Game Log - ESPN",
-          "url": "https://www.espn.com/mlb/player/gamelog/_/id/4683763/pete-crow-armstrong"
-        }
-      ]
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "summary": "Merrill went 1-for-4 with a double and an RBI June 16 at St. Louis; fully back in the lineup after a one-game rib scare (MRI/CT negative).",
-      "sources": [
-        {
-          "title": "Jackson Merrill Game Log - ESPN",
-          "url": "https://www.espn.com/mlb/player/gamelog/_/id/5083074/jackson-merrill"
-        }
-      ]
-    },
-    {
-      "name": "Teoscar Hernandez",
-      "team": "LAD",
-      "position": "OF",
-      "summary": "Hernández remains on the IL (since May 27) with a Grade 1 left hamstring strain; the Dodgers are taking a measured approach to his return.",
-      "sources": [
-        {
-          "title": "Teoscar Hernández expected to miss 1 month - Yahoo Sports",
-          "url": "https://sports.yahoo.com/mlb/article/teoscar-hernandez-expected-to-miss-1-month-with-hamstring-strain-dodgers-place-him-on-il-233120077.html"
-        }
-      ]
-    },
-    {
-      "name": "Devin Williams",
-      "team": "NYM",
-      "position": "RP",
-      "summary": "Williams (Mets closer) did not pitch June 16; has settled in after a rough April, stringing together scoreless outings with 10 saves on the year.",
-      "sources": [
-        {
-          "title": "Mets' Devin Williams finding his groove - MLB.com",
-          "url": "https://www.mlb.com/mets/news/mets-devin-williams-settling-in-2026"
-        }
-      ]
-    },
-    {
-      "name": "Zack Wheeler",
-      "team": "PHI",
-      "position": "SP",
-      "summary": "Wheeler is between starts after dominating June 15 — 6 scoreless 2-hit innings, 9 K — which lowered his ERA to 2.01, among the NL's best.",
-      "sources": [
-        {
-          "title": "Zack Wheeler News - RotoWire",
-          "url": "https://www.rotowire.com/baseball/player/zack-wheeler-10951"
-        }
-      ]
-    },
-    {
-      "name": "Cole Ragans",
-      "team": "KCR",
-      "position": "SP",
-      "summary": "Ragans had a mid-June rehab setback (elbow stiffness) and was sent for further testing; on the IL since May 8 with no return timeline.",
-      "sources": [
-        {
-          "title": "Royals' Ragans has setback in rehab - ESPN",
-          "url": "https://www.espn.com/mlb/story/_/id/49054370/royals-ragans-setback-rehab-injured-left-elbow"
-        }
-      ]
-    },
-    {
-      "name": "Chase Burns",
-      "team": "CIN",
-      "position": "SP",
-      "summary": "Burns is between starts after a historic rookie run — June 15's 5 scoreless innings, 7 K, was his 11th straight start allowing 2 or fewer runs.",
-      "sources": [
-        {
-          "title": "Chase Burns' dominance among greatest Reds stretches - SI",
-          "url": "https://www.si.com/mlb/reds/onsi/chase-burns-dominance-puts-him-among-the-greatest-stretches-in-reds-history-01kv87y1zn09"
-        }
-      ]
-    },
-    {
-      "name": "Nathan Eovaldi",
-      "team": "TEX",
-      "position": "SP",
-      "summary": "Eovaldi is between starts after winning June 14 at Boston (7 IP, 3 ER); the 36-year-old is healthy following a mid-May side-tightness scare.",
-      "sources": [
-        {
-          "title": "Nathan Eovaldi Game Log - ESPN",
-          "url": "https://www.espn.com/mlb/player/gamelog/_/id/31174/nathan-eovaldi"
-        }
-      ]
-    },
-    {
-      "name": "Emmet Sheehan",
-      "team": "LAD",
-      "position": "SP",
-      "summary": "Sheehan remains in the Dodgers' rotation despite an up-and-down ERA; home runs have been the recurring issue, but he's healthy and between starts.",
-      "sources": [
-        {
-          "title": "Emmet Sheehan Game Log - ESPN",
-          "url": "https://www.espn.com/mlb/player/gamelog/_/id/4417806/emmet-sheehan"
-        }
-      ]
-    },
-    {
-      "name": "Reid Detmers",
-      "team": "LAA",
-      "position": "SP",
-      "summary": "Detmers tossed 7 scoreless innings (3 H, 3 K) for the win June 16 at Arizona, dropping his ERA to 4.31; now 3-2 with strong peripherals (91 K over 81.1 IP).",
-      "sources": [
-        {
-          "title": "Reid Detmers Game Log - ESPN",
-          "url": "https://www.espn.com/mlb/player/gamelog/_/id/4326697/reid-detmers"
-        }
-      ]
-    },
-    {
-      "name": "Stanton/Rice",
-      "team": "NYY",
-      "position": "DH",
-      "summary": "Ben Rice homered with 2 RBI, 2 runs and 2 walks June 16 vs the White Sox; in a full breakout (~.300, 1.000+ OPS, 13 HR), hitting cleanup amid Aaron Judge's absence.",
-      "sources": [
-        {
-          "title": "From Ivy League catcher to Yankees' cleanup hitter - ESPN",
-          "url": "https://www.espn.com/mlb/story/_/id/48439737/mlb-2026-ben-rice-new-york-yankees-radar-rise-cleanup-hitter"
-        }
-      ]
-    }
-  ],
+  "players": [],
   "injuries": [
     {
       "name": "Teoscar Hernandez",
       "team": "LAD",
       "position": "OF",
-      "status": "10-day IL (L hamstring strain)",
-      "previous_status": "Active",
-      "note": "Grade 1 left hamstring strain; on IL since May 27, expected ~1 month out with a cautious return timeline.",
-      "source": {
-        "title": "Teoscar Hernández expected to miss 1 month - Yahoo Sports",
-        "url": "https://sports.yahoo.com/mlb/article/teoscar-hernandez-expected-to-miss-1-month-with-hamstring-strain-dodgers-place-him-on-il-233120077.html"
-      }
+      "status": "IL-10",
+      "previous_status": "",
+      "note": "10-Day-IL: Hernandez (hamstring) is expected to report to Triple-A Oklahoma City to begin a rehab assignment this week in hopes of coming off the injured list for the Doders' series opener against the Athletics on June 29, Sonja Chen of MLB.com reports.",
+      "source": null
     },
     {
       "name": "Cole Ragans",
       "team": "KCR",
       "position": "SP",
-      "status": "15-day IL (L elbow)",
-      "previous_status": "Rehab assignment",
-      "note": "Mid-June rehab setback with elbow stiffness; undergoing further testing, no return timeline. On IL since May 8.",
-      "source": {
-        "title": "Royals' Ragans has setback in rehab - ESPN",
-        "url": "https://www.espn.com/mlb/story/_/id/49054370/royals-ragans-setback-rehab-injured-left-elbow"
-      }
+      "status": "IL-60",
+      "previous_status": "IL-60",
+      "note": "60-Day-IL: The Royals transferred Ragans (elbow) to the 60-day injured list Wednesday.",
+      "source": null
     }
   ]
 }
