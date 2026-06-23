@@ -1,0 +1,52 @@
+name: Daily fantasy baseball report
+
+# Runs in GitHub's cloud — no dependency on Jon's Mac being awake.
+# Pulls box scores + season stats from the MLB Stats API and injuries from
+# ESPN (deterministic, no LLM), writes data/*.json, commits + pushes (which
+# triggers the Vercel redeploy), and sends the daily email via Gmail SMTP.
+
+on:
+  schedule:
+    # 09:15 UTC ≈ 5:15am ET (EDT). GitHub cron is UTC-only and may run a few
+    # minutes late; a skipped day self-heals on the next run (season stats are
+    # cumulative). Across DST this lands 4:15–5:15am ET — fine for a 5am digest.
+    - cron: "15 9 * * *"
+  workflow_dispatch: {}   # allow manual runs from the Actions tab
+
+# Allow the job to push the regenerated data files back to the repo.
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-report
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate report, write data, send email
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python3 generate_daily.py --send
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name  "btbaseball-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/yesterday.json data/news.json data/season_stats.json data/mlb_player_ids.json
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "Daily data update $(date -u +%Y-%m-%d)"
+            git push origin HEAD:main
+          fi
