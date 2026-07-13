@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T13:55:54Z",
+  "generated_at": "2026-07-13T14:50:57Z",
   "window_hours": 24,
   "players": [],
   "injuries": [
@@ -8,7 +8,7 @@
       "team": "NYM",
       "position": "3B",
       "status": "day-to-day",
-      "previous_status": "",
+      "previous_status": "day-to-day",
       "note": "Day-To-Day: Bichette (leg/ankle) is out of the lineup for Sunday's game against the Red Sox.",
       "source": null
     },
