@@ -1,25 +1,25 @@
 {
-  "date": "2026-07-12",
-  "generated_at": "2026-07-13T14:50:57Z",
+  "date": "2026-07-13",
+  "generated_at": "2026-07-14T10:55:54Z",
   "totals": {
     "hitters": {
-      "AB": 33,
-      "H": 6,
-      "R": 6,
-      "HR": 1,
-      "RBI": 5,
-      "SB": 1,
-      "points": 13.0
+      "AB": 0,
+      "H": 0,
+      "R": 0,
+      "HR": 0,
+      "RBI": 0,
+      "SB": 0,
+      "points": 0.0
     },
     "pitchers": {
-      "IP": 12.33,
-      "H": 7,
-      "ER": 3,
-      "K": 17,
-      "BB": 5,
-      "W": 1,
+      "IP": 0.0,
+      "H": 0,
+      "ER": 0,
+      "K": 0,
+      "BB": 0,
+      "W": 0,
       "SV": 0,
-      "points": 4.34
+      "points": 0.0
     }
   },
   "players": [
@@ -28,204 +28,120 @@
       "team": "BAL",
       "position": "C",
       "type": "hitter",
-      "opponent": "vs Kansas City Royals",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 1,
-        "HR": 1,
-        "RBI": 1,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 3.0,
-      "summary": "Went deep"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "@ Detroit Tigers",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 1.0,
-      "summary": "1-for-5"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": "vs Colorado Rockies",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 3,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 1
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
       "points": 0.0,
-      "summary": "0-for-3"
+      "summary": ""
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": "vs Boston Red Sox",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 1,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "day-to-day",
+      "stats": {},
       "points": 0.0,
-      "summary": "0-for-1"
+      "summary": ""
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": "vs Philadelphia Phillies",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 3,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 1
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
       "points": 0.0,
-      "summary": "0-for-3"
+      "summary": ""
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ Cincinnati Reds",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 3,
-        "H": 1,
-        "HR": 0,
-        "RBI": 1,
-        "R": 2,
-        "SB": 1,
-        "BB": 2
-      },
-      "points": 4.0,
-      "summary": "1 RBI; stole a base"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs Toronto Blue Jays",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
       "points": 0.0,
-      "summary": "0-for-4"
+      "summary": ""
     },
     {
       "name": "Hernandez/Chourio",
       "team": "MIL",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ Pittsburgh Pirates",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 2,
-        "HR": 0,
-        "RBI": 1,
-        "R": 2,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 3.0,
-      "summary": "1 RBI"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Devin Williams",
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": "vs Boston Red Sox",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 1.0,
-        "H": 2,
-        "ER": 1,
-        "K": 0,
-        "BB": 2,
-        "W": 0,
-        "L": 0,
-        "SV": 0,
-        "GS": 0
-      },
-      "points": 0,
-      "summary": "1.0 IP, 0 K, 1 ER"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ Detroit Tigers",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 2,
-        "ER": 0,
-        "K": 10,
-        "BB": 2,
-        "W": 1,
-        "L": 0,
-        "SV": 0,
-        "GS": 1
-      },
-      "points": 3.36,
-      "summary": "Earned the W; quality start; dominant 10 K; scoreless"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Cole Ragans",
@@ -246,7 +162,7 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "Team off day",
+      "dnp_reason": "day-to-day",
       "stats": {},
       "points": 0.0,
       "summary": ""
@@ -268,22 +184,12 @@
       "team": "LAD",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs Arizona Diamondbacks",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 5.33,
-        "H": 3,
-        "ER": 2,
-        "K": 7,
-        "BB": 1,
-        "W": 0,
-        "L": 0,
-        "SV": 0,
-        "GS": 1
-      },
-      "points": 0.98,
-      "summary": "7 K"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Reid Detmers",
@@ -302,20 +208,12 @@
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": "@ Washington Nationals",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "HR": 0,
-        "RBI": 2,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 2.0,
-      "summary": "2 RBI"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     }
   ]
 }
