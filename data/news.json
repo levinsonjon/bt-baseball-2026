@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T10:55:54Z",
+  "generated_at": "2026-07-15T11:01:51Z",
   "window_hours": 24,
   "players": [],
   "injuries": [
@@ -26,7 +26,7 @@
       "team": "CIN",
       "position": "SP",
       "status": "day-to-day",
-      "previous_status": "",
+      "previous_status": "day-to-day",
       "note": "Day-To-Day: Burns will not play in Tuesday's All-Star Game due to a right groin injury he suffered during his last start Wednesday, Mark Sheldon of MLB.com reports.",
       "source": null
     }
