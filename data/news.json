@@ -1,17 +1,8 @@
 {
-  "generated_at": "2026-07-16T11:11:34Z",
+  "generated_at": "2026-07-17T10:58:00Z",
   "window_hours": 24,
   "players": [],
   "injuries": [
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "status": "day-to-day",
-      "previous_status": "day-to-day",
-      "note": "Day-To-Day: Bichette (leg/ankle) is out of the lineup for Sunday's game against the Red Sox.",
-      "source": null
-    },
     {
       "name": "Cole Ragans",
       "team": "KCR",
@@ -19,15 +10,6 @@
       "status": "IL-60",
       "previous_status": "IL-60",
       "note": "60-Day-IL: Ragans underwent UCL repair surgery on his left elbow Wednesday, Anne Rogers of MLB.com reports.",
-      "source": null
-    },
-    {
-      "name": "Chase Burns",
-      "team": "CIN",
-      "position": "SP",
-      "status": "day-to-day",
-      "previous_status": "day-to-day",
-      "note": "Day-To-Day: Burns will not play in Tuesday's All-Star Game due to a right groin injury he suffered during his last start Wednesday, Mark Sheldon of MLB.com reports.",
       "source": null
     }
   ]

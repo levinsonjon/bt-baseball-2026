@@ -1,10 +1,10 @@
 {
-  "date": "2026-07-15",
-  "generated_at": "2026-07-16T11:11:34Z",
+  "date": "2026-07-16",
+  "generated_at": "2026-07-17T10:58:00Z",
   "totals": {
     "hitters": {
-      "AB": 0,
-      "H": 0,
+      "AB": 7,
+      "H": 1,
       "R": 0,
       "HR": 0,
       "RBI": 0,
@@ -12,14 +12,14 @@
       "points": 0.0
     },
     "pitchers": {
-      "IP": 0.0,
+      "IP": 1.0,
       "H": 0,
       "ER": 0,
-      "K": 0,
+      "K": 1,
       "BB": 0,
       "W": 0,
-      "SV": 0,
-      "points": 0.0
+      "SV": 1,
+      "points": 5.0
     }
   },
   "players": [
@@ -40,12 +40,20 @@
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "vs New York Mets",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 3,
+        "H": 1,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 1
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "1-for-3"
     },
     {
       "name": "Luis Arraez",
@@ -64,12 +72,20 @@
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "day-to-day",
-      "stats": {},
+      "opponent": "@ Philadelphia Phillies",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "0-for-4"
     },
     {
       "name": "Lindor/McGonigle",
@@ -124,12 +140,22 @@
       "team": "NYM",
       "position": "RP",
       "type": "rp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Philadelphia Phillies",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 1.0,
+        "H": 0,
+        "ER": 0,
+        "K": 1,
+        "BB": 0,
+        "W": 0,
+        "L": 0,
+        "SV": 1,
+        "GS": 0
+      },
+      "points": 5,
+      "summary": "Nailed down the save; scoreless"
     },
     {
       "name": "Zack Wheeler",
@@ -162,7 +188,7 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "day-to-day",
+      "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
       "summary": ""
