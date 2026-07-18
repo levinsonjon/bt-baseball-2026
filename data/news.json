@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T10:58:00Z",
+  "generated_at": "2026-07-18T10:41:54Z",
   "window_hours": 24,
   "players": [],
   "injuries": [
@@ -10,6 +10,15 @@
       "status": "IL-60",
       "previous_status": "IL-60",
       "note": "60-Day-IL: Ragans underwent UCL repair surgery on his left elbow Wednesday, Anne Rogers of MLB.com reports.",
+      "source": null
+    },
+    {
+      "name": "Nathan Eovaldi",
+      "team": "TEX",
+      "position": "SP",
+      "status": "day-to-day",
+      "previous_status": "",
+      "note": "Day-To-Day: Eovaldi is dealing with an illness but is lined up to start against Atlanta on Sunday, Kennedi Landry of MLB.com reports.",
       "source": null
     }
   ]
