@@ -1,25 +1,25 @@
 {
-  "date": "2026-07-17",
-  "generated_at": "2026-07-18T10:41:54Z",
+  "date": "2026-07-18",
+  "generated_at": "2026-07-19T10:42:47Z",
   "totals": {
     "hitters": {
-      "AB": 30,
-      "H": 3,
-      "R": 2,
+      "AB": 31,
+      "H": 5,
+      "R": 4,
       "HR": 0,
-      "RBI": 0,
-      "SB": 1,
-      "points": 3.0
+      "RBI": 4,
+      "SB": 2,
+      "points": 10.0
     },
     "pitchers": {
-      "IP": 6.0,
-      "H": 4,
+      "IP": 0.0,
+      "H": 0,
       "ER": 0,
-      "K": 7,
+      "K": 0,
       "BB": 0,
       "W": 0,
       "SV": 0,
-      "points": 3.36
+      "points": 0.0
     }
   },
   "players": [
@@ -32,28 +32,36 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
+        "AB": 3,
         "H": 0,
         "HR": 0,
         "RBI": 0,
         "R": 0,
         "SB": 0,
-        "BB": 0
+        "BB": 1
       },
       "points": 0.0,
-      "summary": "0-for-4"
+      "summary": "0-for-3"
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs New York Mets",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 1,
+        "HR": 0,
+        "RBI": 2,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 2.0,
+      "summary": "2 RBI"
     },
     {
       "name": "Luis Arraez",
@@ -64,28 +72,36 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
+        "AB": 4,
         "H": 1,
         "HR": 0,
         "RBI": 0,
         "R": 0,
         "SB": 0,
-        "BB": 0
+        "BB": 1
       },
       "points": 0.0,
-      "summary": "1-for-5"
+      "summary": "1-for-4"
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "@ Philadelphia Phillies",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 3,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 1
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "0-for-3"
     },
     {
       "name": "Lindor/McGonigle",
@@ -93,6 +109,46 @@
       "position": "SS",
       "type": "hitter",
       "opponent": "@ Los Angeles Angels",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 5,
+        "H": 2,
+        "HR": 0,
+        "RBI": 0,
+        "R": 2,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 2.0,
+      "summary": "Multi-hit day"
+    },
+    {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "vs Minnesota Twins",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 5,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 0.0,
+      "summary": "0-for-5"
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "@ Kansas City Royals",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -108,46 +164,6 @@
       "summary": "0-for-4"
     },
     {
-      "name": "Pete Crow-Armstrong",
-      "team": "CHC",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "vs Minnesota Twins",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 3,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 1,
-        "SB": 1,
-        "BB": 1
-      },
-      "points": 2.0,
-      "summary": "0-for-3"
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "@ Kansas City Royals",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 0.0,
-      "summary": "0-for-5"
-    },
-    {
       "name": "Hernandez/Chourio",
       "team": "MIL",
       "position": "OF",
@@ -156,16 +172,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 0,
+        "AB": 3,
+        "H": 1,
         "HR": 0,
-        "RBI": 0,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
+        "RBI": 2,
+        "R": 2,
+        "SB": 2,
+        "BB": 2
       },
-      "points": 1.0,
-      "summary": "0-for-5"
+      "points": 6.0,
+      "summary": "2 RBI; swiped 2 bags"
     },
     {
       "name": "Devin Williams",
@@ -222,7 +238,7 @@
       "type": "sp",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "day-to-day",
+      "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
       "summary": ""
@@ -244,42 +260,24 @@
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs Detroit Tigers",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 4,
-        "ER": 0,
-        "K": 7,
-        "BB": 0,
-        "W": 0,
-        "L": 0,
-        "SV": 0,
-        "GS": 1
-      },
-      "points": 3.36,
-      "summary": "quality start; 7 K; scoreless"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": "vs Los Angeles Dodgers",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 2,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
       "points": 0.0,
-      "summary": "Multi-hit day"
+      "summary": ""
     }
   ]
 }
