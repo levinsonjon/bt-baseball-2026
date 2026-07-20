@@ -141,21 +141,15 @@
       "projected_stats": {}
     },
     {
-      "name": "Devin Williams",
-      "team": "NYM",
+      "name": "Williams/Hader",
+      "current_player": "Josh Hader",
+      "team": "HOU",
       "positions": [
         "RP"
       ],
       "player_type": "rp",
-      "projected_points": 166.0,
-      "projected_stats": {
-        "IP": 64.1,
-        "G": 61.0,
-        "GS": 0.0,
-        "W": 3.3,
-        "SV": 29.9,
-        "ERA": 2.845
-      }
+      "projected_points": 0,
+      "projected_stats": {}
     },
     {
       "name": "Zack Wheeler",
