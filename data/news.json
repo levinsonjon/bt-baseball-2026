@@ -1,8 +1,17 @@
 {
-  "generated_at": "2026-07-19T10:42:47Z",
+  "generated_at": "2026-07-20T11:57:52Z",
   "window_hours": 24,
   "players": [],
   "injuries": [
+    {
+      "name": "Jeffers/Basallo",
+      "team": "BAL",
+      "position": "C",
+      "status": "day-to-day",
+      "previous_status": "",
+      "note": "Day-To-Day: Basallo exited Sunday's game against Houston early with right shoulder discomfort, Roch Kubatko of MASNsports.com reports.",
+      "source": null
+    },
     {
       "name": "Cole Ragans",
       "team": "KCR",

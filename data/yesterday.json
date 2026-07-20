@@ -1,25 +1,25 @@
 {
-  "date": "2026-07-18",
-  "generated_at": "2026-07-19T10:42:47Z",
+  "date": "2026-07-19",
+  "generated_at": "2026-07-20T11:57:52Z",
   "totals": {
     "hitters": {
-      "AB": 31,
-      "H": 5,
-      "R": 4,
-      "HR": 0,
-      "RBI": 4,
-      "SB": 2,
-      "points": 10.0
+      "AB": 34,
+      "H": 11,
+      "R": 6,
+      "HR": 3,
+      "RBI": 6,
+      "SB": 1,
+      "points": 16.0
     },
     "pitchers": {
-      "IP": 0.0,
-      "H": 0,
-      "ER": 0,
-      "K": 0,
-      "BB": 0,
+      "IP": 4.0,
+      "H": 6,
+      "ER": 4,
+      "K": 2,
+      "BB": 2,
       "W": 0,
       "SV": 0,
-      "points": 0.0
+      "points": -1.76
     }
   },
   "players": [
@@ -32,16 +32,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
+        "AB": 1,
         "H": 0,
         "HR": 0,
         "RBI": 0,
         "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
       "points": 0.0,
-      "summary": "0-for-3"
+      "summary": "0-for-1"
     },
     {
       "name": "Bryce Harper",
@@ -49,106 +49,6 @@
       "position": "1B",
       "type": "hitter",
       "opponent": "vs New York Mets",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "HR": 0,
-        "RBI": 2,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 2.0,
-      "summary": "2 RBI"
-    },
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "type": "hitter",
-      "opponent": "@ Seattle Mariners",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 1
-      },
-      "points": 0.0,
-      "summary": "1-for-4"
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "type": "hitter",
-      "opponent": "@ Philadelphia Phillies",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 3,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 1
-      },
-      "points": 0.0,
-      "summary": "0-for-3"
-    },
-    {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
-      "position": "SS",
-      "type": "hitter",
-      "opponent": "@ Los Angeles Angels",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 2,
-        "HR": 0,
-        "RBI": 0,
-        "R": 2,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 2.0,
-      "summary": "Multi-hit day"
-    },
-    {
-      "name": "Pete Crow-Armstrong",
-      "team": "CHC",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "vs Minnesota Twins",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 0.0,
-      "summary": "0-for-5"
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "@ Kansas City Royals",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -164,6 +64,106 @@
       "summary": "0-for-4"
     },
     {
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
+      "type": "hitter",
+      "opponent": "@ Seattle Mariners",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 1,
+        "HR": 0,
+        "RBI": 1,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 1.0,
+      "summary": "1 RBI"
+    },
+    {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "type": "hitter",
+      "opponent": "@ Philadelphia Phillies",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 5,
+        "H": 2,
+        "HR": 0,
+        "RBI": 0,
+        "R": 1,
+        "SB": 0,
+        "BB": 1
+      },
+      "points": 1.0,
+      "summary": "Multi-hit day"
+    },
+    {
+      "name": "Lindor/McGonigle",
+      "team": "DET",
+      "position": "SS",
+      "type": "hitter",
+      "opponent": "@ Los Angeles Angels",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 3,
+        "H": 1,
+        "HR": 1,
+        "RBI": 1,
+        "R": 1,
+        "SB": 0,
+        "BB": 1
+      },
+      "points": 3.0,
+      "summary": "Went deep"
+    },
+    {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "vs Minnesota Twins",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 1,
+        "HR": 0,
+        "RBI": 0,
+        "R": 1,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 1.0,
+      "summary": "1-for-4"
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "@ Kansas City Royals",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 6,
+        "H": 4,
+        "HR": 2,
+        "RBI": 4,
+        "R": 2,
+        "SB": 1,
+        "BB": 0
+      },
+      "points": 9.0,
+      "summary": "Multi-HR game (2); drove in 4; stole a base"
+    },
+    {
       "name": "Hernandez/Chourio",
       "team": "MIL",
       "position": "OF",
@@ -175,13 +175,13 @@
         "AB": 3,
         "H": 1,
         "HR": 0,
-        "RBI": 2,
-        "R": 2,
-        "SB": 2,
-        "BB": 2
+        "RBI": 0,
+        "R": 1,
+        "SB": 0,
+        "BB": 0
       },
-      "points": 6.0,
-      "summary": "2 RBI; swiped 2 bags"
+      "points": 1.0,
+      "summary": "1-for-3"
     },
     {
       "name": "Devin Williams",
@@ -236,12 +236,22 @@
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Atlanta Braves",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 4.0,
+        "H": 6,
+        "ER": 4,
+        "K": 2,
+        "BB": 2,
+        "W": 0,
+        "L": 1,
+        "SV": 0,
+        "GS": 1
+      },
+      "points": -1.76,
+      "summary": "Took the L"
     },
     {
       "name": "Emmet Sheehan",
@@ -272,12 +282,20 @@
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "vs Los Angeles Dodgers",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 1,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "1-for-4"
     }
   ]
 }
