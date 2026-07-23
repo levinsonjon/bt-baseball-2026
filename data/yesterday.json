@@ -1,25 +1,25 @@
 {
-  "date": "2026-07-21",
-  "generated_at": "2026-07-22T11:18:49Z",
+  "date": "2026-07-22",
+  "generated_at": "2026-07-23T11:19:42Z",
   "totals": {
     "hitters": {
-      "AB": 21,
-      "H": 8,
-      "R": 4,
-      "HR": 1,
-      "RBI": 3,
+      "AB": 30,
+      "H": 6,
+      "R": 2,
+      "HR": 2,
+      "RBI": 5,
       "SB": 0,
-      "points": 8.0
+      "points": 9.0
     },
     "pitchers": {
-      "IP": 13.0,
-      "H": 9,
-      "ER": 2,
-      "K": 16,
+      "IP": 5.33,
+      "H": 2,
+      "ER": 1,
+      "K": 6,
       "BB": 2,
-      "W": 1,
-      "SV": 1,
-      "points": 9.72
+      "W": 0,
+      "SV": 0,
+      "points": 1.98
     }
   },
   "players": [
@@ -30,7 +30,7 @@
       "type": "hitter",
       "opponent": null,
       "dnp": true,
-      "dnp_reason": "day-to-day",
+      "dnp_reason": "IL-10",
       "stats": {},
       "points": 0.0,
       "summary": ""
@@ -44,28 +44,36 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
-        "H": 1,
+        "AB": 3,
+        "H": 0,
         "HR": 0,
         "RBI": 0,
-        "R": 1,
+        "R": 0,
         "SB": 0,
-        "BB": 0
+        "BB": 1
       },
-      "points": 1.0,
-      "summary": "1-for-4"
+      "points": 0.0,
+      "summary": "0-for-3"
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Kansas City Royals",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 3,
+        "H": 0,
+        "HR": 0,
+        "RBI": 1,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 1.0,
+      "summary": "0-for-3"
     },
     {
       "name": "Bo Bichette",
@@ -80,11 +88,11 @@
         "H": 1,
         "HR": 0,
         "RBI": 0,
-        "R": 1,
+        "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
-      "points": 1.0,
+      "points": 0.0,
       "summary": "1-for-4"
     },
     {
@@ -96,7 +104,7 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
+        "AB": 4,
         "H": 1,
         "HR": 0,
         "RBI": 0,
@@ -105,7 +113,7 @@
         "BB": 0
       },
       "points": 0.0,
-      "summary": "1-for-3"
+      "summary": "1-for-4"
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -116,16 +124,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 2,
-        "H": 2,
+        "AB": 3,
+        "H": 0,
         "HR": 0,
-        "RBI": 2,
-        "R": 1,
+        "RBI": 0,
+        "R": 0,
         "SB": 0,
-        "BB": 3
+        "BB": 0
       },
-      "points": 3.0,
-      "summary": "2 RBI"
+      "points": 0.0,
+      "summary": "0-for-3"
     },
     {
       "name": "Jackson Merrill",
@@ -142,7 +150,7 @@
         "RBI": 1,
         "R": 1,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
       "points": 3.0,
       "summary": "Went deep"
@@ -172,44 +180,24 @@
       "team": "HOU",
       "position": "RP",
       "type": "rp",
-      "opponent": "vs Miami Marlins",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 1.0,
-        "H": 1,
-        "ER": 0,
-        "K": 1,
-        "BB": 0,
-        "W": 0,
-        "L": 0,
-        "SV": 1,
-        "GS": 0
-      },
-      "points": 5,
-      "summary": "Nailed down the save; scoreless"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs Los Angeles Dodgers",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 7.0,
-        "H": 5,
-        "ER": 2,
-        "K": 9,
-        "BB": 0,
-        "W": 0,
-        "L": 1,
-        "SV": 0,
-        "GS": 1
-      },
-      "points": 1.92,
-      "summary": "Took the L; 9 K"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Cole Ragans",
@@ -228,22 +216,12 @@
       "team": "CIN",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ Seattle Mariners",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 5.0,
-        "H": 3,
-        "ER": 0,
-        "K": 6,
-        "BB": 2,
-        "W": 1,
-        "L": 0,
-        "SV": 0,
-        "GS": 1
-      },
-      "points": 2.8,
-      "summary": "Earned the W; scoreless"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Nathan Eovaldi",
@@ -274,24 +252,42 @@
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs St. Louis Cardinals",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 5.33,
+        "H": 2,
+        "ER": 1,
+        "K": 6,
+        "BB": 2,
+        "W": 0,
+        "L": 1,
+        "SV": 0,
+        "GS": 1
+      },
+      "points": 1.98,
+      "summary": "Took the L"
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs Pittsburgh Pirates",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 5,
+        "H": 1,
+        "HR": 1,
+        "RBI": 3,
+        "R": 1,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 5.0,
+      "summary": "Went deep; drove in 3"
     }
   ]
 }
