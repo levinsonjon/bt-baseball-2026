@@ -9,8 +9,8 @@
     "SB": 2
   },
   "Lindor/McGonigle": {
-    "AB": 328,
-    "H": 76,
+    "AB": 332,
+    "H": 77,
     "AVG": 0.232,
     "HR": 10,
     "RBI": 27,
@@ -72,13 +72,13 @@
     "AVG": 0.282
   },
   "Jackson Merrill": {
-    "AB": 387,
+    "AB": 388,
     "H": 87,
     "HR": 14,
     "RBI": 44,
     "R": 47,
     "SB": 20,
-    "AVG": 0.225
+    "AVG": 0.224
   },
   "Zack Wheeler": {
     "IP": 100.0,

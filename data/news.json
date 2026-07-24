@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T11:19:42Z",
+  "generated_at": "2026-07-24T11:11:39Z",
   "window_hours": 24,
   "players": [],
   "injuries": [
@@ -8,7 +8,7 @@
       "team": "BAL",
       "position": "C",
       "status": "IL-10",
-      "previous_status": "day-to-day",
+      "previous_status": "IL-10",
       "note": "10-Day-IL: The Orioles placed Basallo on the 10-day injured list Wednesday with right shoulder inflammation.",
       "source": null
     },
