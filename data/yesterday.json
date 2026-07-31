@@ -1,15 +1,15 @@
 {
-  "date": "2026-07-29",
-  "generated_at": "2026-07-30T11:20:27Z",
+  "date": "2026-07-30",
+  "generated_at": "2026-07-31T11:34:58Z",
   "totals": {
     "hitters": {
-      "AB": 36,
-      "H": 8,
-      "R": 4,
-      "HR": 1,
-      "RBI": 7,
-      "SB": 1,
-      "points": 13.0
+      "AB": 20,
+      "H": 5,
+      "R": 1,
+      "HR": 0,
+      "RBI": 0,
+      "SB": 0,
+      "points": 1.0
     },
     "pitchers": {
       "IP": 0.0,
@@ -40,47 +40,19 @@
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "@ Miami Marlins",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "HR": 0,
-        "RBI": 1,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 2.0,
-      "summary": "1 RBI"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": "vs Milwaukee Brewers",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 4,
-        "HR": 0,
-        "RBI": 2,
-        "R": 1,
-        "SB": 1,
-        "BB": 0
-      },
-      "points": 4.0,
-      "summary": "2 RBI; stole a base"
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "type": "hitter",
-      "opponent": "vs Atlanta Braves",
+      "opponent": "@ San Diego Padres",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -96,24 +68,36 @@
       "summary": "0-for-4"
     },
     {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
-      "position": "SS",
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
       "type": "hitter",
-      "opponent": "vs Baltimore Orioles",
+      "opponent": "vs Miami Marlins",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 0,
+        "AB": 4,
+        "H": 2,
         "HR": 0,
-        "RBI": 1,
-        "R": 0,
+        "RBI": 0,
+        "R": 1,
         "SB": 0,
         "BB": 0
       },
       "points": 1.0,
-      "summary": "0-for-5"
+      "summary": "Multi-hit day"
+    },
+    {
+      "name": "Lindor/McGonigle",
+      "team": "DET",
+      "position": "SS",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -125,47 +109,7 @@
       "dnp_reason": null,
       "stats": {
         "AB": 5,
-        "H": 1,
-        "HR": 1,
-        "RBI": 2,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 4.0,
-      "summary": "Went deep"
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "vs Colorado Rockies",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 3,
-        "H": 1,
-        "HR": 0,
-        "RBI": 1,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 1.0,
-      "summary": "1 RBI"
-    },
-    {
-      "name": "Hernandez/Chourio",
-      "team": "MIL",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "@ San Francisco Giants",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 0,
+        "H": 2,
         "HR": 0,
         "RBI": 0,
         "R": 0,
@@ -173,7 +117,39 @@
         "BB": 0
       },
       "points": 0.0,
-      "summary": "0-for-5"
+      "summary": "Multi-hit day"
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "vs San Francisco Giants",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 1,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 0.0,
+      "summary": "1-for-4"
+    },
+    {
+      "name": "Hernandez/Chourio",
+      "team": "MIL",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Williams/Hader",
@@ -268,16 +244,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 1,
+        "AB": 3,
+        "H": 0,
         "HR": 0,
         "RBI": 0,
-        "R": 1,
+        "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 2
       },
-      "points": 1.0,
-      "summary": "1-for-5"
+      "points": 0.0,
+      "summary": "0-for-3, drew 2 walks"
     }
   ]
 }
