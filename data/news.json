@@ -1,23 +1,14 @@
 {
-  "generated_at": "2026-08-01T10:47:38Z",
+  "generated_at": "2026-08-01T18:50:18Z",
   "window_hours": 24,
   "players": [],
   "injuries": [
-    {
-      "name": "Jeffers/Basallo",
-      "team": "BAL",
-      "position": "C",
-      "status": "IL-10",
-      "previous_status": "IL-10",
-      "note": "10-Day-IL: Orioles president of baseball operations Mike Elias said Friday that Basallo (shoulder) will resume hitting within the next couple days, Jake Rill of MLB.com reports.",
-      "source": null
-    },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "status": "day-to-day",
-      "previous_status": "",
+      "previous_status": "day-to-day",
       "note": "Day-To-Day: Arraez went 4-for-5 with two RBI, a run scored and a stolen base in Wednesday's 16-3 win over the Brewers.",
       "source": null
     },

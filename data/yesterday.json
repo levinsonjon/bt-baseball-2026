@@ -1,15 +1,15 @@
 {
   "date": "2026-07-31",
-  "generated_at": "2026-08-01T10:47:38Z",
+  "generated_at": "2026-08-01T18:50:18Z",
   "totals": {
     "hitters": {
-      "AB": 31,
-      "H": 5,
-      "R": 4,
-      "HR": 1,
-      "RBI": 3,
+      "AB": 37,
+      "H": 7,
+      "R": 5,
+      "HR": 2,
+      "RBI": 7,
       "SB": 0,
-      "points": 8.0
+      "points": 14.0
     },
     "pitchers": {
       "IP": 5.0,
@@ -24,16 +24,24 @@
   },
   "players": [
     {
-      "name": "Jeffers/Basallo",
-      "team": "BAL",
+      "name": "Basallo/Dingler",
+      "team": "DET",
       "position": "C",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "IL-10",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Athletics",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 6,
+        "H": 2,
+        "HR": 1,
+        "RBI": 4,
+        "R": 1,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 6.0,
+      "summary": "Went deep; drove in 4"
     },
     {
       "name": "Bryce Harper",
