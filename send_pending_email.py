@@ -29,6 +29,10 @@ REPO_ROOT = Path(__file__).parent
 DATA_DIR = REPO_ROOT / "data"
 SEND_LOG = REPO_ROOT / "send_email.log"
 
+from log_rotation import rotate as _rotate_log
+
+_rotate_log(SEND_LOG)
+
 # Dedicated OAuth client for the fantasy-baseball cron scripts. Kept separate
 # from `~/.config/personal-mcp/gmail/` (used by the gmail-personal MCP server)
 # because concurrent refreshes between the MCP server and these cron jobs

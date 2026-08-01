@@ -78,6 +78,10 @@ ESPN_STATUS_MAP = {
 
 LOG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "health_update.log")
 
+from log_rotation import rotate as _rotate_log
+
+_rotate_log(LOG_PATH)
+
 
 def log(msg):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
