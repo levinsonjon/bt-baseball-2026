@@ -1,25 +1,25 @@
 {
-  "date": "2026-07-30",
-  "generated_at": "2026-07-31T11:34:58Z",
+  "date": "2026-07-31",
+  "generated_at": "2026-08-01T10:47:38Z",
   "totals": {
     "hitters": {
-      "AB": 20,
+      "AB": 31,
       "H": 5,
-      "R": 1,
-      "HR": 0,
-      "RBI": 0,
+      "R": 4,
+      "HR": 1,
+      "RBI": 3,
       "SB": 0,
-      "points": 1.0
+      "points": 8.0
     },
     "pitchers": {
-      "IP": 0.0,
-      "H": 0,
-      "ER": 0,
-      "K": 0,
-      "BB": 0,
+      "IP": 5.0,
+      "H": 10,
+      "ER": 6,
+      "K": 5,
+      "BB": 1,
       "W": 0,
       "SV": 0,
-      "points": 0.0
+      "points": -3.2
     }
   },
   "players": [
@@ -40,12 +40,20 @@
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Baltimore Orioles",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 1,
+        "HR": 0,
+        "RBI": 1,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 1.0,
+      "summary": "1 RBI"
     },
     {
       "name": "Luis Arraez",
@@ -53,6 +61,26 @@
       "position": "2B",
       "type": "hitter",
       "opponent": "@ San Diego Padres",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 3,
+        "H": 1,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 0.0,
+      "summary": "1-for-3"
+    },
+    {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "type": "hitter",
+      "opponent": "vs Miami Marlins",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -68,48 +96,36 @@
       "summary": "0-for-4"
     },
     {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "type": "hitter",
-      "opponent": "vs Miami Marlins",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 2,
-        "HR": 0,
-        "RBI": 0,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 1.0,
-      "summary": "Multi-hit day"
-    },
-    {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Athletics",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 3,
+        "H": 1,
+        "HR": 1,
+        "RBI": 2,
+        "R": 2,
+        "SB": 0,
+        "BB": 2
+      },
+      "points": 5.0,
+      "summary": "Went deep"
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ St. Louis Cardinals",
+      "opponent": "vs New York Yankees",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 2,
+        "AB": 4,
+        "H": 0,
         "HR": 0,
         "RBI": 0,
         "R": 0,
@@ -117,7 +133,7 @@
         "BB": 0
       },
       "points": 0.0,
-      "summary": "Multi-hit day"
+      "summary": "0-for-4"
     },
     {
       "name": "Jackson Merrill",
@@ -129,27 +145,35 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 1,
+        "H": 0,
         "HR": 0,
         "RBI": 0,
-        "R": 0,
+        "R": 1,
         "SB": 0,
         "BB": 0
       },
-      "points": 0.0,
-      "summary": "1-for-4"
+      "points": 1.0,
+      "summary": "0-for-4"
     },
     {
       "name": "Hernandez/Chourio",
       "team": "MIL",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Los Angeles Angels",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 5,
+        "H": 1,
+        "HR": 0,
+        "RBI": 0,
+        "R": 1,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 1.0,
+      "summary": "1-for-5"
     },
     {
       "name": "Williams/Hader",
@@ -204,12 +228,22 @@
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Houston Astros",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 5.0,
+        "H": 10,
+        "ER": 6,
+        "K": 5,
+        "BB": 1,
+        "W": 0,
+        "L": 1,
+        "SV": 0,
+        "GS": 1
+      },
+      "points": -3.2,
+      "summary": "Took the L; 6 ER allowed"
     },
     {
       "name": "Emmet Sheehan",
@@ -240,20 +274,20 @@
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": "@ Chicago White Sox",
+      "opponent": "@ Chicago Cubs",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
-        "H": 0,
+        "AB": 4,
+        "H": 1,
         "HR": 0,
         "RBI": 0,
         "R": 0,
         "SB": 0,
-        "BB": 2
+        "BB": 0
       },
       "points": 0.0,
-      "summary": "0-for-3, drew 2 walks"
+      "summary": "1-for-4"
     }
   ]
 }
