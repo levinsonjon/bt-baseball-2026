@@ -235,6 +235,29 @@ def apply_swap_deltas(prior: dict, splits: list[dict], player_type: str,
         return out
 
 
+def swap_delta_after(player: dict, delta_after: date) -> date:
+    """Lower bound (exclusive) for a swapped slot's delta accumulation.
+
+    Normally the global watermark, but a slot may carry `swap_effective`
+    (YYYY-MM-DD) — the league date the new player takes over. Games before it
+    belong to the prior player and must not be credited to the slot, so the
+    bound is raised to the day before. Needed when a swap is seeded ahead of
+    its effective date: the watermark alone would fold in the new player's
+    games from the seeding day onward.
+
+    Only ever raises the bound, never lowers it, so the self-healing gap
+    recovery in apply_swap_deltas is preserved.
+    """
+    raw = player.get("swap_effective")
+    if not raw:
+        return delta_after
+    try:
+        eff = date.fromisoformat(raw)
+    except (TypeError, ValueError):
+        return delta_after
+    return max(delta_after, eff - timedelta(days=1))
+
+
 def _split_date(split: dict):
     raw = split.get("date")
     if not raw:
@@ -358,7 +381,8 @@ def build_day_results(report_date: date) -> tuple[list[DayResult], dict]:
         if swapped:
             prior = season_stats.get(slot, {})
             season_stats[slot] = apply_swap_deltas(
-                prior, splits, ptype, after=delta_after, through=report_date
+                prior, splits, ptype,
+                after=swap_delta_after(p, delta_after), through=report_date
             )
         elif splits:
             new_tot = season_totals_from_gamelog(splits, ptype)
