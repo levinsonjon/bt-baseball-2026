@@ -25,8 +25,29 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config
 
-CREDS_PATH = os.path.expanduser("~/.config/personal-mcp/gdrive/.gdrive-server-credentials.json")
-OAUTH_PATH = os.path.expanduser("~/.config/personal-mcp/gdrive/gcp-oauth.keys.json")
+# Drive/Sheets OAuth. Prefer a dedicated `gdrive-fb/` client if one exists,
+# exactly as GMAIL_* below prefers `gmail-fb/`, and fall back to the shared
+# `gdrive/` folder until that client is created.
+#
+# Sharing `gdrive/` with the gdrive-personal MCP server is what broke this
+# script: concurrent refreshes trip Google's rotation-revocation policy, so the
+# token works whenever Jon is using Claude and is dead again by the 3:13am
+# cron. Every run failed at get_token() with HTTP 400 from 2026-07-08 (last
+# "Updated 72 cells") through 2026-08-01 — 24 days of no Sheets update — while
+# an on-demand refresh always succeeded, which is why it looked healthy.
+#
+# To finish the fix (mirrors the 2026-05-12 Gmail split): create a second
+# OAuth client ID (Desktop app) in GCP project personal-claude-mcp-486922,
+# save it to ~/.config/personal-mcp/gdrive-fb/gcp-oauth.keys.json, and run the
+# auth flow. This module picks it up automatically — no code change needed.
+_GDRIVE_FB = os.path.expanduser("~/.config/personal-mcp/gdrive-fb")
+_GDRIVE_SHARED = os.path.expanduser("~/.config/personal-mcp/gdrive")
+_GDRIVE_DIR = _GDRIVE_FB if os.path.exists(
+    os.path.join(_GDRIVE_FB, "gcp-oauth.keys.json")
+) else _GDRIVE_SHARED
+
+CREDS_PATH = os.path.join(_GDRIVE_DIR, ".gdrive-server-credentials.json")
+OAUTH_PATH = os.path.join(_GDRIVE_DIR, "gcp-oauth.keys.json")
 
 # Dedicated OAuth client for the fantasy-baseball cron scripts. Kept separate
 # from `~/.config/personal-mcp/gmail/` (used by the gmail-personal MCP server)
@@ -176,22 +197,74 @@ def send_alert_email(subject, body, html=False, cc=True):
         return False
 
 
+def _watermark_from_json(text):
+    """Parse a yesterday.json payload into a date, or None."""
+    try:
+        date_str = json.loads(text).get("date")
+        return datetime.strptime(date_str, "%Y-%m-%d").date() if date_str else None
+    except (json.JSONDecodeError, ValueError, AttributeError):
+        return None
+
+
+def _remote_watermark():
+    """yesterday.json's date as of origin/main, or None if git/network fails.
+
+    The GitHub Actions pipeline commits data straight to origin every morning
+    and nothing pulls it down here, so the working copy routinely sits days
+    behind while the site is perfectly current — on 2026-08-01 the local file
+    was 12 days stale and the alert fired even though the pipeline was healthy.
+    Checking only the working copy makes this alarm permanently false, which is
+    worse than not having it.
+
+    Best-effort by design: this runs before any other network step so that a
+    DNS or OAuth failure can't silence the alert (see the 2026-05-04
+    hardening), and every failure path here falls back to the local file.
+    """
+    import subprocess
+    try:
+        subprocess.run(
+            ["git", "fetch", "--quiet", "origin", "main"],
+            cwd=os.path.dirname(os.path.abspath(__file__)),
+            capture_output=True, timeout=30, check=False,
+        )
+        out = subprocess.run(
+            ["git", "show", "origin/main:data/yesterday.json"],
+            cwd=os.path.dirname(os.path.abspath(__file__)),
+            capture_output=True, timeout=30, check=False,
+        )
+        if out.returncode == 0:
+            return _watermark_from_json(out.stdout.decode())
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return None
+
+
 def check_pipeline_freshness():
     """Compare data/yesterday.json's date to today. If >36h stale, the daily
     pipeline has silently failed for at least one cycle — fire a Reminder so
     Jon notices before the lag piles up. The cause is usually Gmail OAuth
     revocation (which the regular re-auth check catches only after expiry),
-    but can also be a remote-agent failure or local cron miss."""
+    but can also be a remote-agent failure or local cron miss.
+
+    Reads the newer of the local working copy and origin/main, because either
+    can legitimately be ahead: Actions pushes to origin without pulling here,
+    and a manual local run can write data before it is pushed.
+    """
     try:
         with open(YESTERDAY_FILE) as f:
-            payload = json.load(f)
-        date_str = payload.get("date")
-        if not date_str:
-            return
-        watermark = datetime.strptime(date_str, "%Y-%m-%d").date()
-    except (FileNotFoundError, json.JSONDecodeError, ValueError) as e:
-        log(f"Pipeline freshness check skipped: {e}")
+            local = _watermark_from_json(f.read())
+    except (FileNotFoundError, OSError) as e:
+        log(f"Pipeline freshness check: local yesterday.json unreadable ({e})")
+        local = None
+
+    remote = _remote_watermark()
+    candidates = [w for w in (local, remote) if w is not None]
+    if not candidates:
+        log("Pipeline freshness check skipped: no readable watermark")
         return
+    watermark = max(candidates)
+    if remote is not None and local is not None and remote != local:
+        log(f"Watermark: local {local}, origin/main {remote} — using {watermark}")
 
     expected = (datetime.now() - timedelta(days=1)).date()
     age_days = (expected - watermark).days
