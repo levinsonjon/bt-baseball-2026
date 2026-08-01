@@ -3,9 +3,9 @@
   "pick_number": 9,
   "players": [
     {
-      "name": "Jeffers/Basallo",
-      "current_player": "Samuel Basallo",
-      "team": "BAL",
+      "name": "Basallo/Dingler",
+      "current_player": "Dillon Dingler",
+      "team": "DET",
       "positions": [
         "C"
       ],
