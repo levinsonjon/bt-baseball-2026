@@ -29,15 +29,27 @@ Fantasy baseball project for Jon's BT Baseball Pool 2026 league. Includes draft 
 | **GitHub Actions** (`.github/workflows/daily.yml`) | 09:15 UTC (~5:15am ET) daily | GitHub cloud | Runs `generate_daily.py`: pulls MLB Stats API gameLogs + ESPN injuries (deterministic, no LLM), writes `data/*.json`, commits+pushes (triggers Vercel redeploy) |
 
 - Manual run: `gh workflow run daily.yml` (or the Actions tab). Local run: `python3 generate_daily.py` (add `--date YYYY-MM-DD`, `--dry-run`, `--send`).
-- **Email is gated on repo secrets** `GMAIL_ADDRESS` / `GMAIL_APP_PASSWORD` (Gmail app password, SMTP). Until those are set, the Actions run refreshes site data only and the **legacy remote-agent + launchd path below still sends the daily email**. Once secrets are set, retire the legacy path to avoid duplicate emails.
+- **Email goes out from Actions via Gmail SMTP.** Repo secrets `GMAIL_ADDRESS` (levinson.jon@gmail.com) and `GMAIL_APP_PASSWORD` (a Google app password, not the account password) were set 2026-08-01 and verified end-to-end. Recipients come from `config.REPORT_EMAIL` / `REPORT_EMAIL_CC`, not the secrets. `send_email_smtp()` is best-effort: it logs and returns False on any failure so an email problem never blocks the data push. If the app password is ever revoked, regenerate at https://myaccount.google.com/apppasswords and `gh secret set GMAIL_APP_PASSWORD`.
 - ⚠️ **Pushing `.github/workflows/*` requires the `workflow` OAuth scope** on the git/gh credential (`gh auth refresh -h github.com -s workflow`). The workflow commit sat unpushed for 3 weeks (6/23–7/13) because both tokens lacked the scope, and the site froze at 6/21 — the push failure is loud, but only if someone actually pushes.
 - **Local git checkout can silently lag behind origin** — since Actions pushes directly to `main` every day, a local clone that isn't pulled between sessions can go a week+ stale even though the site itself is current. Always `git fetch origin main` (and pull/rebase) before editing data files in this repo.
 - **Two `gh`/git credentials are configured on this Mac** — `jlev-sage` (Sage work account, no push access to this repo) and `levinsonjon` (repo owner). If `git push` 403s with `Permission to levinsonjon/bt-baseball-2026.git denied to jlev-sage`, the wrong account is active: run `gh auth switch -h github.com -u levinsonjon` and retry.
 - Swapped slots accumulate via a **watermark**: `generate_daily.py` reads the date in `yesterday.json` and folds in game-log deltas strictly after it (`apply_swap_deltas`). Non-swapped slots are rebuilt from full-season gameLogs every run, so they self-heal any gap automatically.
 
-### Legacy pipeline (email path only, until Gmail secrets are set)
+### Legacy pipeline — RETIRED 2026-08-01 (kept for reference / recovery)
 
-Two stages with handoff via Gmail drafts:
+Superseded entirely by the Actions pipeline above once the Gmail secrets landed. All three pieces are **disabled but recoverable**:
+
+| Piece | How it was retired | How to bring it back |
+|-------|--------------------|----------------------|
+| Local launchd sender `com.jon.fantasy-baseball-send` | `launchctl bootout` + `launchctl disable gui/$UID/com.jon.fantasy-baseball-send` (the disable persists across reboot) | `launchctl enable` then `launchctl bootstrap gui/$UID ~/Library/LaunchAgents/com.jon.fantasy-baseball-send.plist` — plist was left on disk |
+| Remote trigger `trig_01AWGDMAqyJY5oZNYiqKQQdT` | Paused in the claude.ai UI (deliberately not deleted — the tuned prompt would be unrecoverable) | Unpause at the same URL |
+| 35 accumulated DATA drafts (6/18–7/31) | Moved to Gmail Trash | Restore from Trash within 30 days |
+
+⚠️ The trigger now lives at `https://claude.ai/code/routines/<id>` (claude.ai renamed "scheduled tasks" to "routines"); the old `/code/scheduled/<id>` path still resolves. It is **not** visible to the `RemoteTrigger` API tool from a Claude Code session authenticated as `jon@sagecare.ai` — `list` returns empty even while the trigger is live. It's registered under a different login, so manage it in the browser.
+
+`update_health.py` (3:13am) is **not** part of this and remains active.
+
+Historical description of how it worked — two stages with handoff via Gmail drafts:
 
 | Stage | Time (ET) | Where | What |
 |-------|-----------|-------|------|
