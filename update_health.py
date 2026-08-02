@@ -48,25 +48,16 @@ _GDRIVE_DIR = _GDRIVE_FB if os.path.exists(
 
 CREDS_PATH = os.path.join(_GDRIVE_DIR, ".gdrive-server-credentials.json")
 OAUTH_PATH = os.path.join(_GDRIVE_DIR, "gcp-oauth.keys.json")
+GDRIVE_REAUTH_CMD = f"node {os.path.join(_GDRIVE_DIR, 'auth.mjs')}"
 
-# Dedicated OAuth client for the fantasy-baseball cron scripts. Kept separate
-# from `~/.config/personal-mcp/gmail/` (used by the gmail-personal MCP server)
-# because concurrent refreshes between the MCP server and these cron jobs
-# triggered Google's rotation-revocation policy three times (Apr 30, May 1,
-# May 9) — each time bricking the daily pipeline mid-week.
-#
-# This script no longer sends any mail; these paths survive only so the weekly
-# expiry check below can warn about the credential send_pending_email.py would
-# need if the legacy pipeline is ever revived.
-GMAIL_CREDS_PATH = os.path.expanduser("~/.config/personal-mcp/gmail-fb/credentials.json")
-GMAIL_OAUTH_PATH = os.path.expanduser("~/.config/personal-mcp/gmail-fb/gcp-oauth.keys.json")
+# There is deliberately no Gmail credential here. This script stopped sending
+# mail on 2026-08-02, and its weekly Gmail re-auth check went with it on
+# 2026-08-03: nothing in the active pipeline uses that token, so the Reminder
+# was nagging Jon to renew a credential only the retired send_pending_email.py
+# would need. Drive/Sheets (above) is the only OAuth credential this job holds.
 
 # ESPN public injuries API
 ESPN_INJURIES_URL = "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/injuries"
-
-# MLB Stats API (public, no auth needed)
-MLB_SCHEDULE_URL = "https://statsapi.mlb.com/api/v1/schedule"
-MLB_BOXSCORE_URL = "https://statsapi.mlb.com/api/v1/game/{game_pk}/boxscore"
 
 # Jon's roster file
 MY_TEAM_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "my_team.json")
@@ -78,13 +69,8 @@ STALE_THRESHOLD_HOURS = 36
 # MLB player ID cache (maps normalized name -> MLB person ID)
 MLB_PLAYER_IDS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "mlb_player_ids.json")
 
-# MLB people/stats endpoints
-MLB_PEOPLE_URL = "https://statsapi.mlb.com/api/v1/people"
+# MLB player-name lookup, used by search_mlb_player_id()
 MLB_SEARCH_URL = "https://statsapi.mlb.com/api/v1/people/search"
-MLB_TRANSACTIONS_URL = "https://statsapi.mlb.com/api/v1/transactions"
-
-# ESPN news
-ESPN_NEWS_URL = "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/news"
 
 # Map ESPN injury status to our health_status values (from config.PLAYING_TIME_DISCOUNTS)
 # ESPN uses hyphenated forms like "60-Day-IL", "10-Day-IL", "Day-To-Day"
@@ -124,28 +110,27 @@ def log(msg):
         f.write(line + "\n")
 
 
-def notify_reauth_needed(reason):
+def create_reminder(title, body):
     """Create a persistent macOS Reminder so Jon sees the alert even though
-    cron runs while he's asleep. Gmail-based alerts can't be trusted here —
-    the failing credential is the Gmail one."""
-    reauth_cmd = (
-        f"GMAIL_OAUTH_PATH={GMAIL_OAUTH_PATH} "
-        f"GMAIL_CREDENTIALS_PATH={GMAIL_CREDS_PATH} "
-        f"npx @gongrzhe/server-gmail-autoauth-mcp auth"
-    )
-    body = f"{reason}\n\nRe-auth command:\n{reauth_cmd}"
-    name = "Fantasy Baseball: re-auth Gmail OAuth"
+    cron runs while he's asleep.
+
+    Email is deliberately not the channel: everything this raises is either a
+    broken credential or a broken pipeline, which are exactly the conditions
+    under which an emailed warning wouldn't arrive. 60s osascript timeout —
+    10s was too tight for a cold-wake cron and every alert during the 5/8-12
+    outage silently timed out.
+    """
     esc = lambda s: s.replace("\\", "\\\\").replace('"', '\\"')
     script = (
         f'tell application "Reminders" to make new reminder '
-        f'with properties {{name:"{esc(name)}", body:"{esc(body)}"}}'
+        f'with properties {{name:"{esc(title)}", body:"{esc(body)}"}}'
     )
     try:
         subprocess.run(["osascript", "-e", script], check=True, timeout=60,
                        capture_output=True)
-        log(f"Created re-auth Reminder: {reason}")
+        log(f"Created Reminder — {title}: {body.splitlines()[0]}")
     except Exception as e:
-        log(f"WARN: failed to create re-auth Reminder: {e}")
+        log(f"WARN: failed to create Reminder '{title}': {e}")
 
 
 def _watermark_from_json(text):
@@ -193,9 +178,12 @@ def _remote_watermark():
 def check_pipeline_freshness():
     """Compare data/yesterday.json's date to today. If >36h stale, the daily
     pipeline has silently failed for at least one cycle — fire a Reminder so
-    Jon notices before the lag piles up. The cause is usually Gmail OAuth
-    revocation (which the regular re-auth check catches only after expiry),
-    but can also be a remote-agent failure or local cron miss.
+    Jon notices before the lag piles up. Since 2026-07-13 the pipeline is the
+    GitHub Actions run, so that is where the cause almost always is.
+
+    Keep the message's cause list current. When it still led with "Likely
+    Gmail OAuth revoked" the real cause (empty DATA drafts) went unaddressed
+    for two weeks even though this Reminder fired every single morning.
 
     Reads the newer of the local working copy and origin/main, because either
     can legitimately be ahead: Actions pushes to origin without pulling here,
@@ -228,41 +216,17 @@ def check_pipeline_freshness():
     msg = (
         f"data/yesterday.json watermark is {age_days} day(s) behind "
         f"(file shows {watermark}, expected {expected}). The daily pipeline "
-        f"hasn't pushed since then. Check send_email.log for the cause, in "
-        f"likelihood order: (1) remote agent shipping empty DATA drafts (no "
-        f"JSON blocks) — check the remote trigger on claude.ai; "
-        f"send_pending_email.py now fires its own specific Reminder for this. "
-        f"(2) Gmail OAuth revoked — re-auth and run send_pending_email.py. "
-        f"(3) local cron miss / Mac offline at run time."
+        f"hasn't pushed since then. Causes, in likelihood order: "
+        f"(1) the GitHub Actions run is failing or was disabled — "
+        f"`gh run list --workflow=daily.yml` and read the newest log; "
+        f"(2) generate_daily.py is erroring on upstream data (MLB Stats API "
+        f"or ESPN shape change) — reproduce with `python3 generate_daily.py "
+        f"--dry-run`; (3) the push step is failing — check the run log for a "
+        f"403 or a rejected non-fast-forward. Re-run with "
+        f"`gh workflow run daily.yml` once fixed."
     )
     log(f"PIPELINE STALE: {msg}")
-    notify_reauth_needed(msg)
-
-
-def check_gmail_reauth_needed():
-    """
-    Check if the Gmail personal MCP refresh token expires tomorrow or sooner.
-    Returns a warning message string if re-auth is needed, else None.
-    """
-    if not os.path.exists(GMAIL_CREDS_PATH):
-        return "Gmail credentials file not found — re-auth may be needed now."
-    with open(GMAIL_CREDS_PATH) as f:
-        creds = json.load(f)
-    expiry_ms = creds.get("expiry_date")
-    refresh_ttl = creds.get("refresh_token_expires_in")
-    if not expiry_ms or not refresh_ttl:
-        return None
-    access_expires = datetime.fromtimestamp(expiry_ms / 1000)
-    authed_at = access_expires - timedelta(hours=1)
-    refresh_expires = (authed_at + timedelta(seconds=refresh_ttl)).date()
-    days_left = (refresh_expires - datetime.now().date()).days
-    if days_left <= 1:
-        return (
-            f"Gmail personal MCP token expires {'today' if days_left <= 0 else 'tomorrow'} "
-            f"(authed {authed_at.strftime('%b %-d')}). "
-            f"Re-authenticate to avoid missing tomorrow's email."
-        )
-    return None
+    create_reminder("Fantasy Baseball: daily pipeline is stale", msg)
 
 
 def get_token():
@@ -428,147 +392,9 @@ def resolve_player_ids(roster, boxscore_ids):
     return resolved
 
 
-def fetch_season_stats(roster, player_ids):
-    """Batch-fetch current season stats for all roster players.
-
-    Returns dict: player_name -> {stat_key: value, ...}
-    """
-    season = datetime.now().year
-    all_ids = []
-    id_to_name = {}
-    for p in roster:
-        norm = normalize_name(_lookup_name(p))
-        mlb_id = player_ids.get(norm)
-        if mlb_id:
-            all_ids.append(str(mlb_id))
-            id_to_name[str(mlb_id)] = p["name"]
-
-    if not all_ids:
-        return {}
-
-    # Batch fetch with hydrate — gets both hitting and pitching stats in one call
-    ids_str = ",".join(all_ids)
-    url = (
-        f"{MLB_PEOPLE_URL}?personIds={ids_str}"
-        f"&hydrate=stats(group=[hitting,pitching],type=[season],season={season})"
-    )
-    req = urllib.request.Request(url)
-    req.add_header("User-Agent", "Mozilla/5.0")
-
-    try:
-        resp = urllib.request.urlopen(req, timeout=30)
-        data = json.loads(resp.read())
-    except Exception as e:
-        log(f"Failed to fetch season stats: {e}")
-        return {}
-
-    result = {}
-    for person in data.get("people", []):
-        pid = str(person.get("id", ""))
-        name = id_to_name.get(pid)
-        if not name:
-            continue
-
-        for stat_group in person.get("stats", []):
-            splits = stat_group.get("splits", [])
-            if splits:
-                stat = splits[0].get("stat", {})
-                # Merge all stat groups into one dict per player
-                if name not in result:
-                    result[name] = {}
-                result[name].update(stat)
-
-    log(f"Fetched season stats for {len(result)} players")
-    return result
-
-
 # ---------------------------------------------------------------------------
 # Point calculations
 # ---------------------------------------------------------------------------
-
-def compute_hitter_ytd(stats):
-    """Compute hitter fantasy points to date: BA*1000 + HR + RBI + R + SB."""
-    ab = int(stats.get("atBats", 0))
-    h = int(stats.get("hits", 0))
-    ba = h / ab if ab > 0 else 0.0
-    hr = int(stats.get("homeRuns", 0))
-    rbi = int(stats.get("rbi", 0))
-    r = int(stats.get("runs", 0))
-    sb = int(stats.get("stolenBases", 0))
-    return round(ba * 1000 + hr + rbi + r + sb, 1)
-
-
-def compute_hitter_pace(stats):
-    """Extrapolate hitter points over 162 games (assuming min AB threshold met)."""
-    g = int(stats.get("gamesPlayed", 0))
-    if g == 0:
-        return 0.0
-    ab = int(stats.get("atBats", 0))
-    h = int(stats.get("hits", 0))
-    ba = h / ab if ab > 0 else 0.0
-    factor = 162.0 / g
-    hr = int(stats.get("homeRuns", 0)) * factor
-    rbi = int(stats.get("rbi", 0)) * factor
-    r = int(stats.get("runs", 0)) * factor
-    sb = int(stats.get("stolenBases", 0)) * factor
-    return round(ba * 1000 + hr + rbi + r + sb, 1)
-
-
-def compute_sp_ytd(stats):
-    """Compute SP individual RSAR to date: (1.2*AVG_ERA - ERA) * (IP/9)."""
-    ip_raw = stats.get("inningsPitched", "0")
-    ip = float(ip_raw) if ip_raw else 0.0
-    era_raw = stats.get("era", None)
-    if ip == 0 or era_raw is None:
-        return 0.0
-    era = float(era_raw)
-    rsar = (1.2 * config.MLB_AVG_ERA - era) * (ip / 9.0)
-    return round(rsar, 1)
-
-
-def compute_sp_pace(stats):
-    """Extrapolate SP RSAR over full season (~32 starts, min IP threshold met)."""
-    gs = int(stats.get("gamesStarted", 0))
-    ip_raw = stats.get("inningsPitched", "0")
-    ip = float(ip_raw) if ip_raw else 0.0
-    era_raw = stats.get("era", None)
-    if gs == 0 or ip == 0 or era_raw is None:
-        return 0.0
-    era = float(era_raw)
-    ip_per_start = ip / gs
-    projected_ip = ip_per_start * 32
-    rsar = (1.2 * config.MLB_AVG_ERA - era) * (projected_ip / 9.0)
-    return round(rsar, 1)
-
-
-def compute_rp_ytd(stats):
-    """Compute RP points to date: 5 * (W + SV)."""
-    w = int(stats.get("wins", 0))
-    sv = int(stats.get("saves", 0))
-    return round(5.0 * (w + sv), 1)
-
-
-def compute_rp_pace(stats):
-    """Extrapolate RP points over full season (~65 appearances)."""
-    g = int(stats.get("gamesPlayed", 0))
-    if g == 0:
-        return 0.0
-    w = int(stats.get("wins", 0))
-    sv = int(stats.get("saves", 0))
-    factor = 65.0 / g
-    return round(5.0 * (w * factor + sv * factor), 1)
-
-
-def compute_points(player_type, stats):
-    """Compute (ytd_points, pace_points) for a player based on type."""
-    if player_type == "hitter":
-        return compute_hitter_ytd(stats), compute_hitter_pace(stats)
-    elif player_type == "sp":
-        return compute_sp_ytd(stats), compute_sp_pace(stats)
-    elif player_type == "rp":
-        return compute_rp_ytd(stats), compute_rp_pace(stats)
-    return 0.0, 0.0
-
 
 # ---------------------------------------------------------------------------
 # Day summary generation
@@ -793,19 +619,6 @@ def match_and_update(sheet_players, injuries, token):
     return changes
 
 
-# Status display labels
-STATUS_LABELS = {
-    "healthy":      "✅ Healthy",
-    "day-to-day":   "⚠️ Day-to-Day",
-    "probable":     "🟡 Probable",
-    "questionable": "🟠 Questionable",
-    "IL-10":        "🔴 10-Day IL",
-    "IL-60":        "🔴 60-Day IL",
-    "IL-season":    "❌ Out/Season",
-    "unknown":      "❓ Unknown",
-}
-
-
 def main():
     log("=" * 50)
     log("Starting daily fantasy baseball update...")
@@ -831,18 +644,19 @@ def main():
         sheet_players = read_sheet_players(token)
         match_and_update(sheet_players, injuries, token)
 
-        # Check if Gmail personal MCP token needs re-auth soon
-        reauth_msg = check_gmail_reauth_needed()
-        if reauth_msg:
-            log(f"REAUTH WARNING: {reauth_msg}")
-            notify_reauth_needed(reauth_msg)
-
         log("Daily update complete.")
     except Exception as e:
         log(f"ERROR: {e}")
         err_str = str(e).lower()
         if any(k in err_str for k in ("token", "401", "unauthorized", "invalid_grant", "expired")):
-            notify_reauth_needed(f"Daily update failed (auth error): {e}")
+            # Drive/Sheets is the only credential this job holds — get_token()
+            # is what raises here. It used to print a Gmail re-auth command,
+            # which was the wrong fix for the credential that actually failed.
+            create_reminder(
+                "Fantasy Baseball: re-auth Drive/Sheets OAuth",
+                f"Daily update failed (auth error): {e}\n\n"
+                f"Re-auth command:\n{GDRIVE_REAUTH_CMD}",
+            )
         raise
 
 
