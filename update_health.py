@@ -51,8 +51,8 @@ OAUTH_PATH = os.path.join(_GDRIVE_DIR, "gcp-oauth.keys.json")
 GDRIVE_REAUTH_CMD = f"node {os.path.join(_GDRIVE_DIR, 'auth.mjs')}"
 
 # There is deliberately no Gmail credential here. This script stopped sending
-# mail on 2026-08-02, and its weekly Gmail re-auth check went with it on
-# 2026-08-03: nothing in the active pipeline uses that token, so the Reminder
+# mail on 2026-08-02, and its weekly Gmail re-auth check went with it the same
+# day: nothing in the active pipeline uses that token, so the Reminder
 # was nagging Jon to renew a credential only the retired send_pending_email.py
 # would need. Drive/Sheets (above) is the only OAuth credential this job holds.
 
