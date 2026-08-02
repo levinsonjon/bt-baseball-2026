@@ -154,7 +154,10 @@ def generate_report_from_search_results(
     season_stats = update_season_stats(season_stats, day_results)
     save_season_stats(season_stats)
 
-    html = build_html_email(report_date, day_results, season_stats)
+    # check_gmail_auth: this path sends via the gmail-personal MCP server, so
+    # the OAuth re-auth banner is meaningful here (unlike the SMTP Actions run).
+    html = build_html_email(report_date, day_results, season_stats,
+                            check_gmail_auth=True)
     subject = build_subject(report_date, day_results)
 
     print(f"\n[daily] Report built: {len(day_results)} players")

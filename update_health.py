@@ -54,9 +54,12 @@ OAUTH_PATH = os.path.join(_GDRIVE_DIR, "gcp-oauth.keys.json")
 # because concurrent refreshes between the MCP server and these cron jobs
 # triggered Google's rotation-revocation policy three times (Apr 30, May 1,
 # May 9) — each time bricking the daily pipeline mid-week.
+#
+# This script no longer sends any mail; these paths survive only so the weekly
+# expiry check below can warn about the credential send_pending_email.py would
+# need if the legacy pipeline is ever revived.
 GMAIL_CREDS_PATH = os.path.expanduser("~/.config/personal-mcp/gmail-fb/credentials.json")
 GMAIL_OAUTH_PATH = os.path.expanduser("~/.config/personal-mcp/gmail-fb/gcp-oauth.keys.json")
-ALERT_EMAIL = "levinson.jon@gmail.com"
 
 # ESPN public injuries API
 ESPN_INJURIES_URL = "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/injuries"
@@ -105,9 +108,18 @@ _rotate_log(LOG_PATH)
 
 
 def log(msg):
+    """Append one timestamped line to LOG_PATH.
+
+    Echo to stdout only when attached to a terminal. The launchd plist points
+    both StandardOutPath and StandardErrorPath at LOG_PATH, so an unconditional
+    print() wrote every line to the file twice — which is half of why this log
+    reached 1.2 MB, and made single runs look like duplicate ones. Tracebacks
+    still land in the file via the stderr redirect.
+    """
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     line = f"[{ts}] {msg}"
-    print(line)
+    if sys.stdout.isatty():
+        print(line)
     with open(LOG_PATH, "a") as f:
         f.write(line + "\n")
 
@@ -134,67 +146,6 @@ def notify_reauth_needed(reason):
         log(f"Created re-auth Reminder: {reason}")
     except Exception as e:
         log(f"WARN: failed to create re-auth Reminder: {e}")
-
-
-def send_alert_email(subject, body, html=False, cc=True):
-    """Send an email via the personal Gmail API. Set html=True for HTML body.
-    Set cc=False to skip CC recipients (e.g. for admin-only alerts).
-    Returns True on success, False on failure."""
-    import base64
-    from email.mime.text import MIMEText
-
-    try:
-        # Get Gmail token
-        with open(GMAIL_CREDS_PATH) as f:
-            creds = json.load(f)
-        with open(GMAIL_OAUTH_PATH) as f:
-            oauth = json.load(f)
-            oauth_info = oauth.get("installed", oauth.get("web", oauth))
-
-        now_ms = int(time.time() * 1000)
-        if now_ms > creds.get("expiry_date", 0):
-            data = urllib.parse.urlencode({
-                "client_id": oauth_info["client_id"],
-                "client_secret": oauth_info["client_secret"],
-                "refresh_token": creds["refresh_token"],
-                "grant_type": "refresh_token",
-            }).encode()
-            req = urllib.request.Request("https://oauth2.googleapis.com/token", data=data)
-            resp = urllib.request.urlopen(req, timeout=15)
-            new_tokens = json.loads(resp.read())
-            creds["access_token"] = new_tokens["access_token"]
-            creds["expiry_date"] = int(time.time() * 1000) + new_tokens.get("expires_in", 3600) * 1000
-            with open(GMAIL_CREDS_PATH, "w") as f:
-                json.dump(creds, f, indent=2)
-
-        gmail_token = creds["access_token"]
-
-        # Build the message
-        msg = MIMEText(body, "html" if html else "plain")
-        msg["to"] = ALERT_EMAIL
-        msg["from"] = ALERT_EMAIL
-        msg["subject"] = subject
-        if cc:
-            cc_list = getattr(config, "REPORT_EMAIL_CC", [])
-            if cc_list:
-                msg["cc"] = ", ".join(cc_list)
-        raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
-
-        # Send via Gmail API
-        url = "https://gmail.googleapis.com/gmail/v1/users/me/messages/send"
-        req = urllib.request.Request(url, data=json.dumps({"raw": raw}).encode(), method="POST")
-        req.add_header("Authorization", f"Bearer {gmail_token}")
-        req.add_header("Content-Type", "application/json")
-        urllib.request.urlopen(req, timeout=15)
-        log("Alert email sent.")
-        return True
-    except Exception as e:
-        log(f"Failed to send alert email: {e}")
-        err_str = str(e).lower()
-        if any(k in err_str for k in ("invalid_grant", "401", "unauthorized",
-                                       "token has been", "refresherror")):
-            notify_reauth_needed(f"Gmail send failed: {e}")
-        return False
 
 
 def _watermark_from_json(text):
@@ -409,170 +360,6 @@ def load_my_roster():
     with open(MY_TEAM_FILE) as f:
         data = json.load(f)
     return data.get("players", [])
-
-
-def fetch_yesterday_boxscores(roster):
-    """Fetch yesterday's stats for roster players via MLB Stats API.
-
-    Returns (player_stats dict, display_date, player_ids dict) where player_stats
-    maps player name -> {player_type, position, opponent, stats, synopsis} and
-    player_ids maps normalized name -> MLB person ID.
-    """
-    yesterday = datetime.now() - timedelta(days=1)
-    date_str = yesterday.strftime("%Y-%m-%d")
-    display_date = yesterday.strftime("%b %-d")
-
-    log(f"Fetching MLB boxscores for {date_str}...")
-
-    # 1. Get schedule
-    url = f"{MLB_SCHEDULE_URL}?date={date_str}&sportId=1"
-    req = urllib.request.Request(url)
-    req.add_header("User-Agent", "Mozilla/5.0")
-    resp = urllib.request.urlopen(req, timeout=30)
-    schedule = json.loads(resp.read())
-
-    game_pks = []
-    for date_entry in schedule.get("dates", []):
-        for game in date_entry.get("games", []):
-            state = game.get("status", {}).get("abstractGameState", "")
-            if state == "Final":
-                game_pks.append(game["gamePk"])
-
-    if not game_pks:
-        log(f"No completed MLB games for {date_str}")
-        return {}, display_date, {}
-
-    log(f"Found {len(game_pks)} completed games for {date_str}")
-
-    # Build roster lookup by normalized name (use real MLB name for matching;
-    # the value still carries the slot's "name" for downstream display).
-    roster_lookup = {}
-    for p in roster:
-        roster_lookup[normalize_name(_lookup_name(p))] = p
-
-    # 2. Fetch each boxscore, extract roster player stats
-    player_stats = {}
-    player_ids = {}  # normalized name -> MLB person ID
-
-    for game_pk in game_pks:
-        url = MLB_BOXSCORE_URL.format(game_pk=game_pk)
-        req = urllib.request.Request(url)
-        req.add_header("User-Agent", "Mozilla/5.0")
-        try:
-            resp = urllib.request.urlopen(req, timeout=30)
-            boxscore = json.loads(resp.read())
-        except Exception as e:
-            log(f"  Failed to fetch boxscore for game {game_pk}: {e}")
-            continue
-
-        for side in ("away", "home"):
-            team_data = boxscore.get("teams", {}).get(side, {})
-            opp_side = "home" if side == "away" else "away"
-            opp_abbr = boxscore.get("teams", {}).get(opp_side, {}).get(
-                "team", {}
-            ).get("abbreviation", "???")
-
-            for pid, pdata in team_data.get("players", {}).items():
-                full_name = pdata.get("person", {}).get("fullName", "")
-                norm = normalize_name(full_name)
-
-                if norm not in roster_lookup:
-                    continue
-
-                rp = roster_lookup[norm]
-                mlb_id = pdata.get("person", {}).get("id")
-                if mlb_id:
-                    player_ids[norm] = mlb_id
-                batting = pdata.get("stats", {}).get("batting", {})
-                pitching = pdata.get("stats", {}).get("pitching", {})
-
-                if rp["player_type"] == "hitter":
-                    ab = int(batting.get("atBats", 0))
-                    pa = int(batting.get("plateAppearances", 0))
-                    if ab == 0 and pa == 0:
-                        continue
-
-                    h = int(batting.get("hits", 0))
-                    r = int(batting.get("runs", 0))
-                    hr = int(batting.get("homeRuns", 0))
-                    rbi = int(batting.get("rbi", 0))
-                    sb = int(batting.get("stolenBases", 0))
-                    bb = int(batting.get("baseOnBalls", 0))
-
-                    parts = [f"{h}-for-{ab}"]
-                    if hr:
-                        parts.append(f"{hr} HR")
-                    if rbi:
-                        parts.append(f"{rbi} RBI")
-                    if r:
-                        parts.append(f"{r} R")
-                    if sb:
-                        parts.append(f"{sb} SB")
-                    if bb:
-                        parts.append(f"{bb} BB")
-
-                    player_stats[rp["name"]] = {
-                        "player_type": "hitter",
-                        "position": rp["positions"][0] if rp.get("positions") else "",
-                        "opponent": opp_abbr,
-                        "stats": {
-                            "AB": ab, "H": h, "R": r, "HR": hr,
-                            "RBI": rbi, "SB": sb, "BB": bb,
-                        },
-                        "synopsis": f"vs {opp_abbr}: {', '.join(parts)}",
-                    }
-
-                elif rp["player_type"] in ("sp", "rp"):
-                    ip_str = pitching.get("inningsPitched", "0")
-                    ip = float(ip_str) if ip_str else 0.0
-                    if ip == 0 and not int(pitching.get("battersFaced", 0)):
-                        continue
-
-                    h_allowed = int(pitching.get("hits", 0))
-                    er = int(pitching.get("earnedRuns", 0))
-                    k = int(pitching.get("strikeOuts", 0))
-                    bb_p = int(pitching.get("baseOnBalls", 0))
-
-                    # Decision from note field, e.g. "(W, 1-0)"
-                    note = pitching.get("note", "")
-                    decision = ""
-                    if note:
-                        nl = note.lower()
-                        if nl.startswith("(w"):
-                            decision = "W"
-                        elif nl.startswith("(l"):
-                            decision = "L"
-                        elif nl.startswith("(s"):
-                            decision = "SV"
-                        elif nl.startswith("(h"):
-                            decision = "HLD"
-                        elif nl.startswith("(bs"):
-                            decision = "BS"
-
-                    parts = [f"{ip_str} IP", f"{k} K", f"{er} ER"]
-                    if bb_p:
-                        parts.append(f"{bb_p} BB")
-                    if h_allowed:
-                        parts.append(f"{h_allowed} H")
-                    if decision:
-                        parts.append(decision)
-
-                    player_stats[rp["name"]] = {
-                        "player_type": rp["player_type"],
-                        "position": rp["positions"][0] if rp.get("positions") else "",
-                        "opponent": opp_abbr,
-                        "stats": {
-                            "IP": ip, "H": h_allowed, "ER": er, "K": k,
-                            "BB": bb_p, "W": 1 if decision == "W" else 0,
-                            "L": 1 if decision == "L" else 0,
-                            "SV": 1 if decision == "SV" else 0,
-                        },
-                        "synopsis": f"vs {opp_abbr}: {', '.join(parts)}",
-                        "decision": decision,
-                    }
-
-    log(f"Found stats for {len(player_stats)} roster players, {len(player_ids)} IDs captured")
-    return player_stats, display_date, player_ids
 
 
 # ---------------------------------------------------------------------------
@@ -864,78 +651,8 @@ def generate_day_summary(player_type, day_stats):
 
 
 # ---------------------------------------------------------------------------
-# Player news
+# Rankings sheet update
 # ---------------------------------------------------------------------------
-
-def fetch_player_news(roster, injuries):
-    """Fetch recent news for roster players.
-
-    Sources (in priority order — later sources overwrite earlier):
-      1. ESPN general news feed (matched by player full name)
-      2. ESPN injury notes (from already-fetched injuries dict)
-      3. MLB transactions API (roster moves, IL placements)
-
-    Returns dict: player_name -> short news string.
-    """
-    news = {}
-    roster_lookup = {}  # normalized real-MLB name -> slot display name
-    for p in roster:
-        roster_lookup[normalize_name(_lookup_name(p))] = p["name"]
-
-    # 1. ESPN general news — scan headlines for roster player names
-    try:
-        url = f"{ESPN_NEWS_URL}?limit=80"
-        req = urllib.request.Request(url)
-        req.add_header("User-Agent", "Mozilla/5.0")
-        resp = urllib.request.urlopen(req, timeout=15)
-        data = json.loads(resp.read())
-
-        for article in data.get("articles", []):
-            headline = article.get("headline", "")
-            description = article.get("description", "")
-            text = f"{headline} {description}"
-
-            for norm, real_name in roster_lookup.items():
-                if real_name in news:
-                    continue
-                # Match on full name (case-insensitive)
-                if real_name.lower() in text.lower():
-                    news[real_name] = headline[:100]
-    except Exception as e:
-        log(f"  ESPN news fetch failed: {e}")
-
-    # 2. ESPN injury notes (already fetched) — overwrite with more specific info
-    for espn_name, info in injuries.items():
-        norm = normalize_name(espn_name)
-        if norm in roster_lookup and info.get("note"):
-            note = info["note"]
-            if note and note.lower() not in ("unknown",):
-                news[roster_lookup[norm]] = note[:120]
-
-    # 3. MLB transactions (last 2 days) — highest priority
-    try:
-        yesterday = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
-        today_str = datetime.now().strftime("%Y-%m-%d")
-        url = f"{MLB_TRANSACTIONS_URL}?startDate={yesterday}&endDate={today_str}"
-        req = urllib.request.Request(url)
-        req.add_header("User-Agent", "Mozilla/5.0")
-        resp = urllib.request.urlopen(req, timeout=15)
-        data = json.loads(resp.read())
-
-        for txn in data.get("transactions", []):
-            person = txn.get("person", {})
-            name = person.get("fullName", "")
-            norm = normalize_name(name)
-            if norm in roster_lookup:
-                desc = txn.get("description", "")
-                if desc:
-                    news[roster_lookup[norm]] = desc[:120]
-    except Exception as e:
-        log(f"  MLB transactions fetch failed: {e}")
-
-    log(f"Found news for {len(news)} roster players")
-    return news
-
 
 def apply_injuries_to_players(players):
     """
@@ -1089,221 +806,6 @@ STATUS_LABELS = {
 }
 
 
-def send_daily_email(roster, changes, yesterday_stats, game_date_display,
-                     player_news):
-    """Send combined daily email with hitter/pitcher tables + injury updates."""
-    today = datetime.now().strftime("%B %d, %Y")
-    sheet_url = f"https://docs.google.com/spreadsheets/d/{config.GOOGLE_SHEET_ID}"
-
-    # Shared table styles
-    TH = 'style="padding:6px 10px;text-align:left;border-bottom:2px solid #ddd;white-space:nowrap"'
-    TD = 'style="padding:5px 10px;border-bottom:1px solid #eee"'
-    TD_NUM = 'style="padding:5px 10px;border-bottom:1px solid #eee;text-align:right"'
-    TD_DNP = 'style="padding:5px 10px;border-bottom:1px solid #eee;color:#aaa"'
-    TD_NEWS = 'style="padding:5px 10px;border-bottom:1px solid #eee;font-size:11px;color:#555;max-width:180px"'
-    TD_TOT = 'style="padding:6px 10px;border-top:2px solid #1a3a5c;font-weight:bold;background:#e8f0fe"'
-    TD_TOT_NUM = 'style="padding:6px 10px;border-top:2px solid #1a3a5c;font-weight:bold;background:#e8f0fe;text-align:right"'
-
-    # Filter injury changes to team-only (match by real MLB name; ESPN's
-    # injury feed doesn't know about our composite slot labels)
-    team_names = {normalize_name(_lookup_name(p)) for p in roster}
-    team_changes = [c for c in changes if normalize_name(c["name"]) in team_names]
-
-    # --- Hitters table ---
-    hitters = [p for p in roster if p["player_type"] == "hitter"]
-    hitter_rows = ""
-    tot_h = tot_ab = tot_r = tot_hr = tot_rbi = tot_sb = 0
-    tot_pre = 0.0
-
-    for p in hitters:
-        name = p["name"]
-        pos = p["positions"][0] if p.get("positions") else ""
-        day = yesterday_stats.get(name)
-        pre_proj = p.get("projected_points", 0)
-        summary = generate_day_summary("hitter", day)
-        news = player_news.get(name, "\u2014")
-
-        tot_pre += pre_proj
-
-        if day:
-            s = day["stats"]
-            tot_h += s["H"]; tot_ab += s["AB"]; tot_r += s["R"]
-            tot_hr += s["HR"]; tot_rbi += s["RBI"]; tot_sb += s["SB"]
-            line = f'{s["H"]}-{s["AB"]}'
-            r_val = str(s["R"]) if s["R"] else "\u2014"
-            hr_val = str(s["HR"]) if s["HR"] else "\u2014"
-            rbi_val = str(s["RBI"]) if s["RBI"] else "\u2014"
-            sb_val = str(s["SB"]) if s["SB"] else "\u2014"
-            opp = f'vs {day["opponent"]}'
-            hitter_rows += f"""<tr>
-              <td {TD}><strong>{name}</strong></td><td {TD}>{pos}</td>
-              <td {TD}>{opp}</td><td {TD_NUM}>{line}</td>
-              <td {TD_NUM}>{r_val}</td><td {TD_NUM}>{hr_val}</td>
-              <td {TD_NUM}>{rbi_val}</td><td {TD_NUM}>{sb_val}</td>
-              <td {TD}>{summary}</td><td {TD_NEWS}>{news}</td>
-              <td {TD_NUM}>{pre_proj:.0f}</td>
-            </tr>"""
-        else:
-            hitter_rows += f"""<tr style="color:#aaa">
-              <td {TD}><strong>{name}</strong></td><td {TD}>{pos}</td>
-              <td {TD_DNP} colspan="6">DNP</td>
-              <td {TD_DNP}>{summary}</td><td {TD_NEWS}>{news}</td>
-              <td {TD_NUM}>{pre_proj:.0f}</td>
-            </tr>"""
-
-    # Total row
-    hitter_rows += f"""<tr>
-      <td {TD_TOT} colspan="3">TOTAL</td>
-      <td {TD_TOT_NUM}>{tot_h}-{tot_ab}</td>
-      <td {TD_TOT_NUM}>{tot_r}</td><td {TD_TOT_NUM}>{tot_hr}</td>
-      <td {TD_TOT_NUM}>{tot_rbi}</td><td {TD_TOT_NUM}>{tot_sb}</td>
-      <td {TD_TOT}></td><td {TD_TOT}></td>
-      <td {TD_TOT_NUM}>{tot_pre:.0f}</td>
-    </tr>"""
-
-    hitters_html = f"""
-    <h2 style="color:#1a3a5c">Hitters \u2014 {game_date_display}</h2>
-    <p style="color:#999;font-size:11px;margin-top:0">Scoring: BA&times;1000 + HR + RBI + R + SB (300 AB min)</p>
-    <table style="border-collapse:collapse;width:100%;font-size:13px">
-      <thead><tr style="background:#f5f5f5">
-        <th {TH}>Player</th><th {TH}>Pos</th><th {TH}>Opp</th>
-        <th {TH}>H/AB</th><th {TH}>R</th><th {TH}>HR</th><th {TH}>RBI</th><th {TH}>SB</th>
-        <th {TH}>Summary</th><th {TH}>News</th><th {TH}>Pre</th>
-      </tr></thead>
-      <tbody>{hitter_rows}</tbody>
-    </table>"""
-
-    # --- Pitchers table ---
-    pitchers = [p for p in roster if p["player_type"] in ("sp", "rp")]
-    pitcher_rows = ""
-    ptot_ip = ptot_h = ptot_er = ptot_k = ptot_bb = 0.0
-    sp_pre_vals = []
-    rp_pre = 0.0
-
-    for p in pitchers:
-        name = p["name"]
-        pos = p["positions"][0] if p.get("positions") else ""
-        ptype = p["player_type"]
-        day = yesterday_stats.get(name)
-        pre_proj = p.get("projected_points", 0)
-        summary = generate_day_summary(ptype, day)
-        news = player_news.get(name, "\u2014")
-
-        if ptype == "sp":
-            sp_pre_vals.append(pre_proj)
-        else:  # rp
-            rp_pre = pre_proj
-
-        if day:
-            s = day["stats"]
-            ptot_ip += s.get("IP", 0); ptot_h += s.get("H", 0)
-            ptot_er += s.get("ER", 0); ptot_k += s.get("K", 0)
-            ptot_bb += s.get("BB", 0)
-            ip_val = s.get("IP", 0)
-            ip_display = f'{ip_val:.1f}' if ip_val != int(ip_val) else f'{int(ip_val)}.0'
-            k_val = str(s.get("K", 0))
-            er_val = str(s.get("ER", 0))
-            h_val = str(s.get("H", 0))
-            bb_val = str(s.get("BB", 0))
-            dec = day.get("decision", "") or "\u2014"
-            opp = f'vs {day["opponent"]}'
-            pitcher_rows += f"""<tr>
-              <td {TD}><strong>{name}</strong></td><td {TD}>{pos}</td>
-              <td {TD}>{opp}</td><td {TD_NUM}>{ip_display}</td>
-              <td {TD_NUM}>{h_val}</td><td {TD_NUM}>{er_val}</td>
-              <td {TD_NUM}>{k_val}</td><td {TD_NUM}>{bb_val}</td><td {TD}>{dec}</td>
-              <td {TD}>{summary}</td><td {TD_NEWS}>{news}</td>
-              <td {TD_NUM}>{pre_proj:.1f}</td>
-            </tr>"""
-        else:
-            pitcher_rows += f"""<tr style="color:#aaa">
-              <td {TD}><strong>{name}</strong></td><td {TD}>{pos}</td>
-              <td {TD_DNP} colspan="7">DNP</td>
-              <td {TD_DNP}>{summary}</td><td {TD_NEWS}>{news}</td>
-              <td {TD_NUM}>{pre_proj:.1f}</td>
-            </tr>"""
-
-    # Total row — team scoring: top 3 SP projection * 3.5 + RP projection
-    top3_pre = sum(sorted(sp_pre_vals, reverse=True)[:3])
-    ptot_pre = top3_pre * config.SP_RSAR_MULTIPLIER + rp_pre
-
-    ip_tot_display = f'{ptot_ip:.1f}'
-    pitcher_rows += f"""<tr>
-      <td {TD_TOT} colspan="3">TOTAL</td>
-      <td {TD_TOT_NUM}>{ip_tot_display}</td>
-      <td {TD_TOT_NUM}>{int(ptot_h)}</td><td {TD_TOT_NUM}>{int(ptot_er)}</td>
-      <td {TD_TOT_NUM}>{int(ptot_k)}</td><td {TD_TOT_NUM}>{int(ptot_bb)}</td>
-      <td {TD_TOT}></td><td {TD_TOT}></td><td {TD_TOT}></td>
-      <td {TD_TOT_NUM}>{ptot_pre:.1f}</td>
-    </tr>"""
-
-    scoring_note = "SP: RSAR = (1.2&times;AvgERA \u2212 ERA)&times;(IP/9), top 3 &times; 3.5 &middot; RP: 5&times;(W+SV)"
-    pitchers_html = f"""
-    <h2 style="color:#1a3a5c">Pitchers \u2014 {game_date_display}</h2>
-    <p style="color:#999;font-size:11px;margin-top:0">{scoring_note}</p>
-    <table style="border-collapse:collapse;width:100%;font-size:13px">
-      <thead><tr style="background:#f5f5f5">
-        <th {TH}>Player</th><th {TH}>Pos</th><th {TH}>Opp</th>
-        <th {TH}>IP</th><th {TH}>H</th><th {TH}>ER</th><th {TH}>K</th><th {TH}>BB</th><th {TH}>Dec</th>
-        <th {TH}>Summary</th><th {TH}>News</th><th {TH}>Pre</th>
-      </tr></thead>
-      <tbody>{pitcher_rows}</tbody>
-    </table>"""
-
-    # --- Injury section (team-only) ---
-    injury_html = '<h2 style="color:#1a3a5c">Injury Report</h2>'
-    if team_changes:
-        team_changes_sorted = sorted(
-            team_changes, key=lambda c: 1 if c["new_status"] == "healthy" else 0
-        )
-        inj_rows = ""
-        for c in team_changes_sorted:
-            old_label = STATUS_LABELS.get(c["old_status"], c["old_status"])
-            new_label = STATUS_LABELS.get(c["new_status"], c["new_status"])
-            note = c["note"] or "\u2014"
-            inj_rows += f"""<tr>
-              <td {TD}><strong>{c['name']}</strong></td>
-              <td {TD}>{c['team']} \u00b7 {c['pos']}</td>
-              <td {TD}>{old_label}</td><td {TD}>{new_label}</td>
-              <td {TD} style="color:#555;font-size:12px">{note}</td>
-            </tr>"""
-        injury_html += f"""
-        <p style="color:#555">{len(team_changes)} roster player(s) with status changes.</p>
-        <table style="border-collapse:collapse;width:100%;font-size:13px">
-          <thead><tr style="background:#f5f5f5">
-            <th {TH}>Player</th><th {TH}>Team \u00b7 Pos</th>
-            <th {TH}>Previous</th><th {TH}>Current</th><th {TH}>Note</th>
-          </tr></thead>
-          <tbody>{inj_rows}</tbody>
-        </table>"""
-    else:
-        injury_html += '<p style="color:#888">No injury status changes for your roster.</p>'
-
-    # --- Combine ---
-    html = f"""
-<html><body style="font-family:Arial,sans-serif;color:#222;max-width:1100px;margin:0 auto">
-  <h1 style="color:#1a3a5c;border-bottom:2px solid #1a3a5c;padding-bottom:6px">Fantasy Baseball Daily \u2014 {today}</h1>
-  {hitters_html}
-  {pitchers_html}
-  {injury_html}
-  <p style="margin-top:20px;font-size:12px">
-    <a href="{sheet_url}" style="color:#1a73e8">View rankings sheet \u2192</a>
-    &nbsp;&middot;&nbsp; Pre = preseason projection
-  </p>
-</body></html>"""
-
-    played_count = len(yesterday_stats)
-    ok = send_alert_email(
-        f"Fantasy Baseball Daily \u2014 {today} ({played_count} played, {len(team_changes)} injury updates)",
-        html,
-        html=True,
-    )
-    if ok:
-        log(f"Daily email sent ({played_count} played, {len(team_changes)} injury changes).")
-    else:
-        log(f"Daily email FAILED to send ({played_count} played, {len(team_changes)} injury changes) - see 'Failed to send alert email' above.")
-
-
 def main():
     log("=" * 50)
     log("Starting daily fantasy baseball update...")
@@ -1316,25 +818,18 @@ def main():
         log(f"WARN: pipeline freshness check failed: {e}")
 
     try:
-        # Load Jon's roster
-        roster = load_my_roster()
-        log(f"Loaded roster: {len(roster)} players")
-
-        # Update health/injury data in the full Rankings sheet
+        # Update health/injury data in the full Rankings sheet.
+        #
+        # This script does NOT send the daily report email. It used to, via its
+        # own send_daily_email(), which quietly kept running after 960ce85 moved
+        # the email to GitHub Actions — so on 2026-08-02 Jon got two reports,
+        # one at 4:17am from here and one at 6:49am from Actions. Actions is now
+        # the sole sender (it's cloud-side, so it doesn't depend on this Mac
+        # being awake). Keep it that way.
         token = get_token()
         injuries = fetch_espn_injuries()
         sheet_players = read_sheet_players(token)
-        changes = match_and_update(sheet_players, injuries, token)
-
-        # Fetch yesterday's box scores for roster players
-        yesterday_stats, game_date_display, _ = fetch_yesterday_boxscores(roster)
-
-        # Fetch player news (ESPN news + MLB transactions + injury notes)
-        player_news = fetch_player_news(roster, injuries)
-
-        # Send combined daily email (yesterday's performance + news + injuries)
-        send_daily_email(roster, changes or [], yesterday_stats, game_date_display,
-                         player_news)
+        match_and_update(sheet_players, injuries, token)
 
         # Check if Gmail personal MCP token needs re-auth soon
         reauth_msg = check_gmail_reauth_needed()

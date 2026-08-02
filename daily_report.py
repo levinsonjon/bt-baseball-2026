@@ -337,11 +337,28 @@ def check_gmail_reauth_needed() -> Optional[str]:
 
 
 def _build_reauth_banner() -> str:
-    """Return an HTML warning banner if Gmail re-auth is due, else empty string."""
+    """Return an HTML warning banner if Gmail re-auth is due, else empty string.
+
+    Only meaningful for senders that actually use GMAIL_CREDENTIALS_PATH — i.e.
+    run_daily.py, which goes out through the gmail-personal MCP server. The
+    GitHub Actions path sends over SMTP with an app password and has no OAuth
+    token to expire, so build_html_email() leaves this off by default. Enabling
+    it there produced a permanent false "credentials file not found" banner:
+    on a runner, Path.home() is /home/runner and the file never exists.
+    """
     msg = check_gmail_reauth_needed()
     if msg:
         return f'<div class="reauth-banner"><strong>Action needed:</strong> {msg}</div>'
     return ""
+
+
+def _send_date(report_date: date) -> date:
+    """The morning the report goes out: the day after the games it covers.
+
+    Derived from report_date rather than read off the clock so that backfills
+    (`generate_daily.py --date`) title correctly instead of stamping today.
+    """
+    return report_date + timedelta(days=1)
 
 
 # ---------------------------------------------------------------------------
@@ -477,18 +494,28 @@ def build_html_email(
     report_date: date,
     day_results: list[DayResult],
     season_stats: dict,
+    check_gmail_auth: bool = False,
 ) -> str:
-    """Build the full HTML email body matching the established format."""
+    """Build the full HTML email body matching the established format.
+
+    `report_date` is the date of the games covered. The title carries the send
+    date (the morning after) to match the long-standing convention; the section
+    headers carry the game date.
+
+    Set `check_gmail_auth` only when the caller sends via the gmail-personal
+    MCP OAuth credential — see _build_reauth_banner().
+    """
 
     hitters = [r for r in day_results if r.player_type == "hitter"]
     pitchers = [r for r in day_results if r.player_type in ("sp", "rp")]
     injured = [r for r in day_results if r.injury_flag]
     played_count = sum(1 for r in day_results if not r.dnp)
     date_short = report_date.strftime("%b %-d")
+    banner = _build_reauth_banner() if check_gmail_auth else ""
 
     html = f"""<html><body style="font-family:Arial,sans-serif;color:#222;max-width:1100px;margin:0 auto">
-  <h1 style="color:#1a3a5c;border-bottom:2px solid #1a3a5c;padding-bottom:6px">Fantasy Baseball Daily — {report_date.strftime("%B %d, %Y")}</h1>
-  {_build_reauth_banner()}
+  <h1 style="color:#1a3a5c;border-bottom:2px solid #1a3a5c;padding-bottom:6px">Fantasy Baseball Daily — {_send_date(report_date).strftime("%B %d, %Y")}</h1>
+  {banner}
     <h2 style="color:#1a3a5c">Hitters — {date_short}</h2>
     <p style="color:#999;font-size:11px;margin-top:0">Scoring: BA&times;1000 + HR + RBI + R + SB (300 AB min)</p>
     <table style="border-collapse:collapse;width:100%;font-size:13px">
@@ -660,7 +687,9 @@ def build_data_draft_html(report_date: date, day_results: list[DayResult]) -> st
 
 
 def build_subject(report_date: date, day_results: list[DayResult] = None) -> str:
-    base = f"{config.REPORT_SUBJECT_PREFIX} — {report_date.strftime('%B %d, %Y')}"
+    """Subject line. Dated by send date (the morning after the games), matching
+    the H1 in build_html_email() and the convention Jon has been reading."""
+    base = f"{config.REPORT_SUBJECT_PREFIX} — {_send_date(report_date).strftime('%B %d, %Y')}"
     if day_results:
         played = sum(1 for r in day_results if not r.dnp)
         injured = sum(1 for r in day_results if r.injury_flag)
