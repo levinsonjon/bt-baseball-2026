@@ -1,17 +1,8 @@
 {
-  "generated_at": "2026-08-02T10:49:36Z",
+  "generated_at": "2026-08-03T12:35:14Z",
   "window_hours": 24,
   "players": [],
   "injuries": [
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "status": "day-to-day",
-      "previous_status": "day-to-day",
-      "note": "Day-To-Day: Arraez (cramps) will start at second base and bat leadoff Saturday against the Padres.",
-      "source": null
-    },
     {
       "name": "Cole Ragans",
       "team": "KCR",
