@@ -1,16 +1,6 @@
 {
-  "generated_at": "2026-08-04T11:32:54Z",
+  "generated_at": "2026-08-05T11:28:10Z",
   "window_hours": 24,
   "players": [],
-  "injuries": [
-    {
-      "name": "Cole Ragans",
-      "team": "KCR",
-      "position": "SP",
-      "status": "IL-60",
-      "previous_status": "IL-60",
-      "note": "60-Day-IL: Ragans underwent UCL repair surgery on his left elbow Wednesday, Anne Rogers of MLB.com reports.",
-      "source": null
-    }
-  ]
+  "injuries": []
 }
