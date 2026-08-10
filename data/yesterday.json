@@ -1,25 +1,25 @@
 {
-  "date": "2026-08-08",
-  "generated_at": "2026-08-09T09:55:11Z",
+  "date": "2026-08-09",
+  "generated_at": "2026-08-10T10:35:20Z",
   "totals": {
     "hitters": {
-      "AB": 35,
-      "H": 7,
-      "R": 6,
-      "HR": 3,
-      "RBI": 7,
+      "AB": 38,
+      "H": 10,
+      "R": 8,
+      "HR": 2,
+      "RBI": 5,
       "SB": 1,
-      "points": 17.0
+      "points": 16.0
     },
     "pitchers": {
-      "IP": 5.33,
-      "H": 6,
-      "ER": 5,
-      "K": 6,
-      "BB": 3,
+      "IP": 0.0,
+      "H": 0,
+      "ER": 0,
+      "K": 0,
+      "BB": 0,
       "W": 0,
       "SV": 0,
-      "points": -2.02
+      "points": 0.0
     }
   },
   "players": [
@@ -33,15 +33,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 1,
+        "H": 0,
         "HR": 0,
-        "RBI": 1,
-        "R": 1,
+        "RBI": 0,
+        "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
-      "points": 2.0,
-      "summary": "1 RBI"
+      "points": 0.0,
+      "summary": "0-for-4"
     },
     {
       "name": "Bryce Harper",
@@ -52,16 +52,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 1,
-        "HR": 1,
-        "RBI": 1,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
+        "AB": 2,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 1,
+        "BB": 4
       },
-      "points": 3.0,
-      "summary": "Went deep"
+      "points": 1.0,
+      "summary": "0-for-2, drew 4 walks"
     },
     {
       "name": "Luis Arraez",
@@ -72,16 +72,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
-        "H": 2,
+        "AB": 6,
+        "H": 0,
         "HR": 0,
-        "RBI": 1,
+        "RBI": 0,
         "R": 1,
         "SB": 0,
         "BB": 0
       },
-      "points": 2.0,
-      "summary": "1 RBI"
+      "points": 1.0,
+      "summary": "0-for-6"
     },
     {
       "name": "Bo Bichette",
@@ -92,16 +92,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 2,
-        "H": 0,
+        "AB": 5,
+        "H": 5,
         "HR": 0,
-        "RBI": 0,
-        "R": 0,
+        "RBI": 3,
+        "R": 3,
         "SB": 0,
-        "BB": 0
+        "BB": 1
       },
-      "points": 0.0,
-      "summary": "0-for-2"
+      "points": 6.0,
+      "summary": "drove in 3; scored 3"
     },
     {
       "name": "Lindor/McGonigle",
@@ -112,16 +112,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 6,
+        "AB": 5,
         "H": 1,
         "HR": 0,
-        "RBI": 1,
-        "R": 1,
+        "RBI": 0,
+        "R": 0,
         "SB": 0,
         "BB": 0
       },
-      "points": 2.0,
-      "summary": "1 RBI"
+      "points": 0.0,
+      "summary": "1-for-5"
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -132,16 +132,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
-        "H": 0,
+        "AB": 5,
+        "H": 1,
         "HR": 0,
         "RBI": 0,
-        "R": 0,
+        "R": 2,
         "SB": 0,
-        "BB": 2
+        "BB": 1
       },
-      "points": 0.0,
-      "summary": "0-for-3, drew 2 walks"
+      "points": 2.0,
+      "summary": "1-for-5"
     },
     {
       "name": "Jackson Merrill",
@@ -153,15 +153,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 1,
+        "H": 2,
         "HR": 1,
-        "RBI": 2,
+        "RBI": 1,
         "R": 1,
-        "SB": 1,
+        "SB": 0,
         "BB": 0
       },
-      "points": 5.0,
-      "summary": "Went deep; stole a base"
+      "points": 3.0,
+      "summary": "Went deep"
     },
     {
       "name": "Hernandez/Chourio",
@@ -173,15 +173,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 3,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
+        "H": 1,
+        "HR": 1,
+        "RBI": 1,
+        "R": 1,
         "SB": 0,
-        "BB": 1
+        "BB": 2
       },
-      "points": 0.0,
-      "summary": "0-for-3"
+      "points": 3.0,
+      "summary": "Went deep"
     },
     {
       "name": "Williams/Hader",
@@ -224,22 +224,12 @@
       "team": "CIN",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ Washington Nationals",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 5.33,
-        "H": 6,
-        "ER": 5,
-        "K": 6,
-        "BB": 3,
-        "W": 0,
-        "L": 1,
-        "SV": 0,
-        "GS": 1
-      },
-      "points": -2.02,
-      "summary": "Took the L; 5 ER allowed"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Nathan Eovaldi",
@@ -287,15 +277,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 1,
-        "HR": 1,
-        "RBI": 1,
-        "R": 1,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
         "SB": 0,
         "BB": 0
       },
-      "points": 3.0,
-      "summary": "Went deep"
+      "points": 0.0,
+      "summary": "0-for-4"
     }
   ]
 }
