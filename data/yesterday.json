@@ -1,25 +1,25 @@
 {
-  "date": "2026-08-17",
-  "generated_at": "2026-08-18T09:47:33Z",
+  "date": "2026-08-18",
+  "generated_at": "2026-08-19T09:48:01Z",
   "totals": {
     "hitters": {
-      "AB": 32,
-      "H": 13,
-      "R": 5,
-      "HR": 3,
-      "RBI": 7,
-      "SB": 1,
-      "points": 16.0
+      "AB": 30,
+      "H": 8,
+      "R": 4,
+      "HR": 1,
+      "RBI": 2,
+      "SB": 0,
+      "points": 7.0
     },
     "pitchers": {
-      "IP": 0.0,
-      "H": 0,
-      "ER": 0,
-      "K": 0,
-      "BB": 0,
+      "IP": 5.0,
+      "H": 2,
+      "ER": 2,
+      "K": 7,
+      "BB": 4,
       "W": 0,
       "SV": 0,
-      "points": 0.0
+      "points": 0.8
     }
   },
   "players": [
@@ -32,21 +32,41 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 1,
+        "AB": 1,
+        "H": 0,
         "HR": 0,
         "RBI": 0,
         "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
       "points": 0.0,
-      "summary": "1-for-5"
+      "summary": "0-for-1"
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
+      "type": "hitter",
+      "opponent": "vs Miami Marlins",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 2,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 1,
+        "SB": 0,
+        "BB": 2
+      },
+      "points": 1.0,
+      "summary": "0-for-2, drew 2 walks"
+    },
+    {
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
       "type": "hitter",
       "opponent": "vs Miami Marlins",
       "dnp": false,
@@ -58,30 +78,10 @@
         "RBI": 0,
         "R": 1,
         "SB": 0,
-        "BB": 1
-      },
-      "points": 1.0,
-      "summary": "3-hit game"
-    },
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "type": "hitter",
-      "opponent": "vs Miami Marlins",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 1,
-        "HR": 0,
-        "RBI": 1,
-        "R": 0,
-        "SB": 0,
         "BB": 0
       },
       "points": 1.0,
-      "summary": "1 RBI"
+      "summary": "3-hit game"
     },
     {
       "name": "Bo Bichette",
@@ -92,16 +92,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
-        "H": 1,
+        "AB": 5,
+        "H": 2,
         "HR": 0,
-        "RBI": 1,
+        "RBI": 0,
         "R": 0,
         "SB": 0,
         "BB": 0
       },
-      "points": 1.0,
-      "summary": "1 RBI"
+      "points": 0.0,
+      "summary": "Multi-hit day"
     },
     {
       "name": "Lindor/McGonigle",
@@ -109,46 +109,6 @@
       "position": "SS",
       "type": "hitter",
       "opponent": "@ Pittsburgh Pirates",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 6,
-        "H": 2,
-        "HR": 1,
-        "RBI": 2,
-        "R": 2,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 5.0,
-      "summary": "Went deep"
-    },
-    {
-      "name": "Pete Crow-Armstrong",
-      "team": "CHC",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "vs Chicago White Sox",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 4,
-        "HR": 2,
-        "RBI": 3,
-        "R": 2,
-        "SB": 1,
-        "BB": 1
-      },
-      "points": 8.0,
-      "summary": "Multi-HR game (2); drove in 3; stole a base"
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "@ New York Mets",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -164,16 +124,64 @@
       "summary": "1-for-4"
     },
     {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "vs Chicago White Sox",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 3,
+        "H": 1,
+        "HR": 1,
+        "RBI": 1,
+        "R": 1,
+        "SB": 0,
+        "BB": 2
+      },
+      "points": 3.0,
+      "summary": "Went deep"
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "@ New York Mets",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 0.0,
+      "summary": "0-for-4"
+    },
+    {
       "name": "Hernandez/Chourio",
       "team": "MIL",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs Seattle Mariners",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 1,
+        "HR": 0,
+        "RBI": 1,
+        "R": 1,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 2.0,
+      "summary": "1 RBI"
     },
     {
       "name": "Williams/Hader",
@@ -192,12 +200,22 @@
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs Miami Marlins",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 5.0,
+        "H": 2,
+        "ER": 2,
+        "K": 7,
+        "BB": 4,
+        "W": 0,
+        "L": 0,
+        "SV": 0,
+        "GS": 1
+      },
+      "points": 0.8,
+      "summary": "7 K"
     },
     {
       "name": "Cole Ragans",
@@ -264,12 +282,20 @@
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "@ Baltimore Orioles",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 3,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "0-for-3"
     }
   ]
 }
