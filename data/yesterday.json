@@ -1,25 +1,25 @@
 {
-  "date": "2026-08-20",
-  "generated_at": "2026-08-21T09:51:21Z",
+  "date": "2026-08-21",
+  "generated_at": "2026-08-22T09:40:59Z",
   "totals": {
     "hitters": {
-      "AB": 7,
-      "H": 2,
-      "R": 1,
-      "HR": 0,
-      "RBI": 1,
-      "SB": 1,
-      "points": 3.0
+      "AB": 35,
+      "H": 8,
+      "R": 5,
+      "HR": 2,
+      "RBI": 3,
+      "SB": 0,
+      "points": 10.0
     },
     "pitchers": {
-      "IP": 0.0,
-      "H": 0,
+      "IP": 6.0,
+      "H": 6,
       "ER": 0,
-      "K": 0,
-      "BB": 0,
+      "K": 5,
+      "BB": 1,
       "W": 0,
       "SV": 0,
-      "points": 0.0
+      "points": 3.36
     }
   },
   "players": [
@@ -28,91 +28,147 @@
       "team": "DET",
       "position": "C",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "@ Kansas City Royals",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 5,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "0-for-5"
     },
     {
       "name": "Bryce Harper",
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs St. Louis Cardinals",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 1,
+        "SB": 0,
+        "BB": 1
+      },
+      "points": 1.0,
+      "summary": "0-for-4"
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs St. Louis Cardinals",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 5,
+        "H": 3,
+        "HR": 0,
+        "RBI": 0,
+        "R": 1,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 1.0,
+      "summary": "3-hit game"
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Chicago White Sox",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 1,
+        "HR": 1,
+        "RBI": 1,
+        "R": 1,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 3.0,
+      "summary": "Went deep"
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Kansas City Royals",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 2,
+        "HR": 0,
+        "RBI": 1,
+        "R": 0,
+        "SB": 0,
+        "BB": 1
+      },
+      "points": 1.0,
+      "summary": "1 RBI"
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Seattle Mariners",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 1,
+        "HR": 1,
+        "RBI": 1,
+        "R": 1,
+        "SB": 0,
+        "BB": 1
+      },
+      "points": 3.0,
+      "summary": "Went deep"
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "vs Minnesota Twins",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "0-for-4"
     },
     {
       "name": "Hernandez/Chourio",
       "team": "MIL",
       "position": "OF",
       "type": "hitter",
-      "opponent": "vs Seattle Mariners",
+      "opponent": "vs Atlanta Braves",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -120,12 +176,12 @@
         "H": 1,
         "HR": 0,
         "RBI": 0,
-        "R": 0,
-        "SB": 1,
+        "R": 1,
+        "SB": 0,
         "BB": 1
       },
       "points": 1.0,
-      "summary": "stole a base"
+      "summary": "1-for-3"
     },
     {
       "name": "Williams/Hader",
@@ -204,32 +260,42 @@
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Texas Rangers",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 6.0,
+        "H": 6,
+        "ER": 0,
+        "K": 5,
+        "BB": 1,
+        "W": 0,
+        "L": 0,
+        "SV": 0,
+        "GS": 1
+      },
+      "points": 3.36,
+      "summary": "quality start; scoreless"
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": "@ Baltimore Orioles",
+      "opponent": "vs Toronto Blue Jays",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
-        "H": 1,
+        "AB": 2,
+        "H": 0,
         "HR": 0,
-        "RBI": 1,
-        "R": 1,
+        "RBI": 0,
+        "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 2
       },
-      "points": 2.0,
-      "summary": "1 RBI"
+      "points": 0.0,
+      "summary": "0-for-2, drew 2 walks"
     }
   ]
 }
