@@ -1,25 +1,25 @@
 {
-  "date": "2026-09-01",
-  "generated_at": "2026-09-02T13:38:12Z",
+  "date": "2026-09-02",
+  "generated_at": "2026-09-03T13:34:27Z",
   "totals": {
     "hitters": {
-      "AB": 37,
-      "H": 14,
-      "R": 5,
-      "HR": 0,
-      "RBI": 1,
+      "AB": 34,
+      "H": 10,
+      "R": 7,
+      "HR": 1,
+      "RBI": 2,
       "SB": 1,
-      "points": 7.0
+      "points": 11.0
     },
     "pitchers": {
-      "IP": 0.0,
-      "H": 0,
-      "ER": 0,
-      "K": 0,
+      "IP": 8.0,
+      "H": 6,
+      "ER": 1,
+      "K": 9,
       "BB": 0,
       "W": 0,
-      "SV": 0,
-      "points": 0.0
+      "SV": 1,
+      "points": 7.92
     }
   },
   "players": [
@@ -28,20 +28,12 @@
       "team": "DET",
       "position": "C",
       "type": "hitter",
-      "opponent": "@ Minnesota Twins",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 1.0,
-      "summary": "1-for-4"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Bryce Harper",
@@ -52,16 +44,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
-        "H": 4,
+        "AB": 2,
+        "H": 1,
         "HR": 0,
-        "RBI": 1,
-        "R": 1,
+        "RBI": 0,
+        "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 2
       },
-      "points": 2.0,
-      "summary": "1 RBI"
+      "points": 0.0,
+      "summary": "1-for-2"
     },
     {
       "name": "Luis Arraez",
@@ -69,66 +61,6 @@
       "position": "2B",
       "type": "hitter",
       "opponent": "@ Arizona Diamondbacks",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 2,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 1
-      },
-      "points": 0.0,
-      "summary": "Multi-hit day"
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "type": "hitter",
-      "opponent": "@ Tampa Bay Rays",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 0.0,
-      "summary": "1-for-4"
-    },
-    {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
-      "position": "SS",
-      "type": "hitter",
-      "opponent": "@ Minnesota Twins",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 3,
-        "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 1.0,
-      "summary": "1-for-3"
-    },
-    {
-      "name": "Pete Crow-Armstrong",
-      "team": "CHC",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "vs Milwaukee Brewers",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -144,6 +76,66 @@
       "summary": "0-for-4"
     },
     {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "type": "hitter",
+      "opponent": "@ Tampa Bay Rays",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 2,
+        "HR": 0,
+        "RBI": 0,
+        "R": 2,
+        "SB": 1,
+        "BB": 1
+      },
+      "points": 3.0,
+      "summary": "stole a base"
+    },
+    {
+      "name": "Lindor/McGonigle",
+      "team": "DET",
+      "position": "SS",
+      "type": "hitter",
+      "opponent": "@ Minnesota Twins",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 6,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 1,
+        "SB": 0,
+        "BB": 1
+      },
+      "points": 1.0,
+      "summary": "0-for-6"
+    },
+    {
+      "name": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "vs Milwaukee Brewers",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 3,
+        "H": 1,
+        "HR": 0,
+        "RBI": 0,
+        "R": 2,
+        "SB": 0,
+        "BB": 2
+      },
+      "points": 2.0,
+      "summary": "1-for-3"
+    },
+    {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
@@ -153,7 +145,7 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 2,
+        "H": 0,
         "HR": 0,
         "RBI": 0,
         "R": 0,
@@ -161,7 +153,7 @@
         "BB": 0
       },
       "points": 0.0,
-      "summary": "Multi-hit day"
+      "summary": "0-for-4"
     },
     {
       "name": "Hernandez/Chourio",
@@ -172,28 +164,38 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 2,
-        "HR": 0,
-        "RBI": 0,
-        "R": 1,
-        "SB": 1,
+        "AB": 6,
+        "H": 4,
+        "HR": 1,
+        "RBI": 1,
+        "R": 2,
+        "SB": 0,
         "BB": 0
       },
-      "points": 2.0,
-      "summary": "stole a base"
+      "points": 4.0,
+      "summary": "Went deep"
     },
     {
       "name": "Williams/Hader",
       "team": "HOU",
       "position": "RP",
       "type": "rp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs Chicago White Sox",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 1.0,
+        "H": 0,
+        "ER": 0,
+        "K": 1,
+        "BB": 0,
+        "W": 0,
+        "L": 0,
+        "SV": 1,
+        "GS": 0
+      },
+      "points": 5,
+      "summary": "Nailed down the save; scoreless"
     },
     {
       "name": "Zack Wheeler",
@@ -260,12 +262,22 @@
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs New York Yankees",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 7.0,
+        "H": 6,
+        "ER": 1,
+        "K": 8,
+        "BB": 0,
+        "W": 0,
+        "L": 0,
+        "SV": 0,
+        "GS": 1
+      },
+      "points": 2.92,
+      "summary": "quality start; 8 K"
     },
     {
       "name": "Stanton/Rice",
@@ -277,15 +289,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 5,
-        "H": 1,
+        "H": 2,
         "HR": 0,
-        "RBI": 0,
-        "R": 1,
+        "RBI": 1,
+        "R": 0,
         "SB": 0,
         "BB": 0
       },
       "points": 1.0,
-      "summary": "1-for-5"
+      "summary": "1 RBI"
     }
   ]
 }
