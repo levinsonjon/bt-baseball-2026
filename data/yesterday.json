@@ -1,25 +1,25 @@
 {
-  "date": "2026-09-02",
-  "generated_at": "2026-09-03T13:34:27Z",
+  "date": "2026-09-03",
+  "generated_at": "2026-09-04T13:31:40Z",
   "totals": {
     "hitters": {
-      "AB": 34,
-      "H": 10,
-      "R": 7,
+      "AB": 8,
+      "H": 1,
+      "R": 1,
       "HR": 1,
       "RBI": 2,
-      "SB": 1,
-      "points": 11.0
+      "SB": 0,
+      "points": 4.0
     },
     "pitchers": {
-      "IP": 8.0,
-      "H": 6,
-      "ER": 1,
-      "K": 9,
+      "IP": 0.0,
+      "H": 0,
+      "ER": 0,
+      "K": 0,
       "BB": 0,
       "W": 0,
-      "SV": 1,
-      "points": 7.92
+      "SV": 0,
+      "points": 0.0
     }
   },
   "players": [
@@ -40,80 +40,48 @@
       "team": "PHI",
       "position": "1B",
       "type": "hitter",
-      "opponent": "@ Arizona Diamondbacks",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 2,
-        "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 2
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
       "points": 0.0,
-      "summary": "1-for-2"
+      "summary": ""
     },
     {
       "name": "Luis Arraez",
       "team": "SFG",
       "position": "2B",
       "type": "hitter",
-      "opponent": "@ Arizona Diamondbacks",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
       "points": 0.0,
-      "summary": "0-for-4"
+      "summary": ""
     },
     {
       "name": "Bo Bichette",
       "team": "NYM",
       "position": "3B",
       "type": "hitter",
-      "opponent": "@ Tampa Bay Rays",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 2,
-        "HR": 0,
-        "RBI": 0,
-        "R": 2,
-        "SB": 1,
-        "BB": 1
-      },
-      "points": 3.0,
-      "summary": "stole a base"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": "@ Minnesota Twins",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 6,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 1,
-        "SB": 0,
-        "BB": 1
-      },
-      "points": 1.0,
-      "summary": "0-for-6"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -124,23 +92,35 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
+        "AB": 4,
         "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 2,
+        "HR": 1,
+        "RBI": 2,
+        "R": 1,
         "SB": 0,
-        "BB": 2
+        "BB": 0
       },
-      "points": 2.0,
-      "summary": "1-for-3"
+      "points": 4.0,
+      "summary": "Went deep"
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ Cincinnati Reds",
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
+    },
+    {
+      "name": "Hernandez/Chourio",
+      "team": "MIL",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "@ Chicago Cubs",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -156,46 +136,16 @@
       "summary": "0-for-4"
     },
     {
-      "name": "Hernandez/Chourio",
-      "team": "MIL",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "@ Chicago Cubs",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 6,
-        "H": 4,
-        "HR": 1,
-        "RBI": 1,
-        "R": 2,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 4.0,
-      "summary": "Went deep"
-    },
-    {
       "name": "Williams/Hader",
       "team": "HOU",
       "position": "RP",
       "type": "rp",
-      "opponent": "vs Chicago White Sox",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 1.0,
-        "H": 0,
-        "ER": 0,
-        "K": 1,
-        "BB": 0,
-        "W": 0,
-        "L": 0,
-        "SV": 1,
-        "GS": 0
-      },
-      "points": 5,
-      "summary": "Nailed down the save; scoreless"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Zack Wheeler",
@@ -262,42 +212,24 @@
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs New York Yankees",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 7.0,
-        "H": 6,
-        "ER": 1,
-        "K": 8,
-        "BB": 0,
-        "W": 0,
-        "L": 0,
-        "SV": 0,
-        "GS": 1
-      },
-      "points": 2.92,
-      "summary": "quality start; 8 K"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": "@ Los Angeles Angels",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 2,
-        "HR": 0,
-        "RBI": 1,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 1.0,
-      "summary": "1 RBI"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     }
   ]
 }
