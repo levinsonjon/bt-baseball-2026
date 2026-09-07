@@ -1,25 +1,25 @@
 {
-  "date": "2026-09-05",
-  "generated_at": "2026-09-06T12:52:54Z",
+  "date": "2026-09-06",
+  "generated_at": "2026-09-07T15:02:46Z",
   "totals": {
     "hitters": {
-      "AB": 30,
-      "H": 9,
-      "R": 2,
-      "HR": 0,
-      "RBI": 4,
+      "AB": 31,
+      "H": 4,
+      "R": 4,
+      "HR": 2,
+      "RBI": 6,
       "SB": 0,
-      "points": 6.0
+      "points": 12.0
     },
     "pitchers": {
-      "IP": 7.0,
-      "H": 3,
-      "ER": 1,
-      "K": 10,
-      "BB": 2,
-      "W": 1,
+      "IP": 0.0,
+      "H": 0,
+      "ER": 0,
+      "K": 0,
+      "BB": 0,
+      "W": 0,
       "SV": 0,
-      "points": 2.36
+      "points": 0.0
     }
   },
   "players": [
@@ -33,15 +33,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 0,
+        "H": 1,
         "HR": 0,
-        "RBI": 1,
+        "RBI": 0,
         "R": 0,
         "SB": 0,
         "BB": 0
       },
-      "points": 1.0,
-      "summary": "0-for-4"
+      "points": 0.0,
+      "summary": "1-for-4"
     },
     {
       "name": "Bryce Harper",
@@ -53,7 +53,7 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 2,
+        "H": 0,
         "HR": 0,
         "RBI": 0,
         "R": 0,
@@ -61,7 +61,7 @@
         "BB": 0
       },
       "points": 0.0,
-      "summary": "Multi-hit day"
+      "summary": "0-for-4"
     },
     {
       "name": "Luis Arraez",
@@ -72,8 +72,8 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
-        "H": 2,
+        "AB": 3,
+        "H": 1,
         "HR": 0,
         "RBI": 1,
         "R": 0,
@@ -93,27 +93,35 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
+        "H": 1,
+        "HR": 1,
+        "RBI": 3,
+        "R": 1,
         "SB": 0,
         "BB": 0
       },
-      "points": 0.0,
-      "summary": "0-for-4"
+      "points": 5.0,
+      "summary": "Went deep; drove in 3"
     },
     {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "@ Cleveland Guardians",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 2,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 2
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "0-for-2, drew 2 walks"
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -124,16 +132,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
+        "AB": 3,
         "H": 1,
-        "HR": 0,
-        "RBI": 1,
-        "R": 0,
+        "HR": 1,
+        "RBI": 2,
+        "R": 1,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
-      "points": 1.0,
-      "summary": "1 RBI"
+      "points": 4.0,
+      "summary": "Went deep"
     },
     {
       "name": "Jackson Merrill",
@@ -150,7 +158,7 @@
         "RBI": 0,
         "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
       "points": 0.0,
       "summary": "0-for-3"
@@ -165,59 +173,39 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 1,
+        "H": 0,
         "HR": 0,
-        "RBI": 1,
-        "R": 0,
+        "RBI": 0,
+        "R": 2,
         "SB": 0,
-        "BB": 0
+        "BB": 1
       },
-      "points": 1.0,
-      "summary": "1 RBI"
+      "points": 2.0,
+      "summary": "0-for-4"
     },
     {
       "name": "Williams/Hader",
       "team": "HOU",
       "position": "RP",
       "type": "rp",
-      "opponent": "vs Arizona Diamondbacks",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 1.0,
-        "H": 0,
-        "ER": 0,
-        "K": 1,
-        "BB": 0,
-        "W": 0,
-        "L": 0,
-        "SV": 0,
-        "GS": 0
-      },
-      "points": 0,
-      "summary": "scoreless"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs Atlanta Braves",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 3,
-        "ER": 1,
-        "K": 9,
-        "BB": 2,
-        "W": 1,
-        "L": 0,
-        "SV": 0,
-        "GS": 1
-      },
-      "points": 2.36,
-      "summary": "Earned the W; quality start; 9 K"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Cole Ragans",
@@ -288,16 +276,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
-        "H": 3,
+        "AB": 4,
+        "H": 0,
         "HR": 0,
         "RBI": 0,
-        "R": 2,
+        "R": 0,
         "SB": 0,
-        "BB": 2
+        "BB": 1
       },
-      "points": 2.0,
-      "summary": "3-hit game"
+      "points": 0.0,
+      "summary": "0-for-4"
     }
   ]
 }
