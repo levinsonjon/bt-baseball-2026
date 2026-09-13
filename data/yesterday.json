@@ -1,25 +1,25 @@
 {
-  "date": "2026-09-11",
-  "generated_at": "2026-09-12T12:50:26Z",
+  "date": "2026-09-12",
+  "generated_at": "2026-09-13T13:47:48Z",
   "totals": {
     "hitters": {
-      "AB": 41,
-      "H": 17,
-      "R": 11,
-      "HR": 2,
-      "RBI": 7,
-      "SB": 1,
-      "points": 21.0
+      "AB": 28,
+      "H": 5,
+      "R": 5,
+      "HR": 3,
+      "RBI": 3,
+      "SB": 0,
+      "points": 11.0
     },
     "pitchers": {
-      "IP": 0.0,
-      "H": 0,
-      "ER": 0,
-      "K": 0,
+      "IP": 2.67,
+      "H": 4,
+      "ER": 1,
+      "K": 2,
       "BB": 0,
       "W": 0,
       "SV": 0,
-      "points": 0.0
+      "points": 0.5
     }
   },
   "players": [
@@ -28,20 +28,12 @@
       "team": "DET",
       "position": "C",
       "type": "hitter",
-      "opponent": "vs Colorado Rockies",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "HR": 1,
-        "RBI": 2,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 4.0,
-      "summary": "Went deep"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Bryce Harper",
@@ -52,16 +44,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 2,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
+        "AB": 3,
+        "H": 1,
+        "HR": 1,
+        "RBI": 1,
+        "R": 1,
         "SB": 0,
         "BB": 0
       },
-      "points": 0.0,
-      "summary": "Multi-hit day"
+      "points": 3.0,
+      "summary": "Went deep"
     },
     {
       "name": "Luis Arraez",
@@ -69,46 +61,6 @@
       "position": "2B",
       "type": "hitter",
       "opponent": "@ Atlanta Braves",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 2,
-        "HR": 0,
-        "RBI": 1,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 1.0,
-      "summary": "1 RBI"
-    },
-    {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
-      "type": "hitter",
-      "opponent": "@ New York Yankees",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 1.0,
-      "summary": "1-for-4"
-    },
-    {
-      "name": "Lindor/McGonigle",
-      "team": "DET",
-      "position": "SS",
-      "type": "hitter",
-      "opponent": "vs Colorado Rockies",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -124,6 +76,46 @@
       "summary": "0-for-4"
     },
     {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "type": "hitter",
+      "opponent": "@ New York Yankees",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 5,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 0.0,
+      "summary": "0-for-5"
+    },
+    {
+      "name": "Lindor/McGonigle",
+      "team": "DET",
+      "position": "SS",
+      "type": "hitter",
+      "opponent": "vs Colorado Rockies",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 5,
+        "H": 2,
+        "HR": 1,
+        "RBI": 1,
+        "R": 1,
+        "SB": 0,
+        "BB": 1
+      },
+      "points": 3.0,
+      "summary": "Went deep"
+    },
+    {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
@@ -133,15 +125,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 1,
+        "H": 0,
         "HR": 0,
-        "RBI": 1,
-        "R": 1,
+        "RBI": 0,
+        "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
-      "points": 2.0,
-      "summary": "1 RBI"
+      "points": 0.0,
+      "summary": "0-for-4"
     },
     {
       "name": "Jackson Merrill",
@@ -152,16 +144,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 3,
-        "HR": 0,
-        "RBI": 0,
-        "R": 2,
-        "SB": 1,
-        "BB": 0
+        "AB": 4,
+        "H": 1,
+        "HR": 1,
+        "RBI": 1,
+        "R": 1,
+        "SB": 0,
+        "BB": 1
       },
       "points": 3.0,
-      "summary": "stole a base"
+      "summary": "Went deep"
     },
     {
       "name": "Hernandez/Chourio",
@@ -172,16 +164,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 6,
-        "H": 4,
+        "AB": 3,
+        "H": 1,
         "HR": 0,
-        "RBI": 2,
-        "R": 3,
+        "RBI": 0,
+        "R": 2,
         "SB": 0,
-        "BB": 0
+        "BB": 2
       },
-      "points": 5.0,
-      "summary": "2 RBI; scored 3"
+      "points": 2.0,
+      "summary": "1-for-3"
     },
     {
       "name": "Williams/Hader",
@@ -236,12 +228,22 @@
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Arizona Diamondbacks",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 2.67,
+        "H": 4,
+        "ER": 1,
+        "K": 2,
+        "BB": 0,
+        "W": 0,
+        "L": 0,
+        "SV": 0,
+        "GS": 0
+      },
+      "points": 0.5,
+      "summary": "short outing"
     },
     {
       "name": "Emmet Sheehan",
@@ -272,20 +274,12 @@
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": "vs New York Mets",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 3,
-        "HR": 1,
-        "RBI": 1,
-        "R": 3,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 5.0,
-      "summary": "Went deep; scored 3"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     }
   ]
 }
