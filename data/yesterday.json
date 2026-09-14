@@ -1,25 +1,25 @@
 {
-  "date": "2026-09-12",
-  "generated_at": "2026-09-13T13:47:48Z",
+  "date": "2026-09-13",
+  "generated_at": "2026-09-14T15:52:40Z",
   "totals": {
     "hitters": {
-      "AB": 28,
-      "H": 5,
-      "R": 5,
-      "HR": 3,
-      "RBI": 3,
+      "AB": 35,
+      "H": 6,
+      "R": 3,
+      "HR": 1,
+      "RBI": 5,
       "SB": 0,
-      "points": 11.0
+      "points": 9.0
     },
     "pitchers": {
-      "IP": 2.67,
+      "IP": 9.0,
       "H": 4,
-      "ER": 1,
-      "K": 2,
-      "BB": 0,
+      "ER": 2,
+      "K": 10,
+      "BB": 4,
       "W": 0,
       "SV": 0,
-      "points": 0.5
+      "points": 3.04
     }
   },
   "players": [
@@ -28,39 +28,7 @@
       "team": "DET",
       "position": "C",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
-    },
-    {
-      "name": "Bryce Harper",
-      "team": "PHI",
-      "position": "1B",
-      "type": "hitter",
-      "opponent": "@ Atlanta Braves",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 3,
-        "H": 1,
-        "HR": 1,
-        "RBI": 1,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
-      },
-      "points": 3.0,
-      "summary": "Went deep"
-    },
-    {
-      "name": "Luis Arraez",
-      "team": "SFG",
-      "position": "2B",
-      "type": "hitter",
-      "opponent": "@ Atlanta Braves",
+      "opponent": "vs Colorado Rockies",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -76,11 +44,31 @@
       "summary": "0-for-4"
     },
     {
-      "name": "Bo Bichette",
-      "team": "NYM",
-      "position": "3B",
+      "name": "Bryce Harper",
+      "team": "PHI",
+      "position": "1B",
       "type": "hitter",
-      "opponent": "@ New York Yankees",
+      "opponent": "@ Atlanta Braves",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 5,
+        "H": 2,
+        "HR": 0,
+        "RBI": 0,
+        "R": 1,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 1.0,
+      "summary": "Multi-hit day"
+    },
+    {
+      "name": "Luis Arraez",
+      "team": "SFG",
+      "position": "2B",
+      "type": "hitter",
+      "opponent": "@ Atlanta Braves",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
@@ -96,6 +84,26 @@
       "summary": "0-for-5"
     },
     {
+      "name": "Bo Bichette",
+      "team": "NYM",
+      "position": "3B",
+      "type": "hitter",
+      "opponent": "@ New York Yankees",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 4,
+        "H": 1,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 0.0,
+      "summary": "1-for-4"
+    },
+    {
       "name": "Lindor/McGonigle",
       "team": "DET",
       "position": "SS",
@@ -104,16 +112,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 2,
-        "HR": 1,
-        "RBI": 1,
+        "AB": 3,
+        "H": 1,
+        "HR": 0,
+        "RBI": 2,
         "R": 1,
         "SB": 0,
         "BB": 1
       },
       "points": 3.0,
-      "summary": "Went deep"
+      "summary": "2 RBI"
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -146,14 +154,14 @@
       "stats": {
         "AB": 4,
         "H": 1,
-        "HR": 1,
-        "RBI": 1,
-        "R": 1,
+        "HR": 0,
+        "RBI": 2,
+        "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
-      "points": 3.0,
-      "summary": "Went deep"
+      "points": 2.0,
+      "summary": "2 RBI"
     },
     {
       "name": "Hernandez/Chourio",
@@ -164,16 +172,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
-        "H": 1,
+        "AB": 4,
+        "H": 0,
         "HR": 0,
         "RBI": 0,
-        "R": 2,
+        "R": 0,
         "SB": 0,
-        "BB": 2
+        "BB": 0
       },
-      "points": 2.0,
-      "summary": "1-for-3"
+      "points": 0.0,
+      "summary": "0-for-4"
     },
     {
       "name": "Williams/Hader",
@@ -216,46 +224,56 @@
       "team": "CIN",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Milwaukee Brewers",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 3.0,
+        "H": 2,
+        "ER": 2,
+        "K": 5,
+        "BB": 3,
+        "W": 0,
+        "L": 0,
+        "SV": 0,
+        "GS": 1
+      },
+      "points": -0.32,
+      "summary": "short outing"
     },
     {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ Arizona Diamondbacks",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 2.67,
-        "H": 4,
-        "ER": 1,
-        "K": 2,
-        "BB": 0,
-        "W": 0,
-        "L": 0,
-        "SV": 0,
-        "GS": 0
-      },
-      "points": 0.5,
-      "summary": "short outing"
-    },
-    {
-      "name": "Emmet Sheehan",
-      "team": "LAD",
-      "position": "SP",
-      "type": "sp",
       "opponent": null,
       "dnp": true,
       "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
       "summary": ""
+    },
+    {
+      "name": "Emmet Sheehan",
+      "team": "LAD",
+      "position": "SP",
+      "type": "sp",
+      "opponent": "@ Miami Marlins",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 6.0,
+        "H": 2,
+        "ER": 0,
+        "K": 5,
+        "BB": 1,
+        "W": 0,
+        "L": 0,
+        "SV": 0,
+        "GS": 1
+      },
+      "points": 3.36,
+      "summary": "quality start; scoreless"
     },
     {
       "name": "Reid Detmers",
@@ -274,12 +292,20 @@
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs New York Mets",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 2,
+        "H": 1,
+        "HR": 1,
+        "RBI": 1,
+        "R": 1,
+        "SB": 0,
+        "BB": 2
+      },
+      "points": 3.0,
+      "summary": "Went deep"
     }
   ]
 }
