@@ -1,25 +1,25 @@
 {
-  "date": "2026-09-17",
-  "generated_at": "2026-09-18T13:35:11Z",
+  "date": "2026-09-18",
+  "generated_at": "2026-09-19T13:08:51Z",
   "totals": {
     "hitters": {
-      "AB": 26,
-      "H": 8,
-      "R": 1,
-      "HR": 0,
-      "RBI": 4,
-      "SB": 0,
-      "points": 5.0
+      "AB": 38,
+      "H": 9,
+      "R": 7,
+      "HR": 3,
+      "RBI": 11,
+      "SB": 2,
+      "points": 23.0
     },
     "pitchers": {
-      "IP": 1.0,
-      "H": 0,
-      "ER": 0,
-      "K": 0,
-      "BB": 0,
+      "IP": 3.0,
+      "H": 4,
+      "ER": 2,
+      "K": 4,
+      "BB": 2,
       "W": 0,
       "SV": 0,
-      "points": 0.0
+      "points": -0.32
     }
   },
   "players": [
@@ -32,16 +32,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
+        "AB": 3,
         "H": 1,
         "HR": 0,
-        "RBI": 0,
-        "R": 0,
+        "RBI": 1,
+        "R": 1,
         "SB": 0,
         "BB": 0
       },
-      "points": 0.0,
-      "summary": "1-for-4"
+      "points": 2.0,
+      "summary": "1 RBI"
     },
     {
       "name": "Bryce Harper",
@@ -53,15 +53,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 3,
+        "H": 0,
         "HR": 0,
-        "RBI": 1,
+        "RBI": 0,
         "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
-      "points": 1.0,
-      "summary": "1 RBI"
+      "points": 0.0,
+      "summary": "0-for-4"
     },
     {
       "name": "Luis Arraez",
@@ -72,16 +72,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 2,
+        "AB": 4,
         "H": 0,
         "HR": 0,
-        "RBI": 1,
+        "RBI": 0,
         "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
-      "points": 1.0,
-      "summary": "0-for-2"
+      "points": 0.0,
+      "summary": "0-for-4"
     },
     {
       "name": "Bo Bichette",
@@ -92,16 +92,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
+        "AB": 5,
         "H": 1,
         "HR": 0,
         "RBI": 0,
-        "R": 0,
+        "R": 1,
         "SB": 0,
         "BB": 0
       },
-      "points": 0.0,
-      "summary": "1-for-4"
+      "points": 1.0,
+      "summary": "1-for-5"
     },
     {
       "name": "Lindor/McGonigle",
@@ -112,90 +112,88 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
+        "AB": 5,
         "H": 2,
         "HR": 0,
-        "RBI": 0,
-        "R": 0,
+        "RBI": 4,
+        "R": 1,
         "SB": 0,
         "BB": 1
       },
-      "points": 0.0,
-      "summary": "Multi-hit day"
+      "points": 5.0,
+      "summary": "drove in 4"
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "@ Cincinnati Reds",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 5,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "0-for-5"
     },
     {
       "name": "Jackson Merrill",
       "team": "SDP",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ Colorado Rockies",
+      "opponent": "vs Miami Marlins",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
         "AB": 4,
         "H": 1,
-        "HR": 0,
-        "RBI": 2,
+        "HR": 1,
+        "RBI": 1,
         "R": 1,
         "SB": 0,
         "BB": 0
       },
       "points": 3.0,
-      "summary": "2 RBI"
+      "summary": "Went deep"
     },
     {
       "name": "Hernandez/Chourio",
       "team": "MIL",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ Pittsburgh Pirates",
+      "opponent": "@ Baltimore Orioles",
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
-        "H": 0,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
+        "AB": 5,
+        "H": 2,
+        "HR": 1,
+        "RBI": 3,
+        "R": 1,
+        "SB": 2,
         "BB": 1
       },
-      "points": 0.0,
-      "summary": "0-for-4"
+      "points": 7.0,
+      "summary": "Went deep; drove in 3; swiped 2 bags"
     },
     {
       "name": "Williams/Hader",
       "team": "HOU",
       "position": "RP",
       "type": "rp",
-      "opponent": "vs Kansas City Royals",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 1.0,
-        "H": 0,
-        "ER": 0,
-        "K": 0,
-        "BB": 0,
-        "W": 0,
-        "L": 0,
-        "SV": 0,
-        "GS": 0
-      },
-      "points": 0,
-      "summary": "scoreless"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Zack Wheeler",
@@ -226,12 +224,22 @@
       "team": "CIN",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs Chicago Cubs",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 3.0,
+        "H": 4,
+        "ER": 2,
+        "K": 4,
+        "BB": 2,
+        "W": 0,
+        "L": 0,
+        "SV": 0,
+        "GS": 1
+      },
+      "points": -0.32,
+      "summary": "short outing"
     },
     {
       "name": "Nathan Eovaldi",
@@ -274,12 +282,20 @@
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Arizona Diamondbacks",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 3,
+        "H": 2,
+        "HR": 1,
+        "RBI": 2,
+        "R": 2,
+        "SB": 0,
+        "BB": 2
+      },
+      "points": 5.0,
+      "summary": "Went deep"
     }
   ]
 }
