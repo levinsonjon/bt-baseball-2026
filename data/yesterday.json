@@ -1,25 +1,25 @@
 {
-  "date": "2026-09-18",
-  "generated_at": "2026-09-19T13:08:51Z",
+  "date": "2026-09-19",
+  "generated_at": "2026-09-20T13:34:29Z",
   "totals": {
     "hitters": {
-      "AB": 38,
-      "H": 9,
-      "R": 7,
-      "HR": 3,
-      "RBI": 11,
-      "SB": 2,
-      "points": 23.0
+      "AB": 37,
+      "H": 7,
+      "R": 1,
+      "HR": 0,
+      "RBI": 4,
+      "SB": 0,
+      "points": 5.0
     },
     "pitchers": {
-      "IP": 3.0,
-      "H": 4,
-      "ER": 2,
-      "K": 4,
-      "BB": 2,
+      "IP": 6.0,
+      "H": 8,
+      "ER": 5,
+      "K": 6,
+      "BB": 0,
       "W": 0,
       "SV": 0,
-      "points": -0.32
+      "points": -1.64
     }
   },
   "players": [
@@ -32,16 +32,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
+        "AB": 4,
         "H": 1,
         "HR": 0,
-        "RBI": 1,
-        "R": 1,
+        "RBI": 0,
+        "R": 0,
         "SB": 0,
         "BB": 0
       },
-      "points": 2.0,
-      "summary": "1 RBI"
+      "points": 0.0,
+      "summary": "1-for-4"
     },
     {
       "name": "Bryce Harper",
@@ -53,15 +53,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 0,
+        "H": 1,
         "HR": 0,
-        "RBI": 0,
-        "R": 0,
+        "RBI": 1,
+        "R": 1,
         "SB": 0,
         "BB": 0
       },
-      "points": 0.0,
-      "summary": "0-for-4"
+      "points": 2.0,
+      "summary": "1 RBI"
     },
     {
       "name": "Luis Arraez",
@@ -72,8 +72,8 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
-        "H": 0,
+        "AB": 5,
+        "H": 2,
         "HR": 0,
         "RBI": 0,
         "R": 0,
@@ -81,7 +81,7 @@
         "BB": 0
       },
       "points": 0.0,
-      "summary": "0-for-4"
+      "summary": "Multi-hit day"
     },
     {
       "name": "Bo Bichette",
@@ -92,16 +92,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
+        "AB": 4,
         "H": 1,
         "HR": 0,
-        "RBI": 0,
-        "R": 1,
+        "RBI": 1,
+        "R": 0,
         "SB": 0,
-        "BB": 0
+        "BB": 1
       },
       "points": 1.0,
-      "summary": "1-for-5"
+      "summary": "1 RBI"
     },
     {
       "name": "Lindor/McGonigle",
@@ -112,16 +112,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 2,
+        "AB": 4,
+        "H": 1,
         "HR": 0,
-        "RBI": 4,
-        "R": 1,
+        "RBI": 1,
+        "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
-      "points": 5.0,
-      "summary": "drove in 4"
+      "points": 1.0,
+      "summary": "1 RBI"
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -154,14 +154,14 @@
       "stats": {
         "AB": 4,
         "H": 1,
-        "HR": 1,
-        "RBI": 1,
-        "R": 1,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
         "SB": 0,
-        "BB": 0
+        "BB": 1
       },
-      "points": 3.0,
-      "summary": "Went deep"
+      "points": 0.0,
+      "summary": "1-for-4"
     },
     {
       "name": "Hernandez/Chourio",
@@ -172,16 +172,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 2,
-        "HR": 1,
-        "RBI": 3,
-        "R": 1,
-        "SB": 2,
-        "BB": 1
+        "AB": 4,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
       },
-      "points": 7.0,
-      "summary": "Went deep; drove in 3; swiped 2 bags"
+      "points": 0.0,
+      "summary": "0-for-4"
     },
     {
       "name": "Williams/Hader",
@@ -224,34 +224,34 @@
       "team": "CIN",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs Chicago Cubs",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 3.0,
-        "H": 4,
-        "ER": 2,
-        "K": 4,
-        "BB": 2,
-        "W": 0,
-        "L": 0,
-        "SV": 0,
-        "GS": 1
-      },
-      "points": -0.32,
-      "summary": "short outing"
-    },
-    {
-      "name": "Nathan Eovaldi",
-      "team": "TEX",
-      "position": "SP",
-      "type": "sp",
       "opponent": null,
       "dnp": true,
       "dnp_reason": "Team off day",
       "stats": {},
       "points": 0.0,
       "summary": ""
+    },
+    {
+      "name": "Nathan Eovaldi",
+      "team": "TEX",
+      "position": "SP",
+      "type": "sp",
+      "opponent": "vs Toronto Blue Jays",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 1.0,
+        "H": 2,
+        "ER": 1,
+        "K": 1,
+        "BB": 0,
+        "W": 0,
+        "L": 0,
+        "SV": 0,
+        "GS": 0
+      },
+      "points": -0.44,
+      "summary": "short outing"
     },
     {
       "name": "Emmet Sheehan",
@@ -270,12 +270,22 @@
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs Minnesota Twins",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 5.0,
+        "H": 6,
+        "ER": 4,
+        "K": 5,
+        "BB": 0,
+        "W": 0,
+        "L": 0,
+        "SV": 0,
+        "GS": 1
+      },
+      "points": -1.2,
+      "summary": "5.0 IP, 5 K, 4 ER"
     },
     {
       "name": "Stanton/Rice",
@@ -287,15 +297,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 3,
-        "H": 2,
-        "HR": 1,
-        "RBI": 2,
-        "R": 2,
+        "H": 0,
+        "HR": 0,
+        "RBI": 1,
+        "R": 0,
         "SB": 0,
-        "BB": 2
+        "BB": 0
       },
-      "points": 5.0,
-      "summary": "Went deep"
+      "points": 1.0,
+      "summary": "0-for-3"
     }
   ]
 }
