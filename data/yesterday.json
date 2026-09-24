@@ -1,25 +1,25 @@
 {
-  "date": "2026-09-22",
-  "generated_at": "2026-09-23T14:13:37Z",
+  "date": "2026-09-23",
+  "generated_at": "2026-09-24T14:11:50Z",
   "totals": {
     "hitters": {
-      "AB": 30,
-      "H": 8,
-      "R": 4,
-      "HR": 0,
-      "RBI": 0,
-      "SB": 2,
-      "points": 6.0
+      "AB": 34,
+      "H": 7,
+      "R": 3,
+      "HR": 2,
+      "RBI": 2,
+      "SB": 0,
+      "points": 7.0
     },
     "pitchers": {
-      "IP": 6.67,
-      "H": 8,
-      "ER": 6,
-      "K": 11,
-      "BB": 2,
+      "IP": 1.33,
+      "H": 2,
+      "ER": 1,
+      "K": 0,
+      "BB": 4,
       "W": 0,
       "SV": 0,
-      "points": -2.26
+      "points": 0.0
     }
   },
   "players": [
@@ -28,12 +28,20 @@
       "team": "DET",
       "position": "C",
       "type": "hitter",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
+      "opponent": "vs Washington Nationals",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 3,
+        "H": 0,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 1
+      },
       "points": 0.0,
-      "summary": ""
+      "summary": "0-for-3"
     },
     {
       "name": "Bryce Harper",
@@ -65,15 +73,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 2,
+        "H": 0,
         "HR": 0,
         "RBI": 0,
-        "R": 1,
+        "R": 0,
         "SB": 0,
         "BB": 0
       },
-      "points": 1.0,
-      "summary": "Multi-hit day"
+      "points": 0.0,
+      "summary": "0-for-4"
     },
     {
       "name": "Bo Bichette",
@@ -85,15 +93,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 1,
+        "H": 0,
         "HR": 0,
         "RBI": 0,
-        "R": 0,
+        "R": 1,
         "SB": 0,
         "BB": 1
       },
-      "points": 0.0,
-      "summary": "1-for-4"
+      "points": 1.0,
+      "summary": "0-for-4"
     },
     {
       "name": "Lindor/McGonigle",
@@ -105,7 +113,7 @@
       "dnp_reason": null,
       "stats": {
         "AB": 5,
-        "H": 2,
+        "H": 3,
         "HR": 0,
         "RBI": 0,
         "R": 0,
@@ -113,7 +121,7 @@
         "BB": 0
       },
       "points": 0.0,
-      "summary": "Multi-hit day"
+      "summary": "3-hit game"
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -124,16 +132,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
-        "H": 2,
+        "AB": 3,
+        "H": 0,
         "HR": 0,
         "RBI": 0,
-        "R": 1,
-        "SB": 1,
-        "BB": 2
+        "R": 0,
+        "SB": 0,
+        "BB": 1
       },
-      "points": 2.0,
-      "summary": "stole a base"
+      "points": 0.0,
+      "summary": "0-for-3"
     },
     {
       "name": "Jackson Merrill",
@@ -164,50 +172,50 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
-        "H": 0,
+        "AB": 4,
+        "H": 1,
         "HR": 0,
         "RBI": 0,
-        "R": 1,
-        "SB": 1,
-        "BB": 1
+        "R": 0,
+        "SB": 0,
+        "BB": 0
       },
-      "points": 2.0,
-      "summary": "0-for-3"
+      "points": 0.0,
+      "summary": "1-for-4"
     },
     {
       "name": "Williams/Hader",
       "team": "HOU",
       "position": "RP",
       "type": "rp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Seattle Mariners",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 1.33,
+        "H": 2,
+        "ER": 1,
+        "K": 0,
+        "BB": 4,
+        "W": 0,
+        "L": 1,
+        "SV": 0,
+        "GS": 0
+      },
+      "points": 0,
+      "summary": "Took the L"
     },
     {
       "name": "Zack Wheeler",
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs Milwaukee Brewers",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 5.67,
-        "H": 5,
-        "ER": 3,
-        "K": 11,
-        "BB": 1,
-        "W": 0,
-        "L": 0,
-        "SV": 0,
-        "GS": 1
-      },
-      "points": 0.18,
-      "summary": "dominant 11 K"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Cole Ragans",
@@ -238,22 +246,12 @@
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": "vs New York Mets",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 1.0,
-        "H": 3,
-        "ER": 3,
-        "K": 0,
-        "BB": 1,
-        "W": 0,
-        "L": 1,
-        "SV": 0,
-        "GS": 0
-      },
-      "points": -2.44,
-      "summary": "Took the L; short outing"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Emmet Sheehan",
@@ -288,16 +286,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
-        "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 1,
+        "AB": 4,
+        "H": 3,
+        "HR": 2,
+        "RBI": 2,
+        "R": 2,
         "SB": 0,
         "BB": 1
       },
-      "points": 1.0,
-      "summary": "1-for-3"
+      "points": 6.0,
+      "summary": "Multi-HR game (2)"
     }
   ]
 }
