@@ -1,25 +1,25 @@
 {
-  "date": "2026-09-25",
-  "generated_at": "2026-09-26T13:44:13Z",
+  "date": "2026-09-26",
+  "generated_at": "2026-09-27T14:40:58Z",
   "totals": {
     "hitters": {
-      "AB": 28,
+      "AB": 26,
       "H": 8,
-      "R": 5,
-      "HR": 1,
-      "RBI": 5,
+      "R": 3,
+      "HR": 0,
+      "RBI": 3,
       "SB": 1,
-      "points": 12.0
+      "points": 7.0
     },
     "pitchers": {
-      "IP": 6.0,
-      "H": 2,
-      "ER": 0,
-      "K": 7,
+      "IP": 4.33,
+      "H": 4,
+      "ER": 1,
+      "K": 3,
       "BB": 2,
-      "W": 1,
+      "W": 0,
       "SV": 0,
-      "points": 3.36
+      "points": 1.42
     }
   },
   "players": [
@@ -32,16 +32,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
+        "AB": 4,
         "H": 1,
         "HR": 0,
-        "RBI": 2,
-        "R": 1,
+        "RBI": 0,
+        "R": 0,
         "SB": 0,
         "BB": 0
       },
-      "points": 3.0,
-      "summary": "2 RBI"
+      "points": 0.0,
+      "summary": "1-for-4"
     },
     {
       "name": "Bryce Harper",
@@ -52,16 +52,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 3,
+        "AB": 5,
         "H": 1,
         "HR": 0,
         "RBI": 0,
         "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
       "points": 0.0,
-      "summary": "1-for-3"
+      "summary": "1-for-5"
     },
     {
       "name": "Luis Arraez",
@@ -85,15 +85,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 2,
-        "HR": 1,
-        "RBI": 2,
-        "R": 1,
+        "H": 1,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
         "SB": 0,
         "BB": 1
       },
-      "points": 4.0,
-      "summary": "Went deep"
+      "points": 0.0,
+      "summary": "1-for-4"
     },
     {
       "name": "Lindor/McGonigle",
@@ -104,36 +104,28 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
-        "H": 0,
+        "AB": 5,
+        "H": 1,
         "HR": 0,
-        "RBI": 0,
-        "R": 1,
+        "RBI": 1,
+        "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
       "points": 1.0,
-      "summary": "0-for-4"
+      "summary": "1 RBI"
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
       "position": "OF",
       "type": "hitter",
-      "opponent": "@ Boston Red Sox",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 1,
-        "BB": 1
-      },
-      "points": 1.0,
-      "summary": "stole a base"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Jackson Merrill",
@@ -144,16 +136,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 2,
-        "H": 1,
+        "AB": 4,
+        "H": 2,
         "HR": 0,
-        "RBI": 0,
-        "R": 1,
-        "SB": 0,
-        "BB": 0
+        "RBI": 1,
+        "R": 2,
+        "SB": 1,
+        "BB": 1
       },
-      "points": 1.0,
-      "summary": "1-for-2"
+      "points": 4.0,
+      "summary": "1 RBI; stole a base"
     },
     {
       "name": "Hernandez/Chourio",
@@ -164,13 +156,13 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 1,
-        "H": 1,
+        "AB": 4,
+        "H": 2,
         "HR": 0,
         "RBI": 1,
         "R": 1,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
       "points": 2.0,
       "summary": "1 RBI"
@@ -228,12 +220,22 @@
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "@ Minnesota Twins",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 4.33,
+        "H": 4,
+        "ER": 1,
+        "K": 3,
+        "BB": 2,
+        "W": 0,
+        "L": 0,
+        "SV": 0,
+        "GS": 1
+      },
+      "points": 1.42,
+      "summary": "4.33 IP, 3 K, 1 ER"
     },
     {
       "name": "Emmet Sheehan",
@@ -252,42 +254,24 @@
       "team": "LAA",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ Seattle Mariners",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 6.0,
-        "H": 2,
-        "ER": 0,
-        "K": 7,
-        "BB": 2,
-        "W": 1,
-        "L": 0,
-        "SV": 0,
-        "GS": 1
-      },
-      "points": 3.36,
-      "summary": "Earned the W; quality start; 7 K; scoreless"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Stanton/Rice",
       "team": "NYY",
       "position": "DH",
       "type": "hitter",
-      "opponent": "vs Baltimore Orioles",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 5,
-        "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
       "points": 0.0,
-      "summary": "1-for-5"
+      "summary": ""
     }
   ]
 }
