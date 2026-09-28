@@ -62,6 +62,7 @@ RECENT_WEIGHT = 0.65
 INACTIVE_AB = 15
 INACTIVE_IP = 8.0
 INACTIVE_HAIRCUT = 0.5
+RETURN_HAIRCUT = 0.9      # --hold: an injured player back from the IL plays this share of his projected rate
 MY_TEAM = config.JON_TEAM_NAME
 
 FIRST_ALIASES = {"wm": "william", "jh": "jhoan", "ja": "jarren", "ra": "ranger", "cj": "cj"}
@@ -368,8 +369,10 @@ def games_elapsed(as_of: date) -> float:
 LEAGUE_AVG_HITTER = {"AVG": 0.245, "HR": 0.030, "RBI": 0.115, "R": 0.120, "SB": 0.016}
 
 
-def hitter_ros(uni: Universe, rec: dict, games_left: float) -> dict | None:
-    """ROS AB/H/HR/RBI/R/SB for one hitter, plus usage flags."""
+def hitter_ros(uni: Universe, rec: dict, games_left: float, projected_pt: bool = False) -> dict | None:
+    """ROS AB/H/HR/RBI/R/SB for one hitter, plus usage flags.
+    projected_pt=True ignores recent usage (a player on the IL has none) and
+    plays him at RETURN_HAIRCUT × his projected per-game rate — the hold case."""
     proj = rec.get("proj") or {}
     y = uni.ytd(rec) or {"AB": 0, "H": 0, "HR": 0, "RBI": 0, "R": 0, "SB": 0, "G": 0}
     r30 = uni.recent(rec) or {"AB": 0, "H": 0, "HR": 0, "RBI": 0, "R": 0, "SB": 0, "G": 0}
@@ -387,10 +390,14 @@ def hitter_ros(uni: Universe, rec: dict, games_left: float) -> dict | None:
     # playing time per team game (no projection: this season's AB per team game so far)
     proj_abpg = pab / GAMES if pab else y["AB"] / games_elapsed(uni.as_of)
     recent_abpg = r30["AB"] / games_in_window(uni.as_of)
-    abpg = RECENT_WEIGHT * recent_abpg + (1 - RECENT_WEIGHT) * proj_abpg
-    inactive = r30["AB"] < INACTIVE_AB
-    if inactive:
-        abpg *= INACTIVE_HAIRCUT
+    if projected_pt:
+        abpg = proj_abpg * RETURN_HAIRCUT
+        inactive = False
+    else:
+        abpg = RECENT_WEIGHT * recent_abpg + (1 - RECENT_WEIGHT) * proj_abpg
+        inactive = r30["AB"] < INACTIVE_AB
+        if inactive:
+            abpg *= INACTIVE_HAIRCUT
     ros_ab = abpg * games_left
     out = {"AB": ros_ab, "H": ros_ab * avg, "HR": ros_ab * rate("HR"), "RBI": ros_ab * rate("RBI"),
            "R": ros_ab * rate("R"), "SB": ros_ab * rate("SB"), "inactive": inactive,
@@ -405,7 +412,7 @@ def hitter_bt(carry: dict, ros: dict) -> float:
     return round(avg * 1000) + sum(carry.get(k, 0) + ros[k] for k in ("HR", "RBI", "R", "SB"))
 
 
-def pitcher_ros(uni: Universe, rec: dict, games_left: float, role: str) -> dict | None:
+def pitcher_ros(uni: Universe, rec: dict, games_left: float, role: str, projected_pt: bool = False) -> dict | None:
     proj = rec.get("proj") or {}
     y = uni.ytd(rec) or {"IP": 0.0, "ER": 0, "G": 0, "GS": 0, "W": 0, "SV": 0}
     r30 = uni.recent(rec) or {"IP": 0.0, "ER": 0, "G": 0, "GS": 0, "W": 0, "SV": 0}
@@ -418,16 +425,20 @@ def pitcher_ros(uni: Universe, rec: dict, games_left: float, role: str) -> dict 
     era = blend(w, ytd_era, proj_era)
     proj_ippg = pip / GAMES if pip else y["IP"] / games_elapsed(uni.as_of)
     recent_ippg = r30["IP"] / games_in_window(uni.as_of)
-    ippg = RECENT_WEIGHT * recent_ippg + (1 - RECENT_WEIGHT) * proj_ippg
-    inactive = r30["IP"] < INACTIVE_IP
-    if inactive:
-        ippg *= INACTIVE_HAIRCUT
+    if projected_pt:
+        ippg = proj_ippg * RETURN_HAIRCUT
+        inactive = False
+    else:
+        ippg = RECENT_WEIGHT * recent_ippg + (1 - RECENT_WEIGHT) * proj_ippg
+        inactive = r30["IP"] < INACTIVE_IP
+        if inactive:
+            ippg *= INACTIVE_HAIRCUT
     ros_ip = ippg * games_left
     # appearances: recent rate blended with projection
     pg = proj.get("G", 0) or 0
     proj_gpg = pg / GAMES if pg else y["G"] / games_elapsed(uni.as_of)
     recent_gpg = r30["G"] / games_in_window(uni.as_of)
-    gpg = RECENT_WEIGHT * recent_gpg + (1 - RECENT_WEIGHT) * proj_gpg
+    gpg = (proj_gpg * RETURN_HAIRCUT) if projected_pt else (RECENT_WEIGHT * recent_gpg + (1 - RECENT_WEIGHT) * proj_gpg)
     ros_g = gpg * games_left * (INACTIVE_HAIRCUT if inactive else 1.0)
     out = {"IP": ros_ip, "ER": era * ros_ip / 9, "G": ros_g, "era": era, "inactive": inactive, "ytd": y, "r30": r30}
     if role == "rp":
@@ -436,9 +447,12 @@ def pitcher_ros(uni: Universe, rec: dict, games_left: float, role: str) -> dict 
         proj_rate = pw / GAMES
         recent_rate = (r30["W"] + r30["SV"]) / games_in_window(uni.as_of)
         ytd_rate = (y["W"] + y["SV"]) / max(games_in_window(uni.as_of) * ((uni.as_of - OPENING_DAY).days / 30.0), 1)
-        rate = RECENT_WEIGHT * recent_rate + (1 - RECENT_WEIGHT) * (0.5 * proj_rate + 0.5 * ytd_rate)
-        if inactive:
-            rate *= INACTIVE_HAIRCUT
+        if projected_pt:
+            rate = (0.5 * proj_rate + 0.5 * ytd_rate) * RETURN_HAIRCUT
+        else:
+            rate = RECENT_WEIGHT * recent_rate + (1 - RECENT_WEIGHT) * (0.5 * proj_rate + 0.5 * ytd_rate)
+            if inactive:
+                rate *= INACTIVE_HAIRCUT
         out["WSV"] = rate * games_left
     return out
 
@@ -623,6 +637,107 @@ def analyze(as_of: date, bbsubs: Path | None, season_end: date, only_slot: str |
         print(f"   {delta:+6.0f}  {slot:3s}  {inc:22s} -> {fa} ({team}){runner}")
 
 
+# ---------------------------------------------------------------------------
+# Hold vs replace (2027 workstream 4)
+# ---------------------------------------------------------------------------
+
+def _slot_points(uni, s, carry, rec, games_left, mlera, others_rsar, projected_pt=False):
+    """Slot-final BT points if `rec` fills slot `s` for `games_left` team games."""
+    slot = s["slot"]
+    if slot in HITTER_SLOTS:
+        ros = hitter_ros(uni, rec, games_left, projected_pt)
+        return None if ros is None else hitter_bt(carry, ros), ros
+    if slot == "SP":
+        ros = pitcher_ros(uni, rec, games_left, "sp", projected_pt)
+        return None if ros is None else team_sp_points(others_rsar + [slot_rsar(carry, ros, mlera)]), ros
+    ros = pitcher_ros(uni, rec, games_left, "rp", projected_pt)
+    return None if ros is None else config.RP_WIN_SAVE_MULTIPLIER * ros["WSV"], ros
+
+
+def hold_vs_replace(as_of: date, bbsubs: Path | None, season_end: date, slot: str,
+                    return_date: date, mlera: float, top: int = 3):
+    """Should an injured incumbent be held through the IL stint or replaced?
+
+    Held  = carryover + his production from `return_date` to season end at
+            RETURN_HAIRCUT × projected per-game playing time (regressed rates).
+    Swap  = carryover + the best free agent's production from `as_of`.
+    Also prints the break-even return date: the latest return for which
+    holding still beats the best swap. Motivated by the 2026 catcher chain
+    (Raleigh held would have scored 325; the three-catcher chain scored 296).
+    """
+    global SEASON_END
+    SEASON_END = season_end
+    slot = slot.upper()
+    log: list[str] = []
+    uni = Universe(as_of)
+    rosters = build_rosters(uni, bbsubs, as_of, log)
+    rostered = {id(x["player"]) for r in rosters.values() for x in r if x["player"] is not None}
+    mine = rosters[MY_TEAM]
+    carry_all = carryover_as_of(as_of)
+    games_left = remaining_games(as_of, season_end)
+    slots = [x for x in mine if x["slot"] == slot]
+    if not slots:
+        sys.exit(f"no {slot} slot on the {MY_TEAM} roster")
+    s = slots[0]
+    inc = s["player"]
+    carry = carry_for_slot(uni, carry_all, s)
+    others_rsar = []
+    if slot == "SP":
+        for x in mine:
+            if x["slot"] == "SP" and x is not s:
+                c2 = carry_for_slot(uni, carry_all, x)
+                r2 = pitcher_ros(uni, x["player"], games_left, "sp")
+                others_rsar.append(slot_rsar(c2, r2, mlera) if r2 else 0.0)
+
+    # best free agents from as_of
+    cands = []
+    for rec in uni.players.values():
+        if id(rec) in rostered or rec is inc:
+            continue
+        if slot in HITTER_SLOTS and not eligible_for(rec, slot):
+            continue
+        if slot == "SP" and rec["ptype"] != "sp":
+            continue
+        if slot == "RP" and rec["ptype"] != "rp":
+            continue
+        pts, ros = _slot_points(uni, s, carry, rec, games_left, mlera, others_rsar)
+        if pts is None or ros.get("inactive"):
+            continue
+        cands.append((pts, rec, ros))
+    cands.sort(key=lambda t: -t[0])
+    swap_pts, best, best_ros = cands[0]
+
+    def held_at(ret: date):
+        g = remaining_games(ret, season_end) if ret <= season_end else 0.0
+        pts, _ = _slot_points(uni, s, carry, inc, g, mlera, others_rsar, projected_pt=True)
+        return pts if pts is not None else _slot_points(uni, s, carry, inc, 0.0, mlera, others_rsar, projected_pt=True)[0]
+
+    held_pts = held_at(return_date)
+    # break-even: latest return date at which holding still beats the swap
+    breakeven = None
+    d = as_of
+    while d <= season_end:
+        if held_at(d) >= swap_pts:
+            breakeven = d
+        else:
+            break
+        d += timedelta(days=7)
+
+    print(f"\nHOLD vs REPLACE — {slot} — {inc['name']} ({inc['team']}) — as of {as_of}, expected return {return_date}, season ends {season_end}")
+    print(f"   carryover in the slot: {carry}")
+    print(f"   HOLD    {inc['name']:22s} back {return_date}: slot-final {held_pts:6.0f} pts")
+    print(f"   REPLACE {best['name']:22s} from {as_of}:  slot-final {swap_pts:6.0f} pts")
+    print(f"   verdict: {'HOLD' if held_pts >= swap_pts else 'REPLACE'} by {abs(held_pts - swap_pts):.0f} pts")
+    if breakeven is None:
+        print(f"   break-even: holding never beats the swap, even with an immediate return")
+    else:
+        print(f"   break-even: holding wins if he is back by about {breakeven} (weekly steps); later than that, replace")
+    print(f"   next-best replacements: " + "; ".join(f"{r['name']} {p:.0f}" for p, r, _ in cands[1:top + 1]))
+    if log:
+        print("   resolution notes: " + " | ".join(log[:3]))
+    return {"held": held_pts, "swap": swap_pts, "best": best["name"], "breakeven": breakeven}
+
+
 def main():
     ap = argparse.ArgumentParser(description="Roster-wide swap-window analysis")
     ap.add_argument("--as-of", required=True, help="Analysis date YYYY-MM-DD (stats through the day before)")
@@ -631,11 +746,19 @@ def main():
     ap.add_argument("--top", type=int, default=5)
     ap.add_argument("--season-end", default=SEASON_END.isoformat())
     ap.add_argument("--mlera", type=float, default=config.MLB_AVG_ERA)
+    ap.add_argument("--hold", action="store_true", help="Hold-vs-replace mode for an injured incumbent (needs --slot and --return-date)")
+    ap.add_argument("--return-date", help="Expected return date YYYY-MM-DD for --hold")
     a = ap.parse_args()
     as_of = date.fromisoformat(a.as_of)
     bb = Path(a.bbsubs).expanduser() if a.bbsubs else None
     if bb and not bb.exists():
         sys.exit(f"BBSUBS not found: {bb}")
+    if a.hold:
+        if not (a.slot and a.return_date):
+            sys.exit("--hold needs --slot and --return-date")
+        hold_vs_replace(as_of, bb, date.fromisoformat(a.season_end), a.slot,
+                        date.fromisoformat(a.return_date), a.mlera, a.top)
+        return
     analyze(as_of, bb, date.fromisoformat(a.season_end), a.slot, a.top, a.mlera)
 
 

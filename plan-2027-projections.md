@@ -1,6 +1,6 @@
 # 2027 Plan: Turning the 2026 Retrospective into Model and Process Changes
 
-Status: **approved 2026-09-28; in progress.** Written from the findings in `season-2026-retrospective.md`. Per-workstream status is in the table at the bottom.
+Status: **approved 2026-09-28; all six workstreams built and backtested the same day.** What remains is the March 2027 step: a fresh PitcherList export, `python3 build_history.py --seasons 2024 2025 2026`, then `run_projections.py` and the draft. Written from the findings in `season-2026-retrospective.md`. Per-workstream status is in the table at the bottom.
 
 ## What 2026 taught us, in one line each
 
@@ -90,8 +90,8 @@ Six workstreams, ordered so that each one can be validated against 2026 data bef
 | 1. Playing-time model | **Done** (`playing_time.py`, `build_history.py`, `backtest_2026.py`) | Hitter bias −42 → −10, MAE 66 → 59, corr 0.20 → 0.28; RP corr 0.28 → 0.50; SP unchanged (starters take only an IL/red-flag discount, since continuous history scaling made them worse); team-total miss vs drafted-16 actuals 374 → 193. The corr ≥ 0.35 target was not reached. |
 | 2. Risk discount | **Done, as a visible read only** (`playing_time.risk_profile`, shown in `draft.py`) | Subtracting a risk penalty removed at most 2 of the 7 biggest busts from the top 20 and added no breakouts, so risk is displayed (tier + note + PT factor) and never re-ranks. |
 | 3. Innings weighting | **Done, as a simulator** (`DraftMonitor.sp_depth_value`) | Regressing ERA toward league average made SP correlation worse (0.27 → 0.20; second-of-pair starters corr 0.03), so the formula is untouched. Instead the second of each SP pair is chosen by expected marginal top-3 points under innings variance. |
-| 5. Swap-window tool | In progress (`swap_window.py`) | Must reproduce the 7/13 Hader recommendation |
-| 4. Hold-vs-replace | Not started; builds on 5 | Raleigh / Lindor / Stanton cases |
+| 5. Swap-window tool | **Done** (`swap_window.py`, `data/draft_board_2026.py`) | Reproduces the 7/13 analysis: Hader +54 (memory +48), Duran +39 (+32), every slot's top pick identical, magnitudes within 6 |
+| 4. Hold-vs-replace | **Done** (`swap_window.py --hold --slot X --return-date D`) | Lindor 4/27: replace by 62 (actual +83). Stanton 5/03: replace by 175 (actual +345). Raleigh 5/18: replace by 35 with Jeffers projected 389, which was the defensible ex-ante call; hindsight favoured holding (325 vs 296) only because Jeffers then broke his hamate. The tool prints the break-even return date so the injury read stays Jon's. |
 
 ## Explicitly out of scope
 
