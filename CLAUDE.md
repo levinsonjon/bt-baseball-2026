@@ -2,7 +2,7 @@
 
 ## SEASON OVER (as of 2026-09-28)
 
-The 2026 regular season ended 2026-09-27. **Levinsons finished 2nd of 9 (4,676 pts; Cobey won with 4,788).** Official results are in `season-2026-final.md`; the final data is frozen at git tag `season-2026-final`. The Actions schedule and the launchd health job are disabled (restart checklist at the bottom of that file). Everything below describes the in-season pipeline as it ran.
+The 2026 regular season ended 2026-09-27. **Levinsons finished 2nd of 9 (4,676 pts; Cobey won with 4,788).** Official results are in `season-2026-final.md`; the final data is frozen at git tag `season-2026-final`. The Actions schedule and the launchd health job are disabled (restart checklist at the bottom of that file). Draft retrospective: `season-2026-retrospective.md`, published as an interactive page at https://claude.ai/artifact/5TKxjHSPT4Zqb2tgQVYKEj (personal) and a league-facing "BT 2026 Season Analysis" at https://claude.ai/artifact/6HawM6b1fjtZGYL3KzikMU; both regenerate from `tools/retrospective/`. Everything below describes the in-season pipeline as it ran.
 
 ## Overview
 
