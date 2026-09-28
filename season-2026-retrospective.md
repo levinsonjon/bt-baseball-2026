@@ -24,7 +24,7 @@ What the preseason model said on draft day (2026-03-30) versus what actually hap
 | Washington | 4,499 | 7 | 4,379 | 8 | -120 |
 | Palma | 4,681 | 5 | 4,254 | 9 | -427 |
 
-Correlation between projected and actual team totals: 0.36. The model called Cobey, Lerner, Mudge and Washington within one place each. It had Winters winning (Judge went 1st overall and scored 299) and Palma mid-pack (Rooker, pick 23, scored 181, the biggest bust in the league). Six of nine teams finished below projection; the model over-projected hitters league-wide by about 42 points per player, almost entirely lost playing time.
+Correlation between projected and actual team totals: 0.36. The model called Cobey, Lerner, Mudge and Washington within one place each. It had Winters winning (Seager, Ohtani, Kurtz and Rodríguez each fell 70 to 112 short) and Palma mid-pack (Rooker, pick 23, scored 181, the biggest bust in the league). Washington spent the first overall pick on Judge, who scored 299. Six of nine teams finished below projection; the model over-projected hitters league-wide by about 42 points per player, almost entirely lost playing time.
 
 **Draft versus management, league-wide.** Scoring each team's original 16 on full-season actuals with no swaps:
 
