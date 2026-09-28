@@ -90,9 +90,7 @@ Rest-of-season is measured from each swap's effective date. "Slot impact" is the
 |------|------|-----|----|--------------------|---------|--------|------------:|
 | 4/27 | SS | Lindor | McGonigle | Calf strain, 5–8 weeks | 325 AB, .225, 113 counting | 499 AB, .267, 161 counting | **+83** |
 | 5/04 | DH | Stanton | Ben Rice | Injured | 0 AB (never returned) | 465 AB, 29 HR, 175 counting | **+345** |
-| 5/18 | C | Raleigh | Jeffers | Oblique, 10-day IL | 290 AB, .193, 100 counting | (chain below) | |
-| 6/01 | C | Jeffers | Basallo | Jeffers hamate fracture | | | |
-| 8/02 | C | Basallo | Dingler | Basallo shoulder IL, .150 | | 3-player chain: 65 H, 79 counting | **-29** |
+| 5/18 | C | Raleigh | Jeffers → Basallo → Dingler | Oblique, 10-day IL; then Jeffers hamate (6/01), Basallo shoulder (8/02) | 290 AB, .193, 100 counting | 293 AB, .188, 79 counting | **-29** (detail below) |
 | 6/15 | OF | Hernández | Chourio | Hamstring IL since 5/27 | 261 AB, .261, 81 counting | 370 AB, .278, 152 counting | **+82** |
 | 7/15 | RP | D. Williams | Hader | One-swap window; lost closer role | 3 SV | 16 SV + 1 W | **+70** |
 | 6/21 | 3B | Bichette | M. Vargas | *Reverted: Bichette not on IL, swap not permitted* | 331 AB, .269, 84 counting | 318 AB, .261, 133 counting | (would have been about +45) |
@@ -100,6 +98,19 @@ Rest-of-season is measured from each swap's effective date. "Slot impact" is the
 - The Stanton and Hernández moves were the season. The DH swap alone is worth more than the gap to Cobey.
 - The Hader analysis predicted +40 to +50 and delivered +70.
 - The catcher chain is the one negative. Each link was forced by an injury to the previous catcher, and the catcher free-agent pool was thin all year, but holding Raleigh through his oblique stint would have scored 325 instead of 296. Reads at the time were reasonable; the outcome was not.
+
+**Catcher slot, segment by segment.** The first segment is common to both scenarios, so the whole gap is from 5/18 on.
+
+| Segment | Dates | AB | H | HR | RBI | R | SB |
+|---------|-------|---:|--:|---:|----:|--:|---:|
+| Raleigh | Opening Day to 5/17 | 161 | 26 | 7 | 18 | 16 | 2 |
+| Jeffers | 5/18 to 5/31 | 3 | 1 | 0 | 0 | 1 | 0 |
+| Basallo | 6/01 to 8/01 | 123 | 23 | 7 | 21 | 11 | 0 |
+| Dingler | 8/02 to end | 167 | 31 | 4 | 19 | 16 | 0 |
+| **Actual slot** | | **454** | **81** | **18** | **58** | **44** | **2** |
+| **Raleigh, full season** | | **451** | **82** | **23** | **69** | **49** | **2** |
+
+Actual slot: .178 → 178 + 18 + 58 + 44 + 2 = 300 (official sheet: 296). Raleigh all year: .182 → 182 + 23 + 69 + 49 + 2 = 325. Same at-bats and hits after 5/18; Raleigh produced 21 more counting stats than the three replacements combined and returned faster than the May read expected (85 games after 5/18).
 - The reverted Vargas move would have gained about 45. It was correctly reverted on rules grounds, not on merit.
 
 ## 5. Model calibration across all 144 drafted players
