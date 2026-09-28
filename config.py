@@ -9,6 +9,7 @@ Based on BT Baseball Pool 2026 rules (BBRULES_2026.doc).
 
 LEAGUE_NAME = "BT Baseball Pool 2026"
 LEAGUE_SIZE = 9
+SEASON = 2027           # projection season; playing_time.py reads history for SEASON-1..SEASON-3
 DRAFT_TYPE = "snake"
 DRAFT_PICK = 9           # 9th pick (last in round 1, first in round 2, etc.)
 

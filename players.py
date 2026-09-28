@@ -30,6 +30,11 @@ class Player:
     health_status: str = "healthy"
     injury_note: str = ""
 
+    # Playing time (playing_time.py). projected_stats is post-scaling; the
+    # untouched projection is kept for display/backtests.
+    pt_factor: float = 1.0
+    raw_projected_stats: dict = field(default_factory=dict)
+
     # Computed fields
     projected_points: float = 0.0
     rsar: float = 0.0                  # SP only: runs saved against replacement
