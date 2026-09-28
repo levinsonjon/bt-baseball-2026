@@ -123,6 +123,8 @@ Actual slot: .178 → 178 + 18 + 58 + 44 + 2 = 300 (official sheet: 296). Raleig
 
 ![Drafted hitters: projection vs. actual, 2026](season-2026-hitter-calibration.png)
 
+![Drafted pitchers: projection vs. actual, 2026](season-2026-pitcher-calibration.png)
+
 Within the drafted pool, projection order barely predicted outcome order. That is partly range restriction (everyone drafted was projected 400 to 590) and partly that the biggest swings were injuries the model cannot see. The hitter bias of 42 points is the cost of projecting full playing time for everyone.
 
 Biggest busts league-wide: Rooker -320, Judge -290, Stanton -275, Roman Anthony -221, Luis Robert -211, Raleigh -167, Crochet -161. Biggest breakouts: Schlittler +186, Misiorowski +148, Crow-Armstrong +116, Yordan Alvarez +101, Cade Smith +91, Rasmussen +89, Arozarena +80. Two of the top three SP seasons in the league came from pitchers drafted in rounds 13 to 16 with projections under 70.
