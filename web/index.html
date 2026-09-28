@@ -21,11 +21,32 @@
 
   <main class="shell">
     <h1 class="page-title">Team Overview</h1>
-    <p class="page-sub" id="page-sub">Season stats, fantasy points to date, and projected season totals</p>
+    <p class="page-sub" id="page-sub">Final 2026 stats and fantasy points. Season ended Sep 27, 2026</p>
+
+    <div id="standings-section" class="section">
+      <h2>Final Standings</h2>
+      <p class="section-sub">Official commissioner results, 162 games (MLERA 4.17). Levinsons finished 2nd of 9.</p>
+      <div class="table-wrap">
+        <table class="data" id="standings-table">
+          <thead><tr><th class="num">#</th><th>Team</th><th class="num">Points</th><th class="num">vs 1st</th></tr></thead>
+          <tbody>
+            <tr><td class="num">1</td><td data-label="Team">Cobey</td><td class="num" data-label="Points">4,788</td><td class="num" data-label="vs 1st">+0</td></tr>
+            <tr style="font-weight:600"><td class="num">2</td><td data-label="Team">Levinsons</td><td class="num" data-label="Points">4,676</td><td class="num" data-label="vs 1st">-112</td></tr>
+            <tr><td class="num">3</td><td data-label="Team">Lerner</td><td class="num" data-label="Points">4,664</td><td class="num" data-label="vs 1st">-124</td></tr>
+            <tr><td class="num">4</td><td data-label="Team">Winters</td><td class="num" data-label="Points">4,649</td><td class="num" data-label="vs 1st">-139</td></tr>
+            <tr><td class="num">5</td><td data-label="Team">Mudge</td><td class="num" data-label="Points">4,636</td><td class="num" data-label="vs 1st">-152</td></tr>
+            <tr><td class="num">6</td><td data-label="Team">Williams</td><td class="num" data-label="Points">4,558</td><td class="num" data-label="vs 1st">-230</td></tr>
+            <tr><td class="num">7</td><td data-label="Team">Tchir</td><td class="num" data-label="Points">4,554</td><td class="num" data-label="vs 1st">-234</td></tr>
+            <tr><td class="num">8</td><td data-label="Team">Washington</td><td class="num" data-label="Points">4,379</td><td class="num" data-label="vs 1st">-409</td></tr>
+            <tr><td class="num">9</td><td data-label="Team">Palma</td><td class="num" data-label="Points">4,254</td><td class="num" data-label="vs 1st">-534</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
     <div id="hitters-section" class="section">
       <h2>Position Players</h2>
-      <p class="section-sub">Scoring: BA × 1000 + HR + RBI + R + SB (300 AB min rule applies at season end)</p>
+      <p class="section-sub">Scoring: BA × 1000 + HR + RBI + R + SB (300 AB minimum: every slot cleared it)</p>
       <div class="table-wrap">
         <table class="data" id="hitters-table"><tbody><tr><td class="loader">Loading…</td></tr></tbody></table>
       </div>
@@ -33,7 +54,7 @@
 
     <div id="sp-section" class="section">
       <h2>Starting Pitchers</h2>
-      <p class="section-sub">RSAR = (1.2 × 4.20 − ERA) × (IP/9). Top 3 of 6 count, × 3.5 multiplier for team score.</p>
+      <p class="section-sub">RSAR = (1.2 × 4.17 − ERA) × (IP/9). Top 3 of 6 count, × 3.5 multiplier for team score.</p>
       <div class="table-wrap">
         <table class="data" id="sp-table"><tbody><tr><td class="loader">Loading…</td></tr></tbody></table>
       </div>

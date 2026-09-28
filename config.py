@@ -31,8 +31,9 @@ DRAFT_PICK = 9           # 9th pick (last in round 1, first in round 2, etc.)
 # ---------------------------------------------------------------------------
 
 # MLB average ERA used in RSAR formula. Update annually.
-# 2024 MLB ERA was ~4.25; using 4.20 as 2026 projection baseline.
-MLB_AVG_ERA = 4.20
+# 2026 final league value was 4.17 (commissioner's RESULTS.xlsm); the preseason
+# baseline was 4.20. Reset to a fresh projection baseline for 2027.
+MLB_AVG_ERA = 4.17
 
 # RSAR multiplier (applied to sum of top-3 starters)
 SP_RSAR_MULTIPLIER = 3.5

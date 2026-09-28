@@ -1,6 +1,6 @@
 // team.js — renders Team Overview: position players, SPs, RP.
 
-const MLB_AVG_ERA = 4.20;
+const MLB_AVG_ERA = 4.17;  // 2026 final league MLERA (RESULTS.xlsm)
 const SP_RSAR_MULTIPLIER = 3.5;
 
 function hitterAVG(s) {
@@ -210,7 +210,7 @@ async function renderTeam() {
 
     const refreshed = yesterday.generated_at ? fmtTimestamp(yesterday.generated_at) : "—";
     document.getElementById("page-sub").textContent =
-      `Season stats, fantasy points to date, and projected season totals · data refreshed ${refreshed}`;
+      `Final 2026 stats and fantasy points. Season ended Sep 27, 2026 · last data refresh ${refreshed}`;
   } catch (err) {
     document.getElementById("hitters-section").innerHTML =
       `<div class="empty-state">Couldn't load team data: ${err.message}</div>`;

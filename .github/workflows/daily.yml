@@ -5,12 +5,17 @@ name: Daily fantasy baseball report
 # ESPN (deterministic, no LLM), writes data/*.json, commits + pushes (which
 # triggers the Vercel redeploy), and sends the daily email via Gmail SMTP.
 
+# SEASON OVER (2026-09-28): the daily schedule is disabled. The 2026 regular
+# season ended 2026-09-27 and the final data was frozen at tag `season-2026-final`.
+# Manual runs still work from the Actions tab / `gh workflow run daily.yml`.
+# To re-enable for 2027: restore the `schedule:` block below, bump the season
+# in config.py / generate_daily.py, and reset data/*.json for the new roster.
 on:
-  schedule:
-    # 09:15 UTC ≈ 5:15am ET (EDT). GitHub cron is UTC-only and may run a few
-    # minutes late; a skipped day self-heals on the next run (season stats are
-    # cumulative). Across DST this lands 4:15–5:15am ET — fine for a 5am digest.
-    - cron: "15 9 * * *"
+  # schedule:
+  #   # 09:15 UTC ≈ 5:15am ET (EDT). GitHub cron is UTC-only and may run a few
+  #   # minutes late; a skipped day self-heals on the next run (season stats are
+  #   # cumulative). Across DST this lands 4:15–5:15am ET — fine for a 5am digest.
+  #   - cron: "15 9 * * *"
   workflow_dispatch: {}   # allow manual runs from the Actions tab
 
 # Allow the job to push the regenerated data files back to the repo.
