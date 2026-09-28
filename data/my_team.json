@@ -5,14 +5,35 @@
     {
       "name": "Basallo/Dingler",
       "current_player": "Dillon Dingler",
-      "swap_effective": "2026-08-02",
       "team": "DET",
       "positions": [
         "C"
       ],
       "player_type": "hitter",
       "projected_points": 0,
-      "projected_stats": {}
+      "projected_stats": {},
+      "segments": [
+        {
+          "player": "Cal Raleigh",
+          "from": null,
+          "to": "2026-05-17"
+        },
+        {
+          "player": "Ryan Jeffers",
+          "from": "2026-05-18",
+          "to": "2026-05-31"
+        },
+        {
+          "player": "Samuel Basallo",
+          "from": "2026-06-01",
+          "to": "2026-08-01"
+        },
+        {
+          "player": "Dillon Dingler",
+          "from": "2026-08-02",
+          "to": null
+        }
+      ]
     },
     {
       "name": "Bryce Harper",
@@ -86,7 +107,19 @@
       ],
       "player_type": "hitter",
       "projected_points": 0,
-      "projected_stats": {}
+      "projected_stats": {},
+      "segments": [
+        {
+          "player": "Francisco Lindor",
+          "from": null,
+          "to": "2026-04-26"
+        },
+        {
+          "player": "Kevin McGonigle",
+          "from": "2026-04-27",
+          "to": null
+        }
+      ]
     },
     {
       "name": "Pete Crow-Armstrong",
@@ -139,7 +172,19 @@
       ],
       "player_type": "hitter",
       "projected_points": 0,
-      "projected_stats": {}
+      "projected_stats": {},
+      "segments": [
+        {
+          "player": "Teoscar Hernández",
+          "from": null,
+          "to": "2026-06-14"
+        },
+        {
+          "player": "Jackson Chourio",
+          "from": "2026-06-15",
+          "to": null
+        }
+      ]
     },
     {
       "name": "Williams/Hader",
@@ -150,7 +195,19 @@
       ],
       "player_type": "rp",
       "projected_points": 0,
-      "projected_stats": {}
+      "projected_stats": {},
+      "segments": [
+        {
+          "player": "Devin Williams",
+          "from": null,
+          "to": "2026-07-14"
+        },
+        {
+          "player": "Josh Hader",
+          "from": "2026-07-15",
+          "to": null
+        }
+      ]
     },
     {
       "name": "Zack Wheeler",
@@ -263,7 +320,19 @@
       ],
       "player_type": "hitter",
       "projected_points": 0,
-      "projected_stats": {}
+      "projected_stats": {},
+      "segments": [
+        {
+          "player": "Giancarlo Stanton",
+          "from": null,
+          "to": "2026-05-03"
+        },
+        {
+          "player": "Ben Rice",
+          "from": "2026-05-04",
+          "to": null
+        }
+      ]
     }
   ]
 }

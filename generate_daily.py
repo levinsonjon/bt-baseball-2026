@@ -3,7 +3,8 @@ generate_daily.py — Fully local/cloud daily report generator.
 
 Pulls everything deterministically from public APIs (no LLM, no web search,
 no Gmail drafts):
-  - MLB Stats API gameLog  → yesterday's box scores + season totals
+  - MLB Stats API gameLog  → yesterday's box scores + season totals (every
+    slot rebuilt from full-season logs, per player segment — no watermark)
   - ESPN public injuries    → injury report
   - daily_report / config   → scoring, web JSON payloads, HTML email
 
@@ -157,7 +158,9 @@ def split_opponent(split: dict) -> str:
 
 
 # ---------------------------------------------------------------------------
-# Season totals (non-swapped) and swap-delta accumulation (swapped slots)
+# Season totals: every slot is rebuilt from full-season gameLogs, one segment
+# per player who has occupied the slot (see slot_segments). No watermark, no
+# carried-over deltas — a missed or double run can never corrupt a slot.
 # ---------------------------------------------------------------------------
 
 def season_totals_from_gamelog(splits: list[dict], player_type: str) -> dict:
@@ -191,71 +194,46 @@ def season_totals_from_gamelog(splits: list[dict], player_type: str) -> dict:
         return out
 
 
-def apply_swap_deltas(prior: dict, splits: list[dict], player_type: str,
-                      after: date, through: date) -> dict:
-    """Add the current player's gameLog deltas for (after, through] onto the
-    prior carryover total. Recompute AVG / ERA. Used for mid-season-swapped
-    slots so pre-swap games (folded into `prior`) are never double-counted.
+def slot_segments(player: dict) -> list[dict]:
+    """The (player, from, to) segments that make up a roster slot's season.
 
-    Self-healing: the date range covers every gap day, so a missed run is
-    recovered on the next run rather than lost forever.
+    A roster entry may carry `segments`: an ordered list of
+    {"player": <full MLB name>, "from": "YYYY-MM-DD" | null, "to": "YYYY-MM-DD" | null}
+    covering the season (from=null means opening day, to=null means through
+    today). Entries without `segments` are a single player for the whole
+    season, using current_player / name as today.
     """
-    out = dict(prior)
-    if player_type == "hitter":
-        for sp in splits:
-            d = _split_date(sp)
-            if d is None or not (after < d <= through):
-                continue
-            day = hitter_day_stats(sp)
-            for k in ("AB", "H", "HR", "RBI", "R", "SB"):
-                out[k] = out.get(k, 0) + day[k]
-        if out.get("AB"):
-            out["AVG"] = round(out["H"] / out["AB"], 3)
+    segs = player.get("segments")
+    if segs:
+        out = []
+        for seg in segs:
+            out.append({
+                "player": seg["player"],
+                "from": date.fromisoformat(seg["from"]) if seg.get("from") else None,
+                "to": date.fromisoformat(seg["to"]) if seg.get("to") else None,
+            })
         return out
-    else:
-        # Derive stored earned runs from the stored ERA/IP, add daily deltas.
-        ip = float(out.get("IP", 0.0))
-        er = out.get("ERA", 0.0) * ip / 9.0
-        for sp in splits:
-            d = _split_date(sp)
-            if d is None or not (after < d <= through):
-                continue
-            day = pitcher_day_stats(sp)
-            ip += day["IP"]
-            er += day["ER"]
-            out["K"] = out.get("K", 0) + day["K"]
-            out["BB"] = out.get("BB", 0) + day["BB"]
-            out["W"] = out.get("W", 0) + day["W"]
-            if day["SV"]:
-                out["SV"] = out.get("SV", 0) + day["SV"]
-            out["G"] = out.get("G", 0) + 1
-            out["GS"] = out.get("GS", 0) + day["GS"]
-        out["IP"] = round(ip, 2)
-        out["ERA"] = round(er * 9.0 / ip, 2) if ip else 0.0
-        return out
+    return [{"player": _lookup_name(player), "from": None, "to": None}]
 
 
-def swap_delta_after(player: dict, delta_after: date) -> date:
-    """Lower bound (exclusive) for a swapped slot's delta accumulation.
+def _in_segment(d, seg: dict, through: date) -> bool:
+    if d is None or d > through:
+        return False
+    if seg["from"] is not None and d < seg["from"]:
+        return False
+    if seg["to"] is not None and d > seg["to"]:
+        return False
+    return True
 
-    Normally the global watermark, but a slot may carry `swap_effective`
-    (YYYY-MM-DD) — the league date the new player takes over. Games before it
-    belong to the prior player and must not be credited to the slot, so the
-    bound is raised to the day before. Needed when a swap is seeded ahead of
-    its effective date: the watermark alone would fold in the new player's
-    games from the seeding day onward.
 
-    Only ever raises the bound, never lowers it, so the self-healing gap
-    recovery in apply_swap_deltas is preserved.
-    """
-    raw = player.get("swap_effective")
-    if not raw:
-        return delta_after
-    try:
-        eff = date.fromisoformat(raw)
-    except (TypeError, ValueError):
-        return delta_after
-    return max(delta_after, eff - timedelta(days=1))
+def season_totals_from_segments(segment_splits: list, player_type: str, through: date) -> dict:
+    """Aggregate a slot's season from (segment, gameLog splits) pairs, keeping
+    only the games that fall inside each segment's date range and on or before
+    `through`. Inclusive on both ends of a segment."""
+    kept = []
+    for seg, splits in segment_splits:
+        kept.extend(sp for sp in splits if _in_segment(_split_date(sp), seg, through))
+    return season_totals_from_gamelog(kept, player_type)
 
 
 def _split_date(split: dict):
@@ -266,18 +244,6 @@ def _split_date(split: dict):
         return date.fromisoformat(raw)
     except ValueError:
         return None
-
-
-def previous_watermark() -> date | None:
-    """The last date already folded into season_stats — read from the existing
-    yesterday.json. Used as the lower bound for swap-delta accumulation."""
-    if YESTERDAY_FILE.exists():
-        try:
-            d = json.loads(YESTERDAY_FILE.read_text()).get("date")
-            return date.fromisoformat(d) if d else None
-        except Exception:
-            return None
-    return None
 
 
 # ---------------------------------------------------------------------------
@@ -324,15 +290,14 @@ def previous_injury_status() -> dict:
 def build_day_results(report_date: date) -> tuple[list[DayResult], dict]:
     roster = load_my_roster()
     season = datetime.now().year
-    player_ids = resolve_player_ids(roster, {})
+    # Resolve an MLB ID for every player who has occupied any slot this season
+    # (not just the current one) so each segment's gameLog can be fetched.
+    lookup_entries = [{"name": seg["player"]} for p in roster for seg in slot_segments(p)]
+    player_ids = resolve_player_ids(lookup_entries, {})
     injuries = build_injury_lookup()
     prev_inj = previous_injury_status()
 
     season_stats = load_season_stats()
-    watermark = previous_watermark()
-    # Lower bound for swap deltas: everything strictly after `watermark` and
-    # up to report_date. If no watermark, only count report_date itself.
-    delta_after = watermark if watermark is not None else (report_date - timedelta(days=1))
 
     team_games = max(1, round((report_date - OPENING_DAY).days * 162 / 186))
 
@@ -341,9 +306,7 @@ def build_day_results(report_date: date) -> tuple[list[DayResult], dict]:
         slot = p["name"]
         ptype = p["player_type"]
         lookup = _lookup_name(p)
-        norm = normalize_name(lookup)
-        pid = player_ids.get(norm)
-        swapped = bool(p.get("current_player")) and "/" in slot
+        segments = slot_segments(p)
 
         r = DayResult(slot, ptype)
         r.position = p["positions"][0] if p.get("positions") else ""
@@ -351,7 +314,12 @@ def build_day_results(report_date: date) -> tuple[list[DayResult], dict]:
         r.preseason_pts = float(p.get("projected_points", 0) or 0)
 
         group = "hitting" if ptype == "hitter" else "pitching"
-        splits = fetch_gamelog(pid, group, season) if pid else []
+        # One gameLog per segment player; the last segment is the current player.
+        segment_splits = []
+        for seg in segments:
+            pid = player_ids.get(normalize_name(seg["player"]))
+            segment_splits.append((seg, fetch_gamelog(pid, group, season) if pid else []))
+        splits = segment_splits[-1][1]
 
         # --- yesterday's box score ---
         day_split = next((s for s in splits if _split_date(s) == report_date), None)
@@ -377,21 +345,9 @@ def build_day_results(report_date: date) -> tuple[list[DayResult], dict]:
                     ptype, {"stats": r.stats, "decision": r.decision}
                 )
 
-        # --- season totals ---
-        if swapped:
-            prior = season_stats.get(slot, {})
-            season_stats[slot] = apply_swap_deltas(
-                prior, splits, ptype,
-                after=swap_delta_after(p, delta_after), through=report_date
-            )
-        elif splits:
-            new_tot = season_totals_from_gamelog(splits, ptype)
-            # Guardrail: never let counting stats regress (self-heal a missed run).
-            old = season_stats.get(slot, {})
-            for k in ("AB", "H", "HR", "RBI", "R", "SB", "K", "BB", "W", "SV", "G", "GS"):
-                if k in new_tot and k in old and new_tot[k] < old[k]:
-                    new_tot[k] = old[k]
-            season_stats[slot] = new_tot
+        # --- season totals: authoritative rebuild from the segments' gameLogs ---
+        if any(sp for _, sp in segment_splits):
+            season_stats[slot] = season_totals_from_segments(segment_splits, ptype, report_date)
 
         # --- YTD / pace for the email (site is canonical for the website) ---
         slot_season = season_stats.get(slot, {})

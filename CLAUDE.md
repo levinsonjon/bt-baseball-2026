@@ -40,7 +40,7 @@ Fantasy baseball project for Jon's BT Baseball Pool 2026 league. Includes draft 
 - ⚠️ **Pushing `.github/workflows/*` requires the `workflow` OAuth scope** on the git/gh credential (`gh auth refresh -h github.com -s workflow`). The workflow commit sat unpushed for 3 weeks (6/23–7/13) because both tokens lacked the scope, and the site froze at 6/21 — the push failure is loud, but only if someone actually pushes.
 - **Local git checkout can silently lag behind origin** — since Actions pushes directly to `main` every day, a local clone that isn't pulled between sessions can go a week+ stale even though the site itself is current. Always `git fetch origin main` (and pull/rebase) before editing data files in this repo.
 - **Two `gh`/git credentials are configured on this Mac** — `jlev-sage` (Sage work account, no push access to this repo) and `levinsonjon` (repo owner). If `git push` 403s with `Permission to levinsonjon/bt-baseball-2026.git denied to jlev-sage`, the wrong account is active: run `gh auth switch -h github.com -u levinsonjon` and retry.
-- Swapped slots accumulate via a **watermark**: `generate_daily.py` reads the date in `yesterday.json` and folds in game-log deltas strictly after it (`apply_swap_deltas`). Non-swapped slots are rebuilt from full-season gameLogs every run, so they self-heal any gap automatically.
+- **Every slot is rebuilt from full-season gameLogs on every run** (since 2026-09-28, workstream 6 of `plan-2027-projections.md`). A swapped slot lists its players as dated `segments` in `my_team.json`; the generator fetches each segment player's gameLog, keeps the games inside the segment's date range, and sums them. There is no watermark and nothing carried over, so a missed or double run can never corrupt a slot. (The retired watermark/`apply_swap_deltas` path under-reported the four swapped hitter slots by 34 points by season's end because those slots never self-healed.)
 
 ### Legacy pipeline — RETIRED 2026-08-01 (kept for reference / recovery)
 
@@ -180,25 +180,25 @@ Team AVG on the site is the **flat mean** of per-player AVGs (because each playe
 
 ## Mid-season player swaps
 
-When a roster slot changes player mid-season, we want to **carry forward** the prior player's accumulated stats into the slot rather than reset to zero. Mechanism:
+When a roster slot changes player mid-season, the slot **carries forward** the prior player's stats rather than resetting to zero. Since 2026-09-28 this is expressed entirely in `data/my_team.json` and needs no seeding:
 
-- The roster entry's `name` becomes a composite slot label (e.g. `"Lindor/McGonigle"`) — this is the season_stats key.
-- Add a `current_player` field with the real MLB name (e.g. `"Kevin McGonigle"`) — used for ALL external lookups (web search queries in `run_daily.py`, MLB Stats API and ESPN matching in `update_health.py`).
-- Pre-seed `data/season_stats.json` with the prior player's totals under the new composite key. The remote agent's daily accumulator (`update_season_stats`) adds the new player's daily box score on top.
-- Set `projected_points: 0` and `projected_stats: {}` if the new player has no preseason projection (option C). This makes the team page's projected total a lower bound.
+- The roster entry's `name` is a composite slot label (e.g. `"Lindor/McGonigle"`) — this is the `season_stats.json` key and what the site displays.
+- `current_player` is the real MLB name of the player now in the slot — used for yesterday's box score, ESPN injury matching, and any web-search lookups.
+- `segments` is an ordered list of `{"player": "<full MLB name>", "from": "YYYY-MM-DD" | null, "to": "YYYY-MM-DD" | null}` covering the season. `from: null` means opening day; `to: null` means through today. Ranges are inclusive on both ends. `generate_daily.py` (`slot_segments` / `season_totals_from_segments`) fetches each segment player's full-season gameLog, keeps the games inside that segment's range and on or before the report date, and sums them into the slot's season line. Games dated before a segment's `from` (e.g. a swap seeded ahead of its effective date) contribute nothing.
+- Entries without `segments` are one player for the whole season (the default for untouched slots).
+- Set `projected_points: 0` and `projected_stats: {}` if the new player has no preseason projection. This makes the team page's projected total a lower bound.
 
-The `current_player` field is optional; absent it, `name` is used for both lookup and display (the default for all 15 untouched roster slots). When the prior-player carryover stops mattering (e.g. multiple weeks in), the slot can be renamed to just the current player's name and `current_player` removed.
+**Procedure for a new swap:**
 
-**Current procedure (generate_daily.py era, proven with the Hernandez/Chourio swap 2026-07-13):**
+1. In `data/my_team.json`: set the composite `name` ("Prior/New"), `current_player`, new `team`, `projected_points: 0`, `projected_stats: {}`, and append a segment. Close the prior segment with `"to"` = the day before the league effective date and open the new one with `"from"` = the effective date. A player's MLB ID is resolved by name on the next run and cached in `data/mlb_player_ids.json`.
+2. Run `python3 generate_daily.py` (or wait for the next Actions run). Nothing to seed in `season_stats.json`; the rebuild is authoritative.
+3. Commit + push (Vercel redeploy).
 
-1. Update `data/my_team.json`: composite `name` ("Prior/New"), `current_player`, new `team`, `projected_points: 0`, `projected_stats: {}`.
-2. Seed `data/season_stats.json[new composite key]` with the slot's totals **as of the watermark date** (the `date` in `yesterday.json`) — i.e. prior player frozen at the BBSUBS drop line + the new player's games from the effective date through the watermark (pull from the MLB gameLog endpoint; the BBSUBS add-line snapshot equals the new player's totals through the day *before* the effective date).
-3. Run `python3 generate_daily.py` (or wait for the next Actions run) — `apply_swap_deltas` accumulates everything after the watermark automatically. Do NOT seed through "today," or the next run double-counts.
-4. Commit + push (Vercel redeploy). No launchd one-shots needed anymore.
+A swap can be entered before its effective date: the new segment's `from` guarantees no early credit, and the old `swap_effective` field is gone.
 
-**Swaps effective in the future** (seeding today for a swap that takes effect tomorrow, e.g. the Basallo/Dingler C swap applied 2026-08-01 effective 2026-08-02): add `swap_effective: "YYYY-MM-DD"` to the roster entry. `delta_after` is a single **global** watermark shared by every slot, so without this the next run credits the new player's games from the watermark forward — one or more days too early. `swap_delta_after()` in `generate_daily.py` raises the slot's lower bound to `swap_effective − 1 day`; it only ever raises, never lowers, so the self-healing gap recovery still works. Field is optional and can be deleted once the effective date is safely in the past.
+**Retired (2026-09-28):** the watermark/delta mechanism. `apply_swap_deltas`, `swap_delta_after`, `previous_watermark`, the `swap_effective` roster field and the "never regress counting stats" guardrail were deleted. Under that design a swapped slot was seeded with the prior player's totals as of the watermark date and accumulated daily deltas after it, so any missed or double run silently corrupted the slot for the rest of the season; by 2026-09-27 the four swapped hitter slots were 34 points off the official sheet. The seeding rules in older task-log entries (seed "as of the watermark date", "do NOT seed through today") no longer apply.
 
-**Legacy notes (remote-agent path):** The remote trigger prompt honors `current_player` generically — it computes `search_name = current_player or name` for all WebSearches and uses `slot_name = name` as the canonical key in every JSON output and in `season_stats.json`. For swapped slots, the agent reads the existing `season_stats.json[slot_name]` carryover and ADDs yesterday's box-score deltas (recomputing AVG = H/AB and ERA = ER × 9 / IP) instead of overwriting from a season-totals page that would double-count pre-swap games. This means future swaps require ONLY (a) updating `data/my_team.json` (composite name, `current_player`, zero projections), (b) pre-seeding `season_stats.json` with the prior player's totals under the new key, and (c) optionally a launchd one-shot to fire the swap mid-season — no remote-prompt edit needed.
+**Legacy notes (remote-agent path, retired 2026-08-01):** the remote trigger prompt honored `current_player` generically and added daily box-score deltas onto a seeded `season_stats.json` carryover; the same seeding caveats applied. Kept for reference only.
 
 The 3:13am `update_health.py` email's "Season YTD"/"Pace" columns were removed when the SS slot was first swapped — MLB Stats API returns true cumulative stats per real player, which double-counts pre-swap games against the carryover. (That email itself is gone as of 2026-08-02; the same caution applies to the Actions email's YTD/Pace columns, which read from `season_stats.json` and are therefore safe.) The website (sourced from `season_stats.json`) is the canonical scorekeeper.
 
