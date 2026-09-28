@@ -1,25 +1,25 @@
 {
-  "date": "2026-09-26",
-  "generated_at": "2026-09-27T14:40:58Z",
+  "date": "2026-09-27",
+  "generated_at": "2026-09-28T17:38:17Z",
   "totals": {
     "hitters": {
-      "AB": 26,
+      "AB": 18,
       "H": 8,
-      "R": 3,
-      "HR": 0,
-      "RBI": 3,
-      "SB": 1,
-      "points": 7.0
+      "R": 4,
+      "HR": 2,
+      "RBI": 4,
+      "SB": 0,
+      "points": 10.0
     },
     "pitchers": {
-      "IP": 4.33,
-      "H": 4,
+      "IP": 6.0,
+      "H": 5,
       "ER": 1,
-      "K": 3,
-      "BB": 2,
-      "W": 0,
+      "K": 5,
+      "BB": 0,
+      "W": 1,
       "SV": 0,
-      "points": 1.42
+      "points": 2.36
     }
   },
   "players": [
@@ -28,20 +28,12 @@
       "team": "DET",
       "position": "C",
       "type": "hitter",
-      "opponent": "vs Pittsburgh Pirates",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
-        "SB": 0,
-        "BB": 0
-      },
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
       "points": 0.0,
-      "summary": "1-for-4"
+      "summary": ""
     },
     {
       "name": "Bryce Harper",
@@ -54,14 +46,14 @@
       "stats": {
         "AB": 5,
         "H": 1,
-        "HR": 0,
-        "RBI": 0,
-        "R": 0,
+        "HR": 1,
+        "RBI": 1,
+        "R": 1,
         "SB": 0,
         "BB": 0
       },
-      "points": 0.0,
-      "summary": "1-for-5"
+      "points": 3.0,
+      "summary": "Went deep"
     },
     {
       "name": "Luis Arraez",
@@ -84,16 +76,16 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 4,
+        "AB": 5,
         "H": 1,
         "HR": 0,
         "RBI": 0,
         "R": 0,
         "SB": 0,
-        "BB": 1
+        "BB": 0
       },
       "points": 0.0,
-      "summary": "1-for-4"
+      "summary": "1-for-5"
     },
     {
       "name": "Lindor/McGonigle",
@@ -104,20 +96,40 @@
       "dnp": false,
       "dnp_reason": null,
       "stats": {
-        "AB": 5,
-        "H": 1,
-        "HR": 0,
+        "AB": 3,
+        "H": 2,
+        "HR": 1,
         "RBI": 1,
-        "R": 0,
+        "R": 1,
         "SB": 0,
         "BB": 0
       },
-      "points": 1.0,
-      "summary": "1 RBI"
+      "points": 3.0,
+      "summary": "Went deep"
     },
     {
       "name": "Pete Crow-Armstrong",
       "team": "CHC",
+      "position": "OF",
+      "type": "hitter",
+      "opponent": "@ Boston Red Sox",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "AB": 1,
+        "H": 1,
+        "HR": 0,
+        "RBI": 0,
+        "R": 0,
+        "SB": 0,
+        "BB": 0
+      },
+      "points": 0.0,
+      "summary": "1-for-1"
+    },
+    {
+      "name": "Jackson Merrill",
+      "team": "SDP",
       "position": "OF",
       "type": "hitter",
       "opponent": null,
@@ -126,26 +138,6 @@
       "stats": {},
       "points": 0.0,
       "summary": ""
-    },
-    {
-      "name": "Jackson Merrill",
-      "team": "SDP",
-      "position": "OF",
-      "type": "hitter",
-      "opponent": "vs Arizona Diamondbacks",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "AB": 4,
-        "H": 2,
-        "HR": 0,
-        "RBI": 1,
-        "R": 2,
-        "SB": 1,
-        "BB": 1
-      },
-      "points": 4.0,
-      "summary": "1 RBI; stole a base"
     },
     {
       "name": "Hernandez/Chourio",
@@ -157,15 +149,15 @@
       "dnp_reason": null,
       "stats": {
         "AB": 4,
-        "H": 2,
+        "H": 3,
         "HR": 0,
-        "RBI": 1,
-        "R": 1,
+        "RBI": 2,
+        "R": 2,
         "SB": 0,
         "BB": 0
       },
-      "points": 2.0,
-      "summary": "1 RBI"
+      "points": 4.0,
+      "summary": "2 RBI"
     },
     {
       "name": "Williams/Hader",
@@ -184,12 +176,22 @@
       "team": "PHI",
       "position": "SP",
       "type": "sp",
-      "opponent": null,
-      "dnp": true,
-      "dnp_reason": "Team off day",
-      "stats": {},
-      "points": 0.0,
-      "summary": ""
+      "opponent": "vs Tampa Bay Rays",
+      "dnp": false,
+      "dnp_reason": null,
+      "stats": {
+        "IP": 6.0,
+        "H": 5,
+        "ER": 1,
+        "K": 5,
+        "BB": 0,
+        "W": 1,
+        "L": 0,
+        "SV": 0,
+        "GS": 1
+      },
+      "points": 2.36,
+      "summary": "Earned the W; quality start"
     },
     {
       "name": "Cole Ragans",
@@ -220,22 +222,12 @@
       "team": "TEX",
       "position": "SP",
       "type": "sp",
-      "opponent": "@ Minnesota Twins",
-      "dnp": false,
-      "dnp_reason": null,
-      "stats": {
-        "IP": 4.33,
-        "H": 4,
-        "ER": 1,
-        "K": 3,
-        "BB": 2,
-        "W": 0,
-        "L": 0,
-        "SV": 0,
-        "GS": 1
-      },
-      "points": 1.42,
-      "summary": "4.33 IP, 3 K, 1 ER"
+      "opponent": null,
+      "dnp": true,
+      "dnp_reason": "Team off day",
+      "stats": {},
+      "points": 0.0,
+      "summary": ""
     },
     {
       "name": "Emmet Sheehan",
