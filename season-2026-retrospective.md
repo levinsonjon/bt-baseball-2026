@@ -1,6 +1,6 @@
 # BT Baseball Pool 2026 — Draft Retrospective
 
-What the preseason model said on draft day (2026-03-30) versus what actually happened. Sources: `data/projections_cache.json` (PitcherList projections run through the BT scoring formula, the board the draft tool recommended from), the league draft tracker (overall pick numbers for rounds 1–12), final 2026 MLB Stats API season and game-log data, and the commissioner's official `RESULTS .xlsm`. Actual points below use the official final MLERA of 4.17.
+What the preseason model said on draft day (2026-03-30) versus what actually happened. Sources: `data/projections_cache.json` (PitcherList projections run through the BT scoring formula, the board the draft tool recommended from), the league draft tracker (overall pick numbers; starting pitchers are drafted in pairs sharing a pick, and the DH is a separate 13th round), final 2026 MLB Stats API season and game-log data, and the commissioner's official `RESULTS .xlsm`. Actual points below use the official final MLERA of 4.17.
 
 ## The short version
 
@@ -60,10 +60,10 @@ Actual = the drafted player's full 2026 season under BT scoring, regardless of w
 | 82 | SP | Chase Burns | 88 | 130 | +42 | Right. 2.86 ERA, 154 IP. Top RSAR on the team. |
 | 99 | SP | Emmet Sheehan | 73 | 18 | -56 | Bust. 4.57 ERA. |
 | 100 | RP | Devin Williams | 166 | 95 | -71 | Bust. Lost the Mets closer job. |
-| R13 | SP | Cole Ragans | 98 | 4 | -95 | Bust. 35 IP, injured. Model had him 13th SP. |
-| R14 | SP | Nathan Eovaldi | 88 | 46 | -42 | Short. 4.20 ERA is exactly league average, so near-zero RSAR. |
-| R15 | SP | Reid Detmers | 76 | 119 | +43 | Right. 185 IP, 3.36 ERA, third counting starter. |
-| R16 | DH | Giancarlo Stanton | 378 | 103 | -275 | Bust. 24 games all year. |
+| 64 | SP | Cole Ragans | 98 | 4 | -95 | Bust. 35 IP, injured. Paired with Wheeler at pick 64; model had him 13th SP. |
+| 82 | SP | Nathan Eovaldi | 88 | 46 | -42 | Short. Paired with Burns at pick 82. 4.20 ERA is league average, so near-zero RSAR. |
+| 99 | SP | Reid Detmers | 76 | 119 | +43 | Right. Paired with Sheehan at pick 99. 185 IP, 3.36 ERA, third counting starter. |
+| DH | DH | Giancarlo Stanton | 378 | 103 | -275 | Bust. 24 games all year. Taken 9th of 9 in the separate DH round. |
 
 Six of nine drafted hitters and three of six starters finished within 45 points of projection. The misses are concentrated in injuries (Raleigh, Lindor, Hernández, Ragans, Stanton) rather than in wrong reads of healthy players.
 
@@ -127,7 +127,7 @@ Actual slot: .178 → 178 + 18 + 58 + 44 + 2 = 300 (official sheet: 296). Raleig
 
 Within the drafted pool, projection order barely predicted outcome order. That is partly range restriction (everyone drafted was projected 400 to 590) and partly that the biggest swings were injuries the model cannot see. The hitter bias of 42 points is the cost of projecting full playing time for everyone.
 
-Biggest busts league-wide: Rooker -320, Judge -290, Stanton -275, Roman Anthony -221, Luis Robert -211, Raleigh -167, Crochet -161. Biggest breakouts: Schlittler +186, Misiorowski +148, Crow-Armstrong +116, Yordan Alvarez +101, Cade Smith +91, Rasmussen +89, Arozarena +80. Two of the top three SP seasons in the league came from pitchers drafted in rounds 13 to 16 with projections under 70.
+Biggest busts league-wide: Rooker -320, Judge -290, Stanton -275, Roman Anthony -221, Luis Robert -211, Raleigh -167, Crochet -161. Biggest breakouts: Schlittler +186, Misiorowski +148, Crow-Armstrong +116, Yordan Alvarez +101, Cade Smith +91, Rasmussen +89, Arozarena +80. The two best SP seasons in the league, Schlittler and Misiorowski, were the second halves of pitcher pairs taken at picks 79 and 70, on projections under 70.
 
 ## 6. What we got right
 
@@ -140,7 +140,7 @@ Biggest busts league-wide: Rooker -320, Judge -290, Stanton -275, Roman Anthony 
 ## 7. What we got wrong
 
 - **Spending picks 9 and 10 on Raleigh and Lindor.** Both were reaches versus the model's board (15th and 18th) and both lost most of the year. The model did not flag them, but it also had no better answer at the top; the lesson is about the ceiling of any projection at the top of the draft rather than about these two names.
-- **Stanton at DH.** The model projected 362 AB for a player who had not reached 400 AB in years. A 16th-round pick, so cheap, but it set up an early forced swap.
+- **Stanton at DH.** The model projected 362 AB for a player who had not reached 400 AB in years. The last pick of the separate DH round, so cheap, but it set up an early forced swap.
 - **Pitcher depth picks.** Ragans, Sheehan and Eovaldi were all taken on projections of 73 to 98 and produced 4, 18 and 46. The model's SP correlation of 0.25 says these picks were close to coin flips.
 - **The catcher chain.** Three catcher swaps produced a .176 slot. Whether to hold an injured star or churn low-ceiling replacements was never modelled explicitly; it should be for 2027.
 - **Site accuracy on swapped slots.** Not a draft error, but the site under-reported swapped slots by 34 points by season's end because those slots did not self-heal. Fixed in the wrap-up; the pipeline fix is in `season-2026-final.md`.
@@ -149,6 +149,6 @@ Biggest busts league-wide: Rooker -320, Judge -290, Stanton -275, Roman Anthony 
 
 1. **Model playing time explicitly.** Cap projected AB and IP by age and prior-three-year availability. The 42-point hitter bias and the Stanton, Rooker and Judge busts are all playing-time misses.
 2. **Discount the top of the board.** Above pick 20 the model's ordering had no edge; prefer the healthiest profile among the top tier over the highest number.
-3. **Keep six starters, but weight IP over ERA in rounds 13 to 16.** Detmers (185 IP, 3.36) outscored Ragans and Sheehan combined by 97. Innings are the multiplier in RSAR.
+3. **Keep six starters, but weight IP over ERA for the second pitcher in each pair.** Detmers (185 IP, 3.36) outscored Ragans and Sheehan combined by 97. Innings are the multiplier in RSAR.
 4. **Build an injured-star hold-versus-replace calculator.** Inputs: expected return date, replacement's ROS projection, and the 300 AB floor. The catcher chain would have been caught.
 5. **Treat the swap windows as the main event.** Half the league gained 200 to 550 points on substitutions. Keep the 30-day-usage ROS method from the 7/13 analysis as the standard.

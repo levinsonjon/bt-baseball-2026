@@ -36,11 +36,11 @@ Six workstreams, ordered so that each one can be validated against 2026 data bef
 
 ### 3. Innings-weighted late starters
 
-**Goal:** in rounds 13 to 16, prefer the pitcher likely to throw 180 innings at a 3.5 ERA over one projected for 120 at 3.1.
+**Goal:** for the second starter in each drafted pair, prefer the pitcher likely to throw 180 innings at a 3.5 ERA over one projected for 120 at 3.1.
 
 - **Method:** the RSAR formula already rewards innings; the fix is on the projection side, where expected IP comes from workstream 1 and the recommendation boosts starters whose expected IP is above 160. Add a "three that count" simulator to the draft tool: given the starters already drafted, how much does each candidate raise the expected best-three sum?
 - **Where:** `draft.py` (the SP pairing logic at lines 450 to 490 is the natural home), `config.py` for the IP threshold.
-- **Validation:** 2026 rounds 13 to 16 for all nine teams; Detmers, Rasmussen and Cease should rank above Ragans and Sheehan under the new score.
+- **Validation:** the 2026 second-of-pair starters for all nine teams; Detmers and Rasmussen should rank above Ragans and Sheehan under the new score.
 - **Effort:** one session.
 
 ### 4. Hold-versus-replace calculator for injured starters

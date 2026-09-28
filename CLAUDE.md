@@ -143,6 +143,10 @@ The `gmail-personal` MCP server (separate `gmail/` folder) also expires weekly. 
 - **False "Gmail credentials file not found" banner on Actions emails — FIXED 2026-08-02.** `daily_report._build_reauth_banner()` checks whether `~/.config/personal-mcp/gmail/credentials.json` exists. On a GitHub runner `Path.home()` is `/home/runner`, so it never does and the banner rendered on every Actions email. The check was never relevant there: Actions sends over SMTP with an app password and has no OAuth token to expire. `build_html_email()` now takes `check_gmail_auth=False` by default and only `run_daily.py` passes `True` — that path really does send through the `gmail-personal` MCP server, so the `gmail/` path is correct for it and should not be "fixed" to `gmail-fb/`. **Generally: a credential warning should be raised by the code that uses the credential, not by shared formatting code.**
 - **Duplicated lines in `health_update.log` — FIXED 2026-08-02.** `log()` both `print()`ed and appended to the file while the plist pointed `StandardOutPath` *and* `StandardErrorPath` at that same file, so every line landed twice and single runs read as duplicate ones. `print()` is now gated on `sys.stdout.isatty()`; tracebacks still reach the file via the stderr redirect. `send_pending_email.py` has the same pattern, left alone because it's retired.
 
+## Draft conventions (league draft tracker)
+
+- 12 numbered rounds of 9 picks (1–108). **Starting pitchers are drafted in pairs**: the SP2/SP4/SP6 rows on the tracker share the pick number shown on SP1/SP3/SP5 (e.g. Webb and Fried were both pick 37). **The DH is a separate 13th round** taken in the tracker's "DH order" row. Any pick-number analysis must apply both rules; the 2026 retrospective initially mis-labelled paired starters as rounds 13–16.
+
 ## Scoring
 
 - **Hitters:** BA × 1000 + HR + RBI + R + SB (300 AB minimum rule at season end)
