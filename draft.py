@@ -423,6 +423,39 @@ class DraftMonitor:
         scored.sort(key=lambda x: x[1], reverse=True)
         return scored[:top_n]
 
+    def sp_depth_value(self, candidate: Player, roster_sps: list[Player], sims: int = 2000) -> float:
+        """Expected marginal team SP points from adding `candidate` to the
+        starters already rostered, under playing-time uncertainty.
+
+        2027 workstream 3 ("three that count"). Only the best three of six
+        score, so a depth starter's value is the chance he ends up in the
+        top three when someone ahead of him loses innings, not his own RSAR.
+        Each simulation draws every starter's innings from a normal around
+        his projected IP with sd = risk_sd (history spread) and rescores.
+        Backtested on 2026: re-weighting ERA toward league average did NOT
+        help (second-of-pair starters were unpredictable, corr 0.03), so this
+        keeps the plain RSAR formula and only models innings variance.
+        """
+        import random
+        rng = random.Random(7)
+        pool = roster_sps + [candidate]
+        base = sum(sorted((round(p.rsar) for p in roster_sps), reverse=True)[:config.SP_SCORING_COUNT])
+        gain = 0.0
+        for _ in range(sims):
+            rs = []
+            for p in pool:
+                ip = p.projected_stats.get("IP", 0) or 0
+                era = p.projected_stats.get("ERA")
+                if era is None or ip <= 0:
+                    rs.append(0.0)
+                    continue
+                f = max(0.0, min(1.15, rng.gauss(1.0, p.risk_sd or 0.25)))
+                rs.append((1.2 * config.MLB_AVG_ERA - era) * (ip * f / 9))
+            with_c = sum(sorted((round(r) for r in rs), reverse=True)[:config.SP_SCORING_COUNT])
+            without = sum(sorted((round(r) for r in rs[:-1]), reverse=True)[:config.SP_SCORING_COUNT])
+            gain += (with_c - without)
+        return round(gain / sims * config.SP_RSAR_MULTIPLIER, 1)
+
     def get_sp_pair_recommendation(self) -> Optional[dict]:
         """
         Return the best available SP pair with full context for evaluation.
@@ -452,7 +485,13 @@ class DraftMonitor:
         if len(available_sp) < 2:
             return None
 
-        sp1, sp2 = available_sp[0], available_sp[1]
+        sp1 = available_sp[0]
+        # Second of the pair: the candidate with the best expected marginal
+        # value once sp1 is on the roster, not simply the next RSAR.
+        roster_sps = self.roster.starters() + [sp1]
+        candidates = available_sp[1:9]
+        sp2 = max(candidates, key=lambda p: self.sp_depth_value(p, roster_sps))
+        depth_values = {p.name: self.sp_depth_value(p, roster_sps) for p in candidates}
         roster_rsars = [p.rsar for p in self.roster.starters()]
         pairs_needed = sp_slots_open // 2
 
@@ -482,6 +521,7 @@ class DraftMonitor:
             "total_sp_pts": round(total_sp_pts, 1),
             "pairs_remaining": pairs_needed,
             "health": _combine_health(sp1, sp2),
+            "depth_values": depth_values,   # expected marginal pts of each sp2 candidate
         }
 
     def print_status(self):
@@ -504,8 +544,10 @@ class DraftMonitor:
         for i, (p, adj) in enumerate(recs, 1):
             flag = " *** URGENT" if any(s in open_slots for s in p.eligible_slots()) else ""
             adj_str = f"  (adj {adj:.1f})" if adj != round(p.projected_points, 1) else ""
+            risk = f"  risk:{p.risk_tier}" + (f" ({p.risk_note})" if p.risk_note else "") if p.risk_tier else ""
+            pt = f"  PT×{p.pt_factor:.2f}" if p.pt_factor < 0.999 else ""
             print(f"    {i:2d}. {p.name:<25} {p.position_str:<12} "
-                  f"{p.projected_points:>6.1f} pts{adj_str}  {p.health_status}{flag}")
+                  f"{p.projected_points:>6.1f} pts{adj_str}{pt}  {p.health_status}{risk}{flag}")
 
         sp_rec = self.get_sp_pair_recommendation()
         if sp_rec:
@@ -515,6 +557,8 @@ class DraftMonitor:
                   f"This pair adds: {sp_rec['pair_team_pts']} pts  |  "
                   f"Total SP value ({sp_rec['pairs_remaining']} pairs left): "
                   f"{sp_rec['total_sp_pts']} pts  |  {sp_rec['health']}")
+            dv = sorted(sp_rec.get("depth_values", {}).items(), key=lambda kv: -kv[1])[:5]
+            print("    2nd-of-pair by expected marginal pts: " + ", ".join(f"{n} {v:+.1f}" for n, v in dv))
 
         print()
 

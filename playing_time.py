@@ -184,6 +184,36 @@ def playing_time_factor(h: History, name: str, ptype: str, positions: list[str],
             "il": il, "il_mult": round(il_mult, 3), "detail": detail}
 
 
+def risk_profile(pt: dict) -> dict:
+    """A visible risk read for the draft board (2027 workstream 2).
+
+    Backtested on 2026: subtracting a risk penalty from the projection did not
+    improve the top of the board (at most 2 of the 7 biggest busts left the
+    top 20, and none of the breakouts entered it), so risk is *shown*, never
+    used to re-rank. sd = spread of the prior seasons' playing-time fractions.
+    """
+    fr = [f for _, f in pt.get("detail", []) if f is not None]
+    if len(fr) >= 2:
+        m = sum(fr) / len(fr)
+        sd = (sum((f - m) ** 2 for f in fr) / len(fr)) ** 0.5
+    else:
+        sd = 0.25   # rookie / one season: unknown is risky
+    il = pt.get("il", 0)
+    age = pt.get("age")
+    score = min(1.0, 0.5 * sd / 0.25 * 0.5 + 0.15 * il + (0.05 * max(0.0, (age or 30) - 32)))
+    flags = []
+    if sd >= 0.2:
+        flags.append("uneven seasons")
+    if il >= 2:
+        flags.append(f"{il} IL stints")
+    if age is not None and age >= 33:
+        flags.append(f"age {age:.0f}")
+    if pt.get("hist_frac") is None:
+        flags.append("no MLB history")
+    tier = "high" if score >= 0.5 else "medium" if score >= 0.25 else "low"
+    return {"risk_sd": round(sd, 3), "risk_score": round(score, 2), "risk_tier": tier, "risk_note": ", ".join(flags)}
+
+
 def apply_to_stats(stats: dict, ptype: str, factor: float) -> dict:
     """Scale playing-time-dependent stats by `factor`; leave rates alone."""
     out = dict(stats)

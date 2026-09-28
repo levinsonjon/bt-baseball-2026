@@ -34,6 +34,9 @@ class Player:
     # untouched projection is kept for display/backtests.
     pt_factor: float = 1.0
     raw_projected_stats: dict = field(default_factory=dict)
+    risk_sd: float = 0.25          # spread of prior seasons' playing time (playing_time.risk_profile)
+    risk_tier: str = ""            # low / medium / high, shown on the board
+    risk_note: str = ""
 
     # Computed fields
     projected_points: float = 0.0

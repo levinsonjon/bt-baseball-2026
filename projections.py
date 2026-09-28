@@ -104,7 +104,7 @@ def apply_playing_time(players: list[Player], season: int) -> list[Player]:
     playing_time.py. Idempotent: always scales from raw_projected_stats.
     Skips (with a message) when data/history/ has not been built."""
     try:
-        from playing_time import History, playing_time_factor, apply_to_stats
+        from playing_time import History, playing_time_factor, apply_to_stats, risk_profile
         history = History.load()
     except FileNotFoundError:
         print("[projections] data/history/ missing — run build_history.py; "
@@ -117,6 +117,8 @@ def apply_playing_time(players: list[Player], season: int) -> list[Player]:
                                  season, projected_stats=p.raw_projected_stats)
         p.pt_factor = pt["factor"]
         p.projected_stats = apply_to_stats(p.raw_projected_stats, p.player_type, p.pt_factor)
+        risk = risk_profile(pt)
+        p.risk_sd, p.risk_tier, p.risk_note = risk["risk_sd"], risk["risk_tier"], risk["risk_note"]
     discounted = sum(1 for p in players if p.pt_factor < 0.999)
     print(f"[projections] Playing-time factors applied ({discounted} of {len(players)} below 1.0).")
     return players
@@ -137,6 +139,9 @@ def save_cache(players: list[Player]):
             "projected_stats": p.projected_stats,
             "raw_projected_stats": p.raw_projected_stats or p.projected_stats,
             "pt_factor": p.pt_factor,
+            "risk_sd": p.risk_sd,
+            "risk_tier": p.risk_tier,
+            "risk_note": p.risk_note,
             "projected_points": p.projected_points,
             "health_status": p.health_status,
             "injury_note": p.injury_note,
@@ -167,6 +172,9 @@ def load_cache() -> list[Player]:
         )
         p.raw_projected_stats = d.get("raw_projected_stats", {}) or dict(p.projected_stats)
         p.pt_factor = d.get("pt_factor", 1.0)
+        p.risk_sd = d.get("risk_sd", 0.25)
+        p.risk_tier = d.get("risk_tier", "")
+        p.risk_note = d.get("risk_note", "")
         players.append(p)
     print(f"[projections] Loaded {len(players)} players from cache.")
     return players
